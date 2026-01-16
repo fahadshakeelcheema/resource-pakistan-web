@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useAuth } from "@/_core/hooks/useAuth";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -8,6 +9,10 @@ import Footer from "@/components/Footer";
  * Abstract imagery for institutional credibility
  */
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />

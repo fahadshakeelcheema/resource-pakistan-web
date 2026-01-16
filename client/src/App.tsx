@@ -12,8 +12,8 @@ import Technology from "./pages/Technology";
 import Governance from "./pages/Governance";
 import Contact from "./pages/Contact";
 
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />

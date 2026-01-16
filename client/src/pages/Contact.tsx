@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { toast } from "sonner";
+import { trpc } from "@/lib/trpc";
 
 /**
  * Contact Page - Minimalist Institutional Design
@@ -9,7 +10,7 @@ import { toast } from "sonner";
  */
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     organization: "",
     email: "",
     phone: "",
@@ -17,7 +18,22 @@ export default function Contact() {
     message: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const submitInquiry = trpc.inquiries.submit.useMutation({
+    onSuccess: (data) => {
+      toast.success(data.message);
+      setFormData({
+        fullName: "",
+        organization: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+    },
+    onError: (error) => {
+      toast.error(error.message || "Failed to submit inquiry. Please try again.");
+    },
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -27,30 +43,24 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Validate required fields
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+    if (!formData.fullName || !formData.email || !formData.subject || !formData.message) {
       toast.error("Please fill in all required fields");
       return;
     }
 
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast.success("Inquiry submitted successfully. We will contact you shortly.");
-      setFormData({
-        name: "",
-        organization: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-      });
-      setIsSubmitting(false);
-    }, 1000);
+    // Submit via tRPC
+    await submitInquiry.mutateAsync({
+      fullName: formData.fullName,
+      organization: formData.organization || undefined,
+      email: formData.email,
+      phone: formData.phone || undefined,
+      subject: formData.subject,
+      message: formData.message,
+    });
   };
 
   return (
@@ -112,14 +122,14 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="fullName" className="block text-sm font-medium text-foreground mb-2">
                     Full Name <span className="text-destructive">*</span>
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    id="fullName"
+                    name="fullName"
+                    value={formData.fullName}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="Your full name"
@@ -187,11 +197,11 @@ export default function Contact() {
                     className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                     <option value="">Select a subject</option>
-                    <option value="mining">Mining & Resource Development</option>
-                    <option value="consultancy">Consultancy & Advisory</option>
-                    <option value="technology">EVs & Technology</option>
-                    <option value="industrial">Industrial Planning</option>
-                    <option value="other">Other Inquiry</option>
+                    <option value="Mining & Resource Development">Mining & Resource Development</option>
+                    <option value="Consultancy & Advisory">Consultancy & Advisory</option>
+                    <option value="EVs & Technology">EVs & Technology</option>
+                    <option value="Industrial Planning">Industrial Planning</option>
+                    <option value="Other Inquiry">Other Inquiry</option>
                   </select>
                 </div>
 
@@ -214,10 +224,10 @@ export default function Contact() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={submitInquiry.isPending}
                   className="px-8 py-3 bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "Submitting..." : "Submit Inquiry"}
+                  {submitInquiry.isPending ? "Submitting..." : "Submit Inquiry"}
                 </button>
 
                 <p className="text-xs text-muted-foreground">
