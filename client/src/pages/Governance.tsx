@@ -1,9 +1,10 @@
+import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 /**
- * Governance Page - Minimalist Institutional Design
- * Ethics, compliance, environmental responsibility, stakeholder engagement
+ * Governance Page - Refined Institutional Design
+ * Ethics, compliance, responsibility, stakeholder coordination
  */
 export default function Governance() {
   return (
@@ -12,118 +13,131 @@ export default function Governance() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="container py-20 md:py-32">
+        <section className="container py-16 md:py-24 border-b border-border">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6" style={{ fontFamily: "'Crimson Text', serif" }}>
-              Governance, Ethics & Responsibility
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Our commitment to institutional integrity, environmental stewardship, and responsible development.
+            <h1 className="text-display mb-6">Governance & Responsibility</h1>
+            <p className="text-subheading">
+              Ethics, compliance, and responsible resource development aligned with institutional standards.
             </p>
           </div>
         </section>
 
-        {/* Section 1: Core Commitments */}
-        <section className="container py-20 md:py-24 border-t border-border">
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold text-foreground" style={{ fontFamily: "'Crimson Text', serif" }}>
-              <span className="text-primary font-bold mr-3">1.</span>Core Commitments
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="border-l-4 border-primary pl-6">
-              <h3 className="text-lg font-bold text-foreground mb-3">Institutional Integrity</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                We operate with transparency and accountability in all engagements. Our work is grounded in rigorous analysis and documented evidence, recognizing that our recommendations inform institutional decision-making.
-              </p>
+        {/* Section 1: Governance Framework */}
+        <section className="py-20 md:py-28 section-accent border-t border-border">
+          <div className="container">
+            <div className="mb-16">
+              <h2 className="text-heading">
+                <span className="section-number">1.</span>Governance Framework
+              </h2>
             </div>
 
-            <div className="border-l-4 border-primary pl-6">
-              <h3 className="text-lg font-bold text-foreground mb-3">Confidentiality and Information Security</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                All client information, project details, and strategic discussions are maintained under strict confidentiality protocols. We understand the sensitive nature of resource development and policy planning work.
+            <div className="max-w-3xl">
+              <p className="text-body mb-6">
+                Resource Pakistan operates under strict ethical, compliance, and governance standards. Our work is structured to support institutional decision-making while maintaining confidentiality, transparency, and accountability. We understand that our recommendations may inform policy and institutional decisions, and we structure our engagement accordingly.
               </p>
-            </div>
-
-            <div className="border-l-4 border-primary pl-6">
-              <h3 className="text-lg font-bold text-foreground mb-3">Compliance and Legal Standards</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                We operate in full compliance with applicable laws, regulations, and institutional frameworks. Our work integrates compliance requirements into all recommendations and deliverables.
-              </p>
-            </div>
-
-            <div className="border-l-4 border-primary pl-6">
-              <h3 className="text-lg font-bold text-foreground mb-3">Responsible Resource Development</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Resource extraction must integrate environmental protection, community considerations, and long-term sustainability. We embed these principles into every resource development engagement.
+              <p className="text-body">
+                We are committed to responsible resource and industrial development that integrates environmental protection, socio-economic considerations, and long-term sustainability. All our work is subject to institutional review and designed to withstand scrutiny from government bodies, policy analysts, and stakeholder groups.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Section 2: Sustainable Development Integration */}
-        <section className="container py-20 md:py-24 border-t border-border">
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold text-foreground" style={{ fontFamily: "'Crimson Text', serif" }}>
-              <span className="text-primary font-bold mr-3">2.</span>Sustainable Development Integration
-            </h2>
+        {/* Section 2: Ethical Principles */}
+        <section className="py-20 md:py-28 section-light border-t border-border">
+          <div className="container">
+            <div className="mb-16">
+              <h2 className="text-heading">
+                <span className="section-number">2.</span>Ethical Principles
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {/* Integrity and Transparency */}
+              <div className="card-institutional">
+                <h3 className="text-lg font-bold text-foreground mb-4">Integrity and Transparency</h3>
+                <p className="text-body text-muted-foreground">
+                  We operate with transparency and accountability, documenting all analysis and recommendations. Our engagement framework prioritizes clear communication of assumptions, limitations, and evidence-based conclusions.
+                </p>
+              </div>
+
+              {/* Confidentiality */}
+              <div className="card-institutional">
+                <h3 className="text-lg font-bold text-foreground mb-4">Confidentiality</h3>
+                <p className="text-body text-muted-foreground">
+                  We maintain strict confidentiality regarding all client information, project details, and strategic discussions. Our work respects the sensitive nature of resource development and policy planning.
+                </p>
+              </div>
+
+              {/* Responsible Development */}
+              <div className="card-institutional">
+                <h3 className="text-lg font-bold text-foreground mb-4">Responsible Development</h3>
+                <p className="text-body text-muted-foreground">
+                  Resource and industrial development must integrate environmental stewardship, community considerations, and long-term sustainability. We embed these principles into every engagement.
+                </p>
+              </div>
+
+              {/* Institutional Alignment */}
+              <div className="card-institutional">
+                <h3 className="text-lg font-bold text-foreground mb-4">Institutional Alignment</h3>
+                <p className="text-body text-muted-foreground">
+                  Our work is structured to support institutional decision-making processes and align with Pakistan's governance frameworks, policy objectives, and long-term development priorities.
+                </p>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div className="space-y-8">
-            <div className="pb-8 border-b border-border">
-              <h3 className="text-lg font-bold text-foreground mb-3">Environmental Stewardship</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                We integrate environmental protection into all resource development planning. Our assessments include comprehensive environmental impact analysis and mitigation strategies.
-              </p>
+        {/* Section 3: Compliance and Standards */}
+        <section className="py-20 md:py-28 section-accent border-t border-border">
+          <div className="container">
+            <div className="mb-16">
+              <h2 className="text-heading">
+                <span className="section-number">3.</span>Compliance and Standards
+              </h2>
             </div>
 
-            <div className="pb-8 border-b border-border">
-              <h3 className="text-lg font-bold text-foreground mb-3">Community and Socio-Economic Considerations</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Resource development affects local communities and broader socio-economic dynamics. We support clients in developing approaches that balance resource opportunity with community and social considerations.
+            <div className="max-w-3xl">
+              <p className="text-body mb-6">
+                Resource Pakistan operates in compliance with Pakistan's regulatory frameworks, environmental standards, and institutional requirements. All our recommendations are designed to support compliance and withstand institutional review. We maintain awareness of evolving policy frameworks and adjust our advisory services accordingly.
               </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-bold text-foreground mb-3">Long-Term Sustainability</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                We view resource development as a long-term institutional commitment, not a short-term extraction opportunity. Our recommendations prioritize sustainable value creation over immediate returns.
+              <p className="text-body">
+                Our engagement methodology integrates compliance requirements from the outset, ensuring that all recommendations are feasible within Pakistan's institutional and regulatory context. We support clients in understanding compliance requirements and developing implementation strategies aligned with institutional standards.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Section 3: Multi-Stakeholder Coordination */}
-        <section className="container py-20 md:py-24 border-t border-border">
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold text-foreground" style={{ fontFamily: "'Crimson Text', serif" }}>
-              <span className="text-primary font-bold mr-3">3.</span>Multi-Stakeholder Coordination
-            </h2>
-          </div>
+        {/* Section 4: Stakeholder Coordination */}
+        <section className="py-20 md:py-28 section-light border-t border-border">
+          <div className="container">
+            <div className="mb-16">
+              <h2 className="text-heading">
+                <span className="section-number">4.</span>Stakeholder Coordination
+              </h2>
+            </div>
 
-          <div className="max-w-3xl">
-            <p className="text-base text-foreground leading-relaxed">
-              Responsible resource and industrial development requires coordination across government bodies, environmental authorities, community groups, and other stakeholders. We support structured engagement processes that ensure all perspectives are considered and institutional alignment is achieved.
-            </p>
+            <div className="max-w-3xl">
+              <p className="text-body mb-6">
+                Resource development and industrial planning require coordination across multiple stakeholder groups including government bodies, policy institutions, local communities, and strategic partners. We facilitate structured engagement processes and support alignment across institutional levels and sectoral interests.
+              </p>
+              <p className="text-body">
+                Our stakeholder coordination approach prioritizes transparency, documented communication, and institutional alignment. We help decision-makers navigate complex multi-stakeholder environments and develop consensus around feasibility-driven strategies.
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* Section 4: Governance Standards */}
-        <section className="container py-20 md:py-24 border-t border-border">
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold text-foreground" style={{ fontFamily: "'Crimson Text', serif" }}>
-              <span className="text-primary font-bold mr-3">4.</span>Governance Standards
-            </h2>
-          </div>
-
-          <div className="max-w-3xl space-y-6">
-            <p className="text-base text-foreground leading-relaxed">
-              We maintain transparent processes and clear communication with all stakeholders. Our recommendations are documented with clear explanation of analysis, assumptions, limitations, and conclusions.
+        {/* CTA Section */}
+        <section className="py-16 md:py-24 section-accent border-t border-border">
+          <div className="container text-center">
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              For questions regarding our governance framework, compliance standards, or ethical principles, please contact us.
             </p>
-            <p className="text-base text-foreground leading-relaxed">
-              We recognize that our work may inform public policy and institutional decisions. We structure our engagement and deliverables accordingly, ensuring that analysis is rigorous, recommendations are well-founded, and institutional decision-makers have clear understanding of implications and constraints.
-            </p>
+            <Link href="/contact">
+              <a className="inline-block px-8 py-3 bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:-translate-y-0.5">
+                Get in Touch
+              </a>
+            </Link>
           </div>
         </section>
       </main>

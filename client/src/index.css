@@ -66,7 +66,7 @@
   --popover-foreground: #2a2520;
   
   /* Light gray for secondary elements */
-  --secondary: #e8e4df;
+  --secondary: #f0ede8;
   --secondary-foreground: #2a2520;
   
   /* Muted for supporting text */
@@ -138,6 +138,9 @@
     @apply bg-background text-foreground;
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.3px;
+    font-feature-settings: "kern" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   /* Typography System */
@@ -233,6 +236,20 @@
     }
   }
   
+  /* Section Rhythm - Alternating backgrounds for visual hierarchy */
+  .section-light {
+    @apply bg-background;
+  }
+  
+  .section-accent {
+    @apply bg-secondary;
+  }
+  
+  .section-with-image {
+    @apply bg-cover bg-center bg-no-repeat;
+    background-blend-mode: overlay;
+  }
+  
   /* Section Divider - Minimalist thin line */
   .section-divider {
     @apply my-16 border-t border-border;
@@ -254,41 +271,82 @@
   
   /* Institutional button - border only, minimal style */
   .btn-institutional {
-    @apply px-6 py-3 border border-foreground text-foreground font-medium transition-colors;
+    @apply px-6 py-3 border border-foreground text-foreground font-medium;
     background-color: transparent;
     letter-spacing: 0.5px;
+    transition: all 0.3s ease-out;
   }
   
   .btn-institutional:hover {
-    @apply bg-foreground text-background;
+    @apply bg-foreground text-background shadow-md;
   }
   
   /* Primary button - slate blue */
   .btn-primary {
-    @apply px-6 py-3 bg-primary text-primary-foreground font-medium transition-colors;
+    @apply px-6 py-3 bg-primary text-primary-foreground font-medium;
     letter-spacing: 0.5px;
+    transition: all 0.3s ease-out;
   }
   
   .btn-primary:hover {
     @apply shadow-lg;
+    transform: translateY(-1px);
   }
   
   /* Subtle link underline on hover */
   a {
-    @apply text-primary transition-colors;
+    @apply text-primary;
+    transition: all 0.2s ease-out;
   }
   
   a:hover {
     @apply text-primary underline;
   }
   
-  /* Institutional card - minimal border */
+  /* Institutional card - minimal border with subtle shadow */
   .card-institutional {
     @apply p-8 border border-border bg-card;
+    transition: all 0.3s ease-out;
+  }
+  
+  .card-institutional:hover {
+    @apply shadow-md;
+    border-color: #1e3a5f;
   }
   
   /* Accent line above section titles */
   .accent-line {
     @apply w-12 h-0.5 bg-primary mb-4;
+  }
+  
+  /* Enhanced typography for visual hierarchy */
+  .text-display {
+    font-family: 'Crimson Text', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  
+  .text-heading {
+    font-family: 'Crimson Text', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  
+  .text-subheading {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #6b6259;
+    letter-spacing: 0.3px;
+  }
+  
+  .text-body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
   }
 }
