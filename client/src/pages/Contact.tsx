@@ -1,0 +1,250 @@
+import { useState } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { toast } from "sonner";
+
+/**
+ * Contact Page - Minimalist Institutional Design
+ * Professional contact form, company information
+ */
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    organization: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      toast.error("Please fill in all required fields");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    setTimeout(() => {
+      toast.success("Inquiry submitted successfully. We will contact you shortly.");
+      setFormData({
+        name: "",
+        organization: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+      setIsSubmitting(false);
+    }, 1000);
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col bg-background">
+      <Header />
+
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="container py-20 md:py-32">
+          <div className="max-w-3xl">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6" style={{ fontFamily: "'Crimson Text', serif" }}>
+              Contact Resource Pakistan
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              For inquiries regarding feasibility studies, advisory services, or strategic partnerships.
+            </p>
+          </div>
+        </section>
+
+        {/* Contact Information and Form */}
+        <section className="container py-20 md:py-24 border-t border-border">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+            {/* Company Information */}
+            <div className="md:col-span-1">
+              <h2 className="text-2xl font-bold text-foreground mb-8" style={{ fontFamily: "'Crimson Text', serif" }}>
+                Company Information
+              </h2>
+
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-2">Company Name</h3>
+                  <p className="text-base text-foreground">Resource Pakistan (Pvt) Ltd</p>
+                </div>
+
+                <div>
+                  <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-2">Location</h3>
+                  <p className="text-base text-foreground">Pakistan</p>
+                  <p className="text-sm text-muted-foreground mt-2">Operations across Balochistan, KPK, and other regions</p>
+                </div>
+
+                <div>
+                  <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-2">Focus Areas</h3>
+                  <ul className="text-sm text-foreground space-y-1">
+                    <li>Mining & Resources</li>
+                    <li>Consultancy & Advisory</li>
+                    <li>Electric Vehicles & Technology</li>
+                    <li>Industrial Planning</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="md:col-span-2">
+              <h2 className="text-2xl font-bold text-foreground mb-8" style={{ fontFamily: "'Crimson Text', serif" }}>
+                Send Inquiry
+              </h2>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Name */}
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    Full Name <span className="text-destructive">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                    placeholder="Your full name"
+                  />
+                </div>
+
+                {/* Organization */}
+                <div>
+                  <label htmlFor="organization" className="block text-sm font-medium text-foreground mb-2">
+                    Organization/Institution
+                  </label>
+                  <input
+                    type="text"
+                    id="organization"
+                    name="organization"
+                    value={formData.organization}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                    placeholder="Your organization"
+                  />
+                </div>
+
+                {/* Email */}
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    Email Address <span className="text-destructive">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                    placeholder="your@email.com"
+                  />
+                </div>
+
+                {/* Phone */}
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                    placeholder="+92 (optional)"
+                  />
+                </div>
+
+                {/* Subject */}
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                    Subject <span className="text-destructive">*</span>
+                  </label>
+                  <select
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    <option value="">Select a subject</option>
+                    <option value="mining">Mining & Resource Development</option>
+                    <option value="consultancy">Consultancy & Advisory</option>
+                    <option value="technology">EVs & Technology</option>
+                    <option value="industrial">Industrial Planning</option>
+                    <option value="other">Other Inquiry</option>
+                  </select>
+                </div>
+
+                {/* Message */}
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    Message <span className="text-destructive">*</span>
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={6}
+                    className="w-full px-4 py-3 border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                    placeholder="Please provide details about your inquiry..."
+                  />
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="px-8 py-3 bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? "Submitting..." : "Submit Inquiry"}
+                </button>
+
+                <p className="text-xs text-muted-foreground">
+                  <span className="text-destructive">*</span> Required fields
+                </p>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        {/* Additional Information */}
+        <section className="container py-20 md:py-24 border-t border-border">
+          <div className="max-w-3xl">
+            <h2 className="text-2xl font-bold text-foreground mb-6" style={{ fontFamily: "'Crimson Text', serif" }}>
+              Confidentiality & Professional Standards
+            </h2>
+            <p className="text-base text-foreground leading-relaxed">
+              All inquiries and communications with Resource Pakistan are handled with strict confidentiality and professional standards. We understand the sensitive nature of resource development and institutional planning work, and we maintain rigorous information security protocols.
+            </p>
+            <p className="text-base text-foreground leading-relaxed mt-6">
+              Our team will review your inquiry and respond within 2-3 business days. For time-sensitive matters, please indicate this in your message.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
