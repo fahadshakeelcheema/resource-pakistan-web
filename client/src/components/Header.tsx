@@ -25,10 +25,8 @@ export default function Header() {
       <div className="container py-6 flex items-center justify-between">
         {/* Logo / Company Name */}
         <Link href="/">
-          <a className="text-2xl font-bold text-foreground no-underline hover:no-underline">
-            <span className="font-serif" style={{ fontFamily: "'Crimson Text', serif" }}>
-              Resource Pakistan
-            </span>
+          <a className="flex items-center gap-3 no-underline hover:no-underline">
+            <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-12 w-auto" />
           </a>
         </Link>
 

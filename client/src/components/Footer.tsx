@@ -21,15 +21,19 @@ export default function Footer() {
     <footer className="bg-background border-t border-border mt-24">
       <div className="container py-16">
         {/* Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Company Info */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          {/* Company Logo */}
           <div>
-            <h3 className="text-lg font-bold text-foreground mb-4" style={{ fontFamily: "'Crimson Text', serif" }}>
-              Resource Pakistan
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-32 w-auto mb-4" />
+            <p className="text-xs text-muted-foreground leading-relaxed">
               Strategic development across mining, consultancy, electric vehicles, and industrial technology.
             </p>
+          </div>
+
+          {/* Partner Organization */}
+          <div>
+            <h4 className="text-sm font-bold text-foreground mb-4 uppercase tracking-wider">Partner Organization</h4>
+            <img src="/images/irada-logo.png" alt="Irada Pakistan" className="h-24 w-auto" />
           </div>
 
           {/* Navigation */}
