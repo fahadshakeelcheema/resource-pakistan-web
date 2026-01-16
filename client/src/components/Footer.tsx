@@ -42,9 +42,9 @@ export default function Footer() {
             <nav className="flex flex-col gap-3">
               {navItems.map((item) => (
                 <Link key={item.href} href={item.href}>
-                  <a className="text-sm text-muted-foreground transition-colors hover:text-primary">
+                  <span className="text-sm text-muted-foreground transition-colors hover:text-primary inline-block">
                     {item.label}
-                  </a>
+                  </span>
                 </Link>
               ))}
             </nav>
@@ -57,7 +57,7 @@ export default function Footer() {
               <p>Resource Pakistan (Pvt) Ltd</p>
               <p>Pakistan</p>
               <Link href="/contact">
-                <a className="text-primary hover:underline">Send Inquiry</a>
+                <span className="text-primary hover:underline inline-block">Send Inquiry</span>
               </Link>
             </div>
           </div>
