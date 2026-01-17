@@ -26,7 +26,7 @@ export default function Header() {
         {/* Logo / Company Name */}
         <Link href="/">
           <a className="flex items-center gap-3 no-underline hover:no-underline">
-            <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-12 w-auto" />
+            <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-16 w-auto" />
           </a>
         </Link>
 
