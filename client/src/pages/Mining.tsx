@@ -13,12 +13,18 @@ export default function Mining() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="container py-16 md:py-24 border-b border-border">
-          <div className="max-w-3xl">
-            <h1 className="text-display mb-6">Mining & Resource Development</h1>
-            <p className="text-subheading">
-              Responsible mineral development through comprehensive feasibility assessment and institutional alignment.
-            </p>
+        <section className="relative overflow-hidden py-16 md:py-24 border-b border-border">
+          <div 
+            className="absolute inset-0 opacity-[0.06] grayscale"
+            style={{backgroundImage: 'url(/images/pakistan-reko-diq-landscape.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}
+          ></div>
+          <div className="container relative z-10">
+            <div className="max-w-3xl">
+              <h1 className="text-display mb-6">Mining & Resource Development</h1>
+              <p className="text-subheading">
+                Responsible mineral development through comprehensive feasibility assessment and institutional alignment.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -87,12 +93,44 @@ export default function Mining() {
           </div>
         </section>
 
-        {/* Section 3: Technical Knowledge */}
+        {/* Section 3: Geological Context */}
+        <section className="py-20 md:py-28 section-light border-t border-border">
+          <div className="container">
+            <div className="mb-16">
+              <h2 className="text-heading">
+                <span className="section-number">3.</span>Pakistan's Geological Context
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-body mb-6">
+                  Pakistan's geological diversity spans multiple tectonic zones, creating significant mineral potential across Balochistan, Khyber Pakhtunkhwa, and other regions. Understanding this geological context is essential for feasibility assessment and responsible resource development.
+                </p>
+                <p className="text-body">
+                  Our work integrates geological data, tectonic analysis, and regional mineral surveys to provide comprehensive assessment of resource opportunities and extraction viability.
+                </p>
+              </div>
+              <div className="card-institutional p-0 overflow-hidden">
+                <img 
+                  src="/images/pakistan-tectonic-map.jpg" 
+                  alt="Pakistan Geological and Tectonic Map" 
+                  className="w-full h-auto"
+                />
+                <div className="p-4 bg-muted/30">
+                  <p className="text-sm text-muted-foreground">Pakistan's tectonic structure and geological formations</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 4: Technical Knowledge */}
         <section className="py-20 md:py-28 section-accent border-t border-border">
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">
-                <span className="section-number">3.</span>Technical Knowledge and Expertise
+                <span className="section-number">4.</span>Technical Knowledge and Expertise
               </h2>
             </div>
 

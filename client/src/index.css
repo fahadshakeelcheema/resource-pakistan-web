@@ -77,6 +77,13 @@
   --accent: #1e3a5f;
   --accent-foreground: #f5f3f0;
   
+  /* Earth-tone accents for resource/geological context */
+  --earth-copper: #B87333;
+  --earth-terracotta: #C65D3B;
+  --earth-slate: #6B7280;
+  --earth-sand: #D4A574;
+  --earth-deep: #8B4513;
+  
   /* Destructive for alerts */
   --destructive: #c41e3a;
   --destructive-foreground: #ffffff;

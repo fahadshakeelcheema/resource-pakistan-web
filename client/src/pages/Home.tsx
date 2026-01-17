@@ -21,8 +21,8 @@ export default function Home() {
         {/* Hero Section with Abstract Background */}
         <section className="relative overflow-hidden py-24 md:py-40 border-b border-border">
           <div 
-            className="absolute inset-0 opacity-5"
-            style={{backgroundImage: 'url(/images/abstract-geometric-pattern-1.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}
+            className="absolute inset-0 opacity-[0.08] grayscale"
+            style={{backgroundImage: 'url(/images/pakistan-balochistan-mountains.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}
           ></div>
           <div className="container relative z-10">
             <div className="max-w-3xl">
