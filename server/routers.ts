@@ -1,9 +1,10 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { publicProcedure, router } from "./_core/trpc";
+import { publicProcedure, router, protectedProcedure } from "./_core/trpc";
+import { TRPCError } from "@trpc/server";
 import { z } from "zod";
-import { createInquiry, getInquiries } from "./db";
+import { createInquiry, getInquiries, getInquiriesByStatus, searchInquiries, updateInquiryStatus, updateInquiryNotes, getInquiryById } from "./db";
 import { notifyOwner } from "./_core/notification";
 
 export const appRouter = router({
@@ -59,14 +60,83 @@ export const appRouter = router({
           throw new Error("Failed to submit inquiry. Please try again.");
         }
       }),
-    list: publicProcedure.query(async () => {
-      try {
-        return await getInquiries();
-      } catch (error) {
-        console.error("[Get Inquiries Error]", error);
-        return [];
-      }
-    }),
+    list: protectedProcedure
+      .input(
+        z.object({
+          status: z.string().optional(),
+          search: z.string().optional(),
+        }).optional()
+      )
+      .query(async ({ ctx, input }) => {
+        // Only admins can list inquiries
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Admin access required" });
+        }
+
+        try {
+          if (input?.search) {
+            return await searchInquiries(input.search);
+          }
+          return await getInquiriesByStatus(input?.status);
+        } catch (error) {
+          console.error("[Get Inquiries Error]", error);
+          return [];
+        }
+      }),
+    getById: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Admin access required" });
+        }
+
+        try {
+          return await getInquiryById(input.id);
+        } catch (error) {
+          console.error("[Get Inquiry Error]", error);
+          throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Failed to fetch inquiry" });
+        }
+      }),
+    updateStatus: protectedProcedure
+      .input(
+        z.object({
+          id: z.number(),
+          status: z.enum(["new", "in_progress", "resolved"]),
+        })
+      )
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Admin access required" });
+        }
+
+        try {
+          await updateInquiryStatus(input.id, input.status);
+          return { success: true };
+        } catch (error) {
+          console.error("[Update Inquiry Status Error]", error);
+          throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Failed to update status" });
+        }
+      }),
+    updateNotes: protectedProcedure
+      .input(
+        z.object({
+          id: z.number(),
+          adminNotes: z.string(),
+        })
+      )
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Admin access required" });
+        }
+
+        try {
+          await updateInquiryNotes(input.id, input.adminNotes);
+          return { success: true };
+        } catch (error) {
+          console.error("[Update Inquiry Notes Error]", error);
+          throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Failed to update notes" });
+        }
+      }),
   }),
 });
 

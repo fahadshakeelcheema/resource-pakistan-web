@@ -36,7 +36,8 @@ export const inquiries = mysqlTable("inquiries", {
   phone: varchar("phone", { length: 20 }),
   subject: varchar("subject", { length: 100 }).notNull(),
   message: text("message").notNull(),
-  status: mysqlEnum("status", ["new", "reviewed", "responded"]).default("new").notNull(),
+  status: mysqlEnum("status", ["new", "in_progress", "resolved"]).default("new").notNull(),
+  adminNotes: text("adminNotes"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });

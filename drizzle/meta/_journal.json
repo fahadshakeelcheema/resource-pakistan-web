@@ -15,6 +15,13 @@
       "when": 1768569751173,
       "tag": "0001_pretty_skullbuster",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1768804896309,
+      "tag": "0002_nebulous_lucky_pierre",
+      "breakpoints": true
     }
   ]
 }

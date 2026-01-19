@@ -1,4 +1,4 @@
-import { eq } from "drizzle-orm";
+import { eq, desc, and, or, like } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { InsertUser, users, InsertInquiry, inquiries } from "../drizzle/schema";
 import { ENV } from './_core/env';
@@ -105,5 +105,62 @@ export async function getInquiries() {
     throw new Error("Database not available");
   }
 
-  return db.select().from(inquiries).orderBy((table) => table.createdAt);
+  return db.select().from(inquiries).orderBy(desc(inquiries.createdAt));
+}
+
+export async function getInquiriesByStatus(status?: string) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  if (status && status !== "all") {
+    return db.select().from(inquiries).where(eq(inquiries.status, status as any)).orderBy(desc(inquiries.createdAt));
+  }
+
+  return db.select().from(inquiries).orderBy(desc(inquiries.createdAt));
+}
+
+export async function searchInquiries(searchTerm: string) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  return db.select().from(inquiries).where(
+    or(
+      like(inquiries.fullName, `%${searchTerm}%`),
+      like(inquiries.email, `%${searchTerm}%`),
+      like(inquiries.organization, `%${searchTerm}%`),
+      like(inquiries.subject, `%${searchTerm}%`)
+    )
+  ).orderBy(desc(inquiries.createdAt));
+}
+
+export async function updateInquiryStatus(id: number, status: string) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  await db.update(inquiries).set({ status: status as any }).where(eq(inquiries.id, id));
+}
+
+export async function updateInquiryNotes(id: number, adminNotes: string) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  await db.update(inquiries).set({ adminNotes }).where(eq(inquiries.id, id));
+}
+
+export async function getInquiryById(id: number) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.select().from(inquiries).where(eq(inquiries.id, id)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
 }
