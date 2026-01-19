@@ -35,10 +35,8 @@ export default function Home() {
               <p className="text-body mb-12 max-w-2xl">
                 Resource Pakistan (Pvt) Ltd operates at the intersection of resource development, policy alignment, and long-term industrial planning. We work with government bodies, institutional stakeholders, and strategic partners to advance feasibility-driven projects that create sustainable value for Pakistan's economy.
               </p>
-              <Link href="/about">
-                <a className="inline-block px-8 py-3 bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:-translate-y-0.5">
-                  Learn More
-                </a>
+              <Link href="/about" className="inline-block px-8 py-3 bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:-translate-y-0.5">
+                Learn More
               </Link>
             </div>
           </div>
@@ -181,10 +179,8 @@ export default function Home() {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               For inquiries regarding feasibility studies, advisory services, or strategic partnerships, please contact us.
             </p>
-            <Link href="/contact">
-              <a className="inline-block px-8 py-3 bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:-translate-y-0.5">
-                Submit Inquiry
-              </a>
+            <Link href="/contact" className="inline-block px-8 py-3 bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:-translate-y-0.5">
+              Submit Inquiry
             </Link>
           </div>
         </section>
