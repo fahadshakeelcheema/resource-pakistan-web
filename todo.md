@@ -55,3 +55,8 @@
 - [x] Remove background from Ministry logo
 - [x] Add Ministry logo to Footer component next to Irada logo
 - [x] Test footer partner logos display correctly
+
+## Fix Stretched Partner Logos
+
+- [x] Update Footer component to fix logo aspect ratios
+- [x] Test logos display correctly without stretching
