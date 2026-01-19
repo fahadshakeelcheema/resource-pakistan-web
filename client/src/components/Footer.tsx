@@ -30,10 +30,13 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Partner Organization */}
+          {/* Partner Organizations */}
           <div>
-            <h4 className="text-sm font-bold text-foreground mb-4 uppercase tracking-wider">Partner Organization</h4>
-            <img src="/images/irada-logo.png" alt="Irada Pakistan" className="h-24 w-auto" />
+            <h4 className="text-sm font-bold text-foreground mb-4 uppercase tracking-wider">Partner Organizations</h4>
+            <div className="flex flex-col gap-6">
+              <img src="/images/irada-logo.png" alt="Irada Pakistan" className="h-20 w-auto" />
+              <img src="/images/ministry-science-technology-logo.png" alt="Ministry of Science and Technology" className="h-20 w-auto" />
+            </div>
           </div>
 
           {/* Navigation */}
