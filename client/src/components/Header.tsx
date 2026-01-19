@@ -26,26 +26,20 @@ export default function Header() {
     <header className="bg-background border-b border-border sticky top-0 z-50">
       <div className="container py-6 flex items-center justify-between">
         {/* Logo / Company Name */}
-        <Link href="/">
-          <a className="flex items-center gap-3 no-underline hover:no-underline">
-            <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-16 w-auto" />
-          </a>
+        <Link href="/" className="flex items-center gap-3 no-underline hover:no-underline">
+          <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-16 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href}>
-              <a className="text-sm font-medium text-foreground transition-colors hover:text-primary">
-                {item.label}
-              </a>
+            <Link key={item.href} href={item.href} className="text-sm font-medium text-foreground transition-colors hover:text-primary">
+              {item.label}
             </Link>
           ))}
           {user?.role === "admin" && (
-            <Link href="/admin">
-              <a className="text-sm font-medium text-foreground transition-colors hover:text-primary">
-                Admin
-              </a>
+            <Link href="/admin" className="text-sm font-medium text-foreground transition-colors hover:text-primary">
+              Admin
             </Link>
           )}
         </nav>
@@ -65,23 +59,22 @@ export default function Header() {
         <nav className="md:hidden border-t border-border bg-background">
           <div className="container py-4 flex flex-col gap-4">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <a
-                  className="text-sm font-medium text-foreground transition-colors hover:text-primary"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.label}
               </Link>
             ))}
             {user?.role === "admin" && (
-              <Link href="/admin">
-                <a
-                  className="text-sm font-medium text-foreground transition-colors hover:text-primary"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Admin
-                </a>
+              <Link
+                href="/admin"
+                className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Admin
               </Link>
             )}
           </div>

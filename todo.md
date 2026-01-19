@@ -60,3 +60,8 @@
 
 - [x] Update Footer component to fix logo aspect ratios
 - [x] Test logos display correctly without stretching
+
+## Fix Nested Anchor Tags on Admin Dashboard
+
+- [x] Identify and fix nested anchor tags in Header.tsx
+- [x] Test admin dashboard for HTML validation errors
