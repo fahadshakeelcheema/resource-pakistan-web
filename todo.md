@@ -42,3 +42,9 @@
 - [x] Implement admin-only route protection
 - [x] Test admin access control
 - [x] Test inquiry management functionality
+
+## Admin Navigation Link
+
+- [x] Add conditional admin link to Header component
+- [x] Test admin link visibility for admin users
+- [x] Test admin link hidden for non-admin users

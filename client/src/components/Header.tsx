@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useAuth } from "@/_core/hooks/useAuth";
 
 /**
  * Header Component - Minimalist Institutional Design
@@ -9,6 +10,7 @@ import { Menu, X } from "lucide-react";
  */
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { user } = useAuth();
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -39,6 +41,13 @@ export default function Header() {
               </a>
             </Link>
           ))}
+          {user?.role === "admin" && (
+            <Link href="/admin">
+              <a className="text-sm font-medium text-foreground transition-colors hover:text-primary">
+                Admin
+              </a>
+            </Link>
+          )}
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -65,6 +74,16 @@ export default function Header() {
                 </a>
               </Link>
             ))}
+            {user?.role === "admin" && (
+              <Link href="/admin">
+                <a
+                  className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Admin
+                </a>
+              </Link>
+            )}
           </div>
         </nav>
       )}
