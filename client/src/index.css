@@ -84,6 +84,13 @@
   --earth-sand: #D4A574;
   --earth-deep: #8B4513;
   
+  /* Tailwind color mappings for earth tones */
+  --color-earth-copper: var(--earth-copper);
+  --color-earth-terracotta: var(--earth-terracotta);
+  --color-earth-slate: var(--earth-slate);
+  --color-earth-sand: var(--earth-sand);
+  --color-earth-deep: var(--earth-deep);
+  
   /* Destructive for alerts */
   --destructive: #c41e3a;
   --destructive-foreground: #ffffff;
@@ -257,9 +264,19 @@
     background-blend-mode: overlay;
   }
   
-  /* Section Divider - Minimalist thin line */
+  /* Section Divider - Minimalist thin line with earth-tone accent */
   .section-divider {
-    @apply my-16 border-t border-border;
+    @apply my-16;
+    border-top: 1px solid var(--earth-copper);
+  }
+  
+  /* Earth-tone border utilities */
+  .border-earth-copper {
+    border-color: var(--earth-copper);
+  }
+  
+  .border-earth-terracotta {
+    border-color: var(--earth-terracotta);
   }
   
   /* Numbered Section Header */
@@ -312,13 +329,14 @@
   
   /* Institutional card - minimal border with subtle shadow */
   .card-institutional {
-    @apply p-8 border border-border bg-card;
+    @apply p-8 bg-card;
+    border: 1px solid var(--earth-copper);
     transition: all 0.3s ease-out;
   }
   
   .card-institutional:hover {
     @apply shadow-md;
-    border-color: #1e3a5f;
+    border-color: var(--earth-terracotta);
   }
   
   /* Accent line above section titles */

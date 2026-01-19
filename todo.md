@@ -12,3 +12,15 @@
 - [x] Add data visualizations to appropriate sections
 - [x] Test responsive design with new imagery
 - [x] Verify institutional credibility is maintained
+
+## Earth-Tone Accent Implementation
+
+- [x] Apply copper/terracotta borders to section dividers
+- [x] Apply earth-tone borders to card components
+- [x] Update Home page with accent colors
+- [x] Update Mining page with accent colors
+- [x] Update Consultancy page with accent colors
+- [x] Update Technology page with accent colors
+- [x] Update Governance page with accent colors
+- [x] Update About page with accent colors
+- [x] Test visual warmth while maintaining institutional credibility
