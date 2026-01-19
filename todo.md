@@ -65,3 +65,8 @@
 
 - [x] Identify and fix nested anchor tags in Header.tsx
 - [x] Test admin dashboard for HTML validation errors
+
+## Fix Scroll Position on Navigation
+
+- [x] Implement scroll-to-top behavior on route changes
+- [x] Test scroll restoration across all pages
