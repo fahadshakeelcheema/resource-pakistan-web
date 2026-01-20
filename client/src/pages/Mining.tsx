@@ -28,22 +28,31 @@ export default function Mining() {
           </div>
         </section>
 
-        {/* Section 1: Our Approach to Mining */}
-        <section className="py-20 md:py-28 section-accent border-t border-border">
+        {/* Section 1: Our Approach to Mining - Alternating Layout */}
+        <section className="py-20 md:py-28 bg-background border-t border-border">
           <div className="container">
-            <div className="mb-16">
-              <h2 className="text-heading">
-                <span className="section-number">1.</span>Feasibility-Driven Resource Development
-              </h2>
-            </div>
-
-            <div className="max-w-3xl">
-              <p className="text-body mb-6">
-                Mining and resource extraction require rigorous feasibility assessment, compliance planning, and long-term value-chain analysis. Resource Pakistan provides comprehensive advisory services covering geological assessment, economic viability, regulatory compliance, and implementation planning.
-              </p>
-              <p className="text-body">
-                Our approach integrates technical analysis with institutional requirements, ensuring that resource development projects are both economically sound and aligned with Pakistan's policy frameworks and environmental standards.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Text Left */}
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                  Feasibility-Driven Resource Development
+                </h2>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  Mining and resource extraction require rigorous feasibility assessment, compliance planning, and long-term value-chain analysis. Resource Pakistan provides comprehensive advisory services covering geological assessment, economic viability, regulatory compliance, and implementation planning.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Our approach integrates technical analysis with institutional requirements, ensuring that resource development projects are both economically sound and aligned with Pakistan's policy frameworks and environmental standards.
+                </p>
+              </div>
+              
+              {/* Image Right */}
+              <div>
+                <img 
+                  src="/images/mining-geological-survey.jpg" 
+                  alt="Geological survey and mining operations" 
+                  className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-xl"
+                />
+              </div>
             </div>
           </div>
         </section>

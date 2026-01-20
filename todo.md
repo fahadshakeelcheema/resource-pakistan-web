@@ -70,3 +70,16 @@
 
 - [x] Implement scroll-to-top behavior on route changes
 - [x] Test scroll restoration across all pages
+
+## Visual Impact Enhancement (CSG-Inspired)
+
+- [x] Source high-quality Pakistan landscape imagery for hero section
+- [x] Source circular service icon images (Mining, Consultancy, EVs, Industrial Planning)
+- [x] Implement full-screen hero section with background image overlay
+- [x] Create circular service icons component
+- [x] Update Home page with circular service icons
+- [x] Add alternating image-text layouts to About page
+- [x] Add alternating image-text layouts to Mining page
+- [x] Enhance typography scale and visual hierarchy
+- [x] Test responsive design for new visual elements
+- [x] Verify institutional credibility is maintained

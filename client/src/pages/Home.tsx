@@ -18,69 +18,105 @@ export default function Home() {
       <Header />
 
       <main className="flex-1">
-        {/* Hero Section with Abstract Background */}
-        <section className="relative overflow-hidden py-24 md:py-40 border-b border-border">
+        {/* Full-Screen Hero Section with Background Image */}
+        <section className="relative overflow-hidden min-h-[85vh] flex items-center border-b border-border">
+          {/* Background Image */}
           <div 
-            className="absolute inset-0 opacity-[0.08] grayscale"
-            style={{backgroundImage: 'url(/images/pakistan-balochistan-mountains.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}
+            className="absolute inset-0 bg-cover bg-center"
+            style={{backgroundImage: 'url(/images/hero-pakistan-mountains.jpg)'}}
           ></div>
-          <div className="container relative z-10">
+          {/* Dark Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/70 to-slate-900/50"></div>
+          
+          {/* Content */}
+          <div className="container relative z-10 py-24">
             <div className="max-w-3xl">
-              <h1 className="text-display mb-6">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 Building Pakistan's Resource and Industrial Future
               </h1>
-              <p className="text-subheading mb-8">
+              <p className="text-xl md:text-2xl text-gray-100 mb-8 font-light">
                 Strategic development across mining, consultancy, electric vehicles, and industrial technology.
               </p>
-              <p className="text-body mb-12 max-w-2xl">
+              <p className="text-lg text-gray-200 mb-12 max-w-2xl leading-relaxed">
                 Resource Pakistan (Pvt) Ltd operates at the intersection of resource development, policy alignment, and long-term industrial planning. We work with government bodies, institutional stakeholders, and strategic partners to advance feasibility-driven projects that create sustainable value for Pakistan's economy.
               </p>
-              <Link href="/about" className="inline-block px-8 py-3 bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:-translate-y-0.5">
+              <Link href="/about" className="inline-block px-10 py-4 bg-white text-slate-900 font-semibold text-lg transition-all hover:bg-gray-100 hover:shadow-2xl hover:-translate-y-1">
                 Learn More
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Section 1: Core Verticals */}
-        <section className="py-20 md:py-28 section-accent">
+        {/* Section 1: Core Verticals - Circular Service Icons */}
+        <section className="py-20 md:py-28 bg-background">
           <div className="container">
-            <div className="mb-16">
-              <h2 className="text-heading">
-                <span className="section-number">1.</span>Core Verticals
+            <div className="mb-16 text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+                Core Verticals
               </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Multidisciplinary expertise across mining, consultancy, technology, and industrial planning
+              </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
               {/* Mining & Resources */}
-              <div className="card-institutional">
-                <h3 className="text-xl font-bold text-foreground mb-4">Mining & Resources</h3>
-                <p className="text-body text-muted-foreground">
-                  Responsible mineral development through comprehensive feasibility studies, compliance-oriented planning, and value-chain analysis. We approach resource extraction as a long-term institutional commitment.
+              <div className="flex flex-col items-center text-center group">
+                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-copper transition-all group-hover:border-terracotta group-hover:shadow-2xl">
+                  <img 
+                    src="/images/service-mining.jpg" 
+                    alt="Mining & Resources" 
+                    className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Mining & Resources</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Responsible mineral development through comprehensive feasibility studies and compliance-oriented planning.
                 </p>
               </div>
 
               {/* Consultancy & Advisory */}
-              <div className="card-institutional">
-                <h3 className="text-xl font-bold text-foreground mb-4">Consultancy & Advisory</h3>
-                <p className="text-body text-muted-foreground">
-                  Strategic planning and advisory services for government bodies, think tanks, and institutional stakeholders. We bridge policy frameworks with operational execution.
+              <div className="flex flex-col items-center text-center group">
+                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-copper transition-all group-hover:border-terracotta group-hover:shadow-2xl">
+                  <img 
+                    src="/images/service-consultancy.jpg" 
+                    alt="Consultancy & Advisory" 
+                    className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Consultancy & Advisory</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Strategic planning and advisory services for government bodies and institutional stakeholders.
                 </p>
               </div>
 
               {/* Electric Vehicles & Technology */}
-              <div className="card-institutional">
-                <h3 className="text-xl font-bold text-foreground mb-4">Electric Vehicles & Technology</h3>
-                <p className="text-body text-muted-foreground">
-                  Research-focused initiatives in electric mobility and emerging industrial technologies. Our approach emphasizes pilot programs and long-term institutional planning.
+              <div className="flex flex-col items-center text-center group">
+                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-copper transition-all group-hover:border-terracotta group-hover:shadow-2xl">
+                  <img 
+                    src="/images/service-ev-technology.jpg" 
+                    alt="Electric Vehicles & Technology" 
+                    className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Electric Vehicles & Technology</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Research-focused initiatives in electric mobility and emerging industrial technologies.
                 </p>
               </div>
 
               {/* Industrial Planning */}
-              <div className="card-institutional">
-                <h3 className="text-xl font-bold text-foreground mb-4">Industrial Planning</h3>
-                <p className="text-body text-muted-foreground">
-                  Multidisciplinary coordination across sectors, stakeholder engagement, and feasibility assessment. We support institutional planning with rigorous analysis.
+              <div className="flex flex-col items-center text-center group">
+                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-copper transition-all group-hover:border-terracotta group-hover:shadow-2xl">
+                  <img 
+                    src="/images/service-industrial-planning.jpg" 
+                    alt="Industrial Planning" 
+                    className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Industrial Planning</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Multidisciplinary coordination across sectors with rigorous feasibility assessment.
                 </p>
               </div>
             </div>

@@ -22,22 +22,31 @@ export default function About() {
           </div>
         </section>
 
-        {/* Section 1: Mission and Scope */}
-        <section className="py-20 md:py-28 section-accent">
+        {/* Section 1: Mission and Scope - Alternating Layout */}
+        <section className="py-20 md:py-28 bg-background">
           <div className="container">
-            <div className="mb-16">
-              <h2 className="text-heading">
-                <span className="section-number">1.</span>Mission and Scope
-              </h2>
-            </div>
-
-            <div className="max-w-3xl">
-              <p className="text-body mb-6">
-                Resource Pakistan operates at the interface between resource development, policy frameworks, and industrial strategy. We provide advisory, analytical, and planning services to government bodies, institutional stakeholders, and strategic partners seeking to advance feasibility-driven projects across mining, consultancy, electric vehicles, and industrial technology sectors.
-              </p>
-              <p className="text-body">
-                Our work is grounded in the principle that sustainable resource and industrial development requires rigorous feasibility assessment, institutional alignment, and long-term commitment. We reject transactional approaches in favor of structured, evidence-based planning that serves Pakistan's long-term economic interests.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Image Left */}
+              <div className="order-2 lg:order-1">
+                <img 
+                  src="/images/about-team-collaboration.jpg" 
+                  alt="Professional team collaboration" 
+                  className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-xl"
+                />
+              </div>
+              
+              {/* Text Right */}
+              <div className="order-1 lg:order-2">
+                <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                  Mission and Scope
+                </h2>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  Resource Pakistan operates at the interface between resource development, policy frameworks, and industrial strategy. We provide advisory, analytical, and planning services to government bodies, institutional stakeholders, and strategic partners seeking to advance feasibility-driven projects across mining, consultancy, electric vehicles, and industrial technology sectors.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Our work is grounded in the principle that sustainable resource and industrial development requires rigorous feasibility assessment, institutional alignment, and long-term commitment. We reject transactional approaches in favor of structured, evidence-based planning that serves Pakistan's long-term economic interests.
+                </p>
+              </div>
             </div>
           </div>
         </section>
