@@ -83,3 +83,12 @@
 - [x] Enhance typography scale and visual hierarchy
 - [x] Test responsive design for new visual elements
 - [x] Verify institutional credibility is maintained
+
+## Homepage Click-to-Expand Redesign (Executive-Friendly)
+
+- [x] Implement click-to-expand for Core Verticals circular icons
+- [x] Implement click-to-expand for Our Approach section (4 principles)
+- [x] Implement click-to-expand for Strategic Sectors section (3 sectors)
+- [x] Test click interactions on desktop and mobile
+- [x] Verify reduced scroll length (target: ~1800px vs current ~3000px)
+- [x] Ensure smooth expand/collapse animations

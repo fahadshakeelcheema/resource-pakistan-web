@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { useAuth } from "@/_core/hooks/useAuth";
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -12,6 +13,11 @@ export default function Home() {
   // The userAuth hooks provides authentication state
   // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
   let { user, loading, error, isAuthenticated, logout } = useAuth();
+  
+  // State for expandable sections
+  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [expandedApproach, setExpandedApproach] = useState<string | null>(null);
+  const [expandedSector, setExpandedSector] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -61,7 +67,10 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
               {/* Mining & Resources */}
-              <div className="flex flex-col items-center text-center group">
+              <div 
+                className="flex flex-col items-center text-center group cursor-pointer"
+                onClick={() => setExpandedService(expandedService === 'mining' ? null : 'mining')}
+              >
                 <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-copper transition-all group-hover:border-terracotta group-hover:shadow-2xl">
                   <img 
                     src="/images/service-mining.jpg" 
@@ -70,13 +79,21 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Mining & Resources</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Responsible mineral development through comprehensive feasibility studies and compliance-oriented planning.
-                </p>
+                <div className={`overflow-hidden transition-all duration-300 ${expandedService === 'mining' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Responsible mineral development through comprehensive feasibility studies and compliance-oriented planning.
+                  </p>
+                </div>
+                {expandedService !== 'mining' && (
+                  <p className="text-xs text-copper mt-2">Click to learn more</p>
+                )}
               </div>
 
               {/* Consultancy & Advisory */}
-              <div className="flex flex-col items-center text-center group">
+              <div 
+                className="flex flex-col items-center text-center group cursor-pointer"
+                onClick={() => setExpandedService(expandedService === 'consultancy' ? null : 'consultancy')}
+              >
                 <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-copper transition-all group-hover:border-terracotta group-hover:shadow-2xl">
                   <img 
                     src="/images/service-consultancy.jpg" 
@@ -85,13 +102,21 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Consultancy & Advisory</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Strategic planning and advisory services for government bodies and institutional stakeholders.
-                </p>
+                <div className={`overflow-hidden transition-all duration-300 ${expandedService === 'consultancy' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Strategic planning and advisory services for government bodies and institutional stakeholders.
+                  </p>
+                </div>
+                {expandedService !== 'consultancy' && (
+                  <p className="text-xs text-copper mt-2">Click to learn more</p>
+                )}
               </div>
 
               {/* Electric Vehicles & Technology */}
-              <div className="flex flex-col items-center text-center group">
+              <div 
+                className="flex flex-col items-center text-center group cursor-pointer"
+                onClick={() => setExpandedService(expandedService === 'ev' ? null : 'ev')}
+              >
                 <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-copper transition-all group-hover:border-terracotta group-hover:shadow-2xl">
                   <img 
                     src="/images/service-ev-technology.jpg" 
@@ -100,13 +125,21 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Electric Vehicles & Technology</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Research-focused initiatives in electric mobility and emerging industrial technologies.
-                </p>
+                <div className={`overflow-hidden transition-all duration-300 ${expandedService === 'ev' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Research-focused initiatives in electric mobility and emerging industrial technologies.
+                  </p>
+                </div>
+                {expandedService !== 'ev' && (
+                  <p className="text-xs text-copper mt-2">Click to learn more</p>
+                )}
               </div>
 
               {/* Industrial Planning */}
-              <div className="flex flex-col items-center text-center group">
+              <div 
+                className="flex flex-col items-center text-center group cursor-pointer"
+                onClick={() => setExpandedService(expandedService === 'industrial' ? null : 'industrial')}
+              >
                 <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-copper transition-all group-hover:border-terracotta group-hover:shadow-2xl">
                   <img 
                     src="/images/service-industrial-planning.jpg" 
@@ -115,9 +148,14 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Industrial Planning</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Multidisciplinary coordination across sectors with rigorous feasibility assessment.
-                </p>
+                <div className={`overflow-hidden transition-all duration-300 ${expandedService === 'industrial' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Multidisciplinary coordination across sectors with rigorous feasibility assessment.
+                  </p>
+                </div>
+                {expandedService !== 'industrial' && (
+                  <p className="text-xs text-copper mt-2">Click to learn more</p>
+                )}
               </div>
             </div>
           </div>
@@ -138,35 +176,67 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Feasibility-Driven Planning */}
-              <div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Feasibility-Driven Planning</h3>
-                <p className="text-body text-muted-foreground leading-relaxed">
-                  Every project begins with comprehensive feasibility assessment. We prioritize rigorous analysis over optimistic projections, ensuring recommendations withstand institutional scrutiny.
-                </p>
+              <div 
+                className="cursor-pointer p-6 rounded-lg border border-border hover:border-copper transition-all"
+                onClick={() => setExpandedApproach(expandedApproach === 'feasibility' ? null : 'feasibility')}
+              >
+                <h3 className="text-xl font-bold text-foreground mb-2">Feasibility-Driven Planning</h3>
+                <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'feasibility' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-body text-muted-foreground leading-relaxed">
+                    Every project begins with comprehensive feasibility assessment. We prioritize rigorous analysis over optimistic projections, ensuring recommendations withstand institutional scrutiny.
+                  </p>
+                </div>
+                {expandedApproach !== 'feasibility' && (
+                  <p className="text-xs text-copper mt-2">Click to expand</p>
+                )}
               </div>
 
               {/* Institutional Alignment */}
-              <div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Institutional Alignment</h3>
-                <p className="text-body text-muted-foreground leading-relaxed">
-                  We understand the complexity of working across government, policy, and private sectors. Our work is structured to support institutional decision-making processes.
-                </p>
+              <div 
+                className="cursor-pointer p-6 rounded-lg border border-border hover:border-copper transition-all"
+                onClick={() => setExpandedApproach(expandedApproach === 'institutional' ? null : 'institutional')}
+              >
+                <h3 className="text-xl font-bold text-foreground mb-2">Institutional Alignment</h3>
+                <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'institutional' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-body text-muted-foreground leading-relaxed">
+                    We understand the complexity of working across government, policy, and private sectors. Our work is structured to support institutional decision-making processes.
+                  </p>
+                </div>
+                {expandedApproach !== 'institutional' && (
+                  <p className="text-xs text-copper mt-2">Click to expand</p>
+                )}
               </div>
 
               {/* Responsible Development */}
-              <div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Responsible Development</h3>
-                <p className="text-body text-muted-foreground leading-relaxed">
-                  Resource development must balance economic opportunity with environmental and socio-economic considerations. We integrate compliance and sustainability into every engagement.
-                </p>
+              <div 
+                className="cursor-pointer p-6 rounded-lg border border-border hover:border-copper transition-all"
+                onClick={() => setExpandedApproach(expandedApproach === 'responsible' ? null : 'responsible')}
+              >
+                <h3 className="text-xl font-bold text-foreground mb-2">Responsible Development</h3>
+                <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'responsible' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-body text-muted-foreground leading-relaxed">
+                    Resource development must balance economic opportunity with environmental and socio-economic considerations. We integrate compliance and sustainability into every engagement.
+                  </p>
+                </div>
+                {expandedApproach !== 'responsible' && (
+                  <p className="text-xs text-copper mt-2">Click to expand</p>
+                )}
               </div>
 
               {/* Multidisciplinary Expertise */}
-              <div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Multidisciplinary Expertise</h3>
-                <p className="text-body text-muted-foreground leading-relaxed">
-                  Mining, consultancy, technology, and industrial planning require diverse expertise. Our team brings together specialists across these domains.
-                </p>
+              <div 
+                className="cursor-pointer p-6 rounded-lg border border-border hover:border-copper transition-all"
+                onClick={() => setExpandedApproach(expandedApproach === 'multidisciplinary' ? null : 'multidisciplinary')}
+              >
+                <h3 className="text-xl font-bold text-foreground mb-2">Multidisciplinary Expertise</h3>
+                <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'multidisciplinary' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-body text-muted-foreground leading-relaxed">
+                    Mining, consultancy, technology, and industrial planning require diverse expertise. Our team brings together specialists across these domains.
+                  </p>
+                </div>
+                {expandedApproach !== 'multidisciplinary' && (
+                  <p className="text-xs text-copper mt-2">Click to expand</p>
+                )}
               </div>
             </div>
           </div>
@@ -183,27 +253,51 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Government Bodies & Policy Institutions */}
-              <div className="card-institutional">
-                <h3 className="text-lg font-bold text-foreground mb-4">Government Bodies & Policy Institutions</h3>
-                <p className="text-body text-muted-foreground">
-                  Advisory services, feasibility studies, and strategic planning support for institutional decision-making.
-                </p>
+              <div 
+                className="cursor-pointer p-6 rounded-lg border border-border bg-card hover:border-copper transition-all"
+                onClick={() => setExpandedSector(expandedSector === 'government' ? null : 'government')}
+              >
+                <h3 className="text-lg font-bold text-foreground mb-2">Government Bodies & Policy Institutions</h3>
+                <div className={`overflow-hidden transition-all duration-300 ${expandedSector === 'government' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-body text-muted-foreground">
+                    Advisory services, feasibility studies, and strategic planning support for institutional decision-making.
+                  </p>
+                </div>
+                {expandedSector !== 'government' && (
+                  <p className="text-xs text-copper mt-2">Click to expand</p>
+                )}
               </div>
 
               {/* Investors & Strategic Partners */}
-              <div className="card-institutional">
-                <h3 className="text-lg font-bold text-foreground mb-4">Investors & Strategic Partners</h3>
-                <p className="text-body text-muted-foreground">
-                  Comprehensive due diligence, market assessment, and project evaluation for resource and industrial opportunities.
-                </p>
+              <div 
+                className="cursor-pointer p-6 rounded-lg border border-border bg-card hover:border-copper transition-all"
+                onClick={() => setExpandedSector(expandedSector === 'investors' ? null : 'investors')}
+              >
+                <h3 className="text-lg font-bold text-foreground mb-2">Investors & Strategic Partners</h3>
+                <div className={`overflow-hidden transition-all duration-300 ${expandedSector === 'investors' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-body text-muted-foreground">
+                    Comprehensive due diligence, market assessment, and project evaluation for resource and industrial opportunities.
+                  </p>
+                </div>
+                {expandedSector !== 'investors' && (
+                  <p className="text-xs text-copper mt-2">Click to expand</p>
+                )}
               </div>
 
               {/* Industrial & Technology Sectors */}
-              <div className="card-institutional">
-                <h3 className="text-lg font-bold text-foreground mb-4">Industrial & Technology Sectors</h3>
-                <p className="text-body text-muted-foreground">
-                  Research support, technology assessment, and long-term planning for emerging industrial initiatives.
-                </p>
+              <div 
+                className="cursor-pointer p-6 rounded-lg border border-border bg-card hover:border-copper transition-all"
+                onClick={() => setExpandedSector(expandedSector === 'industrial' ? null : 'industrial')}
+              >
+                <h3 className="text-lg font-bold text-foreground mb-2">Industrial & Technology Sectors</h3>
+                <div className={`overflow-hidden transition-all duration-300 ${expandedSector === 'industrial' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-body text-muted-foreground">
+                    Research support, technology assessment, and long-term planning for emerging industrial initiatives.
+                  </p>
+                </div>
+                {expandedSector !== 'industrial' && (
+                  <p className="text-xs text-copper mt-2">Click to expand</p>
+                )}
               </div>
             </div>
           </div>
