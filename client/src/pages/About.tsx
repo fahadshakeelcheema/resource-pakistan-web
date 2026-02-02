@@ -199,7 +199,7 @@ export default function About() {
         <section className="py-20 md:py-28 section-green border-t border-border">
           <div className="container">
             <div className="mb-16">
-              <h2 className="text-heading">
+              <h2 className="text-heading" style={{textAlign: 'right'}}>
                 <span className="section-number" style={{color: '#ffffff'}}>4.</span>Ethics, Compliance, and Confidentiality
               </h2>
             </div>
