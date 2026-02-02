@@ -23,7 +23,7 @@ export default function Technology() {
         </section>
 
         {/* Section 1: Technology Strategy */}
-        <section className="py-20 md:py-28 section-accent border-t border-border">
+        <section className="py-20 md:py-28 section-cream border-t border-border">
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">
@@ -88,7 +88,7 @@ export default function Technology() {
         </section>
 
         {/* Section 3: Long-Term Outlook */}
-        <section className="py-20 md:py-28 section-accent border-t border-border">
+        <section className="py-20 md:py-28 section-cream border-t border-border">
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">

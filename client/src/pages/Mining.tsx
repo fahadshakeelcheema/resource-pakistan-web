@@ -135,7 +135,7 @@ export default function Mining() {
         </section>
 
         {/* Section 4: Technical Knowledge */}
-        <section className="py-20 md:py-28 section-accent border-t border-border">
+        <section className="py-20 md:py-28 section-cream border-t border-border">
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">

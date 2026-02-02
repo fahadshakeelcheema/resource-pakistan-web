@@ -23,7 +23,7 @@ export default function Consultancy() {
         </section>
 
         {/* Section 1: Our Consultancy Approach */}
-        <section className="py-20 md:py-28 section-accent border-t border-border">
+        <section className="py-20 md:py-28 section-cream border-t border-border">
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">
@@ -88,7 +88,7 @@ export default function Consultancy() {
         </section>
 
         {/* Section 3: Client Sectors */}
-        <section className="py-20 md:py-28 section-accent border-t border-border">
+        <section className="py-20 md:py-28 section-cream border-t border-border">
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">

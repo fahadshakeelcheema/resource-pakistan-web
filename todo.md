@@ -130,3 +130,14 @@
 - [x] Apply alternating backgrounds to About, Mining, and other pages
 - [x] Test contrast ratios (WCAG AA compliance)
 - [x] Verify readability on both background colors
+
+## Apply Alternating Backgrounds to All Pages
+
+- [x] Audit About page sections and apply proper green/cream alternating
+- [x] Audit Mining page sections and apply proper green/cream alternating
+- [x] Audit Consultancy page sections and apply proper green/cream alternating
+- [x] Audit Technology page sections and apply proper green/cream alternating
+- [x] Audit Governance page sections and apply proper green/cream alternating
+- [x] Audit Contact page and apply appropriate background
+- [x] Verify text readability on all pages
+- [x] Test all interactive elements on colored backgrounds

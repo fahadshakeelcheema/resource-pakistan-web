@@ -81,7 +81,8 @@ export default function Contact() {
         </section>
 
         {/* Contact Information and Form */}
-        <section className="container py-20 md:py-24 border-t border-border">
+        <section className="section-cream py-20 md:py-24 border-t border-border">
+          <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             {/* Company Information */}
             <div className="md:col-span-1">
@@ -236,10 +237,12 @@ export default function Contact() {
               </form>
             </div>
           </div>
+          </div>
         </section>
 
         {/* Additional Information */}
-        <section className="container py-20 md:py-24 border-t border-border">
+        <section className="section-green py-20 md:py-24 border-t border-border">
+          <div className="container">
           <div className="max-w-3xl">
             <h2 className="text-2xl font-bold text-foreground mb-6" style={{ fontFamily: "'Crimson Text', serif" }}>
               Confidentiality & Professional Standards
@@ -250,6 +253,7 @@ export default function Contact() {
             <p className="text-base text-foreground leading-relaxed mt-6">
               Our team will review your inquiry and respond within 2-3 business days. For time-sensitive matters, please indicate this in your message.
             </p>
+          </div>
           </div>
         </section>
       </main>

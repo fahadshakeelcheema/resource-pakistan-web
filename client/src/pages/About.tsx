@@ -105,7 +105,7 @@ export default function About() {
         </section>
 
         {/* Section 3: Expertise and Experience */}
-        <section className="py-20 md:py-28 section-accent border-t border-border">
+        <section className="py-20 md:py-28 section-cream border-t border-border">
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">
@@ -148,7 +148,7 @@ export default function About() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 section-accent border-t border-border">
+        <section className="py-16 md:py-24 section-cream border-t border-border">
           <div className="container text-center">
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               To learn more about our services or discuss a potential engagement, please contact us.
