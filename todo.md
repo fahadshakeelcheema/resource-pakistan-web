@@ -183,3 +183,9 @@
 - [x] Governance page: Convert Ethical Principles from click-to-expand to hover-to-expand
 - [x] Home page: Convert Our Approach from click-to-expand to hover-to-expand
 - [x] Home page: Convert Strategic Sectors from click-to-expand to hover-to-expand
+
+## Mining Page Visual Improvements
+
+- [x] Redesign Feasibility-Driven Resource Development diagram for better readability
+- [x] Replace Pakistan's Geological Context image with better visual representation
+- [x] Add custom SVG diagram to Technical Knowledge and Expertise section

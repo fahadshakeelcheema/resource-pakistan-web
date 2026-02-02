@@ -48,39 +48,51 @@ export default function Mining() {
                 </p>
               </div>
               
-              {/* Icon Right - Mining Pickaxe and Layers */}
+              {/* Icon Right - Feasibility Process Flow Diagram */}
               <div className="flex items-center justify-center">
                 <svg 
-                  viewBox="0 0 400 400" 
+                  viewBox="0 0 400 450" 
                   className="w-full max-w-md h-auto"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  {/* Geological Layers */}
-                  <rect x="50" y="100" width="300" height="40" fill="#2d5a3d" opacity="0.9" />
-                  <rect x="50" y="145" width="300" height="35" fill="#2d5a3d" opacity="0.7" />
-                  <rect x="50" y="185" width="300" height="45" fill="#2d5a3d" opacity="0.5" />
-                  <rect x="50" y="235" width="300" height="40" fill="#2d5a3d" opacity="0.3" />
+                  {/* Title */}
+                  <text x="200" y="30" fontSize="18" fill="#095d29" textAnchor="middle" fontWeight="bold">Feasibility Process</text>
                   
-                  {/* Mineral Deposit Indicators */}
-                  <circle cx="120" cy="160" r="8" fill="#095d29" />
-                  <circle cx="180" cy="205" r="10" fill="#095d29" />
-                  <circle cx="250" cy="170" r="7" fill="#095d29" />
-                  <circle cx="290" cy="250" r="9" fill="#095d29" />
+                  {/* Step 1: Geological Assessment */}
+                  <rect x="100" y="60" width="200" height="60" fill="#2d5a3d" rx="8" />
+                  <text x="200" y="85" fontSize="14" fill="#ffffff" textAnchor="middle" fontWeight="bold">Geological Assessment</text>
+                  <text x="200" y="105" fontSize="11" fill="#c8bfb6" textAnchor="middle">Mineral deposits & reserves</text>
                   
-                  {/* Pickaxe Tool */}
-                  <g transform="translate(200, 300)">
-                    {/* Handle */}
-                    <rect x="-6" y="-80" width="12" height="100" fill="#6b6259" rx="2" />
-                    {/* Pickaxe Head */}
-                    <polygon points="-40,-90 40,-90 30,-70 -30,-70" fill="#2d5a3d" />
-                    <polygon points="-5,-90 5,-90 5,-110 -5,-110" fill="#2d5a3d" />
-                  </g>
+                  {/* Arrow Down */}
+                  <line x1="200" y1="120" x2="200" y2="145" stroke="#095d29" strokeWidth="3" />
+                  <polygon points="200,150 195,140 205,140" fill="#095d29" />
                   
-                  {/* Layer Labels */}
-                  <text x="360" y="125" fontSize="12" fill="#2d5a3d" textAnchor="end">Surface</text>
-                  <text x="360" y="165" fontSize="12" fill="#2d5a3d" textAnchor="end">Sediment</text>
-                  <text x="360" y="210" fontSize="12" fill="#2d5a3d" textAnchor="end">Ore Layer</text>
-                  <text x="360" y="255" fontSize="12" fill="#2d5a3d" textAnchor="end">Bedrock</text>
+                  {/* Step 2: Economic Viability */}
+                  <rect x="100" y="150" width="200" height="60" fill="#2d5a3d" rx="8" />
+                  <text x="200" y="175" fontSize="14" fill="#ffffff" textAnchor="middle" fontWeight="bold">Economic Viability</text>
+                  <text x="200" y="195" fontSize="11" fill="#c8bfb6" textAnchor="middle">Market analysis & ROI</text>
+                  
+                  {/* Arrow Down */}
+                  <line x1="200" y1="210" x2="200" y2="235" stroke="#095d29" strokeWidth="3" />
+                  <polygon points="200,240 195,230 205,230" fill="#095d29" />
+                  
+                  {/* Step 3: Regulatory Compliance */}
+                  <rect x="100" y="240" width="200" height="60" fill="#2d5a3d" rx="8" />
+                  <text x="200" y="265" fontSize="14" fill="#ffffff" textAnchor="middle" fontWeight="bold">Regulatory Compliance</text>
+                  <text x="200" y="285" fontSize="11" fill="#c8bfb6" textAnchor="middle">Environmental & legal</text>
+                  
+                  {/* Arrow Down */}
+                  <line x1="200" y1="300" x2="200" y2="325" stroke="#095d29" strokeWidth="3" />
+                  <polygon points="200,330 195,320 205,320" fill="#095d29" />
+                  
+                  {/* Step 4: Implementation Planning */}
+                  <rect x="100" y="330" width="200" height="60" fill="#095d29" rx="8" />
+                  <text x="200" y="355" fontSize="14" fill="#ffffff" textAnchor="middle" fontWeight="bold">Implementation Plan</text>
+                  <text x="200" y="375" fontSize="11" fill="#c8bfb6" textAnchor="middle">Timeline & resources</text>
+                  
+                  {/* Checkmark at bottom */}
+                  <circle cx="200" cy="420" r="20" fill="#095d29" />
+                  <path d="M 190 420 L 197 427 L 210 410" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
             </div>
@@ -186,15 +198,51 @@ export default function Mining() {
                   Our work integrates geological data, tectonic analysis, and regional mineral surveys to provide comprehensive assessment of resource opportunities and extraction viability.
                 </p>
               </div>
-              <div className="card-institutional p-0 overflow-hidden">
-                <img 
-                  src="/images/pakistan-tectonic-map.jpg" 
-                  alt="Pakistan Geological and Tectonic Map" 
+              <div className="card-institutional p-6">
+                <svg 
+                  viewBox="0 0 400 500" 
                   className="w-full h-auto"
-                />
-                <div className="p-4 bg-muted/30">
-                  <p className="text-sm text-muted-foreground">Pakistan's tectonic structure and geological formations</p>
-                </div>
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Title */}
+                  <text x="200" y="30" fontSize="18" fill="#095d29" textAnchor="middle" fontWeight="bold">Pakistan's Mineral Regions</text>
+                  
+                  {/* Simplified Pakistan Map Outline */}
+                  <path d="M 150 80 L 180 70 L 220 80 L 250 70 L 270 90 L 280 120 L 290 160 L 285 200 L 270 240 L 250 280 L 230 320 L 210 360 L 190 400 L 170 420 L 150 410 L 130 380 L 120 340 L 110 300 L 100 260 L 95 220 L 100 180 L 110 140 L 130 100 Z" 
+                    fill="#f5f1e8" 
+                    stroke="#2d5a3d" 
+                    strokeWidth="2" />
+                  
+                  {/* Balochistan Region (Southwest) */}
+                  <circle cx="140" cy="320" r="40" fill="#2d5a3d" opacity="0.3" />
+                  <text x="140" y="315" fontSize="13" fill="#095d29" textAnchor="middle" fontWeight="bold">Balochistan</text>
+                  <text x="140" y="332" fontSize="10" fill="#2d5a3d" textAnchor="middle">Copper, Gold</text>
+                  
+                  {/* KPK Region (Northwest) */}
+                  <circle cx="180" cy="140" r="35" fill="#2d5a3d" opacity="0.3" />
+                  <text x="180" y="135" fontSize="13" fill="#095d29" textAnchor="middle" fontWeight="bold">KPK</text>
+                  <text x="180" y="150" fontSize="10" fill="#2d5a3d" textAnchor="middle">Chromite, Coal</text>
+                  
+                  {/* Punjab Region (East) */}
+                  <circle cx="220" cy="240" r="32" fill="#2d5a3d" opacity="0.3" />
+                  <text x="220" y="235" fontSize="13" fill="#095d29" textAnchor="middle" fontWeight="bold">Punjab</text>
+                  <text x="220" y="250" fontSize="10" fill="#2d5a3d" textAnchor="middle">Rock Salt, Coal</text>
+                  
+                  {/* Mineral Deposit Markers */}
+                  <circle cx="130" cy="300" r="5" fill="#095d29" />
+                  <circle cx="155" cy="340" r="5" fill="#095d29" />
+                  <circle cx="170" cy="125" r="5" fill="#095d29" />
+                  <circle cx="195" cy="150" r="5" fill="#095d29" />
+                  <circle cx="210" cy="230" r="5" fill="#095d29" />
+                  <circle cx="235" cy="250" r="5" fill="#095d29" />
+                  
+                  {/* Legend */}
+                  <rect x="50" y="450" width="300" height="40" fill="#f5f1e8" stroke="#2d5a3d" strokeWidth="1" rx="4" />
+                  <circle cx="70" cy="470" r="5" fill="#095d29" />
+                  <text x="85" y="475" fontSize="11" fill="#2d5a3d">Major Mineral Deposits</text>
+                  <circle cx="230" cy="470" r="15" fill="#2d5a3d" opacity="0.3" />
+                  <text x="255" y="475" fontSize="11" fill="#2d5a3d">Resource Regions</text>
+                </svg>
               </div>
             </div>
           </div>
@@ -209,13 +257,59 @@ export default function Mining() {
               </h2>
             </div>
 
-            <div className="max-w-3xl">
-              <p className="text-body mb-6">
-                Our team brings together professionals with experience in geological assessment, mining engineering, environmental impact analysis, and institutional planning. We have worked on projects across Pakistan's major mineral-bearing regions, developing deep understanding of local geology, regulatory requirements, and institutional dynamics.
-              </p>
-              <p className="text-body">
-                We combine technical rigor with institutional awareness, ensuring that our recommendations are both analytically sound and operationally feasible within Pakistan's policy and governance frameworks.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-body mb-6">
+                  Our team brings together professionals with experience in geological assessment, mining engineering, environmental impact analysis, and institutional planning. We have worked on projects across Pakistan's major mineral-bearing regions, developing deep understanding of local geology, regulatory requirements, and institutional dynamics.
+                </p>
+                <p className="text-body">
+                  We combine technical rigor with institutional awareness, ensuring that our recommendations are both analytically sound and operationally feasible within Pakistan's policy and governance frameworks.
+                </p>
+              </div>
+              
+              {/* Multidisciplinary Expertise Diagram */}
+              <div className="flex items-center justify-center">
+                <svg 
+                  viewBox="0 0 400 400" 
+                  className="w-full max-w-md h-auto"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Central Hub */}
+                  <circle cx="200" cy="200" r="50" fill="#095d29" />
+                  <text x="200" y="195" fontSize="14" fill="#ffffff" textAnchor="middle" fontWeight="bold">Integrated</text>
+                  <text x="200" y="212" fontSize="14" fill="#ffffff" textAnchor="middle" fontWeight="bold">Expertise</text>
+                  
+                  {/* Geological Assessment (Top) */}
+                  <circle cx="200" cy="80" r="45" fill="#2d5a3d" />
+                  <text x="200" y="78" fontSize="12" fill="#ffffff" textAnchor="middle" fontWeight="bold">Geological</text>
+                  <text x="200" y="92" fontSize="12" fill="#ffffff" textAnchor="middle" fontWeight="bold">Assessment</text>
+                  <line x1="200" y1="125" x2="200" y2="150" stroke="#2d5a3d" strokeWidth="3" />
+                  
+                  {/* Mining Engineering (Right) */}
+                  <circle cx="320" cy="200" r="45" fill="#2d5a3d" />
+                  <text x="320" y="198" fontSize="12" fill="#ffffff" textAnchor="middle" fontWeight="bold">Mining</text>
+                  <text x="320" y="212" fontSize="12" fill="#ffffff" textAnchor="middle" fontWeight="bold">Engineering</text>
+                  <line x1="275" y1="200" x2="250" y2="200" stroke="#2d5a3d" strokeWidth="3" />
+                  
+                  {/* Environmental Analysis (Bottom Right) */}
+                  <circle cx="280" cy="310" r="45" fill="#2d5a3d" />
+                  <text x="280" y="305" fontSize="12" fill="#ffffff" textAnchor="middle" fontWeight="bold">Environmental</text>
+                  <text x="280" y="319" fontSize="12" fill="#ffffff" textAnchor="middle" fontWeight="bold">Analysis</text>
+                  <line x1="245" y1="235" x2="265" y2="270" stroke="#2d5a3d" strokeWidth="3" />
+                  
+                  {/* Institutional Planning (Bottom Left) */}
+                  <circle cx="120" cy="310" r="45" fill="#2d5a3d" />
+                  <text x="120" y="305" fontSize="12" fill="#ffffff" textAnchor="middle" fontWeight="bold">Institutional</text>
+                  <text x="120" y="319" fontSize="12" fill="#ffffff" textAnchor="middle" fontWeight="bold">Planning</text>
+                  <line x1="155" y1="235" x2="135" y2="270" stroke="#2d5a3d" strokeWidth="3" />
+                  
+                  {/* Regulatory Compliance (Left) */}
+                  <circle cx="80" cy="200" r="45" fill="#2d5a3d" />
+                  <text x="80" y="198" fontSize="12" fill="#ffffff" textAnchor="middle" fontWeight="bold">Regulatory</text>
+                  <text x="80" y="212" fontSize="12" fill="#ffffff" textAnchor="middle" fontWeight="bold">Compliance</text>
+                  <line x1="125" y1="200" x2="150" y2="200" stroke="#2d5a3d" strokeWidth="3" />
+                </svg>
+              </div>
             </div>
           </div>
         </section>
