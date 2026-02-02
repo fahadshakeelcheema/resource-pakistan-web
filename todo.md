@@ -110,3 +110,12 @@
 ## Reorder Core Verticals Section
 
 - [x] Reorder services: 1. Consultancy & Advisory, 2. Mining & Resources, 3. EVs & Technology, 4. Industrial Planning
+
+## Update Color Scheme to Green
+
+- [x] Extract green color values from Resource Pakistan logo
+- [x] Update CSS variables in index.css (primary, accent colors)
+- [x] Update border colors in components (circular service icons, cards)
+- [x] Update hover states and interactive elements
+- [x] Verify text contrast and readability across all pages
+- [x] Test on light and dark backgrounds

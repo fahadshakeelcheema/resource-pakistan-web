@@ -71,7 +71,7 @@ export default function Home() {
                 className="flex flex-col items-center text-center group cursor-pointer"
                 onClick={() => setExpandedService(expandedService === 'consultancy' ? null : 'consultancy')}
               >
-                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-copper transition-all group-hover:border-terracotta group-hover:shadow-2xl">
+                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-green-primary transition-all group-hover:border-green-light group-hover:shadow-2xl">
                   <img 
                     src="/images/service-consultancy.jpg" 
                     alt="Consultancy & Advisory" 
@@ -85,7 +85,7 @@ export default function Home() {
                   </p>
                 </div>
                 {expandedService !== 'consultancy' && (
-                  <p className="text-xs text-copper mt-2">Click to learn more</p>
+                  <p className="text-xs text-green-primary mt-2">Click to learn more</p>
                 )}
               </div>
 
@@ -94,7 +94,7 @@ export default function Home() {
                 className="flex flex-col items-center text-center group cursor-pointer"
                 onClick={() => setExpandedService(expandedService === 'mining' ? null : 'mining')}
               >
-                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-copper transition-all group-hover:border-terracotta group-hover:shadow-2xl">
+                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-green-primary transition-all group-hover:border-green-light group-hover:shadow-2xl">
                   <img 
                     src="/images/service-mining.jpg" 
                     alt="Mining & Resources" 
@@ -108,7 +108,7 @@ export default function Home() {
                   </p>
                 </div>
                 {expandedService !== 'mining' && (
-                  <p className="text-xs text-copper mt-2">Click to learn more</p>
+                  <p className="text-xs text-green-primary mt-2">Click to learn more</p>
                 )}
               </div>
 
@@ -117,7 +117,7 @@ export default function Home() {
                 className="flex flex-col items-center text-center group cursor-pointer"
                 onClick={() => setExpandedService(expandedService === 'ev' ? null : 'ev')}
               >
-                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-copper transition-all group-hover:border-terracotta group-hover:shadow-2xl">
+                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-green-primary transition-all group-hover:border-green-light group-hover:shadow-2xl">
                   <img 
                     src="/images/service-ev-technology.jpg" 
                     alt="Electric Vehicles & Technology" 
@@ -131,7 +131,7 @@ export default function Home() {
                   </p>
                 </div>
                 {expandedService !== 'ev' && (
-                  <p className="text-xs text-copper mt-2">Click to learn more</p>
+                  <p className="text-xs text-green-primary mt-2">Click to learn more</p>
                 )}
               </div>
 
@@ -140,7 +140,7 @@ export default function Home() {
                 className="flex flex-col items-center text-center group cursor-pointer"
                 onClick={() => setExpandedService(expandedService === 'industrial' ? null : 'industrial')}
               >
-                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-copper transition-all group-hover:border-terracotta group-hover:shadow-2xl">
+                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-green-primary transition-all group-hover:border-green-light group-hover:shadow-2xl">
                   <img 
                     src="/images/service-industrial-planning.jpg" 
                     alt="Industrial Planning" 
@@ -154,7 +154,7 @@ export default function Home() {
                   </p>
                 </div>
                 {expandedService !== 'industrial' && (
-                  <p className="text-xs text-copper mt-2">Click to learn more</p>
+                  <p className="text-xs text-green-primary mt-2">Click to learn more</p>
                 )}
               </div>
             </div>
@@ -177,7 +177,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Feasibility-Driven Planning */}
               <div 
-                className="cursor-pointer p-6 rounded-lg border border-border hover:border-copper transition-all"
+                className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
                 onClick={() => setExpandedApproach(expandedApproach === 'feasibility' ? null : 'feasibility')}
               >
                 <h3 className="text-xl font-bold text-foreground mb-2">Feasibility-Driven Planning</h3>
@@ -187,13 +187,13 @@ export default function Home() {
                   </p>
                 </div>
                 {expandedApproach !== 'feasibility' && (
-                  <p className="text-xs text-copper mt-2">Click to expand</p>
+                  <p className="text-xs text-green-primary mt-2">Click to expand</p>
                 )}
               </div>
 
               {/* Institutional Alignment */}
               <div 
-                className="cursor-pointer p-6 rounded-lg border border-border hover:border-copper transition-all"
+                className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
                 onClick={() => setExpandedApproach(expandedApproach === 'institutional' ? null : 'institutional')}
               >
                 <h3 className="text-xl font-bold text-foreground mb-2">Institutional Alignment</h3>
@@ -203,13 +203,13 @@ export default function Home() {
                   </p>
                 </div>
                 {expandedApproach !== 'institutional' && (
-                  <p className="text-xs text-copper mt-2">Click to expand</p>
+                  <p className="text-xs text-green-primary mt-2">Click to expand</p>
                 )}
               </div>
 
               {/* Responsible Development */}
               <div 
-                className="cursor-pointer p-6 rounded-lg border border-border hover:border-copper transition-all"
+                className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
                 onClick={() => setExpandedApproach(expandedApproach === 'responsible' ? null : 'responsible')}
               >
                 <h3 className="text-xl font-bold text-foreground mb-2">Responsible Development</h3>
@@ -219,13 +219,13 @@ export default function Home() {
                   </p>
                 </div>
                 {expandedApproach !== 'responsible' && (
-                  <p className="text-xs text-copper mt-2">Click to expand</p>
+                  <p className="text-xs text-green-primary mt-2">Click to expand</p>
                 )}
               </div>
 
               {/* Multidisciplinary Expertise */}
               <div 
-                className="cursor-pointer p-6 rounded-lg border border-border hover:border-copper transition-all"
+                className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
                 onClick={() => setExpandedApproach(expandedApproach === 'multidisciplinary' ? null : 'multidisciplinary')}
               >
                 <h3 className="text-xl font-bold text-foreground mb-2">Multidisciplinary Expertise</h3>
@@ -235,7 +235,7 @@ export default function Home() {
                   </p>
                 </div>
                 {expandedApproach !== 'multidisciplinary' && (
-                  <p className="text-xs text-copper mt-2">Click to expand</p>
+                  <p className="text-xs text-green-primary mt-2">Click to expand</p>
                 )}
               </div>
             </div>
@@ -254,7 +254,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Government Bodies & Policy Institutions */}
               <div 
-                className="cursor-pointer p-6 rounded-lg border border-border bg-card hover:border-copper transition-all"
+                className="cursor-pointer p-6 rounded-lg border border-border bg-card hover:border-green-primary transition-all"
                 onClick={() => setExpandedSector(expandedSector === 'government' ? null : 'government')}
               >
                 <h3 className="text-lg font-bold text-foreground mb-2">Government Bodies & Policy Institutions</h3>
@@ -264,13 +264,13 @@ export default function Home() {
                   </p>
                 </div>
                 {expandedSector !== 'government' && (
-                  <p className="text-xs text-copper mt-2">Click to expand</p>
+                  <p className="text-xs text-green-primary mt-2">Click to expand</p>
                 )}
               </div>
 
               {/* Investors & Strategic Partners */}
               <div 
-                className="cursor-pointer p-6 rounded-lg border border-border bg-card hover:border-copper transition-all"
+                className="cursor-pointer p-6 rounded-lg border border-border bg-card hover:border-green-primary transition-all"
                 onClick={() => setExpandedSector(expandedSector === 'investors' ? null : 'investors')}
               >
                 <h3 className="text-lg font-bold text-foreground mb-2">Investors & Strategic Partners</h3>
@@ -280,13 +280,13 @@ export default function Home() {
                   </p>
                 </div>
                 {expandedSector !== 'investors' && (
-                  <p className="text-xs text-copper mt-2">Click to expand</p>
+                  <p className="text-xs text-green-primary mt-2">Click to expand</p>
                 )}
               </div>
 
               {/* Industrial & Technology Sectors */}
               <div 
-                className="cursor-pointer p-6 rounded-lg border border-border bg-card hover:border-copper transition-all"
+                className="cursor-pointer p-6 rounded-lg border border-border bg-card hover:border-green-primary transition-all"
                 onClick={() => setExpandedSector(expandedSector === 'industrial' ? null : 'industrial')}
               >
                 <h3 className="text-lg font-bold text-foreground mb-2">Industrial & Technology Sectors</h3>
@@ -296,7 +296,7 @@ export default function Home() {
                   </p>
                 </div>
                 {expandedSector !== 'industrial' && (
-                  <p className="text-xs text-copper mt-2">Click to expand</p>
+                  <p className="text-xs text-green-primary mt-2">Click to expand</p>
                 )}
               </div>
             </div>

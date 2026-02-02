@@ -77,19 +77,19 @@
   --accent: #1e3a5f;
   --accent-foreground: #f5f3f0;
   
-  /* Earth-tone accents for resource/geological context */
-  --earth-copper: #B87333;
-  --earth-terracotta: #C65D3B;
-  --earth-slate: #6B7280;
-  --earth-sand: #D4A574;
-  --earth-deep: #8B4513;
+  /* Green accents from Resource Pakistan logo */
+  --green-primary: #2D7A3E;
+  --green-light: #3A9B4F;
+  --green-dark: #1F5A2C;
+  --green-muted: #5FAD6F;
+  --green-deep: #164A23;
   
-  /* Tailwind color mappings for earth tones */
-  --color-earth-copper: var(--earth-copper);
-  --color-earth-terracotta: var(--earth-terracotta);
-  --color-earth-slate: var(--earth-slate);
-  --color-earth-sand: var(--earth-sand);
-  --color-earth-deep: var(--earth-deep);
+  /* Tailwind color mappings for green tones */
+  --color-green-primary: var(--green-primary);
+  --color-green-light: var(--green-light);
+  --color-green-dark: var(--green-dark);
+  --color-green-muted: var(--green-muted);
+  --color-green-deep: var(--green-deep);
   
   /* Destructive for alerts */
   --destructive: #c41e3a;
@@ -264,19 +264,19 @@
     background-blend-mode: overlay;
   }
   
-  /* Section Divider - Minimalist thin line with earth-tone accent */
+  /* Section Divider - Minimalist thin line with green accent */
   .section-divider {
     @apply my-16;
-    border-top: 1px solid var(--earth-copper);
+    border-top: 1px solid var(--green-primary);
   }
   
-  /* Earth-tone border utilities */
-  .border-earth-copper {
-    border-color: var(--earth-copper);
+  /* Green border utilities */
+  .border-green-primary {
+    border-color: var(--green-primary);
   }
   
-  .border-earth-terracotta {
-    border-color: var(--earth-terracotta);
+  .border-green-light {
+    border-color: var(--green-light);
   }
   
   /* Numbered Section Header */
@@ -330,13 +330,13 @@
   /* Institutional card - minimal border with subtle shadow */
   .card-institutional {
     @apply p-8 bg-card;
-    border: 1px solid var(--earth-copper);
+    border: 1px solid var(--green-primary);
     transition: all 0.3s ease-out;
   }
   
   .card-institutional:hover {
     @apply shadow-md;
-    border-color: var(--earth-terracotta);
+    border-color: var(--green-light);
   }
   
   /* Accent line above section titles */
