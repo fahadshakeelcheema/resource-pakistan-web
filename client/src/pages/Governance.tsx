@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -7,6 +8,12 @@ import Footer from "@/components/Footer";
  * Ethics, compliance, responsibility, stakeholder coordination
  */
 export default function Governance() {
+  const [expandedPrinciple, setExpandedPrinciple] = useState<string | null>(null);
+
+  const togglePrinciple = (principle: string) => {
+    setExpandedPrinciple(expandedPrinciple === principle ? null : principle);
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
@@ -22,7 +29,7 @@ export default function Governance() {
           </div>
         </section>
 
-        {/* Section 1: Governance Framework */}
+        {/* Section 1: Governance Framework with Icon */}
         <section className="py-20 md:py-28 section-cream border-t border-border">
           <div className="container">
             <div className="mb-16">
@@ -31,57 +38,135 @@ export default function Governance() {
               </h2>
             </div>
 
-            <div className="max-w-3xl">
-              <p className="text-body mb-6">
-                Resource Pakistan operates under strict ethical, compliance, and governance standards. Our work is structured to support institutional decision-making while maintaining confidentiality, transparency, and accountability. We understand that our recommendations may inform policy and institutional decisions, and we structure our engagement accordingly.
-              </p>
-              <p className="text-body">
-                We are committed to responsible resource and industrial development that integrates environmental protection, socio-economic considerations, and long-term sustainability. All our work is subject to institutional review and designed to withstand scrutiny from government bodies, policy analysts, and stakeholder groups.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Icon Left - Balance/Scales of Justice */}
+              <div className="flex items-center justify-center">
+                <svg 
+                  viewBox="0 0 400 400" 
+                  className="w-full max-w-md h-auto"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Central Pillar */}
+                  <rect x="190" y="150" width="20" height="180" fill="#2d5a3d" />
+                  <rect x="170" y="320" width="60" height="15" fill="#095d29" rx="2" />
+                  
+                  {/* Balance Beam */}
+                  <rect x="100" y="145" width="200" height="10" fill="#2d5a3d" rx="2" />
+                  
+                  {/* Left Scale */}
+                  <line x1="120" y1="155" x2="100" y2="200" stroke="#2d5a3d" strokeWidth="2" />
+                  <line x1="120" y1="155" x2="140" y2="200" stroke="#2d5a3d" strokeWidth="2" />
+                  <path d="M 80 200 L 100 200 L 120 220 L 100 220 L 80 200 Z" fill="#095d29" stroke="#2d5a3d" strokeWidth="2" />
+                  <path d="M 100 200 L 120 200 L 140 220 L 120 220 L 100 200 Z" fill="#095d29" stroke="#2d5a3d" strokeWidth="2" />
+                  
+                  {/* Right Scale */}
+                  <line x1="280" y1="155" x2="260" y2="200" stroke="#2d5a3d" strokeWidth="2" />
+                  <line x1="280" y1="155" x2="300" y2="200" stroke="#2d5a3d" strokeWidth="2" />
+                  <path d="M 240 200 L 260 200 L 280 220 L 260 220 L 240 200 Z" fill="#095d29" stroke="#2d5a3d" strokeWidth="2" />
+                  <path d="M 260 200 L 280 200 L 300 220 L 280 220 L 260 200 Z" fill="#095d29" stroke="#2d5a3d" strokeWidth="2" />
+                  
+                  {/* Center Pivot */}
+                  <circle cx="200" cy="150" r="8" fill="#095d29" stroke="#2d5a3d" strokeWidth="2" />
+                  
+                  {/* Decorative Elements - Governance Symbols */}
+                  <circle cx="110" cy="210" r="6" fill="#ffffff" opacity="0.7" />
+                  <circle cx="270" cy="210" r="6" fill="#ffffff" opacity="0.7" />
+                  
+                  {/* Shield Symbol (Compliance) */}
+                  <path d="M 200 80 L 180 85 L 180 105 Q 180 120 200 130 Q 220 120 220 105 L 220 85 Z" fill="#2d5a3d" stroke="#095d29" strokeWidth="2" />
+                  <path d="M 195 100 L 198 105 L 205 95" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+                </svg>
+              </div>
+              
+              {/* Text Right */}
+              <div>
+                <p className="text-body mb-6">
+                  Resource Pakistan operates under strict ethical, compliance, and governance standards. Our work is structured to support institutional decision-making while maintaining confidentiality, transparency, and accountability. We understand that our recommendations may inform policy and institutional decisions, and we structure our engagement accordingly.
+                </p>
+                <p className="text-body">
+                  We are committed to responsible resource and industrial development that integrates environmental protection, socio-economic considerations, and long-term sustainability. All our work is subject to institutional review and designed to withstand scrutiny from government bodies, policy analysts, and stakeholder groups.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Section 2: Ethical Principles */}
-        <section className="py-20 md:py-28 section-light border-t border-border">
+        <section className="py-20 md:py-28 section-green border-t border-border">
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">
-                <span className="section-number">2.</span>Ethical Principles
+                <span className="section-number" style={{color: '#ffffff'}}>2.</span>Ethical Principles
               </h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Integrity and Transparency */}
-              <div className="card-institutional">
-                <h3 className="text-lg font-bold text-foreground mb-4">Integrity and Transparency</h3>
-                <p className="text-body text-muted-foreground">
-                  We operate with transparency and accountability, documenting all analysis and recommendations. Our engagement framework prioritizes clear communication of assumptions, limitations, and evidence-based conclusions.
-                </p>
+              <div 
+                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                style={{backgroundColor: '#095d29'}}
+                onClick={() => togglePrinciple('integrity')}
+              >
+                <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
+                  Integrity and Transparency
+                  <span className="ml-2 text-sm">{expandedPrinciple === 'integrity' ? '−' : '+'}</span>
+                </h3>
+                {expandedPrinciple === 'integrity' && (
+                  <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
+                    We operate with transparency and accountability, documenting all analysis and recommendations. Our engagement framework prioritizes clear communication of assumptions, limitations, and evidence-based conclusions.
+                  </p>
+                )}
               </div>
 
               {/* Confidentiality */}
-              <div className="card-institutional">
-                <h3 className="text-lg font-bold text-foreground mb-4">Confidentiality</h3>
-                <p className="text-body text-muted-foreground">
-                  We maintain strict confidentiality regarding all client information, project details, and strategic discussions. Our work respects the sensitive nature of resource development and policy planning.
-                </p>
+              <div 
+                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                style={{backgroundColor: '#095d29'}}
+                onClick={() => togglePrinciple('confidentiality')}
+              >
+                <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
+                  Confidentiality
+                  <span className="ml-2 text-sm">{expandedPrinciple === 'confidentiality' ? '−' : '+'}</span>
+                </h3>
+                {expandedPrinciple === 'confidentiality' && (
+                  <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
+                    We maintain strict confidentiality regarding all client information, project details, and strategic discussions. Our work respects the sensitive nature of resource development and policy planning.
+                  </p>
+                )}
               </div>
 
               {/* Responsible Development */}
-              <div className="card-institutional">
-                <h3 className="text-lg font-bold text-foreground mb-4">Responsible Development</h3>
-                <p className="text-body text-muted-foreground">
-                  Resource and industrial development must integrate environmental stewardship, community considerations, and long-term sustainability. We embed these principles into every engagement.
-                </p>
+              <div 
+                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                style={{backgroundColor: '#095d29'}}
+                onClick={() => togglePrinciple('responsible')}
+              >
+                <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
+                  Responsible Development
+                  <span className="ml-2 text-sm">{expandedPrinciple === 'responsible' ? '−' : '+'}</span>
+                </h3>
+                {expandedPrinciple === 'responsible' && (
+                  <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
+                    Resource and industrial development must integrate environmental stewardship, community considerations, and long-term sustainability. We embed these principles into every engagement.
+                  </p>
+                )}
               </div>
 
               {/* Institutional Alignment */}
-              <div className="card-institutional">
-                <h3 className="text-lg font-bold text-foreground mb-4">Institutional Alignment</h3>
-                <p className="text-body text-muted-foreground">
-                  Our work is structured to support institutional decision-making processes and align with Pakistan's governance frameworks, policy objectives, and long-term development priorities.
-                </p>
+              <div 
+                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                style={{backgroundColor: '#095d29'}}
+                onClick={() => togglePrinciple('alignment')}
+              >
+                <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
+                  Institutional Alignment
+                  <span className="ml-2 text-sm">{expandedPrinciple === 'alignment' ? '−' : '+'}</span>
+                </h3>
+                {expandedPrinciple === 'alignment' && (
+                  <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
+                    Our work is structured to support institutional decision-making processes and align with Pakistan's governance frameworks, policy objectives, and long-term development priorities.
+                  </p>
+                )}
               </div>
             </div>
           </div>
@@ -108,11 +193,11 @@ export default function Governance() {
         </section>
 
         {/* Section 4: Stakeholder Coordination */}
-        <section className="py-20 md:py-28 section-light border-t border-border">
+        <section className="py-20 md:py-28 section-green border-t border-border">
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">
-                <span className="section-number">4.</span>Stakeholder Coordination
+                <span className="section-number" style={{color: '#ffffff'}}>4.</span>Stakeholder Coordination
               </h2>
             </div>
 

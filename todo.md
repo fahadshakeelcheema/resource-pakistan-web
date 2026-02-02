@@ -151,3 +151,19 @@
 ## Core Principles Click-to-Expand
 
 - [x] Implement click-to-expand functionality for Core Principles cards on About page
+
+## Apply Consistent Design to All Pages
+
+- [x] Mining page: Replace stock images with custom SVG icons
+- [x] Mining page: Add click-to-expand functionality where applicable
+- [x] Mining page: Verify color scheme and text contrast
+- [x] Consultancy page: Replace stock images with custom SVG icons
+- [x] Consultancy page: Add click-to-expand functionality where applicable
+- [x] Consultancy page: Verify color scheme and text contrast
+- [x] EVs & Technology page: Replace stock images with custom SVG icons
+- [x] EVs & Technology page: Add click-to-expand functionality where applicable
+- [x] EVs & Technology page: Verify color scheme and text contrast
+- [x] Governance page: Replace stock images with custom SVG icons
+- [x] Governance page: Add click-to-expand functionality where applicable
+- [x] Governance page: Verify color scheme and text contrast
+- [x] Contact page: Verify styling consistency with other pages
