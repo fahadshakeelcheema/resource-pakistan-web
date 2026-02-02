@@ -226,7 +226,7 @@ export default function Home() {
               >
                 <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#fafafa'}}>Multidisciplinary Expertise</h3>
                 <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'multidisciplinary' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-                  <p className="text-body text-muted-foreground leading-relaxed">
+                  <p className="text-body text-muted-foreground leading-relaxed" style={{color: '#f5e3d1'}}>
                     Mining, consultancy, technology, and industrial planning require diverse expertise. Our team brings together specialists across these domains.
                   </p>
                 </div>
