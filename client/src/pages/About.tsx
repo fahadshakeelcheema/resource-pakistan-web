@@ -62,41 +62,41 @@ export default function About() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Institutional Integrity */}
-              <div className="card-institutional">
-                <h3 className="text-lg font-bold text-foreground mb-4">Institutional Integrity</h3>
-                <p className="text-body text-muted-foreground">
+              <div className="card-institutional" style={{backgroundColor: '#095d29'}}>
+                <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>Institutional Integrity</h3>
+                <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                   We operate with transparency and accountability, understanding that our work informs institutional decision-making. Every recommendation is grounded in rigorous analysis and documented evidence.
                 </p>
               </div>
 
               {/* Feasibility First */}
-              <div className="card-institutional">
-                <h3 className="text-lg font-bold text-foreground mb-4">Feasibility First</h3>
-                <p className="text-body text-muted-foreground">
+              <div className="card-institutional" style={{backgroundColor: '#095d29'}}>
+                <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>Feasibility First</h3>
+                <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                   We prioritize realistic assessment over optimistic projections. Our role is to provide decision-makers with clear understanding of opportunities, constraints, and implementation requirements.
                 </p>
               </div>
 
               {/* Responsible Development */}
-              <div className="card-institutional">
-                <h3 className="text-lg font-bold text-foreground mb-4">Responsible Development</h3>
-                <p className="text-body text-muted-foreground">
+              <div className="card-institutional" style={{backgroundColor: '#095d29'}}>
+                <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>Responsible Development</h3>
+                <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                   Resource and industrial development must integrate environmental stewardship, socio-economic considerations, and compliance. We embed these principles into every engagement.
                 </p>
               </div>
 
               {/* Multidisciplinary Approach */}
-              <div className="card-institutional">
-                <h3 className="text-lg font-bold text-foreground mb-4">Multidisciplinary Approach</h3>
-                <p className="text-body text-muted-foreground">
+              <div className="card-institutional" style={{backgroundColor: '#095d29'}}>
+                <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>Multidisciplinary Approach</h3>
+                <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                   Complex challenges require diverse expertise. We bring together specialists across mining, consultancy, technology, and industrial planning.
                 </p>
               </div>
 
               {/* Long-Term Perspective */}
-              <div className="card-institutional md:col-span-2">
-                <h3 className="text-lg font-bold text-foreground mb-4">Long-Term Perspective</h3>
-                <p className="text-body text-muted-foreground">
+              <div className="card-institutional md:col-span-2" style={{backgroundColor: '#095d29'}}>
+                <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>Long-Term Perspective</h3>
+                <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                   We view our engagements as contributions to Pakistan's long-term development trajectory, not short-term transactions. This perspective shapes our recommendations and approach.
                 </p>
               </div>
