@@ -92,3 +92,11 @@
 - [x] Test click interactions on desktop and mobile
 - [x] Verify reduced scroll length (target: ~1800px vs current ~3000px)
 - [x] Ensure smooth expand/collapse animations
+
+## Add Partner Organization Logos to Footer
+
+- [x] Process 4 new logos to remove backgrounds (CTTI, NAvtech, Huawei, AIIB)
+- [x] Copy processed logos to client/public/images/partners/
+- [x] Update Footer component with 6 logos in linear layout
+- [x] Ensure consistent sizing and spacing across all partner logos
+- [x] Test responsive behavior on mobile and desktop

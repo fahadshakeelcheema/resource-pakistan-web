@@ -21,7 +21,7 @@ export default function Footer() {
     <footer className="bg-background border-t border-border mt-24">
       <div className="container py-16">
         {/* Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12">
           {/* Company Logo */}
           <div>
             <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-32 w-auto mb-4" />
@@ -31,11 +31,15 @@ export default function Footer() {
           </div>
 
           {/* Partner Organizations */}
-          <div>
-            <h4 className="text-sm font-bold text-foreground mb-4 uppercase tracking-wider">Partner Organizations</h4>
-            <div className="flex flex-col gap-6">
-              <img src="/images/irada-logo.png" alt="Irada Pakistan" className="h-20 w-auto object-contain" />
-              <img src="/images/ministry-science-technology-logo.png" alt="Ministry of Science and Technology" className="h-20 w-auto object-contain" />
+          <div className="md:col-span-3">
+            <h4 className="text-sm font-bold text-foreground mb-6 uppercase tracking-wider">Partner Organizations</h4>
+            <div className="flex flex-wrap items-center gap-8">
+              <img src="/images/irada-logo.png" alt="Irada Pakistan" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img src="/images/ministry-science-technology-logo.png" alt="Ministry of Science and Technology" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img src="/images/partners/ctti-logo.png" alt="CTTI" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img src="/images/partners/navtech-logo.png" alt="NAvtech" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img src="/images/partners/huawei-logo.png" alt="Huawei" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img src="/images/partners/aiib-logo.png" alt="AIIB" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
             </div>
           </div>
 
