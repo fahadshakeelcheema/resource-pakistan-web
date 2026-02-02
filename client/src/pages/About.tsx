@@ -162,8 +162,8 @@ export default function About() {
 
               {/* Long-Term Perspective */}
               <div 
-                className="card-institutional md:col-span-2 transition-all hover:shadow-lg" 
-                style={{backgroundColor: '#095d29', width: '696px', marginLeft: '360px'}}
+                className="card-institutional md:col-span-2 transition-all hover:shadow-lg md:mx-auto md:max-w-2xl" 
+                style={{backgroundColor: '#095d29'}}
                 onMouseEnter={() => setHoveredPrinciple('longterm')}
                 onMouseLeave={() => setHoveredPrinciple(null)}
               >
