@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
  */
 export default function Consultancy() {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [hoveredSector, setHoveredSector] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -181,27 +182,45 @@ export default function Consultancy() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Government Bodies */}
-              <div className="card-institutional">
+              <div 
+                className="card-institutional transition-all hover:shadow-lg"
+                onMouseEnter={() => setHoveredSector('government')}
+                onMouseLeave={() => setHoveredSector(null)}
+              >
                 <h3 className="text-lg font-bold text-foreground mb-4">Government Bodies</h3>
-                <p className="text-body text-muted-foreground">
-                  Advisory services for ministries, agencies, and policy institutions. We support institutional planning and strategic decision-making.
-                </p>
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredSector === 'government' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-body text-muted-foreground">
+                    Advisory services for ministries, agencies, and policy institutions. We support institutional planning and strategic decision-making.
+                  </p>
+                </div>
               </div>
 
               {/* Think Tanks & Institutions */}
-              <div className="card-institutional">
+              <div 
+                className="card-institutional transition-all hover:shadow-lg"
+                onMouseEnter={() => setHoveredSector('thinktanks')}
+                onMouseLeave={() => setHoveredSector(null)}
+              >
                 <h3 className="text-lg font-bold text-foreground mb-4">Think Tanks & Institutions</h3>
-                <p className="text-body text-muted-foreground">
-                  Research support, policy analysis, and feasibility assessment for institutional research and planning initiatives.
-                </p>
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredSector === 'thinktanks' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-body text-muted-foreground">
+                    Research support, policy analysis, and feasibility assessment for institutional research and planning initiatives.
+                  </p>
+                </div>
               </div>
 
               {/* Strategic Partners */}
-              <div className="card-institutional">
+              <div 
+                className="card-institutional transition-all hover:shadow-lg"
+                onMouseEnter={() => setHoveredSector('partners')}
+                onMouseLeave={() => setHoveredSector(null)}
+              >
                 <h3 className="text-lg font-bold text-foreground mb-4">Strategic Partners</h3>
-                <p className="text-body text-muted-foreground">
-                  Advisory services for investors, development organizations, and strategic partners seeking to understand Pakistan's resource and industrial landscape.
-                </p>
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredSector === 'partners' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-body text-muted-foreground">
+                    Advisory services for investors, development organizations, and strategic partners seeking to understand Pakistan's resource and industrial landscape.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

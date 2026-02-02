@@ -194,3 +194,7 @@
 
 - [x] Reduce spacing between heading and content in Pakistan's Geological Context section
 - [x] Scale down Pakistan mineral regions map to align better with text height
+
+## Consultancy Page Client Sectors Hover
+
+- [x] Add hover-to-reveal functionality to Client Sectors section cards
