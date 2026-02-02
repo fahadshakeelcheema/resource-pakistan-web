@@ -174,7 +174,7 @@ export default function Home() {
               {/* Feasibility-Driven Planning */}
               <div 
                 className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
-                onClick={() => setExpandedApproach(expandedApproach === 'feasibility' ? null : 'feasibility')} style={{backgroundColor: '#65b383'}}
+                onClick={() => setExpandedApproach(expandedApproach === 'feasibility' ? null : 'feasibility')} style={{backgroundColor: '#095d29'}}
               >
                 <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#ffffff'}}>Feasibility-Driven Planning</h3>
                 <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'feasibility' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
@@ -190,7 +190,7 @@ export default function Home() {
               {/* Institutional Alignment */}
               <div 
                 className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
-                onClick={() => setExpandedApproach(expandedApproach === 'institutional' ? null : 'institutional')} style={{backgroundColor: '#65b383'}}
+                onClick={() => setExpandedApproach(expandedApproach === 'institutional' ? null : 'institutional')} style={{backgroundColor: '#095d29'}}
               >
                 <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#fafafa'}}>Institutional Alignment</h3>
                 <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'institutional' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
@@ -206,7 +206,7 @@ export default function Home() {
               {/* Responsible Development */}
               <div 
                 className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
-                onClick={() => setExpandedApproach(expandedApproach === 'responsible' ? null : 'responsible')} style={{backgroundColor: '#65b383'}}
+                onClick={() => setExpandedApproach(expandedApproach === 'responsible' ? null : 'responsible')} style={{backgroundColor: '#095d29'}}
               >
                 <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#f5f5f4'}}>Responsible Development</h3>
                 <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'responsible' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
@@ -222,7 +222,7 @@ export default function Home() {
               {/* Multidisciplinary Expertise */}
               <div 
                 className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
-                onClick={() => setExpandedApproach(expandedApproach === 'multidisciplinary' ? null : 'multidisciplinary')}
+                onClick={() => setExpandedApproach(expandedApproach === 'multidisciplinary' ? null : 'multidisciplinary')} style={{backgroundColor: '#095d29'}}
               >
                 <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#fafafa'}}>Multidisciplinary Expertise</h3>
                 <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'multidisciplinary' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
