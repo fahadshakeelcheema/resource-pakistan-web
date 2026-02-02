@@ -8,11 +8,7 @@ import Footer from "@/components/Footer";
  * Mission, principles, expertise, and ethics
  */
 export default function About() {
-  const [expandedPrinciple, setExpandedPrinciple] = useState<string | null>(null);
-
-  const togglePrinciple = (principle: string) => {
-    setExpandedPrinciple(expandedPrinciple === principle ? null : principle);
-  };
+  const [hoveredPrinciple, setHoveredPrinciple] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -98,87 +94,87 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Institutional Integrity */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => togglePrinciple('integrity')}
+                onMouseEnter={() => setHoveredPrinciple('integrity')}
+                onMouseLeave={() => setHoveredPrinciple(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Institutional Integrity
-                  <span className="ml-2 text-sm">{expandedPrinciple === 'integrity' ? '−' : '+'}</span>
                 </h3>
-                {expandedPrinciple === 'integrity' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredPrinciple === 'integrity' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     We operate with transparency and accountability, understanding that our work informs institutional decision-making. Every recommendation is grounded in rigorous analysis and documented evidence.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Feasibility First */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => togglePrinciple('feasibility')}
+                onMouseEnter={() => setHoveredPrinciple('feasibility')}
+                onMouseLeave={() => setHoveredPrinciple(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Feasibility First
-                  <span className="ml-2 text-sm">{expandedPrinciple === 'feasibility' ? '−' : '+'}</span>
                 </h3>
-                {expandedPrinciple === 'feasibility' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredPrinciple === 'feasibility' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     We prioritize realistic assessment over optimistic projections. Our role is to provide decision-makers with clear understanding of opportunities, constraints, and implementation requirements.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Responsible Development */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => togglePrinciple('responsible')}
+                onMouseEnter={() => setHoveredPrinciple('responsible')}
+                onMouseLeave={() => setHoveredPrinciple(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Responsible Development
-                  <span className="ml-2 text-sm">{expandedPrinciple === 'responsible' ? '−' : '+'}</span>
                 </h3>
-                {expandedPrinciple === 'responsible' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredPrinciple === 'responsible' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Resource and industrial development must integrate environmental stewardship, socio-economic considerations, and compliance. We embed these principles into every engagement.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Multidisciplinary Approach */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => togglePrinciple('multidisciplinary')}
+                onMouseEnter={() => setHoveredPrinciple('multidisciplinary')}
+                onMouseLeave={() => setHoveredPrinciple(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Multidisciplinary Approach
-                  <span className="ml-2 text-sm">{expandedPrinciple === 'multidisciplinary' ? '−' : '+'}</span>
                 </h3>
-                {expandedPrinciple === 'multidisciplinary' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredPrinciple === 'multidisciplinary' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Complex challenges require diverse expertise. We bring together specialists across mining, consultancy, technology, and industrial planning.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Long-Term Perspective */}
               <div 
-                className="card-institutional md:col-span-2 cursor-pointer transition-all hover:shadow-lg" 
-                style={{backgroundColor: '#095d29', width: '696px', marginLeft: '350px', marginLeft: '400px', marginLeft: '360px'}}
-                onClick={() => togglePrinciple('longterm')}
+                className="card-institutional md:col-span-2 transition-all hover:shadow-lg" 
+                style={{backgroundColor: '#095d29', width: '696px', marginLeft: '360px'}}
+                onMouseEnter={() => setHoveredPrinciple('longterm')}
+                onMouseLeave={() => setHoveredPrinciple(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Long-Term Perspective
-                  <span className="ml-2 text-sm">{expandedPrinciple === 'longterm' ? '−' : '+'}</span>
                 </h3>
-                {expandedPrinciple === 'longterm' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredPrinciple === 'longterm' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     We view our engagements as contributions to Pakistan's long-term development trajectory, not short-term transactions. This perspective shapes our recommendations and approach.
                   </p>
-                )}
+                </div>
               </div>
             </div>
           </div>

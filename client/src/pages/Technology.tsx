@@ -8,11 +8,7 @@ import Footer from "@/components/Footer";
  * Electric vehicles, emerging technologies, research-focused initiatives
  */
 export default function Technology() {
-  const [expandedArea, setExpandedArea] = useState<string | null>(null);
-
-  const toggleArea = (area: string) => {
-    setExpandedArea(expandedArea === area ? null : area);
-  };
+  const [hoveredArea, setHoveredArea] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -112,70 +108,70 @@ export default function Technology() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Electric Mobility */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => toggleArea('mobility')}
+                onMouseEnter={() => setHoveredArea('mobility')}
+                onMouseLeave={() => setHoveredArea(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Electric Mobility
-                  <span className="ml-2 text-sm">{expandedArea === 'mobility' ? '−' : '+'}</span>
                 </h3>
-                {expandedArea === 'mobility' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredArea === 'mobility' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Assessment of electric vehicle adoption, charging infrastructure, supply chain development, and policy frameworks. We support institutional planning for Pakistan's electric mobility transition.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Technology Pilot Programs */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => toggleArea('pilot')}
+                onMouseEnter={() => setHoveredArea('pilot')}
+                onMouseLeave={() => setHoveredArea(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Technology Pilot Programs
-                  <span className="ml-2 text-sm">{expandedArea === 'pilot' ? '−' : '+'}</span>
                 </h3>
-                {expandedArea === 'pilot' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredArea === 'pilot' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Research support and feasibility assessment for pilot initiatives in emerging technologies. We help institutional stakeholders understand implementation requirements and scalability pathways.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Industrial Technology Integration */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => toggleArea('industrial')}
+                onMouseEnter={() => setHoveredArea('industrial')}
+                onMouseLeave={() => setHoveredArea(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Industrial Technology Integration
-                  <span className="ml-2 text-sm">{expandedArea === 'industrial' ? '−' : '+'}</span>
                 </h3>
-                {expandedArea === 'industrial' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredArea === 'industrial' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Assessment of technology adoption in industrial sectors, supply chain optimization, and productivity enhancement. We support long-term industrial planning and competitiveness.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Research and Analysis */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => toggleArea('research')}
+                onMouseEnter={() => setHoveredArea('research')}
+                onMouseLeave={() => setHoveredArea(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Research and Analysis
-                  <span className="ml-2 text-sm">{expandedArea === 'research' ? '−' : '+'}</span>
                 </h3>
-                {expandedArea === 'research' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredArea === 'research' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Market research, technology benchmarking, and comparative analysis supporting institutional decision-making regarding technology adoption and investment priorities.
                   </p>
-                )}
+                </div>
               </div>
             </div>
           </div>

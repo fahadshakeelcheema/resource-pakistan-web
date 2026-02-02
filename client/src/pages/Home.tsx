@@ -14,10 +14,10 @@ export default function Home() {
   // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
   let { user, loading, error, isAuthenticated, logout } = useAuth();
   
-  // State for expandable sections
+  // State for hover sections
   const [hoveredService, setHoveredService] = useState<string | null>(null);
-  const [expandedApproach, setExpandedApproach] = useState<string | null>(null);
-  const [expandedSector, setExpandedSector] = useState<string | null>(null);
+  const [hoveredApproach, setHoveredApproach] = useState<string | null>(null);
+  const [hoveredSector, setHoveredSector] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -165,14 +165,15 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Feasibility-Driven Planning */}
               <div 
-                className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
-                onClick={() => setExpandedApproach(expandedApproach === 'feasibility' ? null : 'feasibility')} style={{backgroundColor: '#095d29', borderStyle: 'none'}}
+                className="p-6 rounded-lg border border-border hover:border-green-primary transition-all"
+                onMouseEnter={() => setHoveredApproach('feasibility')}
+                onMouseLeave={() => setHoveredApproach(null)}
+                style={{backgroundColor: '#095d29', borderStyle: 'none'}}
               >
                 <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#ffffff'}}>
                   Feasibility-Driven Planning
-                  <span className="ml-2 text-sm">{expandedApproach === 'feasibility' ? '−' : '+'}</span>
                 </h3>
-                <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'feasibility' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredApproach === 'feasibility' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground leading-relaxed" style={{color: '#c8bfb6'}}>
                     Every project begins with comprehensive feasibility assessment. We prioritize rigorous analysis over optimistic projections, ensuring recommendations withstand institutional scrutiny.
                   </p>
@@ -181,53 +182,53 @@ export default function Home() {
 
               {/* Institutional Alignment */}
               <div 
-                className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
-                onClick={() => setExpandedApproach(expandedApproach === 'institutional' ? null : 'institutional')} style={{backgroundColor: '#095d29', borderStyle: 'none'}}
+                className="p-6 rounded-lg border border-border hover:border-green-primary transition-all"
+                onMouseEnter={() => setHoveredApproach('institutional')}
+                onMouseLeave={() => setHoveredApproach(null)}
+                style={{backgroundColor: '#095d29', borderStyle: 'none'}}
               >
                 <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#fafafa'}}>
                   Institutional Alignment
-                  <span className="ml-2 text-sm">{expandedApproach === 'institutional' ? '−' : '+'}</span>
                 </h3>
-                <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'institutional' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredApproach === 'institutional' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground leading-relaxed" style={{color: '#c8bfb6'}}>
                     We understand the complexity of working across government, policy, and private sectors. Our work is structured to support institutional decision-making processes.
                   </p>
                 </div>
-
               </div>
 
               {/* Responsible Development */}
               <div 
-                className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
-                onClick={() => setExpandedApproach(expandedApproach === 'responsible' ? null : 'responsible')} style={{backgroundColor: '#095d29', borderStyle: 'none'}}
+                className="p-6 rounded-lg border border-border hover:border-green-primary transition-all"
+                onMouseEnter={() => setHoveredApproach('responsible')}
+                onMouseLeave={() => setHoveredApproach(null)}
+                style={{backgroundColor: '#095d29', borderStyle: 'none'}}
               >
                 <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#f5f5f4'}}>
                   Responsible Development
-                  <span className="ml-2 text-sm">{expandedApproach === 'responsible' ? '−' : '+'}</span>
                 </h3>
-                <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'responsible' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredApproach === 'responsible' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground leading-relaxed" style={{color: '#c8bfb6'}}>
                     Resource development must balance economic opportunity with environmental and socio-economic considerations. We integrate compliance and sustainability into every engagement.
                   </p>
                 </div>
-
               </div>
 
               {/* Multidisciplinary Expertise */}
               <div 
-                className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
-                onClick={() => setExpandedApproach(expandedApproach === 'multidisciplinary' ? null : 'multidisciplinary')} style={{backgroundColor: '#095d29', borderStyle: 'none'}}
+                className="p-6 rounded-lg border border-border hover:border-green-primary transition-all"
+                onMouseEnter={() => setHoveredApproach('multidisciplinary')}
+                onMouseLeave={() => setHoveredApproach(null)}
+                style={{backgroundColor: '#095d29', borderStyle: 'none'}}
               >
                 <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#fafafa'}}>
                   Multidisciplinary Expertise
-                  <span className="ml-2 text-sm">{expandedApproach === 'multidisciplinary' ? '−' : '+'}</span>
                 </h3>
-                <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'multidisciplinary' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredApproach === 'multidisciplinary' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground leading-relaxed" style={{color: '#c8bfb6'}}>
                     Mining, consultancy, technology, and industrial planning require diverse expertise. Our team brings together specialists across these domains.
                   </p>
                 </div>
-
               </div>
             </div>
           </div>
@@ -245,14 +246,14 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Government Bodies & Policy Institutions */}
               <div 
-                className="cursor-pointer p-6 rounded-lg border border-border bg-card hover:border-green-primary transition-all"
-                onClick={() => setExpandedSector(expandedSector === 'government' ? null : 'government')}
+                className="p-6 rounded-lg border border-border bg-card hover:border-green-primary transition-all"
+                onMouseEnter={() => setHoveredSector('government')}
+                onMouseLeave={() => setHoveredSector(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-2">
                   Government Bodies & Policy Institutions
-                  <span className="ml-2 text-sm">{expandedSector === 'government' ? '−' : '+'}</span>
                 </h3>
-                <div className={`overflow-hidden transition-all duration-300 ${expandedSector === 'government' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredSector === 'government' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground">
                     Advisory services, feasibility studies, and strategic planning support for institutional decision-making.
                   </p>
@@ -261,14 +262,14 @@ export default function Home() {
 
               {/* Investors & Strategic Partners */}
               <div 
-                className="cursor-pointer p-6 rounded-lg border border-border bg-card hover:border-green-primary transition-all"
-                onClick={() => setExpandedSector(expandedSector === 'investors' ? null : 'investors')}
+                className="p-6 rounded-lg border border-border bg-card hover:border-green-primary transition-all"
+                onMouseEnter={() => setHoveredSector('investors')}
+                onMouseLeave={() => setHoveredSector(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-2">
                   Investors & Strategic Partners
-                  <span className="ml-2 text-sm">{expandedSector === 'investors' ? '−' : '+'}</span>
                 </h3>
-                <div className={`overflow-hidden transition-all duration-300 ${expandedSector === 'investors' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredSector === 'investors' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground">
                     Comprehensive due diligence, market assessment, and project evaluation for resource and industrial opportunities.
                   </p>
@@ -277,14 +278,14 @@ export default function Home() {
 
               {/* Industrial & Technology Sectors */}
               <div 
-                className="cursor-pointer p-6 rounded-lg border border-border bg-card hover:border-green-primary transition-all"
-                onClick={() => setExpandedSector(expandedSector === 'industrial' ? null : 'industrial')}
+                className="p-6 rounded-lg border border-border bg-card hover:border-green-primary transition-all"
+                onMouseEnter={() => setHoveredSector('industrial')}
+                onMouseLeave={() => setHoveredSector(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-2">
                   Industrial & Technology Sectors
-                  <span className="ml-2 text-sm">{expandedSector === 'industrial' ? '−' : '+'}</span>
                 </h3>
-                <div className={`overflow-hidden transition-all duration-300 ${expandedSector === 'industrial' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredSector === 'industrial' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground">
                     Research support, technology assessment, and long-term planning for emerging industrial initiatives.
                   </p>

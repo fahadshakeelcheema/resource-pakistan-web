@@ -8,11 +8,7 @@ import Footer from "@/components/Footer";
  * Ethics, compliance, responsibility, stakeholder coordination
  */
 export default function Governance() {
-  const [expandedPrinciple, setExpandedPrinciple] = useState<string | null>(null);
-
-  const togglePrinciple = (principle: string) => {
-    setExpandedPrinciple(expandedPrinciple === principle ? null : principle);
-  };
+  const [hoveredPrinciple, setHoveredPrinciple] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -103,70 +99,70 @@ export default function Governance() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Integrity and Transparency */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => togglePrinciple('integrity')}
+                onMouseEnter={() => setHoveredPrinciple('integrity')}
+                onMouseLeave={() => setHoveredPrinciple(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Integrity and Transparency
-                  <span className="ml-2 text-sm">{expandedPrinciple === 'integrity' ? '−' : '+'}</span>
                 </h3>
-                {expandedPrinciple === 'integrity' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredPrinciple === 'integrity' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     We operate with transparency and accountability, documenting all analysis and recommendations. Our engagement framework prioritizes clear communication of assumptions, limitations, and evidence-based conclusions.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Confidentiality */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => togglePrinciple('confidentiality')}
+                onMouseEnter={() => setHoveredPrinciple('confidentiality')}
+                onMouseLeave={() => setHoveredPrinciple(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Confidentiality
-                  <span className="ml-2 text-sm">{expandedPrinciple === 'confidentiality' ? '−' : '+'}</span>
                 </h3>
-                {expandedPrinciple === 'confidentiality' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredPrinciple === 'confidentiality' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     We maintain strict confidentiality regarding all client information, project details, and strategic discussions. Our work respects the sensitive nature of resource development and policy planning.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Responsible Development */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => togglePrinciple('responsible')}
+                onMouseEnter={() => setHoveredPrinciple('responsible')}
+                onMouseLeave={() => setHoveredPrinciple(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Responsible Development
-                  <span className="ml-2 text-sm">{expandedPrinciple === 'responsible' ? '−' : '+'}</span>
                 </h3>
-                {expandedPrinciple === 'responsible' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredPrinciple === 'responsible' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Resource and industrial development must integrate environmental stewardship, community considerations, and long-term sustainability. We embed these principles into every engagement.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Institutional Alignment */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => togglePrinciple('alignment')}
+                onMouseEnter={() => setHoveredPrinciple('alignment')}
+                onMouseLeave={() => setHoveredPrinciple(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Institutional Alignment
-                  <span className="ml-2 text-sm">{expandedPrinciple === 'alignment' ? '−' : '+'}</span>
                 </h3>
-                {expandedPrinciple === 'alignment' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredPrinciple === 'alignment' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Our work is structured to support institutional decision-making processes and align with Pakistan's governance frameworks, policy objectives, and long-term development priorities.
                   </p>
-                )}
+                </div>
               </div>
             </div>
           </div>

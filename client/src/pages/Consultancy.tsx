@@ -8,11 +8,7 @@ import Footer from "@/components/Footer";
  * Advisory services, feasibility planning, stakeholder coordination
  */
 export default function Consultancy() {
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-
-  const toggleService = (service: string) => {
-    setExpandedService(expandedService === service ? null : service);
-  };
+  const [hoveredService, setHoveredService] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -105,70 +101,70 @@ export default function Consultancy() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Strategic Planning */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => toggleService('strategic')}
+                onMouseEnter={() => setHoveredService('strategic')}
+                onMouseLeave={() => setHoveredService(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Strategic Planning
-                  <span className="ml-2 text-sm">{expandedService === 'strategic' ? '−' : '+'}</span>
                 </h3>
-                {expandedService === 'strategic' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredService === 'strategic' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Long-term planning for resource development, industrial strategy, and technology initiatives. We support institutional decision-making with comprehensive analysis and feasibility assessment.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Policy Analysis */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => toggleService('policy')}
+                onMouseEnter={() => setHoveredService('policy')}
+                onMouseLeave={() => setHoveredService(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Policy Analysis
-                  <span className="ml-2 text-sm">{expandedService === 'policy' ? '−' : '+'}</span>
                 </h3>
-                {expandedService === 'policy' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredService === 'policy' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Assessment of policy frameworks, regulatory requirements, and institutional alignment. We help identify opportunities and constraints within Pakistan's governance structures.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Feasibility Assessment */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => toggleService('feasibility')}
+                onMouseEnter={() => setHoveredService('feasibility')}
+                onMouseLeave={() => setHoveredService(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Feasibility Assessment
-                  <span className="ml-2 text-sm">{expandedService === 'feasibility' ? '−' : '+'}</span>
                 </h3>
-                {expandedService === 'feasibility' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredService === 'feasibility' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Comprehensive evaluation of proposed initiatives across mining, technology, industrial planning, and development sectors. We prioritize realistic assessment and clear communication of constraints.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Stakeholder Engagement */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => toggleService('stakeholder')}
+                onMouseEnter={() => setHoveredService('stakeholder')}
+                onMouseLeave={() => setHoveredService(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Stakeholder Engagement
-                  <span className="ml-2 text-sm">{expandedService === 'stakeholder' ? '−' : '+'}</span>
                 </h3>
-                {expandedService === 'stakeholder' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredService === 'stakeholder' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Coordination across government bodies, policy institutions, private sector, and strategic partners. We facilitate institutional alignment and long-term planning processes.
                   </p>
-                )}
+                </div>
               </div>
             </div>
           </div>

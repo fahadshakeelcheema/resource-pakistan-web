@@ -8,11 +8,7 @@ import Footer from "@/components/Footer";
  * Responsible mineral development, feasibility studies, compliance
  */
 export default function Mining() {
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-
-  const toggleService = (service: string) => {
-    setExpandedService(expandedService === service ? null : service);
-  };
+  const [hoveredService, setHoveredService] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -103,70 +99,70 @@ export default function Mining() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Feasibility Studies */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => toggleService('feasibility')}
+                onMouseEnter={() => setHoveredService('feasibility')}
+                onMouseLeave={() => setHoveredService(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Feasibility Studies
-                  <span className="ml-2 text-sm">{expandedService === 'feasibility' ? '−' : '+'}</span>
                 </h3>
-                {expandedService === 'feasibility' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredService === 'feasibility' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Comprehensive assessment of mineral deposits, extraction viability, market conditions, and implementation requirements. We prioritize realistic analysis over optimistic projections.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Compliance & Regulatory Planning */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => toggleService('compliance')}
+                onMouseEnter={() => setHoveredService('compliance')}
+                onMouseLeave={() => setHoveredService(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Compliance & Regulatory Planning
-                  <span className="ml-2 text-sm">{expandedService === 'compliance' ? '−' : '+'}</span>
                 </h3>
-                {expandedService === 'compliance' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredService === 'compliance' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Navigation of Pakistan's regulatory frameworks, environmental standards, and institutional requirements. We ensure projects are structured for institutional approval and long-term sustainability.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Value-Chain Analysis */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => toggleService('valuechain')}
+                onMouseEnter={() => setHoveredService('valuechain')}
+                onMouseLeave={() => setHoveredService(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Value-Chain Analysis
-                  <span className="ml-2 text-sm">{expandedService === 'valuechain' ? '−' : '+'}</span>
                 </h3>
-                {expandedService === 'valuechain' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredService === 'valuechain' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Assessment of extraction, processing, and market dynamics. We identify opportunities for value addition and institutional coordination across the supply chain.
                   </p>
-                )}
+                </div>
               </div>
 
               {/* Stakeholder Coordination */}
               <div 
-                className="card-institutional cursor-pointer transition-all hover:shadow-lg" 
+                className="card-institutional transition-all hover:shadow-lg" 
                 style={{backgroundColor: '#095d29'}}
-                onClick={() => toggleService('stakeholder')}
+                onMouseEnter={() => setHoveredService('stakeholder')}
+                onMouseLeave={() => setHoveredService(null)}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
                   Stakeholder Coordination
-                  <span className="ml-2 text-sm">{expandedService === 'stakeholder' ? '−' : '+'}</span>
                 </h3>
-                {expandedService === 'stakeholder' && (
+                <div className={`overflow-hidden transition-all duration-300 ${hoveredService === 'stakeholder' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground" style={{color: '#c8bfb6'}}>
                     Engagement with government bodies, policy institutions, local stakeholders, and strategic partners. We facilitate institutional alignment and long-term planning.
                   </p>
-                )}
+                </div>
               </div>
             </div>
           </div>

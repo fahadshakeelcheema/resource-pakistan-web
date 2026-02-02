@@ -173,3 +173,13 @@
 - [x] Core Verticals: Change from click-to-expand to hover-to-reveal (details appear on hover over image or text)
 - [x] Our Approach: Change to click-to-expand with + indicator (matching other pages pattern)
 - [x] Strategic Sectors: Change to click-to-expand with + indicator (matching other pages pattern)
+
+## Convert All Click-to-Expand to Hover-to-Expand
+
+- [x] About page: Convert Core Principles from click-to-expand to hover-to-expand
+- [x] Mining page: Convert Core Services from click-to-expand to hover-to-expand
+- [x] Consultancy page: Convert services from click-to-expand to hover-to-expand
+- [x] Technology page: Convert Focus Areas from click-to-expand to hover-to-expand
+- [x] Governance page: Convert Ethical Principles from click-to-expand to hover-to-expand
+- [x] Home page: Convert Our Approach from click-to-expand to hover-to-expand
+- [x] Home page: Convert Strategic Sectors from click-to-expand to hover-to-expand
