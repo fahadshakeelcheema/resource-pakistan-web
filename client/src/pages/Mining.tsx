@@ -29,7 +29,7 @@ export default function Mining() {
         </section>
 
         {/* Section 1: Our Approach to Mining - Alternating Layout */}
-        <section className="py-20 md:py-28 bg-background border-t border-border">
+        <section className="py-20 md:py-28 section-cream border-t border-border">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Text Left */}
@@ -58,7 +58,7 @@ export default function Mining() {
         </section>
 
         {/* Section 2: Core Services */}
-        <section className="py-20 md:py-28 section-light border-t border-border">
+        <section className="py-20 md:py-28 section-green border-t border-border">
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">
@@ -103,7 +103,7 @@ export default function Mining() {
         </section>
 
         {/* Section 3: Geological Context */}
-        <section className="py-20 md:py-28 section-light border-t border-border">
+        <section className="py-20 md:py-28 section-green border-t border-border">
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">

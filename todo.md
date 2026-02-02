@@ -119,3 +119,14 @@
 - [x] Update hover states and interactive elements
 - [x] Verify text contrast and readability across all pages
 - [x] Test on light and dark backgrounds
+
+## Alternating Section Backgrounds (Green & Neutral)
+
+- [x] Determine green background shade (lighter than logo for readability)
+- [x] Choose neutral alternating color (cream/off-white)
+- [x] Update CSS section background classes
+- [x] Adjust text colors for green backgrounds (ensure white/light text)
+- [x] Apply alternating backgrounds to Home page sections
+- [x] Apply alternating backgrounds to About, Mining, and other pages
+- [x] Test contrast ratios (WCAG AA compliance)
+- [x] Verify readability on both background colors

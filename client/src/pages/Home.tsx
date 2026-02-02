@@ -54,7 +54,7 @@ export default function Home() {
         </section>
 
         {/* Section 1: Core Verticals - Circular Service Icons */}
-        <section className="py-20 md:py-28 bg-background">
+        <section className="py-20 md:py-28 section-cream">
           <div className="container">
             <div className="mb-16 text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -162,12 +162,8 @@ export default function Home() {
         </section>
 
         {/* Section 2: Our Approach */}
-        <section className="py-20 md:py-28 section-light border-t border-border relative overflow-hidden">
-          <div 
-            className="absolute inset-0 opacity-3"
-            style={{backgroundImage: 'url(/images/abstract-data-visualization.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}
-          ></div>
-          <div className="container relative z-10">
+        <section className="py-20 md:py-28 section-green border-t border-white/20">
+          <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">
                 <span className="section-number">2.</span>Our Approach
@@ -243,7 +239,7 @@ export default function Home() {
         </section>
 
         {/* Section 3: Strategic Sectors */}
-        <section className="py-20 md:py-28 section-accent border-t border-border">
+        <section className="py-20 md:py-28 section-cream border-t border-border">
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">
@@ -304,12 +300,12 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 section-light border-t border-border">
+        <section className="py-16 md:py-24 section-green border-t border-white/20">
           <div className="container text-center">
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               For inquiries regarding feasibility studies, advisory services, or strategic partnerships, please contact us.
             </p>
-            <Link href="/contact" className="inline-block px-8 py-3 bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:-translate-y-0.5">
+            <Link href="/contact" className="inline-block px-8 py-3 bg-white text-green-primary font-medium transition-all hover:shadow-lg hover:-translate-y-0.5">
               Submit Inquiry
             </Link>
           </div>

@@ -259,6 +259,30 @@
     @apply bg-secondary;
   }
   
+  /* Green section background with light text */
+  .section-green {
+    background-color: var(--green-primary);
+    color: #ffffff;
+  }
+  
+  .section-green h1,
+  .section-green h2,
+  .section-green h3,
+  .section-green h4 {
+    color: #ffffff;
+  }
+  
+  .section-green p,
+  .section-green .text-muted-foreground {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Cream/neutral section background */
+  .section-cream {
+    background-color: #FAF8F6;
+    color: #2a2520;
+  }
+  
   .section-with-image {
     @apply bg-cover bg-center bg-no-repeat;
     background-blend-mode: overlay;

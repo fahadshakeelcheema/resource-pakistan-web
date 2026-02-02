@@ -23,7 +23,7 @@ export default function About() {
         </section>
 
         {/* Section 1: Mission and Scope - Alternating Layout */}
-        <section className="py-20 md:py-28 bg-background">
+        <section className="py-20 md:py-28 section-cream">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Image Left */}
@@ -52,7 +52,7 @@ export default function About() {
         </section>
 
         {/* Section 2: Core Principles */}
-        <section className="py-20 md:py-28 section-light border-t border-border">
+        <section className="py-20 md:py-28 section-green border-t border-border">
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">
@@ -125,7 +125,7 @@ export default function About() {
         </section>
 
         {/* Section 4: Ethics, Compliance, and Confidentiality */}
-        <section className="py-20 md:py-28 section-light border-t border-border">
+        <section className="py-20 md:py-28 section-green border-t border-border">
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">
