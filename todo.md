@@ -167,3 +167,9 @@
 - [x] Governance page: Add click-to-expand functionality where applicable
 - [x] Governance page: Verify color scheme and text contrast
 - [x] Contact page: Verify styling consistency with other pages
+
+## Homepage Interaction Pattern Updates
+
+- [x] Core Verticals: Change from click-to-expand to hover-to-reveal (details appear on hover over image or text)
+- [x] Our Approach: Change to click-to-expand with + indicator (matching other pages pattern)
+- [x] Strategic Sectors: Change to click-to-expand with + indicator (matching other pages pattern)
