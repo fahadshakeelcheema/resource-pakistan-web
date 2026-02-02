@@ -166,7 +166,7 @@ export default function Home() {
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">
-                <span className="section-number">2.</span>Our Approach
+                <span className="section-number" style={{color: '#eff0f1'}}>2.</span>Our Approach
               </h2>
             </div>
 
@@ -174,9 +174,9 @@ export default function Home() {
               {/* Feasibility-Driven Planning */}
               <div 
                 className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
-                onClick={() => setExpandedApproach(expandedApproach === 'feasibility' ? null : 'feasibility')}
+                onClick={() => setExpandedApproach(expandedApproach === 'feasibility' ? null : 'feasibility')} style={{backgroundColor: '#65b383'}}
               >
-                <h3 className="text-xl font-bold text-foreground mb-2">Feasibility-Driven Planning</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#ffffff'}}>Feasibility-Driven Planning</h3>
                 <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'feasibility' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground leading-relaxed">
                     Every project begins with comprehensive feasibility assessment. We prioritize rigorous analysis over optimistic projections, ensuring recommendations withstand institutional scrutiny.
@@ -190,9 +190,9 @@ export default function Home() {
               {/* Institutional Alignment */}
               <div 
                 className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
-                onClick={() => setExpandedApproach(expandedApproach === 'institutional' ? null : 'institutional')}
+                onClick={() => setExpandedApproach(expandedApproach === 'institutional' ? null : 'institutional')} style={{backgroundColor: '#65b383'}}
               >
-                <h3 className="text-xl font-bold text-foreground mb-2">Institutional Alignment</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#fafafa'}}>Institutional Alignment</h3>
                 <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'institutional' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground leading-relaxed">
                     We understand the complexity of working across government, policy, and private sectors. Our work is structured to support institutional decision-making processes.
@@ -206,9 +206,9 @@ export default function Home() {
               {/* Responsible Development */}
               <div 
                 className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
-                onClick={() => setExpandedApproach(expandedApproach === 'responsible' ? null : 'responsible')}
+                onClick={() => setExpandedApproach(expandedApproach === 'responsible' ? null : 'responsible')} style={{backgroundColor: '#65b383'}}
               >
-                <h3 className="text-xl font-bold text-foreground mb-2">Responsible Development</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#f5f5f4'}}>Responsible Development</h3>
                 <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'responsible' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground leading-relaxed">
                     Resource development must balance economic opportunity with environmental and socio-economic considerations. We integrate compliance and sustainability into every engagement.
@@ -224,7 +224,7 @@ export default function Home() {
                 className="cursor-pointer p-6 rounded-lg border border-border hover:border-green-primary transition-all"
                 onClick={() => setExpandedApproach(expandedApproach === 'multidisciplinary' ? null : 'multidisciplinary')}
               >
-                <h3 className="text-xl font-bold text-foreground mb-2">Multidisciplinary Expertise</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#fafafa'}}>Multidisciplinary Expertise</h3>
                 <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'multidisciplinary' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
                   <p className="text-body text-muted-foreground leading-relaxed">
                     Mining, consultancy, technology, and industrial planning require diverse expertise. Our team brings together specialists across these domains.
@@ -302,7 +302,7 @@ export default function Home() {
         {/* CTA Section */}
         <section className="py-16 md:py-24 section-green border-t border-white/20">
           <div className="container text-center">
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto" style={{color: '#f2f2f2'}}>
               For inquiries regarding feasibility studies, advisory services, or strategic partnerships, please contact us.
             </p>
             <Link href="/contact" className="inline-block px-8 py-3 bg-white text-green-primary font-medium transition-all hover:shadow-lg hover:-translate-y-0.5">
