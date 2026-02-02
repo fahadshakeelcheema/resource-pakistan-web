@@ -66,29 +66,6 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-              {/* Mining & Resources */}
-              <div 
-                className="flex flex-col items-center text-center group cursor-pointer"
-                onClick={() => setExpandedService(expandedService === 'mining' ? null : 'mining')}
-              >
-                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-copper transition-all group-hover:border-terracotta group-hover:shadow-2xl">
-                  <img 
-                    src="/images/service-mining.jpg" 
-                    alt="Mining & Resources" 
-                    className="w-full h-full object-cover transition-transform group-hover:scale-110"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Mining & Resources</h3>
-                <div className={`overflow-hidden transition-all duration-300 ${expandedService === 'mining' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Responsible mineral development through comprehensive feasibility studies and compliance-oriented planning.
-                  </p>
-                </div>
-                {expandedService !== 'mining' && (
-                  <p className="text-xs text-copper mt-2">Click to learn more</p>
-                )}
-              </div>
-
               {/* Consultancy & Advisory */}
               <div 
                 className="flex flex-col items-center text-center group cursor-pointer"
@@ -108,6 +85,29 @@ export default function Home() {
                   </p>
                 </div>
                 {expandedService !== 'consultancy' && (
+                  <p className="text-xs text-copper mt-2">Click to learn more</p>
+                )}
+              </div>
+
+              {/* Mining & Resources */}
+              <div 
+                className="flex flex-col items-center text-center group cursor-pointer"
+                onClick={() => setExpandedService(expandedService === 'mining' ? null : 'mining')}
+              >
+                <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-copper transition-all group-hover:border-terracotta group-hover:shadow-2xl">
+                  <img 
+                    src="/images/service-mining.jpg" 
+                    alt="Mining & Resources" 
+                    className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Mining & Resources</h3>
+                <div className={`overflow-hidden transition-all duration-300 ${expandedService === 'mining' ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Responsible mineral development through comprehensive feasibility studies and compliance-oriented planning.
+                  </p>
+                </div>
+                {expandedService !== 'mining' && (
                   <p className="text-xs text-copper mt-2">Click to learn more</p>
                 )}
               </div>

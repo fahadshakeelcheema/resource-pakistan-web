@@ -106,3 +106,7 @@
 - [x] Restructure footer to 3-column top row (Logo | Navigation | Contact)
 - [x] Move Partner Organizations to bottom section with center alignment
 - [x] Test responsive behavior on mobile and desktop
+
+## Reorder Core Verticals Section
+
+- [x] Reorder services: 1. Consultancy & Advisory, 2. Mining & Resources, 3. EVs & Technology, 4. Industrial Planning
