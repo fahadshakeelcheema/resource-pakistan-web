@@ -147,3 +147,7 @@
 - [x] Replace Mission and Scope section image with relevant symbol/icon (no stock photos)
 - [x] Add relevant picture/symbol next to Expertise and Experience section
 - [x] Add relevant picture/symbol next to Ethics, Compliance, and Confidentiality section
+
+## Core Principles Click-to-Expand
+
+- [x] Implement click-to-expand functionality for Core Principles cards on About page
