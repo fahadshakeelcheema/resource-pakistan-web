@@ -167,7 +167,7 @@ export default function About() {
               {/* Long-Term Perspective */}
               <div 
                 className="card-institutional md:col-span-2 cursor-pointer transition-all hover:shadow-lg" 
-                style={{backgroundColor: '#095d29'}}
+                style={{backgroundColor: '#095d29', width: '696px', marginLeft: '350px', marginLeft: '400px', marginLeft: '360px'}}
                 onClick={() => togglePrinciple('longterm')}
               >
                 <h3 className="text-lg font-bold text-foreground mb-4" style={{color: '#ffffff'}}>
