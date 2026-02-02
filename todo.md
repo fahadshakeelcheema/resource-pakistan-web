@@ -141,3 +141,9 @@
 - [x] Audit Contact page and apply appropriate background
 - [x] Verify text readability on all pages
 - [x] Test all interactive elements on colored backgrounds
+
+## About Page Image Replacement (Custom Symbols/Icons)
+
+- [x] Replace Mission and Scope section image with relevant symbol/icon (no stock photos)
+- [x] Add relevant picture/symbol next to Expertise and Experience section
+- [x] Add relevant picture/symbol next to Ethics, Compliance, and Confidentiality section

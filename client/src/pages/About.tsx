@@ -26,13 +26,41 @@ export default function About() {
         <section className="py-20 md:py-28 section-cream">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {/* Image Left */}
-              <div className="order-2 lg:order-1">
-                <img 
-                  src="/images/about-team-collaboration.jpg" 
-                  alt="Professional team collaboration" 
-                  className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-xl"
-                />
+              {/* Icon Left - Mission Compass */}
+              <div className="order-2 lg:order-1 flex items-center justify-center">
+                <svg 
+                  viewBox="0 0 400 400" 
+                  className="w-full max-w-md h-auto"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Outer Circle */}
+                  <circle cx="200" cy="200" r="180" fill="none" stroke="#2d5a3d" strokeWidth="4" />
+                  <circle cx="200" cy="200" r="160" fill="none" stroke="#2d5a3d" strokeWidth="2" opacity="0.5" />
+                  
+                  {/* Cardinal Points */}
+                  <text x="200" y="50" textAnchor="middle" fontSize="24" fontWeight="bold" fill="#2d5a3d">N</text>
+                  <text x="200" y="365" textAnchor="middle" fontSize="24" fontWeight="bold" fill="#2d5a3d">S</text>
+                  <text x="50" y="210" textAnchor="middle" fontSize="24" fontWeight="bold" fill="#2d5a3d">W</text>
+                  <text x="350" y="210" textAnchor="middle" fontSize="24" fontWeight="bold" fill="#2d5a3d">E</text>
+                  
+                  {/* Compass Needle - pointing to strategic direction */}
+                  <g transform="rotate(-30 200 200)">
+                    <polygon points="200,80 210,200 200,210 190,200" fill="#095d29" />
+                    <polygon points="200,210 210,200 200,320 190,200" fill="#2d5a3d" opacity="0.6" />
+                  </g>
+                  
+                  {/* Center Circle */}
+                  <circle cx="200" cy="200" r="15" fill="#095d29" />
+                  <circle cx="200" cy="200" r="8" fill="#ffffff" />
+                  
+                  {/* Degree Marks */}
+                  <g stroke="#2d5a3d" strokeWidth="2" opacity="0.4">
+                    <line x1="200" y1="30" x2="200" y2="50" />
+                    <line x1="200" y1="350" x2="200" y2="370" />
+                    <line x1="30" y1="200" x2="50" y2="200" />
+                    <line x1="350" y1="200" x2="370" y2="200" />
+                  </g>
+                </svg>
               </div>
               
               {/* Text Right */}
@@ -113,13 +141,56 @@ export default function About() {
               </h2>
             </div>
 
-            <div className="max-w-3xl">
-              <p className="text-body mb-6">
-                Our team comprises professionals with extensive experience in resource development, institutional planning, technology assessment, and strategic advisory. We have worked across government bodies, policy institutions, and private sector organizations, developing deep understanding of Pakistan's institutional landscape and sectoral dynamics.
-              </p>
-              <p className="text-body">
-                Our expertise spans feasibility study methodology, environmental and social impact assessment, technology evaluation, industrial policy analysis, and stakeholder coordination. We combine technical rigor with institutional awareness to deliver recommendations that are both analytically sound and operationally feasible.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Text Left */}
+              <div className="order-1">
+                <p className="text-body mb-6">
+                  Our team comprises professionals with extensive experience in resource development, institutional planning, technology assessment, and strategic advisory. We have worked across government bodies, policy institutions, and private sector organizations, developing deep understanding of Pakistan's institutional landscape and sectoral dynamics.
+                </p>
+                <p className="text-body">
+                  Our expertise spans feasibility study methodology, environmental and social impact assessment, technology evaluation, industrial policy analysis, and stakeholder coordination. We combine technical rigor with institutional awareness to deliver recommendations that are both analytically sound and operationally feasible.
+                </p>
+              </div>
+              
+              {/* Icon Right - Interconnected Expertise */}
+              <div className="order-2 flex items-center justify-center">
+                <svg 
+                  viewBox="0 0 400 400" 
+                  className="w-full max-w-sm h-auto"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Central Hub */}
+                  <circle cx="200" cy="200" r="40" fill="#095d29" />
+                  <text x="200" y="210" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#ffffff">Core</text>
+                  
+                  {/* Outer Nodes - Expertise Areas */}
+                  {/* Mining */}
+                  <circle cx="200" cy="80" r="35" fill="#2d5a3d" />
+                  <text x="200" y="88" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#ffffff">Mining</text>
+                  <line x1="200" y1="160" x2="200" y2="115" stroke="#2d5a3d" strokeWidth="3" />
+                  
+                  {/* Consultancy */}
+                  <circle cx="320" cy="200" r="35" fill="#2d5a3d" />
+                  <text x="320" y="205" textAnchor="middle" fontSize="12" fontWeight="bold" fill="#ffffff">Advisory</text>
+                  <line x1="240" y1="200" x2="285" y2="200" stroke="#2d5a3d" strokeWidth="3" />
+                  
+                  {/* Technology */}
+                  <circle cx="200" cy="320" r="35" fill="#2d5a3d" />
+                  <text x="200" y="325" textAnchor="middle" fontSize="13" fontWeight="bold" fill="#ffffff">Tech</text>
+                  <line x1="200" y1="240" x2="200" y2="285" stroke="#2d5a3d" strokeWidth="3" />
+                  
+                  {/* Industrial */}
+                  <circle cx="80" cy="200" r="35" fill="#2d5a3d" />
+                  <text x="80" y="205" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#ffffff">Industrial</text>
+                  <line x1="160" y1="200" x2="115" y2="200" stroke="#2d5a3d" strokeWidth="3" />
+                  
+                  {/* Cross-connections showing integration */}
+                  <line x1="220" y1="180" x2="290" y2="220" stroke="#2d5a3d" strokeWidth="1.5" opacity="0.3" strokeDasharray="5,5" />
+                  <line x1="180" y1="180" x2="110" y2="220" stroke="#2d5a3d" strokeWidth="1.5" opacity="0.3" strokeDasharray="5,5" />
+                  <line x1="180" y1="220" x2="110" y2="180" stroke="#2d5a3d" strokeWidth="1.5" opacity="0.3" strokeDasharray="5,5" />
+                  <line x1="220" y1="220" x2="290" y2="180" stroke="#2d5a3d" strokeWidth="1.5" opacity="0.3" strokeDasharray="5,5" />
+                </svg>
+              </div>
             </div>
           </div>
         </section>
@@ -133,16 +204,65 @@ export default function About() {
               </h2>
             </div>
 
-            <div className="max-w-3xl">
-              <p className="text-body mb-6">
-                Resource Pakistan operates under strict ethical and compliance standards. We maintain confidentiality regarding all client information, project details, and strategic discussions. Our work is structured to support institutional decision-making processes while respecting the sensitive nature of resource development and policy planning.
-              </p>
-              <p className="text-body mb-6">
-                We are committed to responsible resource development that integrates environmental protection, community considerations, and long-term sustainability. All our recommendations are subject to institutional review and are designed to withstand scrutiny from government bodies, policy analysts, and stakeholder groups.
-              </p>
-              <p className="text-body">
-                Our engagement framework prioritizes transparency, documented analysis, and clear communication of assumptions, limitations, and recommendations. We understand that our work may inform public policy and institutional decisions, and we structure our deliverables accordingly.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Icon Left - Shield of Integrity */}
+              <div className="order-2 lg:order-1 flex items-center justify-center">
+                <svg 
+                  viewBox="0 0 400 400" 
+                  className="w-full max-w-sm h-auto"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Shield Outline */}
+                  <path 
+                    d="M 200 50 L 320 100 L 320 200 Q 320 300 200 350 Q 80 300 80 200 L 80 100 Z" 
+                    fill="none" 
+                    stroke="#ffffff" 
+                    strokeWidth="4"
+                  />
+                  <path 
+                    d="M 200 60 L 310 105 L 310 200 Q 310 290 200 335 Q 90 290 90 200 L 90 105 Z" 
+                    fill="#095d29" 
+                    opacity="0.9"
+                  />
+                  
+                  {/* Checkmark */}
+                  <path 
+                    d="M 140 200 L 180 240 L 260 150" 
+                    fill="none" 
+                    stroke="#ffffff" 
+                    strokeWidth="12" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  />
+                  
+                  {/* Inner Shield Details */}
+                  <path 
+                    d="M 200 70 L 200 320" 
+                    stroke="#ffffff" 
+                    strokeWidth="1" 
+                    opacity="0.2"
+                  />
+                  <path 
+                    d="M 100 110 L 300 110" 
+                    stroke="#ffffff" 
+                    strokeWidth="1" 
+                    opacity="0.2"
+                  />
+                </svg>
+              </div>
+              
+              {/* Text Right */}
+              <div className="order-1 lg:order-2">
+                <p className="text-body mb-6">
+                  Resource Pakistan operates under strict ethical and compliance standards. We maintain confidentiality regarding all client information, project details, and strategic discussions. Our work is structured to support institutional decision-making processes while respecting the sensitive nature of resource development and policy planning.
+                </p>
+                <p className="text-body mb-6">
+                  We are committed to responsible resource development that integrates environmental protection, community considerations, and long-term sustainability. All our recommendations are subject to institutional review and are designed to withstand scrutiny from government bodies, policy analysts, and stakeholder groups.
+                </p>
+                <p className="text-body">
+                  Our engagement framework prioritizes transparency, documented analysis, and clear communication of assumptions, limitations, and recommendations. We understand that our work may inform public policy and institutional decisions, and we structure our deliverables accordingly.
+                </p>
+              </div>
             </div>
           </div>
         </section>
