@@ -56,7 +56,7 @@ export default function About() {
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">
-                <span className="section-number">2.</span>Core Principles
+                <span className="section-number" style={{color: '#ffffff'}}>2.</span>Core Principles
               </h2>
             </div>
 
@@ -129,7 +129,7 @@ export default function About() {
           <div className="container">
             <div className="mb-16">
               <h2 className="text-heading">
-                <span className="section-number">4.</span>Ethics, Compliance, and Confidentiality
+                <span className="section-number" style={{color: '#ffffff'}}>4.</span>Ethics, Compliance, and Confidentiality
               </h2>
             </div>
 
