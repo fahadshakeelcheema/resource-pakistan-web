@@ -185,7 +185,7 @@ export default function Mining() {
           <div className="container">
             <div className="mb-8">
               <h2 className="text-heading">
-                <span className="section-number" style={{color: '#ffffff'}}>3.</span>Pakistan's Geological Context
+                <span className="section-number" style={{color: '#0f0f0f'}}>3.</span>Pakistan's Geological Context
               </h2>
             </div>
 
