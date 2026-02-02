@@ -24,8 +24,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Company Logo */}
           <div>
-            <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-32 w-auto mb-4" />
-            <p className="text-xs text-muted-foreground leading-relaxed">
+            <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-32 w-auto mb-4" style={{marginLeft: '70px', width: '300px', height: '240px'}} />
+            <p className="text-xs text-muted-foreground leading-relaxed" style={{textAlign: 'center'}}>
               Strategic development across mining, consultancy, electric vehicles, and industrial technology.
             </p>
           </div>
