@@ -189,3 +189,8 @@
 - [x] Redesign Feasibility-Driven Resource Development diagram for better readability
 - [x] Replace Pakistan's Geological Context image with better visual representation
 - [x] Add custom SVG diagram to Technical Knowledge and Expertise section
+
+## Mining Page Geological Context Section Spacing
+
+- [x] Reduce spacing between heading and content in Pakistan's Geological Context section
+- [x] Scale down Pakistan mineral regions map to align better with text height

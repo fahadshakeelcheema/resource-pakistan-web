@@ -183,7 +183,7 @@ export default function Mining() {
         {/* Section 3: Geological Context */}
         <section className="py-20 md:py-28 section-cream border-t border-border">
           <div className="container">
-            <div className="mb-16">
+            <div className="mb-8">
               <h2 className="text-heading">
                 <span className="section-number" style={{color: '#ffffff'}}>3.</span>Pakistan's Geological Context
               </h2>
@@ -201,7 +201,7 @@ export default function Mining() {
               <div className="card-institutional p-6">
                 <svg 
                   viewBox="0 0 400 500" 
-                  className="w-full h-auto"
+                  className="w-full h-auto max-w-sm mx-auto"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   {/* Title */}
