@@ -178,7 +178,7 @@ export default function Home() {
               >
                 <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#ffffff'}}>Feasibility-Driven Planning</h3>
                 <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'feasibility' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-                  <p className="text-body text-muted-foreground leading-relaxed">
+                  <p className="text-body text-muted-foreground leading-relaxed" style={{color: '#c8bfb6'}}>
                     Every project begins with comprehensive feasibility assessment. We prioritize rigorous analysis over optimistic projections, ensuring recommendations withstand institutional scrutiny.
                   </p>
                 </div>
@@ -194,7 +194,7 @@ export default function Home() {
               >
                 <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#fafafa'}}>Institutional Alignment</h3>
                 <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'institutional' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-                  <p className="text-body text-muted-foreground leading-relaxed">
+                  <p className="text-body text-muted-foreground leading-relaxed" style={{color: '#c8bfb6'}}>
                     We understand the complexity of working across government, policy, and private sectors. Our work is structured to support institutional decision-making processes.
                   </p>
                 </div>
@@ -210,7 +210,7 @@ export default function Home() {
               >
                 <h3 className="text-xl font-bold text-foreground mb-2" style={{color: '#f5f5f4'}}>Responsible Development</h3>
                 <div className={`overflow-hidden transition-all duration-300 ${expandedApproach === 'responsible' ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-                  <p className="text-body text-muted-foreground leading-relaxed">
+                  <p className="text-body text-muted-foreground leading-relaxed" style={{color: '#c8bfb6'}}>
                     Resource development must balance economic opportunity with environmental and socio-economic considerations. We integrate compliance and sustainability into every engagement.
                   </p>
                 </div>
