@@ -281,3 +281,13 @@
 - [x] Check card layouts on small screens
 - [x] Verify image scaling and performance
 - [x] Test footer layout on mobile
+
+## Remove Section Serial Numbers
+
+- [x] Remove section serial numbers from Home page
+- [x] Remove section serial numbers from About page
+- [x] Remove section serial numbers from Mining page
+- [x] Remove section serial numbers from Consultancy page
+- [x] Remove section serial numbers from Technology page
+- [x] Remove section serial numbers from Governance page
+- [x] Ensure proper code indentation across all page files
