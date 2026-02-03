@@ -23,7 +23,7 @@ export default function Footer() {
         {/* Top Row: Enhanced 4-column layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 flex flex-col items-center text-center">
             <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-24 w-auto mb-6" />
             <p className="text-sm text-muted-foreground leading-relaxed">
               Building Pakistan's resource and industrial future through strategic development.
@@ -92,13 +92,13 @@ export default function Footer() {
         {/* Partner Organizations - Bottom Section */}
         <div className="border-t border-border pt-12 mb-12">
           <h4 className="text-sm font-bold text-foreground mb-8 uppercase tracking-wider text-center">Partner Organizations</h4>
-          <div className="flex flex-wrap items-center justify-center gap-8">
-            <img src="/images/irada-logo.png" alt="Irada Pakistan" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
-            <img src="/images/ministry-science-technology-logo.png" alt="Ministry of Science and Technology" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
-            <img src="/images/partners/ctti-logo.png" alt="CTTI" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
-            <img src="/images/partners/navtech-logo.png" alt="NAvtech" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
-            <img src="/images/partners/huawei-logo.png" alt="Huawei" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
-            <img src="/images/partners/aiib-logo.png" alt="AIIB" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+          <div className="flex flex-wrap items-center justify-center gap-12">
+            <img src="/images/irada-logo.png" alt="Irada Pakistan" className="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            <img src="/images/ministry-science-technology-logo.png" alt="Ministry of Science and Technology" className="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            <img src="/images/partners/ctti-logo.png" alt="CTTI" className="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            <img src="/images/partners/navtech-logo.png" alt="NAvtech" className="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            <img src="/images/partners/huawei-logo.png" alt="Huawei" className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            <img src="/images/partners/aiib-logo.png" alt="AIIB" className="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
           </div>
         </div>
 

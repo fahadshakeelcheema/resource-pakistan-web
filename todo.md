@@ -236,3 +236,8 @@
 ## Footer Layout Redesign
 
 - [x] Redesign footer layout for enhanced visual appeal while keeping partner logos at bottom
+
+## Footer Logo Alignment and Partner Logo Sizing
+
+- [x] Center-align Resource Pakistan logo with text underneath in footer
+- [x] Review and adjust partner organization logo sizes for symmetry
