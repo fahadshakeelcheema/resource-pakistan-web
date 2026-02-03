@@ -16,7 +16,7 @@ export default function Mining() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-16 md:py-14 border-b border-border">
+        <section className="relative overflow-hidden py-10 md:py-10 border-b border-border">
           <div 
             className="absolute inset-0 opacity-[0.06] grayscale"
             style={{backgroundImage: 'url(/images/pakistan-reko-diq-landscape.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}
@@ -32,9 +32,9 @@ export default function Mining() {
         </section>
 
         {/* Section 1: Our Approach to Mining - Alternating Layout */}
-        <section className="py-12 md:py-16 section-cream border-t border-border">
+        <section className="py-8 md:py-10 section-cream border-t border-border">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center">
               {/* Text Left */}
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -100,15 +100,15 @@ export default function Mining() {
         </section>
 
         {/* Section 2: Core Services */}
-        <section className="py-12 md:py-16 section-green border-t border-border">
+        <section className="py-8 md:py-10 section-green border-t border-border">
           <div className="container">
-            <div className="mb-10">
+            <div className="mb-6">
               <h2 className="text-heading">
                 <span className="section-number" style={{color: '#ffffff'}}>2.</span>Core Services
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Feasibility Studies */}
               <div 
                 className="card-institutional transition-all hover:shadow-lg" 
@@ -181,15 +181,15 @@ export default function Mining() {
         </section>
 
         {/* Section 3: Geological Context */}
-        <section className="py-12 md:py-16 section-cream border-t border-border">
+        <section className="py-8 md:py-10 section-cream border-t border-border">
           <div className="container">
-            <div className="mb-8">
+            <div className="mb-6">
               <h2 className="text-heading">
                 <span className="section-number" style={{color: '#0f0f0f'}}>3.</span>Pakistan's Geological Context
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
               <div>
                 <p className="text-body mb-6">
                   Pakistan's geological diversity spans multiple tectonic zones, creating significant mineral potential across Balochistan, Khyber Pakhtunkhwa, and other regions. Understanding this geological context is essential for feasibility assessment and responsible resource development.
@@ -249,15 +249,15 @@ export default function Mining() {
         </section>
 
         {/* Section 4: Technical Knowledge */}
-        <section className="py-12 md:py-16 section-cream border-t border-border">
+        <section className="py-8 md:py-10 section-cream border-t border-border">
           <div className="container">
-            <div className="mb-10">
+            <div className="mb-6">
               <h2 className="text-heading">
                 <span className="section-number">4.</span>Technical Knowledge and Expertise
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
               <div>
                 <p className="text-body mb-6">
                   Our team brings together professionals with experience in geological assessment, mining engineering, environmental impact analysis, and institutional planning. We have worked on projects across Pakistan's major mineral-bearing regions, developing deep understanding of local geology, regulatory requirements, and institutional dynamics.
@@ -315,9 +315,9 @@ export default function Mining() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-14 section-light border-t border-border">
+        <section className="py-10 md:py-10 section-light border-t border-border">
           <div className="container text-center">
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
               For mining feasibility studies, compliance planning, or resource development advisory, please contact us.
             </p>
             <Link href="/contact">

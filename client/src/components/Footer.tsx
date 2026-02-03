@@ -19,9 +19,9 @@ export default function Footer() {
 
   return (
     <footer className="bg-background border-t border-border mt-16">
-      <div className="container py-12">
+      <div className="container py-8">
         {/* Top Row: Enhanced 4-column layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           {/* Company Info */}
           <div className="lg:col-span-1 flex flex-col items-center text-center">
             <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-24 w-auto mb-6" />
@@ -90,9 +90,9 @@ export default function Footer() {
         </div>
 
         {/* Partner Organizations - Bottom Section */}
-        <div className="border-t border-border pt-8 mb-8">
+        <div className="border-t border-border pt-8 mb-6">
           <h4 className="text-sm font-bold text-foreground mb-6 uppercase tracking-wider text-center">Partner Organizations</h4>
-          <div className="flex flex-wrap items-center justify-center gap-8">
+          <div className="flex flex-wrap items-center justify-center gap-6">
             <img src="/images/irada-logo.png" alt="Irada Pakistan" className="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
             <img src="/images/ministry-science-technology-logo.png" alt="Ministry of Science and Technology" className="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
             <img src="/images/partners/ctti-logo.png" alt="CTTI" className="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />

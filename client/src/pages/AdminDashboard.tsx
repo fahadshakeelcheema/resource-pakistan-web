@@ -117,10 +117,10 @@ export default function AdminDashboard() {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      <main className="flex-1 py-12">
+      <main className="flex-1 py-8">
         <div className="container">
           {/* Header */}
-          <div className="mb-8">
+          <div className="mb-6">
             <h1 className="text-display mb-4">Admin Dashboard</h1>
             <p className="text-subheading text-muted-foreground">
               Manage and respond to contact form inquiries
@@ -128,7 +128,7 @@ export default function AdminDashboard() {
           </div>
 
           {/* Filters */}
-          <div className="mb-8 flex flex-col md:flex-row gap-4">
+          <div className="mb-6 flex flex-col md:flex-row gap-4">
             <div className="flex-1">
               <Input
                 placeholder="Search by name, email, organization, or subject..."

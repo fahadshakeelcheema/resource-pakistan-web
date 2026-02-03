@@ -69,7 +69,7 @@ export default function Contact() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-12 md:py-20">
+        <section className="relative overflow-hidden py-8 md:py-20">
           <div 
             className="absolute inset-0 opacity-[0.06] grayscale"
             style={{backgroundImage: 'url(/images/pakistan-reko-diq-landscape.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}
@@ -87,12 +87,12 @@ export default function Contact() {
         </section>
 
         {/* Contact Information and Form */}
-        <section className="section-cream py-12 md:py-14 border-t border-border">
+        <section className="section-cream py-8 md:py-10 border-t border-border">
           <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Company Information */}
             <div className="md:col-span-1">
-              <h2 className="text-2xl font-bold text-foreground mb-8" style={{ fontFamily: "'Crimson Text', serif" }}>
+              <h2 className="text-2xl font-bold text-foreground mb-6" style={{ fontFamily: "'Crimson Text', serif" }}>
                 Company Information
               </h2>
 
@@ -122,7 +122,7 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="md:col-span-2">
-              <h2 className="text-2xl font-bold text-foreground mb-8" style={{ fontFamily: "'Crimson Text', serif" }}>
+              <h2 className="text-2xl font-bold text-foreground mb-6" style={{ fontFamily: "'Crimson Text', serif" }}>
                 Send Inquiry
               </h2>
 
@@ -247,7 +247,7 @@ export default function Contact() {
         </section>
 
         {/* Additional Information */}
-        <section className="section-green py-12 md:py-14 border-t border-border">
+        <section className="section-green py-8 md:py-10 border-t border-border">
           <div className="container">
           <div className="max-w-3xl">
             <h2 className="text-2xl font-bold text-foreground mb-6" style={{ fontFamily: "'Crimson Text', serif", color: '#ffffff' }}>

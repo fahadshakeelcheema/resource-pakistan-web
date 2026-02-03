@@ -35,15 +35,15 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/70 to-slate-900/50"></div>
           
           {/* Content */}
-          <div className="container relative z-10 py-14">
+          <div className="container relative z-10 py-10">
             <div className="max-w-3xl">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 Building Pakistan's Resource and Industrial Future
               </h1>
-              <p className="text-xl md:text-2xl text-gray-100 mb-8 font-light">
+              <p className="text-xl md:text-2xl text-gray-100 mb-6 font-light">
                 Strategic development across mining, consultancy, electric vehicles, and industrial technology.
               </p>
-              <p className="text-lg text-gray-200 mb-12 max-w-2xl leading-relaxed">
+              <p className="text-lg text-gray-200 mb-6 max-w-2xl leading-relaxed">
                 Resource Pakistan (Pvt) Ltd operates at the intersection of resource development, policy alignment, and long-term industrial planning. We work with government bodies, institutional stakeholders, and strategic partners to advance feasibility-driven projects that create sustainable value for Pakistan's economy.
               </p>
               <Link href="/about" className="inline-block px-10 py-4 bg-white text-slate-900 font-semibold text-lg transition-all hover:bg-gray-100 hover:shadow-2xl hover:-translate-y-1">
@@ -54,9 +54,9 @@ export default function Home() {
         </section>
 
         {/* Section 1: Core Verticals - Circular Service Icons */}
-        <section className="py-12 md:py-16 section-cream">
+        <section className="py-8 md:py-10 section-cream">
           <div className="container">
-            <div className="mb-10 text-center">
+            <div className="mb-6 text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
                 Core Verticals
               </h2>
@@ -65,7 +65,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6">
               {/* Consultancy & Advisory */}
               <div 
                 className="flex flex-col items-center text-center group"
@@ -154,15 +154,15 @@ export default function Home() {
         </section>
 
         {/* Section 2: Our Approach */}
-        <section className="py-12 md:py-16 section-green border-t border-white/20">
+        <section className="py-8 md:py-10 section-green border-t border-white/20">
           <div className="container">
-            <div className="mb-10">
+            <div className="mb-6">
               <h2 className="text-heading">
                 <span className="section-number" style={{color: '#eff0f1'}}>2.</span>Our Approach
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Feasibility-Driven Planning */}
               <div 
                 className="p-6 rounded-lg border border-border hover:border-green-primary transition-all"
@@ -235,15 +235,15 @@ export default function Home() {
         </section>
 
         {/* Section 3: Strategic Sectors */}
-        <section className="py-12 md:py-16 section-cream border-t border-border">
+        <section className="py-8 md:py-10 section-cream border-t border-border">
           <div className="container">
-            <div className="mb-10">
+            <div className="mb-6">
               <h2 className="text-heading">
                 <span className="section-number">3.</span>Strategic Sectors
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Government Bodies & Policy Institutions */}
               <div 
                 className="p-6 rounded-lg border border-border bg-card hover:border-green-primary transition-all"
@@ -296,9 +296,9 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-14 section-green border-t border-white/20">
+        <section className="py-10 md:py-10 section-green border-t border-white/20">
           <div className="container text-center">
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto" style={{color: '#f2f2f2'}}>
+            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto" style={{color: '#f2f2f2'}}>
               For inquiries regarding feasibility studies, advisory services, or strategic partnerships, please contact us.
             </p>
             <Link href="/contact" className="inline-block px-8 py-3 bg-white text-green-primary font-medium transition-all hover:shadow-lg hover:-translate-y-0.5">

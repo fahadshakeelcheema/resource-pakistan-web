@@ -16,7 +16,7 @@ export default function Governance() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-16 md:py-14 border-b border-border">
+        <section className="relative overflow-hidden py-10 md:py-10 border-b border-border">
           <div 
             className="absolute inset-0 opacity-[0.06] grayscale"
             style={{backgroundImage: 'url(/images/pakistan-reko-diq-landscape.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}
@@ -32,15 +32,15 @@ export default function Governance() {
         </section>
 
         {/* Section 1: Governance Framework with Icon */}
-        <section className="py-12 md:py-16 section-cream border-t border-border">
+        <section className="py-8 md:py-10 section-cream border-t border-border">
           <div className="container">
-            <div className="mb-10">
+            <div className="mb-6">
               <h2 className="text-heading">
                 <span className="section-number">1.</span>Governance Framework
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center">
               {/* Text Left */}
               <div>
                 <p className="text-body mb-6">
@@ -94,15 +94,15 @@ export default function Governance() {
         </section>
 
         {/* Section 2: Ethical Principles */}
-        <section className="py-12 md:py-16 section-green border-t border-border">
+        <section className="py-8 md:py-10 section-green border-t border-border">
           <div className="container">
-            <div className="mb-10">
+            <div className="mb-6">
               <h2 className="text-heading">
                 <span className="section-number" style={{color: '#ffffff'}}>2.</span>Ethical Principles
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Integrity and Transparency */}
               <div 
                 className="card-institutional transition-all hover:shadow-lg" 
@@ -175,15 +175,15 @@ export default function Governance() {
         </section>
 
         {/* Section 3: Compliance and Standards */}
-        <section className="py-12 md:py-16 section-cream border-t border-border">
+        <section className="py-8 md:py-10 section-cream border-t border-border">
           <div className="container">
-            <div className="mb-10">
+            <div className="mb-6">
               <h2 className="text-heading">
                 <span className="section-number">3.</span>Compliance and Standards
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center">
               {/* Text Content */}
               <div>
                 <p className="text-body mb-6">
@@ -229,15 +229,15 @@ export default function Governance() {
         </section>
 
         {/* Section 4: Stakeholder Coordination */}
-        <section className="py-12 md:py-16 section-green border-t border-border">
+        <section className="py-8 md:py-10 section-green border-t border-border">
           <div className="container">
-            <div className="mb-10">
+            <div className="mb-6">
               <h2 className="text-heading">
                 <span className="section-number" style={{color: '#ffffff'}}>4.</span>Stakeholder Coordination
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center">
               {/* Text Content */}
               <div>
                 <p className="text-body mb-6" style={{color: '#ede0d4'}}>
@@ -296,9 +296,9 @@ export default function Governance() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-14 section-cream border-t border-border">
+        <section className="py-10 md:py-10 section-cream border-t border-border">
           <div className="container text-center">
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
               For questions regarding our governance framework, compliance standards, or ethical principles, please contact us.
             </p>
             <Link href="/contact">
