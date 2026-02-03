@@ -295,3 +295,8 @@
 ## About Page Layout Adjustment
 
 - [x] Swap Ethics, Compliance, and Confidentiality section layout: move image to right, text to left
+
+## Fix Pixelated Logo
+
+- [x] Investigate current logo file format and resolution
+- [x] Replace with higher resolution version for crisp display at all zoom levels
