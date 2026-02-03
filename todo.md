@@ -232,3 +232,7 @@
 
 - [x] Swap Governance Framework section layout: move diagram to right, content to left
 - [x] Swap Compliance and Standards section layout: move diagram to right, content to left
+
+## Footer Layout Redesign
+
+- [x] Redesign footer layout for enhanced visual appeal while keeping partner logos at bottom

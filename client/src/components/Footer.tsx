@@ -20,38 +20,70 @@ export default function Footer() {
   return (
     <footer className="bg-background border-t border-border mt-24">
       <div className="container py-16">
-        {/* Top Row: Logo, Navigation, Contact */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Company Logo */}
-          <div>
-            <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-32 w-auto mb-4" style={{marginLeft: '70px', width: '300px', height: '240px'}} />
-            <p className="text-xs text-muted-foreground leading-relaxed" style={{textAlign: 'center'}}>
-              Strategic development across mining, consultancy, electric vehicles, and industrial technology.
+        {/* Top Row: Enhanced 4-column layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-24 w-auto mb-6" />
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Building Pakistan's resource and industrial future through strategic development.
             </p>
           </div>
 
-          {/* Navigation */}
+          {/* Core Services */}
           <div>
-            <h4 className="text-sm font-bold text-foreground mb-4 uppercase tracking-wider">Navigation</h4>
+            <h4 className="text-sm font-bold text-foreground mb-4 uppercase tracking-wider">Core Services</h4>
             <nav className="flex flex-col gap-3">
-              {navItems.map((item) => (
-                <Link key={item.href} href={item.href}>
-                  <span className="text-sm text-muted-foreground transition-colors hover:text-primary inline-block">
-                    {item.label}
-                  </span>
-                </Link>
-              ))}
+              <Link href="/mining">
+                <span className="text-sm text-muted-foreground transition-colors hover:text-primary inline-block">
+                  Mining & Resources
+                </span>
+              </Link>
+              <Link href="/consultancy">
+                <span className="text-sm text-muted-foreground transition-colors hover:text-primary inline-block">
+                  Consultancy & Advisory
+                </span>
+              </Link>
+              <Link href="/technology">
+                <span className="text-sm text-muted-foreground transition-colors hover:text-primary inline-block">
+                  EVs & Technology
+                </span>
+              </Link>
+            </nav>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-sm font-bold text-foreground mb-4 uppercase tracking-wider">Company</h4>
+            <nav className="flex flex-col gap-3">
+              <Link href="/about">
+                <span className="text-sm text-muted-foreground transition-colors hover:text-primary inline-block">
+                  About Us
+                </span>
+              </Link>
+              <Link href="/governance">
+                <span className="text-sm text-muted-foreground transition-colors hover:text-primary inline-block">
+                  Governance
+                </span>
+              </Link>
+              <Link href="/contact">
+                <span className="text-sm text-muted-foreground transition-colors hover:text-primary inline-block">
+                  Contact
+                </span>
+              </Link>
             </nav>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-sm font-bold text-foreground mb-4 uppercase tracking-wider">Contact</h4>
-            <div className="text-sm text-muted-foreground space-y-2">
-              <p>Resource Pakistan (Pvt) Ltd</p>
+            <h4 className="text-sm font-bold text-foreground mb-4 uppercase tracking-wider">Get in Touch</h4>
+            <div className="text-sm text-muted-foreground space-y-3">
+              <p className="font-medium text-foreground">Resource Pakistan (Pvt) Ltd</p>
               <p>Pakistan</p>
               <Link href="/contact">
-                <span className="text-primary hover:underline inline-block">Send Inquiry</span>
+                <span className="inline-flex items-center gap-2 text-primary hover:underline">
+                  Send Inquiry →
+                </span>
               </Link>
             </div>
           </div>
