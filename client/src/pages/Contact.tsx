@@ -69,14 +69,20 @@ export default function Contact() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="container py-20 md:py-32">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6" style={{ fontFamily: "'Crimson Text', serif" }}>
-              Contact Resource Pakistan
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              For inquiries regarding feasibility studies, advisory services, or strategic partnerships.
-            </p>
+        <section className="relative overflow-hidden py-20 md:py-32">
+          <div 
+            className="absolute inset-0 opacity-[0.06] grayscale"
+            style={{backgroundImage: 'url(/images/pakistan-reko-diq-landscape.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}
+          ></div>
+          <div className="container relative z-10">
+            <div className="max-w-3xl">
+              <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6" style={{ fontFamily: "'Crimson Text', serif" }}>
+                Contact Resource Pakistan
+              </h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                For inquiries regarding feasibility studies, advisory services, or strategic partnerships.
+              </p>
+            </div>
           </div>
         </section>
 

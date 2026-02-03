@@ -198,3 +198,12 @@
 ## Consultancy Page Client Sectors Hover
 
 - [x] Add hover-to-reveal functionality to Client Sectors section cards
+
+## Add Hero Background Images to All Pages
+
+- [x] Review Mining page background implementation
+- [x] Add background image to About page hero section
+- [x] Add background image to Consultancy page hero section
+- [x] Add background image to Technology page hero section
+- [x] Add background image to Governance page hero section
+- [x] Add background image to Contact page hero section

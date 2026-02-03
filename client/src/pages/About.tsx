@@ -16,12 +16,18 @@ export default function About() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="container py-16 md:py-24 border-b border-border">
-          <div className="max-w-3xl">
-            <h1 className="text-display mb-6">About Resource Pakistan</h1>
-            <p className="text-subheading">
-              A multidisciplinary company founded to support Pakistan's resource and industrial development through rigorous planning, institutional alignment, and responsible execution.
-            </p>
+        <section className="relative overflow-hidden py-16 md:py-24 border-b border-border">
+          <div 
+            className="absolute inset-0 opacity-[0.06] grayscale"
+            style={{backgroundImage: 'url(/images/pakistan-reko-diq-landscape.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}
+          ></div>
+          <div className="container relative z-10">
+            <div className="max-w-3xl">
+              <h1 className="text-display mb-6">About Resource Pakistan</h1>
+              <p className="text-subheading">
+                A multidisciplinary company founded to support Pakistan's resource and industrial development through rigorous planning, institutional alignment, and responsible execution.
+              </p>
+            </div>
           </div>
         </section>
 
