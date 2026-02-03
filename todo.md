@@ -223,3 +223,7 @@
 ## Consultancy Page Layout Adjustment
 
 - [x] Swap Consultancy Approach section layout: move diagram to right, content to left
+
+## Technology Timeline Diagram Spacing Fix
+
+- [x] Fix overlapping Integration and Implementation labels in Technology page timeline diagram
