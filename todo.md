@@ -227,3 +227,8 @@
 ## Technology Timeline Diagram Spacing Fix
 
 - [x] Fix overlapping Integration and Implementation labels in Technology page timeline diagram
+
+## Governance Page Layout Adjustments
+
+- [x] Swap Governance Framework section layout: move diagram to right, content to left
+- [x] Swap Compliance and Standards section layout: move diagram to right, content to left

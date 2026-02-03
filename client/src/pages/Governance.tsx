@@ -41,7 +41,17 @@ export default function Governance() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {/* Icon Left - Balance/Scales of Justice */}
+              {/* Text Left */}
+              <div>
+                <p className="text-body mb-6">
+                  Resource Pakistan operates under strict ethical, compliance, and governance standards. Our work is structured to support institutional decision-making while maintaining confidentiality, transparency, and accountability. We understand that our recommendations may inform policy and institutional decisions, and we structure our engagement accordingly.
+                </p>
+                <p className="text-body">
+                  We are committed to responsible resource and industrial development that integrates environmental protection, socio-economic considerations, and long-term sustainability. All our work is subject to institutional review and designed to withstand scrutiny from government bodies, policy analysts, and stakeholder groups.
+                </p>
+              </div>
+
+              {/* Diagram Right - Balance/Scales of Justice */}
               <div className="flex items-center justify-center">
                 <svg 
                   viewBox="0 0 400 400" 
@@ -78,16 +88,6 @@ export default function Governance() {
                   <path d="M 200 80 L 180 85 L 180 105 Q 180 120 200 130 Q 220 120 220 105 L 220 85 Z" fill="#2d5a3d" stroke="#095d29" strokeWidth="2" />
                   <path d="M 195 100 L 198 105 L 205 95" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
                 </svg>
-              </div>
-              
-              {/* Text Right */}
-              <div>
-                <p className="text-body mb-6">
-                  Resource Pakistan operates under strict ethical, compliance, and governance standards. Our work is structured to support institutional decision-making while maintaining confidentiality, transparency, and accountability. We understand that our recommendations may inform policy and institutional decisions, and we structure our engagement accordingly.
-                </p>
-                <p className="text-body">
-                  We are committed to responsible resource and industrial development that integrates environmental protection, socio-economic considerations, and long-term sustainability. All our work is subject to institutional review and designed to withstand scrutiny from government bodies, policy analysts, and stakeholder groups.
-                </p>
               </div>
             </div>
           </div>
@@ -184,8 +184,18 @@ export default function Governance() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Text Content */}
+              <div>
+                <p className="text-body mb-6">
+                  Resource Pakistan operates in compliance with Pakistan's regulatory frameworks, environmental standards, and institutional requirements. All our recommendations are designed to support compliance and withstand institutional review. We maintain awareness of evolving policy frameworks and adjust our advisory services accordingly.
+                </p>
+                <p className="text-body">
+                  Our engagement methodology integrates compliance requirements from the outset, ensuring that all recommendations are feasible within Pakistan's institutional and regulatory context. We support clients in understanding compliance requirements and developing implementation strategies aligned with institutional standards.
+                </p>
+              </div>
+
               {/* SVG Diagram - Compliance Layers */}
-              <div className="order-2 lg:order-1 flex items-center justify-center">
+              <div className="flex items-center justify-center">
                 <svg 
                   viewBox="0 0 400 350" 
                   className="w-full max-w-md h-auto"
@@ -213,16 +223,6 @@ export default function Governance() {
                   <path d="M 270 135 L 275 142 L 285 128" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
                   <path d="M 250 65 L 255 72 L 265 58" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
                 </svg>
-              </div>
-              
-              {/* Text Content */}
-              <div className="order-1 lg:order-2">
-                <p className="text-body mb-6">
-                  Resource Pakistan operates in compliance with Pakistan's regulatory frameworks, environmental standards, and institutional requirements. All our recommendations are designed to support compliance and withstand institutional review. We maintain awareness of evolving policy frameworks and adjust our advisory services accordingly.
-                </p>
-                <p className="text-body">
-                  Our engagement methodology integrates compliance requirements from the outset, ensuring that all recommendations are feasible within Pakistan's institutional and regulatory context. We support clients in understanding compliance requirements and developing implementation strategies aligned with institutional standards.
-                </p>
               </div>
             </div>
           </div>
