@@ -183,13 +183,47 @@ export default function Governance() {
               </h2>
             </div>
 
-            <div className="max-w-3xl">
-              <p className="text-body mb-6">
-                Resource Pakistan operates in compliance with Pakistan's regulatory frameworks, environmental standards, and institutional requirements. All our recommendations are designed to support compliance and withstand institutional review. We maintain awareness of evolving policy frameworks and adjust our advisory services accordingly.
-              </p>
-              <p className="text-body">
-                Our engagement methodology integrates compliance requirements from the outset, ensuring that all recommendations are feasible within Pakistan's institutional and regulatory context. We support clients in understanding compliance requirements and developing implementation strategies aligned with institutional standards.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* SVG Diagram - Compliance Layers */}
+              <div className="order-2 lg:order-1 flex items-center justify-center">
+                <svg 
+                  viewBox="0 0 400 350" 
+                  className="w-full max-w-md h-auto"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Base Layer - Regulatory Framework */}
+                  <rect x="50" y="250" width="300" height="60" fill="#095d29" stroke="#2d5a3d" strokeWidth="2" rx="4" />
+                  <text x="200" y="285" fontSize="14" fill="#ffffff" textAnchor="middle" fontWeight="600">Regulatory Framework</text>
+                  
+                  {/* Second Layer - Environmental Standards */}
+                  <rect x="75" y="180" width="250" height="60" fill="#2d5a3d" stroke="#095d29" strokeWidth="2" rx="4" />
+                  <text x="200" y="215" fontSize="14" fill="#ffffff" textAnchor="middle" fontWeight="600">Environmental Standards</text>
+                  
+                  {/* Third Layer - Institutional Requirements */}
+                  <rect x="100" y="110" width="200" height="60" fill="#3d7a4f" stroke="#2d5a3d" strokeWidth="2" rx="4" />
+                  <text x="200" y="145" fontSize="14" fill="#ffffff" textAnchor="middle" fontWeight="600">Institutional Requirements</text>
+                  
+                  {/* Top Layer - Advisory Excellence */}
+                  <rect x="125" y="40" width="150" height="60" fill="#4d8a5f" stroke="#2d5a3d" strokeWidth="2" rx="4" />
+                  <text x="200" y="75" fontSize="14" fill="#ffffff" textAnchor="middle" fontWeight="600">Advisory Excellence</text>
+                  
+                  {/* Checkmarks for each layer */}
+                  <path d="M 60 275 L 65 282 L 75 268" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M 85 205 L 90 212 L 100 198" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M 110 135 L 115 142 L 125 128" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M 135 65 L 140 72 L 150 58" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+                </svg>
+              </div>
+              
+              {/* Text Content */}
+              <div className="order-1 lg:order-2">
+                <p className="text-body mb-6">
+                  Resource Pakistan operates in compliance with Pakistan's regulatory frameworks, environmental standards, and institutional requirements. All our recommendations are designed to support compliance and withstand institutional review. We maintain awareness of evolving policy frameworks and adjust our advisory services accordingly.
+                </p>
+                <p className="text-body">
+                  Our engagement methodology integrates compliance requirements from the outset, ensuring that all recommendations are feasible within Pakistan's institutional and regulatory context. We support clients in understanding compliance requirements and developing implementation strategies aligned with institutional standards.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -203,13 +237,60 @@ export default function Governance() {
               </h2>
             </div>
 
-            <div className="max-w-3xl">
-              <p className="text-body mb-6">
-                Resource development and industrial planning require coordination across multiple stakeholder groups including government bodies, policy institutions, local communities, and strategic partners. We facilitate structured engagement processes and support alignment across institutional levels and sectoral interests.
-              </p>
-              <p className="text-body">
-                Our stakeholder coordination approach prioritizes transparency, documented communication, and institutional alignment. We help decision-makers navigate complex multi-stakeholder environments and develop consensus around feasibility-driven strategies.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Text Content */}
+              <div>
+                <p className="text-body mb-6" style={{color: '#ede0d4'}}>
+                  Resource development and industrial planning require coordination across multiple stakeholder groups including government bodies, policy institutions, local communities, and strategic partners. We facilitate structured engagement processes and support alignment across institutional levels and sectoral interests.
+                </p>
+                <p className="text-body" style={{color: '#ede0d4'}}>
+                  Our stakeholder coordination approach prioritizes transparency, documented communication, and institutional alignment. We help decision-makers navigate complex multi-stakeholder environments and develop consensus around feasibility-driven strategies.
+                </p>
+              </div>
+
+              {/* SVG Diagram - Stakeholder Network */}
+              <div className="flex items-center justify-center">
+                <svg 
+                  viewBox="0 0 400 400" 
+                  className="w-full max-w-md h-auto"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Central Hub - Resource Pakistan */}
+                  <circle cx="200" cy="200" r="50" fill="#ede0d4" stroke="#ffffff" strokeWidth="3" />
+                  <text x="200" y="200" fontSize="13" fill="#095d29" textAnchor="middle" fontWeight="bold">Resource</text>
+                  <text x="200" y="215" fontSize="13" fill="#095d29" textAnchor="middle" fontWeight="bold">Pakistan</text>
+                  
+                  {/* Government Bodies (Top) */}
+                  <line x1="200" y1="150" x2="200" y2="80" stroke="#ffffff" strokeWidth="2" opacity="0.6" />
+                  <circle cx="200" cy="60" r="35" fill="#ffffff" fillOpacity="0.2" stroke="#ffffff" strokeWidth="2" />
+                  <text x="200" y="60" fontSize="11" fill="#ffffff" textAnchor="middle" fontWeight="600">Government</text>
+                  <text x="200" y="73" fontSize="11" fill="#ffffff" textAnchor="middle" fontWeight="600">Bodies</text>
+                  
+                  {/* Policy Institutions (Right) */}
+                  <line x1="250" y1="200" x2="320" y2="200" stroke="#ffffff" strokeWidth="2" opacity="0.6" />
+                  <circle cx="340" cy="200" r="35" fill="#ffffff" fillOpacity="0.2" stroke="#ffffff" strokeWidth="2" />
+                  <text x="340" y="200" fontSize="11" fill="#ffffff" textAnchor="middle" fontWeight="600">Policy</text>
+                  <text x="340" y="213" fontSize="11" fill="#ffffff" textAnchor="middle" fontWeight="600">Institutions</text>
+                  
+                  {/* Local Communities (Bottom) */}
+                  <line x1="200" y1="250" x2="200" y2="320" stroke="#ffffff" strokeWidth="2" opacity="0.6" />
+                  <circle cx="200" cy="340" r="35" fill="#ffffff" fillOpacity="0.2" stroke="#ffffff" strokeWidth="2" />
+                  <text x="200" y="340" fontSize="11" fill="#ffffff" textAnchor="middle" fontWeight="600">Local</text>
+                  <text x="200" y="353" fontSize="11" fill="#ffffff" textAnchor="middle" fontWeight="600">Communities</text>
+                  
+                  {/* Strategic Partners (Left) */}
+                  <line x1="150" y1="200" x2="80" y2="200" stroke="#ffffff" strokeWidth="2" opacity="0.6" />
+                  <circle cx="60" cy="200" r="35" fill="#ffffff" fillOpacity="0.2" stroke="#ffffff" strokeWidth="2" />
+                  <text x="60" y="200" fontSize="11" fill="#ffffff" textAnchor="middle" fontWeight="600">Strategic</text>
+                  <text x="60" y="213" fontSize="11" fill="#ffffff" textAnchor="middle" fontWeight="600">Partners</text>
+                  
+                  {/* Connection dots */}
+                  <circle cx="200" cy="150" r="4" fill="#ffffff" />
+                  <circle cx="250" cy="200" r="4" fill="#ffffff" />
+                  <circle cx="200" cy="250" r="4" fill="#ffffff" />
+                  <circle cx="150" cy="200" r="4" fill="#ffffff" />
+                </svg>
+              </div>
             </div>
           </div>
         </section>

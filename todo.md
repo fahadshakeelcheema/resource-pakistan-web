@@ -207,3 +207,10 @@
 - [x] Add background image to Technology page hero section
 - [x] Add background image to Governance page hero section
 - [x] Add background image to Contact page hero section
+
+## Technology and Governance Page Enhancements
+
+- [x] Add relevant image to Technology page Long-Term Institutional Planning section
+- [x] Adjust Governance Framework section alignment (heading, content, image)
+- [x] Add relevant SVG to Governance page Compliance and Standards section
+- [x] Add relevant SVG to Governance page Stakeholder Coordination section

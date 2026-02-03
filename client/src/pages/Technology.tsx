@@ -192,13 +192,66 @@ export default function Technology() {
               </h2>
             </div>
 
-            <div className="max-w-3xl">
-              <p className="text-body mb-6">
-                Our technology work is framed within long-term institutional planning horizons. We support government bodies and strategic partners in developing comprehensive strategies that integrate technology adoption with industrial development, resource management, and policy frameworks.
-              </p>
-              <p className="text-body">
-                We emphasize realistic assessment of implementation timelines, institutional capacity requirements, and resource commitments. Our recommendations are structured to support evidence-based institutional decision-making and long-term strategic planning.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Text Content */}
+              <div>
+                <p className="text-body mb-6">
+                  Our technology work is framed within long-term institutional planning horizons. We support government bodies and strategic partners in developing comprehensive strategies that integrate technology adoption with industrial development, resource management, and policy frameworks.
+                </p>
+                <p className="text-body">
+                  We emphasize realistic assessment of implementation timelines, institutional capacity requirements, and resource commitments. Our recommendations are structured to support evidence-based institutional decision-making and long-term strategic planning.
+                </p>
+              </div>
+
+              {/* SVG Diagram - Timeline/Planning Visual */}
+              <div className="flex items-center justify-center">
+                <svg 
+                  viewBox="0 0 400 300" 
+                  className="w-full max-w-md h-auto"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Timeline Arrow */}
+                  <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                      <polygon points="0 0, 10 3, 0 6" fill="#095d29" />
+                    </marker>
+                  </defs>
+                  <line x1="50" y1="150" x2="350" y2="150" stroke="#2d5a3d" strokeWidth="3" markerEnd="url(#arrowhead)" />
+                  
+                  {/* Phase 1: Assessment */}
+                  <circle cx="80" cy="150" r="25" fill="#095d29" stroke="#2d5a3d" strokeWidth="2" />
+                  <text x="80" y="155" fontSize="12" fill="#ffffff" textAnchor="middle" fontWeight="bold">1</text>
+                  <text x="80" y="195" fontSize="14" fill="#2d5a3d" textAnchor="middle" fontWeight="600">Assessment</text>
+                  
+                  {/* Phase 2: Strategy */}
+                  <circle cx="160" cy="150" r="25" fill="#095d29" stroke="#2d5a3d" strokeWidth="2" />
+                  <text x="160" y="155" fontSize="12" fill="#ffffff" textAnchor="middle" fontWeight="bold">2</text>
+                  <text x="160" y="195" fontSize="14" fill="#2d5a3d" textAnchor="middle" fontWeight="600">Strategy</text>
+                  
+                  {/* Phase 3: Integration */}
+                  <circle cx="240" cy="150" r="25" fill="#095d29" stroke="#2d5a3d" strokeWidth="2" />
+                  <text x="240" y="155" fontSize="12" fill="#ffffff" textAnchor="middle" fontWeight="bold">3</text>
+                  <text x="240" y="195" fontSize="14" fill="#2d5a3d" textAnchor="middle" fontWeight="600">Integration</text>
+                  
+                  {/* Phase 4: Implementation */}
+                  <circle cx="320" cy="150" r="25" fill="#095d29" stroke="#2d5a3d" strokeWidth="2" />
+                  <text x="320" y="155" fontSize="12" fill="#ffffff" textAnchor="middle" fontWeight="bold">4</text>
+                  <text x="320" y="195" fontSize="14" fill="#2d5a3d" textAnchor="middle" fontWeight="600">Implementation</text>
+                  
+                  {/* Top Labels */}
+                  <text x="80" y="100" fontSize="11" fill="#6b7280" textAnchor="middle">Capacity</text>
+                  <text x="80" y="115" fontSize="11" fill="#6b7280" textAnchor="middle">Analysis</text>
+                  
+                  <text x="160" y="100" fontSize="11" fill="#6b7280" textAnchor="middle">Policy</text>
+                  <text x="160" y="115" fontSize="11" fill="#6b7280" textAnchor="middle">Framework</text>
+                  
+                  <text x="240" y="100" fontSize="11" fill="#6b7280" textAnchor="middle">Technology</text>
+                  <text x="240" y="115" fontSize="11" fill="#6b7280" textAnchor="middle">Adoption</text>
+                  
+                  <text x="320" y="100" fontSize="11" fill="#6b7280" textAnchor="middle">Long-term</text>
+                  <text x="320" y="115" fontSize="11" fill="#6b7280" textAnchor="middle">Execution</text>
+                </svg>
+              </div>
             </div>
           </div>
         </section>
