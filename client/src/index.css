@@ -199,9 +199,10 @@
   
   p {
     font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.75;
     margin-bottom: 1.25rem;
     color: #2a2520;
+    max-width: 75ch; /* Optimal line length for readability */
   }
   
   button:not(:disabled),

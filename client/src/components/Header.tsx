@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useAuth } from "@/_core/hooks/useAuth";
@@ -11,6 +11,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { user } = useAuth();
+  const [location] = useLocation();
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -32,11 +33,20 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="text-sm font-medium text-foreground transition-colors hover:text-primary">
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isActive = location === item.href;
+            return (
+              <Link 
+                key={item.href} 
+                href={item.href} 
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  isActive ? 'text-primary border-b-2 border-primary' : 'text-foreground'
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
           {user?.role === "admin" && (
             <Link href="/admin" className="text-sm font-medium text-foreground transition-colors hover:text-primary">
               Admin
@@ -58,16 +68,21 @@ export default function Header() {
       {mobileMenuOpen && (
         <nav className="md:hidden border-t border-border bg-background">
           <div className="container py-4 flex flex-col gap-4">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm font-medium text-foreground transition-colors hover:text-primary"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = location === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    isActive ? 'text-primary font-bold' : 'text-foreground'
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
             {user?.role === "admin" && (
               <Link
                 href="/admin"
