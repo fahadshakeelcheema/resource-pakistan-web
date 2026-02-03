@@ -106,7 +106,7 @@ export default function Footer() {
         <div className="border-t border-border pt-8">
           {/* Copyright */}
           <div className="text-center text-xs text-muted-foreground">
-            <p>© {currentYear} Resource Pakistan (Pvt) Ltd. All rights reserved.</p>
+            <p className="max-w-none mx-auto">© {currentYear} Resource Pakistan (Pvt) Ltd. All rights reserved.</p>
           </div>
         </div>
       </div>
