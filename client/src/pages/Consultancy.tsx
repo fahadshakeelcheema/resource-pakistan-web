@@ -17,7 +17,7 @@ export default function Consultancy() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-16 md:py-24 border-b border-border">
+        <section className="relative overflow-hidden py-16 md:py-14 border-b border-border">
           <div 
             className="absolute inset-0 opacity-[0.06] grayscale"
             style={{backgroundImage: 'url(/images/pakistan-reko-diq-landscape.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}
@@ -33,15 +33,15 @@ export default function Consultancy() {
         </section>
 
         {/* Section 1: Our Consultancy Approach with Icon */}
-        <section className="py-20 md:py-28 section-cream border-t border-border">
+        <section className="py-12 md:py-16 section-cream border-t border-border">
           <div className="container">
-            <div className="mb-16">
+            <div className="mb-10">
               <h2 className="text-heading">
                 <span className="section-number">1.</span>Consultancy Approach
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
               {/* Text Left */}
               <div>
                 <p className="text-body mb-6">
@@ -97,15 +97,15 @@ export default function Consultancy() {
         </section>
 
         {/* Section 2: Consultancy Services */}
-        <section className="py-20 md:py-28 section-green border-t border-border">
+        <section className="py-12 md:py-16 section-green border-t border-border">
           <div className="container">
-            <div className="mb-16">
+            <div className="mb-10">
               <h2 className="text-heading">
                 <span className="section-number" style={{color: '#ffffff'}}>2.</span>Core Consultancy Services
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Strategic Planning */}
               <div 
                 className="card-institutional transition-all hover:shadow-lg" 
@@ -178,15 +178,15 @@ export default function Consultancy() {
         </section>
 
         {/* Section 3: Client Sectors */}
-        <section className="py-20 md:py-28 section-cream border-t border-border">
+        <section className="py-12 md:py-16 section-cream border-t border-border">
           <div className="container">
-            <div className="mb-16">
+            <div className="mb-10">
               <h2 className="text-heading">
                 <span className="section-number">3.</span>Client Sectors
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Government Bodies */}
               <div 
                 className="card-institutional transition-all hover:shadow-lg"
@@ -233,7 +233,7 @@ export default function Consultancy() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 section-light border-t border-border">
+        <section className="py-16 md:py-14 section-light border-t border-border">
           <div className="container text-center">
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               For consultancy services, strategic planning, or advisory support, please contact us.

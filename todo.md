@@ -241,3 +241,10 @@
 
 - [x] Center-align Resource Pakistan logo with text underneath in footer
 - [x] Review and adjust partner organization logo sizes for symmetry
+
+## Reduce Unnecessary Spacing Throughout Website
+
+- [x] Review and reduce section padding (py-20, py-24, py-28) across all pages
+- [x] Reduce hero section padding
+- [x] Adjust header and footer spacing
+- [x] Reduce margin between sections
