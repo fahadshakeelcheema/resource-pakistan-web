@@ -291,3 +291,7 @@
 - [x] Remove section serial numbers from Technology page
 - [x] Remove section serial numbers from Governance page
 - [x] Ensure proper code indentation across all page files
+
+## About Page Layout Adjustment
+
+- [x] Swap Ethics, Compliance, and Confidentiality section layout: move image to right, text to left

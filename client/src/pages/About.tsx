@@ -505,8 +505,35 @@ export default function About() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center">
-              {/* Icon Left - Shield of Integrity */}
-              <div className="order-2 lg:order-1 flex items-center justify-center">
+              {/* Text Left */}
+              <div className="order-1 lg:order-1">
+                <p className="text-body mb-6">
+                  Resource Pakistan operates under strict ethical and compliance
+                  standards. We maintain confidentiality regarding all client
+                  information, project details, and strategic discussions. Our
+                  work is structured to support institutional decision-making
+                  processes while respecting the sensitive nature of resource
+                  development and policy planning.
+                </p>
+                <p className="text-body mb-6">
+                  We are committed to responsible resource development that
+                  integrates environmental protection, community considerations,
+                  and long-term sustainability. All our recommendations are
+                  subject to institutional review and are designed to withstand
+                  scrutiny from government bodies, policy analysts, and
+                  stakeholder groups.
+                </p>
+                <p className="text-body">
+                  Our engagement framework prioritizes transparency, documented
+                  analysis, and clear communication of assumptions, limitations,
+                  and recommendations. We understand that our work may inform
+                  public policy and institutional decisions, and we structure
+                  our deliverables accordingly.
+                </p>
+              </div>
+
+              {/* Icon Right - Shield of Integrity */}
+              <div className="order-2 lg:order-2 flex items-center justify-center">
                 <svg
                   viewBox="0 0 400 400"
                   className="w-full max-w-sm h-auto"
@@ -549,33 +576,6 @@ export default function About() {
                     opacity="0.2"
                   />
                 </svg>
-              </div>
-
-              {/* Text Right */}
-              <div className="order-1 lg:order-2">
-                <p className="text-body mb-6">
-                  Resource Pakistan operates under strict ethical and compliance
-                  standards. We maintain confidentiality regarding all client
-                  information, project details, and strategic discussions. Our
-                  work is structured to support institutional decision-making
-                  processes while respecting the sensitive nature of resource
-                  development and policy planning.
-                </p>
-                <p className="text-body mb-6">
-                  We are committed to responsible resource development that
-                  integrates environmental protection, community considerations,
-                  and long-term sustainability. All our recommendations are
-                  subject to institutional review and are designed to withstand
-                  scrutiny from government bodies, policy analysts, and
-                  stakeholder groups.
-                </p>
-                <p className="text-body">
-                  Our engagement framework prioritizes transparency, documented
-                  analysis, and clear communication of assumptions, limitations,
-                  and recommendations. We understand that our work may inform
-                  public policy and institutional decisions, and we structure
-                  our deliverables accordingly.
-                </p>
               </div>
             </div>
           </div>
