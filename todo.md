@@ -219,3 +219,7 @@
 
 - [x] Fix overlapping text in Technology page Long-Term Institutional Planning diagram
 - [x] Fix overlapping checkmarks in Governance page Compliance and Standards diagram
+
+## Consultancy Page Layout Adjustment
+
+- [x] Swap Consultancy Approach section layout: move diagram to right, content to left

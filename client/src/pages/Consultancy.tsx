@@ -42,7 +42,17 @@ export default function Consultancy() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {/* Icon Left - Strategic Planning Diagram */}
+              {/* Text Left */}
+              <div>
+                <p className="text-body mb-6">
+                  Resource Pakistan provides advisory services that bridge policy frameworks with operational execution. We work with government bodies, think tanks, and institutional stakeholders to develop feasibility-driven strategies for resource development, industrial planning, and technology assessment.
+                </p>
+                <p className="text-body">
+                  Our consultancy is grounded in rigorous analysis, institutional understanding, and long-term perspective. We structure recommendations to support institutional decision-making processes and withstand scrutiny from policy analysts and stakeholder groups.
+                </p>
+              </div>
+
+              {/* Diagram Right - Strategic Planning Diagram */}
               <div className="flex items-center justify-center">
                 <svg 
                   viewBox="0 0 400 400" 
@@ -81,16 +91,6 @@ export default function Consultancy() {
                   <path d="M 180 250 Q 150 280 160 310" fill="none" stroke="#2d5a3d" strokeWidth="2" opacity="0.4" />
                   <path d="M 150 180 Q 120 150 130 110" fill="none" stroke="#2d5a3d" strokeWidth="2" opacity="0.4" />
                 </svg>
-              </div>
-              
-              {/* Text Right */}
-              <div>
-                <p className="text-body mb-6">
-                  Resource Pakistan provides advisory services that bridge policy frameworks with operational execution. We work with government bodies, think tanks, and institutional stakeholders to develop feasibility-driven strategies for resource development, industrial planning, and technology assessment.
-                </p>
-                <p className="text-body">
-                  Our consultancy is grounded in rigorous analysis, institutional understanding, and long-term perspective. We structure recommendations to support institutional decision-making processes and withstand scrutiny from policy analysts and stakeholder groups.
-                </p>
               </div>
             </div>
           </div>
