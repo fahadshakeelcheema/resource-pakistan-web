@@ -207,11 +207,11 @@ export default function Governance() {
                   <rect x="125" y="40" width="150" height="60" fill="#4d8a5f" stroke="#2d5a3d" strokeWidth="2" rx="4" />
                   <text x="200" y="75" fontSize="14" fill="#ffffff" textAnchor="middle" fontWeight="600">Advisory Excellence</text>
                   
-                  {/* Checkmarks for each layer */}
-                  <path d="M 60 275 L 65 282 L 75 268" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
-                  <path d="M 85 205 L 90 212 L 100 198" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
-                  <path d="M 110 135 L 115 142 L 125 128" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
-                  <path d="M 135 65 L 140 72 L 150 58" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+                  {/* Checkmarks for each layer - positioned on right side */}
+                  <path d="M 320 275 L 325 282 L 335 268" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M 295 205 L 300 212 L 310 198" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M 270 135 L 275 142 L 285 128" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M 250 65 L 255 72 L 265 58" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </div>
               

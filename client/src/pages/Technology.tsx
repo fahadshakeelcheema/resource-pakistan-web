@@ -239,17 +239,17 @@ export default function Technology() {
                   <text x="320" y="195" fontSize="14" fill="#2d5a3d" textAnchor="middle" fontWeight="600">Implementation</text>
                   
                   {/* Top Labels */}
-                  <text x="80" y="100" fontSize="11" fill="#6b7280" textAnchor="middle">Capacity</text>
-                  <text x="80" y="115" fontSize="11" fill="#6b7280" textAnchor="middle">Analysis</text>
+                  <text x="80" y="95" fontSize="10" fill="#6b7280" textAnchor="middle">Capacity</text>
+                  <text x="80" y="108" fontSize="10" fill="#6b7280" textAnchor="middle">Analysis</text>
                   
-                  <text x="160" y="100" fontSize="11" fill="#6b7280" textAnchor="middle">Policy</text>
-                  <text x="160" y="115" fontSize="11" fill="#6b7280" textAnchor="middle">Framework</text>
+                  <text x="160" y="95" fontSize="10" fill="#6b7280" textAnchor="middle">Policy</text>
+                  <text x="160" y="108" fontSize="10" fill="#6b7280" textAnchor="middle">Framework</text>
                   
-                  <text x="240" y="100" fontSize="11" fill="#6b7280" textAnchor="middle">Technology</text>
-                  <text x="240" y="115" fontSize="11" fill="#6b7280" textAnchor="middle">Adoption</text>
+                  <text x="240" y="95" fontSize="10" fill="#6b7280" textAnchor="middle">Technology</text>
+                  <text x="240" y="108" fontSize="10" fill="#6b7280" textAnchor="middle">Adoption</text>
                   
-                  <text x="320" y="100" fontSize="11" fill="#6b7280" textAnchor="middle">Long-term</text>
-                  <text x="320" y="115" fontSize="11" fill="#6b7280" textAnchor="middle">Execution</text>
+                  <text x="320" y="95" fontSize="10" fill="#6b7280" textAnchor="middle">Long-term</text>
+                  <text x="320" y="108" fontSize="10" fill="#6b7280" textAnchor="middle">Execution</text>
                 </svg>
               </div>
             </div>

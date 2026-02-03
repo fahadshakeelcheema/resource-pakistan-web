@@ -214,3 +214,8 @@
 - [x] Adjust Governance Framework section alignment (heading, content, image)
 - [x] Add relevant SVG to Governance page Compliance and Standards section
 - [x] Add relevant SVG to Governance page Stakeholder Coordination section
+
+## Fix Diagram Text Overlaps
+
+- [x] Fix overlapping text in Technology page Long-Term Institutional Planning diagram
+- [x] Fix overlapping checkmarks in Governance page Compliance and Standards diagram
