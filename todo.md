@@ -513,3 +513,8 @@
 - [x] Add preload hints for critical assets (fonts, logo, hero images)
 - [x] Optimize image loading strategy
 - [x] Test performance improvements with Lighthouse
+
+## Contact Page Image Update
+
+- [x] Search for Pakistani business handshake imagery
+- [x] Replace contact page background with Pakistani men hands image
