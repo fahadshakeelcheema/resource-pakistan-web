@@ -461,3 +461,8 @@
 - [x] Search for governance and policy-related imagery
 - [x] Add background to Governance page hero section
 - [x] Ensure text readability against new background
+
+## Contact Page Background Enhancement
+
+- [x] Improve background visuals on Contact page hero section
+- [x] Ensure text readability and visual consistency with other pages

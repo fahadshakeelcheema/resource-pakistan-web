@@ -82,11 +82,11 @@ export default function Contact() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-8 md:py-20">
+        <section className="relative overflow-hidden py-24 md:py-32 border-b border-border">
           <div
-            className="absolute inset-0 opacity-[0.06] grayscale"
+            className="absolute inset-0"
             style={{
-              backgroundImage: "url(/images/pakistan-reko-diq-landscape.jpg)",
+              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/AUJbBdOSxQVAZXBp.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -94,12 +94,12 @@ export default function Contact() {
           <div className="container relative z-10">
             <div className="max-w-3xl">
               <h1
-                className="text-5xl md:text-6xl font-bold text-foreground mb-6"
-                style={{ fontFamily: "'Crimson Text', serif" }}
+                className="text-5xl md:text-6xl font-bold text-white mb-6"
+                style={{ fontFamily: "'Crimson Text', serif", textShadow: "2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)" }}
               >
                 Contact Resource Pakistan
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-white leading-relaxed font-semibold" style={{ textShadow: "2px 2px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.5)" }}>
                 For inquiries regarding feasibility studies, advisory services,
                 or strategic partnerships.
               </p>
