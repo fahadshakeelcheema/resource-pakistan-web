@@ -22,7 +22,8 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
-import { Search, Loader2, Mail, Phone, Building2, Calendar, MessageSquare } from "lucide-react";
+import { Search, Loader2, Mail, Phone, Building2, Calendar, MessageSquare, Download, Send } from "lucide-react";
+import { responseTemplates, fillTemplate, type ResponseTemplate } from "@shared/responseTemplates";
 
 type InquiryStatus = "new" | "in_progress" | "resolved";
 
@@ -32,6 +33,10 @@ export default function Admin() {
   const [statusFilter, setStatusFilter] = useState<string>("all");
   const [selectedInquiryId, setSelectedInquiryId] = useState<number | null>(null);
   const [adminNotes, setAdminNotes] = useState("");
+  const [selectedTemplateId, setSelectedTemplateId] = useState<string>("");
+  const [responseSubject, setResponseSubject] = useState("");
+  const [responseBody, setResponseBody] = useState("");
+  const [showResponseForm, setShowResponseForm] = useState(false);
 
   const { data: inquiries, isLoading, refetch } = trpc.inquiries.list.useQuery(
     {
@@ -72,6 +77,88 @@ export default function Admin() {
         adminNotes,
       });
     }
+  };
+
+  const handleTemplateSelect = (templateId: string) => {
+    setSelectedTemplateId(templateId);
+    const template = responseTemplates.find((t) => t.id === templateId);
+    if (template && selectedInquiry) {
+      const filled = fillTemplate(template, {
+        name: selectedInquiry.fullName,
+        subject: selectedInquiry.subject,
+        organization: selectedInquiry.organization || "",
+      });
+      setResponseSubject(filled.subject);
+      setResponseBody(filled.body);
+    }
+  };
+
+  const handleSendResponse = () => {
+    if (!selectedInquiry) return;
+    
+    // Create mailto link with pre-filled content
+    const mailtoLink = `mailto:${selectedInquiry.email}?subject=${encodeURIComponent(responseSubject)}&body=${encodeURIComponent(responseBody)}`;
+    window.location.href = mailtoLink;
+    
+    // Reset form
+    setShowResponseForm(false);
+    setSelectedTemplateId("");
+    setResponseSubject("");
+    setResponseBody("");
+  };
+
+  const exportToCSV = () => {
+    if (!inquiries || inquiries.length === 0) return;
+
+    // CSV headers
+    const headers = [
+      "ID",
+      "Date",
+      "Name",
+      "Email",
+      "Organization",
+      "Phone",
+      "Subject",
+      "Message",
+      "Status",
+      "Admin Notes",
+    ];
+
+    // CSV rows
+    const rows = inquiries.map((inquiry) => [
+      inquiry.id,
+      new Date(inquiry.createdAt).toLocaleString(),
+      inquiry.fullName,
+      inquiry.email,
+      inquiry.organization || "",
+      inquiry.phone || "",
+      inquiry.subject,
+      inquiry.message.replace(/\n/g, " ").replace(/"/g, '""'), // Escape quotes and newlines
+      inquiry.status,
+      (inquiry.adminNotes || "").replace(/\n/g, " ").replace(/"/g, '""'),
+    ]);
+
+    // Combine headers and rows
+    const csvContent = [
+      headers.join(","),
+      ...rows.map((row) =>
+        row.map((cell) => `"${cell}"`).join(",")
+      ),
+    ].join("\n");
+
+    // Create blob and download
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute(
+      "download",
+      `inquiries-${new Date().toISOString().split("T")[0]}.csv`
+    );
+    link.style.visibility = "hidden";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const getStatusBadge = (status: string) => {
@@ -146,7 +233,7 @@ export default function Admin() {
             </p>
           </div>
 
-          {/* Filters */}
+          {/* Filters and Export */}
           <div className="mb-6 flex flex-col sm:flex-row gap-4">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -168,6 +255,15 @@ export default function Admin() {
                 <SelectItem value="resolved">Resolved</SelectItem>
               </SelectContent>
             </Select>
+            <Button
+              onClick={exportToCSV}
+              disabled={!inquiries || inquiries.length === 0}
+              variant="outline"
+              className="w-full sm:w-auto"
+            >
+              <Download className="mr-2 h-4 w-4" />
+              Export CSV
+            </Button>
           </div>
 
           {/* Inquiries List */}
@@ -345,6 +441,86 @@ export default function Admin() {
                     )}
                   </div>
                 </div>
+              </div>
+
+              {/* Response Templates */}
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-semibold text-lg">Send Response</h3>
+                  {!showResponseForm && (
+                    <Button
+                      size="sm"
+                      onClick={() => setShowResponseForm(true)}
+                      variant="outline"
+                    >
+                      <Send className="mr-2 h-4 w-4" />
+                      Compose Response
+                    </Button>
+                  )}
+                </div>
+
+                {showResponseForm && (
+                  <div className="space-y-4 border rounded-lg p-4 bg-muted/30">
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">
+                        Select Template
+                      </label>
+                      <Select value={selectedTemplateId} onValueChange={handleTemplateSelect}>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Choose a response template..." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="none">Blank (No Template)</SelectItem>
+                          {responseTemplates.map((template) => (
+                            <SelectItem key={template.id} value={template.id}>
+                              {template.title}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">Subject</label>
+                      <Input
+                        value={responseSubject}
+                        onChange={(e) => setResponseSubject(e.target.value)}
+                        placeholder="Email subject..."
+                      />
+                    </div>
+
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">Message</label>
+                      <Textarea
+                        value={responseBody}
+                        onChange={(e) => setResponseBody(e.target.value)}
+                        placeholder="Email body..."
+                        rows={10}
+                      />
+                    </div>
+
+                    <div className="flex gap-2">
+                      <Button
+                        onClick={handleSendResponse}
+                        disabled={!responseSubject || !responseBody}
+                      >
+                        <Send className="mr-2 h-4 w-4" />
+                        Open in Email Client
+                      </Button>
+                      <Button
+                        variant="outline"
+                        onClick={() => {
+                          setShowResponseForm(false);
+                          setSelectedTemplateId("");
+                          setResponseSubject("");
+                          setResponseBody("");
+                        }}
+                      >
+                        Cancel
+                      </Button>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Admin Notes */}

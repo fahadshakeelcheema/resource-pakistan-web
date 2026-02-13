@@ -329,3 +329,28 @@
 - [x] Display inquiry metadata (submission date, contact info)
 - [x] Add responsive design for mobile access
 - [x] Write vitest tests for admin procedures
+
+## Email Notifications for Contact Forms
+
+- [x] Request admin email address via webdev_request_secrets
+- [x] Create email notification helper function
+- [x] Integrate email sending into inquiry submission flow
+- [x] Test email delivery
+- [x] Write vitest tests for email functionality
+
+## CSV Export Functionality
+
+- [x] Add CSV export button to admin dashboard
+- [x] Implement CSV generation from inquiry data
+- [x] Include filtering in CSV export (respect current filters)
+- [x] Add download functionality
+- [x] Test CSV export with various filters
+
+## Response Templates System
+
+- [x] Create response templates data structure
+- [x] Add template selector to inquiry detail view
+- [x] Implement template categories (mining, consultancy, partnership, general)
+- [x] Add "Send Response" functionality with template
+- [x] Create email sending integration for responses
+- [x] Test template system end-to-end

@@ -6,6 +6,7 @@ import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { createInquiry, getInquiries, getInquiriesByStatus, searchInquiries, updateInquiryStatus, updateInquiryNotes, getInquiryById } from "./db";
 import { notifyOwner } from "./_core/notification";
+import { sendContactFormNotification } from "./_core/email";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -49,6 +50,16 @@ export const appRouter = router({
           await notifyOwner({
             title: "New Inquiry from Resource Pakistan Website",
             content: `New inquiry from ${input.fullName} (${input.email})\n\nSubject: ${input.subject}\n\nMessage: ${input.message}`,
+          });
+
+          // Send email notification
+          await sendContactFormNotification({
+            fullName: input.fullName,
+            email: input.email,
+            organization: input.organization || null,
+            phone: input.phone || null,
+            subject: input.subject,
+            message: input.message,
           });
 
           return {
