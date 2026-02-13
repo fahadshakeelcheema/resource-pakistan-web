@@ -18,19 +18,19 @@ export default function Governance() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-10 md:py-10 border-b border-border">
+        <section className="relative overflow-hidden py-24 md:py-32 border-b border-border">
           <div
-            className="absolute inset-0 opacity-[0.06] grayscale"
+            className="absolute inset-0 opacity-15"
             style={{
-              backgroundImage: "url(/images/pakistan-reko-diq-landscape.jpg)",
+              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/EofUAEvjbCURRFUp.png)",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           ></div>
           <div className="container relative z-10">
             <div className="max-w-3xl">
-              <h1 className="text-display mb-6">Governance & Responsibility</h1>
-              <p className="text-subheading">
+              <h1 className="text-display mb-6 text-foreground">Governance & Responsibility</h1>
+              <p className="text-subheading text-foreground font-semibold">
                 Ethics, compliance, and responsible resource development aligned
                 with institutional standards.
               </p>

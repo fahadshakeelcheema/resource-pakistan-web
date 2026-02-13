@@ -455,3 +455,9 @@
 - [x] Search for electric vehicle or charging infrastructure imagery
 - [x] Add background to EVs & Technology page hero section
 - [x] Ensure text readability against new background
+
+## Governance Page Background Enhancement
+
+- [x] Search for governance and policy-related imagery
+- [x] Add background to Governance page hero section
+- [x] Ensure text readability against new background
