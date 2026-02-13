@@ -393,7 +393,7 @@ export default function Mining() {
                   of resource opportunities and extraction viability.
                 </p>
               </div>
-              <div className="card-institutional p-0 overflow-hidden">
+              <div className="card-institutional p-0 overflow-hidden max-w-md mx-auto">
                 <img
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/ODKAWHNBDLulEcgD.jpeg"
                   alt="Pakistan's Minerals Map showing distribution of copper, scandium, lead and zinc, chromite, marble and granite, and molybdenum across different regions"

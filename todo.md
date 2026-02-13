@@ -445,3 +445,7 @@
 
 - [x] Upload user-provided Pakistan minerals map to S3
 - [x] Replace image in Pakistan's Geological Context section
+
+## Reduce Pakistan Minerals Map Size
+
+- [x] Reduce size of Pakistan minerals map image in Geological Context section
