@@ -20,9 +20,9 @@ export default function About() {
         {/* Hero Section */}
         <section className="relative overflow-hidden py-10 md:py-10 border-b border-border">
           <div
-            className="absolute inset-0 opacity-[0.06] grayscale"
+            className="absolute inset-0 opacity-[0.15]"
             style={{
-              backgroundImage: "url(/images/pakistan-reko-diq-landscape.jpg)",
+              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/HjuvozCNZQjtDKdL.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
