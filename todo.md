@@ -440,3 +440,8 @@
 ## Mining Page Text Visibility Enhancement
 
 - [x] Improve visibility of Mining page subheading text with stronger contrast and styling
+
+## Pakistan's Geological Context Image Replacement
+
+- [x] Upload user-provided Pakistan minerals map to S3
+- [x] Replace image in Pakistan's Geological Context section
