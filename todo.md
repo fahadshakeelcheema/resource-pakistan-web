@@ -426,3 +426,8 @@
 - [x] Search for mining operations imagery with cranes and heavy machinery
 - [x] Add background to Mining & Resource Development page hero section
 - [x] Ensure text readability against new background
+
+## Mining Page Background Transparency Removal
+
+- [x] Remove transparency layer from Mining page background
+- [x] Update text colors to white for readability against full-color background

@@ -25,15 +25,14 @@ export default function Mining() {
               backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/WCgBsJkfmMkOZEEf.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
-              opacity: 0.2,
             }}
           ></div>
           <div className="container relative z-10">
             <div className="max-w-3xl">
-              <h1 className="text-display mb-6 text-foreground">
+              <h1 className="text-display mb-6 text-white drop-shadow-lg">
                 Mining & Resource Development
               </h1>
-              <p className="text-subheading text-foreground">
+              <p className="text-subheading text-white drop-shadow-lg">
                 Responsible mineral development through comprehensive
                 feasibility assessment and institutional alignment.
               </p>
