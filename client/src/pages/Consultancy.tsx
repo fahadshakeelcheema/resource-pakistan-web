@@ -32,13 +32,13 @@ export default function Consultancy() {
               backgroundPosition: "center center",
             }}
           ></div>
-          <div className="absolute inset-0 bg-background/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/50"></div>
           <div className="container relative z-10">
             <div className="max-w-3xl">
-              <h1 className="text-display mb-6 text-foreground">
+              <h1 className="text-display mb-6 text-white drop-shadow-lg">
                 Consultancy & Advisory Services
               </h1>
-              <p className="text-subheading text-foreground">
+              <p className="text-subheading text-white drop-shadow-lg">
                 Strategic planning and advisory services for government bodies,
                 policy institutions, and strategic partners.
               </p>

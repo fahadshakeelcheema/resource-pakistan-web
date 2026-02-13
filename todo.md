@@ -526,3 +526,10 @@
 - [x] Adjust background image positioning for fuller display
 - [x] Enhance section spacing for better visual rhythm (py-16 md:py-20)
 - [x] Ensure symmetry while scrolling down pages
+
+## Full-Scale Background Image Visibility
+
+- [x] Analyze current background image display and overlay issues
+- [x] Reduce dark overlays for better image visibility (from 90% to 40-50%)
+- [x] Adjust background-size for proper full-scale display
+- [x] Ensure images are properly visible while maintaining text readability

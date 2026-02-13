@@ -31,6 +31,7 @@ export default function About() {
               backgroundPosition: "center center",
             }}
           ></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/50"></div>
           <div className="container relative z-10">
             <div className="max-w-3xl">
               <h1 className="text-display mb-6 text-white drop-shadow-lg">About Resource Pakistan</h1>
