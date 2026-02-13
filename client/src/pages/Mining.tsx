@@ -32,7 +32,7 @@ export default function Mining() {
               <h1 className="text-display mb-6 text-white drop-shadow-lg">
                 Mining & Resource Development
               </h1>
-              <p className="text-subheading text-white drop-shadow-lg">
+              <p className="text-subheading text-white font-semibold" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7)' }}>
                 Responsible mineral development through comprehensive
                 feasibility assessment and institutional alignment.
               </p>

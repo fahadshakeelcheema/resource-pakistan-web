@@ -436,3 +436,7 @@
 
 - [x] Search for drilling operations imagery
 - [x] Replace Mining page background with drilling operations image
+
+## Mining Page Text Visibility Enhancement
+
+- [x] Improve visibility of Mining page subheading text with stronger contrast and styling
