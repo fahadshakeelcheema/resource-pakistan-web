@@ -92,6 +92,7 @@ export default function Home() {
               >
                 <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-green-primary transition-all group-hover:border-green-light group-hover:shadow-2xl">
                   <img
+                    loading="lazy"
                     src="/images/service-consultancy.jpg"
                     alt="Consultancy & Advisory"
                     className="w-full h-full object-cover transition-transform group-hover:scale-110"
@@ -118,6 +119,7 @@ export default function Home() {
               >
                 <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-green-primary transition-all group-hover:border-green-light group-hover:shadow-2xl">
                   <img
+                    loading="lazy"
                     src="/images/service-mining.jpg"
                     alt="Mining & Resources"
                     className="w-full h-full object-cover transition-transform group-hover:scale-110"
@@ -144,6 +146,7 @@ export default function Home() {
               >
                 <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-green-primary transition-all group-hover:border-green-light group-hover:shadow-2xl">
                   <img
+                    loading="lazy"
                     src="/images/service-ev-technology.jpg"
                     alt="Electric Vehicles & Technology"
                     className="w-full h-full object-cover transition-transform group-hover:scale-110"
@@ -170,6 +173,7 @@ export default function Home() {
               >
                 <div className="relative w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-green-primary transition-all group-hover:border-green-light group-hover:shadow-2xl">
                   <img
+                    loading="lazy"
                     src="/images/service-industrial-planning.jpg"
                     alt="Industrial Planning"
                     className="w-full h-full object-cover transition-transform group-hover:scale-110"

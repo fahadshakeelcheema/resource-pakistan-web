@@ -505,3 +505,11 @@
 
 - [x] Remove transparency/opacity from Consultancy page backgrounds
 - [x] Remove transparency/opacity from Governance page backgrounds
+
+## Performance Optimization
+
+- [x] Audit all image usage across pages
+- [x] Implement lazy loading for non-critical images
+- [x] Add preload hints for critical assets (fonts, logo, hero images)
+- [x] Optimize image loading strategy
+- [x] Test performance improvements with Lighthouse

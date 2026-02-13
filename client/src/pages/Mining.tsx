@@ -399,6 +399,7 @@ export default function Mining() {
               </div>
               <div className="card-institutional p-0 overflow-hidden max-w-md mx-auto">
                 <img
+                  loading="lazy"
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/ODKAWHNBDLulEcgD.jpeg"
                   alt="Pakistan's Minerals Map showing distribution of copper, scandium, lead and zinc, chromite, marble and granite, and molybdenum across different regions"
                   className="w-full h-auto"

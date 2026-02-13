@@ -62,6 +62,7 @@ export default function Header() {
             alt="Resource Pakistan"
             className="h-auto"
             style={{ width: "140px", height: "auto", imageRendering: "crisp-edges" }}
+            fetchPriority="high"
           />
         </Link>
 
