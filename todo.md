@@ -431,3 +431,8 @@
 
 - [x] Remove transparency layer from Mining page background
 - [x] Update text colors to white for readability against full-color background
+
+## Mining Page Background Replacement
+
+- [x] Search for drilling operations imagery
+- [x] Replace Mining page background with drilling operations image

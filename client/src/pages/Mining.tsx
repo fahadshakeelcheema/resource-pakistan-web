@@ -22,7 +22,7 @@ export default function Mining() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/WCgBsJkfmMkOZEEf.jpg)",
+              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/bSfMnSMVuLdvxHwI.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
