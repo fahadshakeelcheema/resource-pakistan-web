@@ -449,3 +449,9 @@
 ## Reduce Pakistan Minerals Map Size
 
 - [x] Reduce size of Pakistan minerals map image in Geological Context section
+
+## EVs & Technology Page Background Enhancement
+
+- [x] Search for electric vehicle or charging infrastructure imagery
+- [x] Add background to EVs & Technology page hero section
+- [x] Ensure text readability against new background
