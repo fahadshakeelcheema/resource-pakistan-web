@@ -10,8 +10,8 @@ export default function Footer() {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
-    { label: "Mining", href: "/mining" },
     { label: "Consultancy", href: "/consultancy" },
+    { label: "Mining", href: "/mining" },
     { label: "EVs & Technology", href: "/technology" },
     { label: "Governance", href: "/governance" },
     { label: "Contact", href: "/contact" },
@@ -34,14 +34,14 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-bold text-foreground mb-4 uppercase tracking-wider">Core Services</h4>
             <nav className="flex flex-col gap-3">
-              <Link href="/mining">
-                <span className="text-sm text-muted-foreground transition-colors hover:text-primary inline-block">
-                  Mining & Resources
-                </span>
-              </Link>
               <Link href="/consultancy">
                 <span className="text-sm text-muted-foreground transition-colors hover:text-primary inline-block">
                   Consultancy & Advisory
+                </span>
+              </Link>
+              <Link href="/mining">
+                <span className="text-sm text-muted-foreground transition-colors hover:text-primary inline-block">
+                  Mining & Resources
                 </span>
               </Link>
               <Link href="/technology">

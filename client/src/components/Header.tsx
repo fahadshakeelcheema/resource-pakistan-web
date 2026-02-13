@@ -18,8 +18,8 @@ export default function Header() {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
-    { label: "Mining", href: "/mining" },
     { label: "Consultancy", href: "/consultancy" },
+    { label: "Mining", href: "/mining" },
     { label: "EVs & Technology", href: "/technology" },
     { label: "Governance", href: "/governance" },
     { label: "Contact", href: "/contact" },

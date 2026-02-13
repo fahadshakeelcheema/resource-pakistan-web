@@ -397,3 +397,8 @@
 ## About Page Background Image Update
 
 - [x] Replace About Us page hero background with mountain landscape image
+
+## Navigation Menu Reorder
+
+- [x] Reorder header navigation: Consultancy before Mining
+- [x] Reorder footer navigation: Consultancy before Mining
