@@ -1,0 +1,50 @@
+{
+  "query": "SELECT id, fullName, email, subject, status, createdAt FROM inquiries ORDER BY createdAt DESC LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user pTDXteyGoVcnmu2.81b3c927beba --database BFmfDM6B49onoAD23KvSUR --execute SELECT id, fullName, email, subject, status, createdAt FROM inquiries ORDER BY createdAt DESC LIMIT 5;",
+  "rows": [
+    {
+      "id": "30005",
+      "fullName": "test123",
+      "email": "fahadonline88@gmail.com",
+      "subject": "EVs & Technology",
+      "status": "new",
+      "createdAt": "2026-02-13 19:16:36"
+    },
+    {
+      "id": "30004",
+      "fullName": "Test User",
+      "email": "test@example.com",
+      "subject": "Mining & Resource Development",
+      "status": "resolved",
+      "createdAt": "2026-02-13 17:24:47"
+    },
+    {
+      "id": "30003",
+      "fullName": "Test User",
+      "email": "test@example.com",
+      "subject": "Mining & Resource Development",
+      "status": "in_progress",
+      "createdAt": "2026-02-13 17:15:35"
+    },
+    {
+      "id": "30002",
+      "fullName": "Test User",
+      "email": "test@example.com",
+      "subject": "Mining & Resource Development",
+      "status": "in_progress",
+      "createdAt": "2026-02-13 16:52:14"
+    },
+    {
+      "id": "30001",
+      "fullName": "Test User",
+      "email": "test@example.com",
+      "subject": "Mining & Resource Development",
+      "status": "new",
+      "createdAt": "2026-02-13 16:51:17"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tfullName\temail\tsubject\tstatus\tcreatedAt\n30005\ttest123\tfahadonline88@gmail.com\tEVs & Technology\tnew\t2026-02-13 19:16:36\n30004\tTest User\ttest@example.com\tMining & Resource Development\tresolved\t2026-02-13 17:24:47\n30003\tTest User\ttest@example.com\tMining & Resource Development\tin_progress\t2026-02-13 17:15:35\n30002\tTest User\ttest@example.com\tMining & Resource Development\tin_progress\t2026-02-13 16:52:14\n30001\tTest User\ttest@example.com\tMining & Resource Development\tnew\t2026-02-13 16:51:17\n",
+  "stderr": "",
+  "execution_time_ms": 364
+}

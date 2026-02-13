@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { sendContactFormNotification } from "./_core/email";
+import { sendContactFormNotification, sendEmail } from "./_core/email";
 import { ENV } from "./_core/env";
 
 describe("Email Notifications", () => {
@@ -8,10 +8,35 @@ describe("Email Notifications", () => {
     expect(ENV.adminEmail.length).toBeGreaterThan(0);
   });
 
+  it("should have SendGrid credentials configured", () => {
+    expect(ENV.sendgridApiKey).toBeDefined();
+    expect(ENV.sendgridApiKey.length).toBeGreaterThan(0);
+    expect(ENV.sendgridApiKey).toMatch(/^SG\./); // SendGrid API keys start with "SG."
+    
+    expect(ENV.senderEmail).toBeDefined();
+    expect(ENV.senderEmail.length).toBeGreaterThan(0);
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    expect(emailRegex.test(ENV.senderEmail)).toBe(true);
+  });
+
   it("should validate email format", () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     expect(emailRegex.test(ENV.adminEmail)).toBe(true);
   });
+
+  it("should send test email via SendGrid", async () => {
+    // Send a simple test email to verify SendGrid credentials
+    const result = await sendEmail({
+      to: ENV.adminEmail,
+      subject: "SendGrid Integration Test",
+      text: "This is a test email to verify SendGrid integration is working correctly.",
+      html: "<p>This is a test email to verify SendGrid integration is working correctly.</p>",
+    });
+
+    // Should return true if SendGrid is properly configured
+    expect(result).toBe(true);
+  }, 10000); // 10 second timeout for API call
 
   it("should send contact form notification", async () => {
     const result = await sendContactFormNotification({
@@ -23,8 +48,7 @@ describe("Email Notifications", () => {
       message: "This is a test message for email notification validation.",
     });
 
-    // In development, this returns true even though no actual email is sent
-    // In production with a real email service, this would verify actual delivery
-    expect(typeof result).toBe("boolean");
-  });
+    // Should return true with SendGrid configured
+    expect(result).toBe(true);
+  }, 10000); // 10 second timeout for API call
 });

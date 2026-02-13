@@ -1,8 +1,13 @@
 import { ENV } from "./env";
+import sgMail from "@sendgrid/mail";
+
+// Initialize SendGrid with API key if available
+if (ENV.sendgridApiKey) {
+  sgMail.setApiKey(ENV.sendgridApiKey);
+}
 
 /**
- * Send email notification using Manus built-in email service
- * This is a simple wrapper around the notification API for email delivery
+ * Send email using SendGrid
  */
 export async function sendEmail({
   to,
@@ -16,9 +21,6 @@ export async function sendEmail({
   html?: string;
 }): Promise<boolean> {
   try {
-    // For now, we'll use a simple fetch to send emails via an external service
-    // In production, you would integrate with SendGrid, AWS SES, or similar
-    
     // Validate email address
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(to)) {
@@ -26,40 +28,37 @@ export async function sendEmail({
       return false;
     }
 
-    // Log email for development (in production, this would actually send)
-    console.log("[Email] Would send email to:", to);
-    console.log("[Email] Subject:", subject);
-    console.log("[Email] Text:", text.substring(0, 100) + "...");
+    // Check if SendGrid is configured
+    if (!ENV.sendgridApiKey || !ENV.senderEmail) {
+      console.warn("[Email] SendGrid not configured (missing API key or sender email)");
+      console.log("[Email] Would send email to:", to);
+      console.log("[Email] Subject:", subject);
+      console.log("[Email] Text:", text.substring(0, 100) + "...");
+      return false;
+    }
 
-    // In a real implementation, you would call an email service API here
-    // For example with SendGrid:
-    // const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Authorization': `Bearer ${process.env.SENDGRID_API_KEY}`,
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({
-    //     personalizations: [{ to: [{ email: to }] }],
-    //     from: { email: 'noreply@resourcepakistan.com' },
-    //     subject,
-    //     content: [
-    //       { type: 'text/plain', value: text },
-    //       ...(html ? [{ type: 'text/html', value: html }] : []),
-    //     ],
-    //   }),
-    // });
+    // Send email via SendGrid
+    const msg = {
+      to,
+      from: ENV.senderEmail, // Must be a verified sender in SendGrid
+      subject,
+      text,
+      html: html || text,
+    };
 
+    await sgMail.send(msg);
+    console.log("[Email] Successfully sent email to:", to);
     return true;
   } catch (error) {
     console.error("[Email] Failed to send email:", error);
+    if (error && typeof error === 'object' && 'response' in error) {
+      const sgError = error as { response?: { body?: unknown } };
+      console.error("[Email] SendGrid error details:", sgError.response?.body);
+    }
     return false;
   }
 }
 
-/**
- * Send contact form notification to admin
- */
 /**
  * Send auto-response acknowledgment to inquiry submitter
  */
@@ -97,7 +96,7 @@ This is an automated acknowledgment. Please do not reply to this email.
   <style>
     body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
     .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-    .header { background-color: #1e3a5f; color: white; padding: 20px; text-align: center; }
+    .header { background-color: #2d5016; color: white; padding: 20px; text-align: center; }
     .content { background-color: #f9f9f9; padding: 30px; border: 1px solid #ddd; }
     .footer { text-align: center; margin-top: 20px; font-size: 12px; color: #666; }
   </style>
@@ -172,7 +171,7 @@ ${message}
 
 ---
 This inquiry was submitted via the Resource Pakistan website contact form.
-View and manage inquiries in the admin dashboard: https://resourcepakistan.com/admin
+View and manage inquiries in the admin dashboard.
   `.trim();
 
   const htmlContent = `
@@ -182,11 +181,11 @@ View and manage inquiries in the admin dashboard: https://resourcepakistan.com/a
   <style>
     body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
     .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-    .header { background-color: #1e3a5f; color: white; padding: 20px; text-align: center; }
+    .header { background-color: #2d5016; color: white; padding: 20px; text-align: center; }
     .content { background-color: #f9f9f9; padding: 20px; border: 1px solid #ddd; }
     .field { margin-bottom: 15px; }
-    .label { font-weight: bold; color: #1e3a5f; }
-    .message-box { background-color: white; padding: 15px; border-left: 4px solid #1e3a5f; margin-top: 15px; }
+    .label { font-weight: bold; color: #2d5016; }
+    .message-box { background-color: white; padding: 15px; border-left: 4px solid #2d5016; margin-top: 15px; }
     .footer { text-align: center; margin-top: 20px; font-size: 12px; color: #666; }
   </style>
 </head>
@@ -214,7 +213,7 @@ View and manage inquiries in the admin dashboard: https://resourcepakistan.com/a
     </div>
     <div class="footer">
       <p>This inquiry was submitted via the Resource Pakistan website contact form.</p>
-      <p><a href="https://resourcepakistan.com/admin">View in Admin Dashboard</a></p>
+      <p>View and manage inquiries in the admin dashboard.</p>
     </div>
   </div>
 </body>
