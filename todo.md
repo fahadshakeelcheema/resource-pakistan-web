@@ -380,3 +380,16 @@
 - [x] Increase navigation font size
 - [x] Implement hide-on-scroll-down behavior
 - [x] Implement show-on-scroll-up behavior
+
+## Breadcrumb Navigation
+
+- [x] Create reusable Breadcrumb component
+- [x] Add breadcrumbs to Home page
+- [x] Add breadcrumbs to About page
+- [x] Add breadcrumbs to Mining page
+- [x] Add breadcrumbs to Consultancy page
+- [x] Add breadcrumbs to Technology page
+- [x] Add breadcrumbs to Governance page
+- [x] Add breadcrumbs to Contact page
+- [x] Add breadcrumbs to Admin page
+- [x] Style breadcrumbs to match institutional design

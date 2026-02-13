@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "@/components/Header";
+import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
@@ -77,6 +78,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
+      <Breadcrumb items={[{ label: "Contact" }]} />
 
       <main className="flex-1">
         {/* Hero Section */}

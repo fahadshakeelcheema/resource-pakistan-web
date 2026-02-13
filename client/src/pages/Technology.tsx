@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { useState } from "react";
 import Header from "@/components/Header";
+import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 
 /**
@@ -13,6 +14,7 @@ export default function Technology() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
+      <Breadcrumb items={[{ label: "EVs & Technology" }]} />
 
       <main className="flex-1">
         {/* Hero Section */}

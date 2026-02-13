@@ -3,6 +3,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
 import { getLoginUrl } from "@/const";
 import Header from "@/components/Header";
+import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -188,6 +189,7 @@ export default function Admin() {
     return (
       <div className="min-h-screen flex flex-col bg-background">
         <Header />
+      <Breadcrumb items={[{ label: "Admin" }]} />
         <main className="flex-1 flex items-center justify-center">
           <div className="text-center max-w-md mx-auto px-4">
             <h1 className="text-3xl font-bold mb-4">Authentication Required</h1>
@@ -208,6 +210,7 @@ export default function Admin() {
     return (
       <div className="min-h-screen flex flex-col bg-background">
         <Header />
+      <Breadcrumb items={[{ label: "Admin" }]} />
         <main className="flex-1 flex items-center justify-center">
           <div className="text-center max-w-md mx-auto px-4">
             <h1 className="text-3xl font-bold mb-4">Access Denied</h1>
@@ -227,6 +230,7 @@ export default function Admin() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
+      <Breadcrumb items={[{ label: "Admin" }]} />
 
       <main className="flex-1 py-12">
         <div className="container">
