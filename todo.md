@@ -300,3 +300,18 @@
 
 - [x] Investigate current logo file format and resolution
 - [x] Replace with higher resolution version for crisp display at all zoom levels
+
+## Pre-Deployment Checklist
+
+- [x] Verify database schema includes contact form table
+- [x] Check contact form implementation and tRPC procedures
+- [x] Test contact form submission end-to-end
+- [x] Verify database connectivity and data persistence
+- [x] Check for large media files that need S3 upload
+- [x] Verify all images are optimized
+- [x] Test all navigation links
+- [x] Check mobile responsiveness
+- [x] Verify error handling
+- [x] Run all vitest tests
+- [x] Check for console errors
+- [x] Verify environment variables are set
