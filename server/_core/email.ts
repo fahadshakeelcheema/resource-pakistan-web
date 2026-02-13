@@ -60,6 +60,79 @@ export async function sendEmail({
 /**
  * Send contact form notification to admin
  */
+/**
+ * Send auto-response acknowledgment to inquiry submitter
+ */
+export async function sendAutoResponse({
+  to,
+  fullName,
+  subject,
+}: {
+  to: string;
+  fullName: string;
+  subject: string;
+}): Promise<boolean> {
+  const emailSubject = "Thank you for contacting Resource Pakistan";
+
+  const textContent = `
+Dear ${fullName},
+
+Thank you for contacting Resource Pakistan (Pvt) Ltd. We have received your inquiry regarding "${subject}".
+
+Our team will review your message and respond within 2-3 business days. We appreciate your interest in our services and look forward to assisting you.
+
+If your matter is urgent, please feel free to call our office during business hours (Monday-Friday, 9:00 AM - 5:00 PM PKT).
+
+Best regards,
+Resource Pakistan Team
+
+---
+This is an automated acknowledgment. Please do not reply to this email.
+  `.trim();
+
+  const htmlContent = `
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { background-color: #1e3a5f; color: white; padding: 20px; text-align: center; }
+    .content { background-color: #f9f9f9; padding: 30px; border: 1px solid #ddd; }
+    .footer { text-align: center; margin-top: 20px; font-size: 12px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Thank You for Contacting Us</h2>
+    </div>
+    <div class="content">
+      <p>Dear ${fullName},</p>
+      <p>Thank you for contacting Resource Pakistan (Pvt) Ltd. We have received your inquiry regarding <strong>"${subject}"</strong>.</p>
+      <p>Our team will review your message and respond within <strong>2-3 business days</strong>. We appreciate your interest in our services and look forward to assisting you.</p>
+      <p>If your matter is urgent, please feel free to call our office during business hours (Monday-Friday, 9:00 AM - 5:00 PM PKT).</p>
+      <p>Best regards,<br>Resource Pakistan Team</p>
+    </div>
+    <div class="footer">
+      <p>This is an automated acknowledgment. Please do not reply to this email.</p>
+    </div>
+  </div>
+</body>
+</html>
+  `.trim();
+
+  return sendEmail({
+    to,
+    subject: emailSubject,
+    text: textContent,
+    html: htmlContent,
+  });
+}
+
+/**
+ * Send contact form notification to admin
+ */
 export async function sendContactFormNotification({
   fullName,
   email,
@@ -148,7 +221,7 @@ View and manage inquiries in the admin dashboard: https://resourcepakistan.com/a
 </html>
   `.trim();
 
-  return await sendEmail({
+  return sendEmail({
     to: adminEmail,
     subject: emailSubject,
     text: textContent,

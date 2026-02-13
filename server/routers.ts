@@ -5,8 +5,9 @@ import { publicProcedure, router, protectedProcedure } from "./_core/trpc";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { createInquiry, getInquiries, getInquiriesByStatus, searchInquiries, updateInquiryStatus, updateInquiryNotes, getInquiryById } from "./db";
+import { getInquiryAnalytics } from "./analytics";
 import { notifyOwner } from "./_core/notification";
-import { sendContactFormNotification } from "./_core/email";
+import { sendContactFormNotification, sendAutoResponse } from "./_core/email";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -52,7 +53,7 @@ export const appRouter = router({
             content: `New inquiry from ${input.fullName} (${input.email})\n\nSubject: ${input.subject}\n\nMessage: ${input.message}`,
           });
 
-          // Send email notification
+          // Send email notification to admin
           await sendContactFormNotification({
             fullName: input.fullName,
             email: input.email,
@@ -60,6 +61,13 @@ export const appRouter = router({
             phone: input.phone || null,
             subject: input.subject,
             message: input.message,
+          });
+
+          // Send auto-response to submitter
+          await sendAutoResponse({
+            to: input.email,
+            fullName: input.fullName,
+            subject: input.subject,
           });
 
           return {
@@ -148,6 +156,15 @@ export const appRouter = router({
           throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Failed to update notes" });
         }
       }),
+
+    // Get analytics data
+    analytics: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user.role !== "admin") {
+        throw new TRPCError({ code: "FORBIDDEN", message: "Admin access required" });
+      }
+
+      return await getInquiryAnalytics();
+    }),
   }),
 });
 

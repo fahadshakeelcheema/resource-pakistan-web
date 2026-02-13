@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
-import { Search, Loader2, Mail, Phone, Building2, Calendar, MessageSquare, Download, Send } from "lucide-react";
+import { Search, Loader2, Mail, Phone, Building2, Calendar, MessageSquare, Download, Send, TrendingUp, Users, Clock, BarChart3 } from "lucide-react";
 import { responseTemplates, fillTemplate, type ResponseTemplate } from "@shared/responseTemplates";
 
 type InquiryStatus = "new" | "in_progress" | "resolved";
@@ -37,6 +37,10 @@ export default function Admin() {
   const [responseSubject, setResponseSubject] = useState("");
   const [responseBody, setResponseBody] = useState("");
   const [showResponseForm, setShowResponseForm] = useState(false);
+
+  const { data: analytics } = trpc.inquiries.analytics.useQuery(undefined, {
+    enabled: user?.role === "admin",
+  });
 
   const { data: inquiries, isLoading, refetch } = trpc.inquiries.list.useQuery(
     {
@@ -232,6 +236,69 @@ export default function Admin() {
               Manage contact form submissions and inquiries
             </p>
           </div>
+
+          {/* Analytics Overview */}
+          {analytics && (
+            <div className="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="bg-card border rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Users className="h-5 w-5 text-primary" />
+                  </div>
+                  <div className="text-sm font-medium text-muted-foreground">Total Inquiries</div>
+                </div>
+                <div className="text-3xl font-bold">{analytics.totalInquiries}</div>
+                <div className="text-xs text-muted-foreground mt-1">
+                  {analytics.newInquiries} new, {analytics.inProgressInquiries} in progress
+                </div>
+              </div>
+
+              <div className="bg-card border rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 bg-blue-500/10 rounded-lg">
+                    <TrendingUp className="h-5 w-5 text-blue-500" />
+                  </div>
+                  <div className="text-sm font-medium text-muted-foreground">This Week</div>
+                </div>
+                <div className="text-3xl font-bold">{analytics.submissionsThisWeek}</div>
+                <div className="text-xs text-muted-foreground mt-1">
+                  {analytics.submissionsThisMonth} this month
+                </div>
+              </div>
+
+              <div className="bg-card border rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 bg-green-500/10 rounded-lg">
+                    <Clock className="h-5 w-5 text-green-500" />
+                  </div>
+                  <div className="text-sm font-medium text-muted-foreground">Avg Response Time</div>
+                </div>
+                <div className="text-3xl font-bold">
+                  {analytics.averageResponseTime !== null
+                    ? `${Math.round(analytics.averageResponseTime)}h`
+                    : "N/A"}
+                </div>
+                <div className="text-xs text-muted-foreground mt-1">
+                  Time to resolution
+                </div>
+              </div>
+
+              <div className="bg-card border rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 bg-purple-500/10 rounded-lg">
+                    <BarChart3 className="h-5 w-5 text-purple-500" />
+                  </div>
+                  <div className="text-sm font-medium text-muted-foreground">Top Category</div>
+                </div>
+                <div className="text-2xl font-bold">
+                  {analytics.categoryDistribution.sort((a, b) => b.count - a.count)[0]?.category || "N/A"}
+                </div>
+                <div className="text-xs text-muted-foreground mt-1">
+                  {analytics.categoryDistribution.sort((a, b) => b.count - a.count)[0]?.count || 0} inquiries
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Filters and Export */}
           <div className="mb-6 flex flex-col sm:flex-row gap-4">
