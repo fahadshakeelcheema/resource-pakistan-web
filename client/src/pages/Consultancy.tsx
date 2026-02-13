@@ -3,6 +3,8 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { seoConfig } from "@/lib/seo-config";
 
 /**
  * Consultancy Page - Refined Institutional Design
@@ -13,7 +15,9 @@ export default function Consultancy() {
   const [hoveredSector, setHoveredSector] = useState<string | null>(null);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <>
+      <SEO metadata={seoConfig.consultancy} />
+      <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <Breadcrumb items={[{ label: "Consultancy" }]} />
 
@@ -460,5 +464,6 @@ export default function Consultancy() {
 
       <Footer />
     </div>
+    </>
   );
 }

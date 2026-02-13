@@ -4,6 +4,8 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { seoConfig, organizationSchema } from "@/lib/seo-config";
 
 /**
  * Home Page - Refined Institutional Design
@@ -21,7 +23,9 @@ export default function Home() {
   const [hoveredSector, setHoveredSector] = useState<string | null>(null);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <>
+      <SEO metadata={seoConfig.home} jsonLd={organizationSchema} />
+      <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <Breadcrumb items={[]} />
 
@@ -400,5 +404,6 @@ export default function Home() {
 
       <Footer />
     </div>
+    </>
   );
 }

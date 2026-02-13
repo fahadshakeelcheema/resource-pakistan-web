@@ -2,6 +2,8 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { seoConfig } from "@/lib/seo-config";
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
 
@@ -76,7 +78,9 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <>
+      <SEO metadata={seoConfig.contact} />
+      <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <Breadcrumb items={[{ label: "Contact" }]} />
 
@@ -347,5 +351,6 @@ export default function Contact() {
 
       <Footer />
     </div>
+    </>
   );
 }

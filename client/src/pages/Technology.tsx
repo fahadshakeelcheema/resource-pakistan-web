@@ -3,6 +3,8 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { seoConfig } from "@/lib/seo-config";
 
 /**
  * Technology Page - Refined Institutional Design
@@ -12,7 +14,9 @@ export default function Technology() {
   const [hoveredArea, setHoveredArea] = useState<string | null>(null);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <>
+      <SEO metadata={seoConfig.evs} />
+      <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <Breadcrumb items={[{ label: "EVs & Technology" }]} />
 
@@ -612,5 +616,6 @@ export default function Technology() {
 
       <Footer />
     </div>
+    </>
   );
 }
