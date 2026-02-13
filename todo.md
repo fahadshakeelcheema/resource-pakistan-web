@@ -410,3 +410,8 @@
 ## About Page Shield Icon Color
 
 - [x] Change shield icon color to golden in Ethics, Compliance, and Confidentiality section
+
+## About Page Mission Section Background
+
+- [x] Extend mountain background to Mission and Scope section
+- [x] Adjust text colors for readability against background

@@ -40,8 +40,17 @@ export default function About() {
         </section>
 
         {/* Section 1: Mission and Scope - Alternating Layout */}
-        <section className="py-8 md:py-10 section-cream">
-          <div className="container">
+        <section className="relative py-8 md:py-10 overflow-hidden border-b border-border">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/HjuvozCNZQjtDKdL.jpg)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              opacity: 0.25,
+            }}
+          ></div>
+          <div className="container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center">
               {/* Icon Left - Mission Compass */}
               <div className="order-2 lg:order-1 flex items-center justify-center">
@@ -140,10 +149,10 @@ export default function About() {
 
               {/* Text Right */}
               <div className="order-1 lg:order-2">
-                <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1a1a1a" }}>
                   Mission and Scope
                 </h2>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-lg mb-6 leading-relaxed" style={{ color: "#2d2d2d" }}>
                   Resource Pakistan operates at the interface between resource
                   development, policy frameworks, and industrial strategy. We
                   provide advisory, analytical, and planning services to
@@ -152,7 +161,7 @@ export default function About() {
                   mining, consultancy, electric vehicles, and industrial
                   technology sectors.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg leading-relaxed" style={{ color: "#2d2d2d" }}>
                   Our work is grounded in the principle that sustainable
                   resource and industrial development requires rigorous
                   feasibility assessment, institutional alignment, and long-term
