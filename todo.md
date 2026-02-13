@@ -415,3 +415,8 @@
 
 - [x] Extend mountain background to Mission and Scope section
 - [x] Adjust text colors for readability against background
+
+## Consultancy Page Background Enhancement
+
+- [x] Add colorful and relevant background to Consultancy page hero section
+- [x] Ensure text readability against new background
