@@ -20,19 +20,20 @@ export default function Mining() {
         {/* Hero Section */}
         <section className="relative overflow-hidden py-10 md:py-10 border-b border-border">
           <div
-            className="absolute inset-0 opacity-[0.06] grayscale"
+            className="absolute inset-0"
             style={{
-              backgroundImage: "url(/images/pakistan-reko-diq-landscape.jpg)",
+              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/WCgBsJkfmMkOZEEf.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
+              opacity: 0.2,
             }}
           ></div>
           <div className="container relative z-10">
             <div className="max-w-3xl">
-              <h1 className="text-display mb-6">
+              <h1 className="text-display mb-6 text-foreground">
                 Mining & Resource Development
               </h1>
-              <p className="text-subheading">
+              <p className="text-subheading text-foreground">
                 Responsible mineral development through comprehensive
                 feasibility assessment and institutional alignment.
               </p>

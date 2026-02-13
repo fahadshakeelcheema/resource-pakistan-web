@@ -420,3 +420,9 @@
 
 - [x] Add colorful and relevant background to Consultancy page hero section
 - [x] Ensure text readability against new background
+
+## Mining Page Background Enhancement
+
+- [x] Search for mining operations imagery with cranes and heavy machinery
+- [x] Add background to Mining & Resource Development page hero section
+- [x] Ensure text readability against new background
