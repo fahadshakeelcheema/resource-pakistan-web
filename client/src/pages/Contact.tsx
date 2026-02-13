@@ -86,7 +86,7 @@ export default function Contact() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/AUJbBdOSxQVAZXBp.jpg)",
+              backgroundImage: "url(/images/professional-handshake.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

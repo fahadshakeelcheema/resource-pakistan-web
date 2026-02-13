@@ -466,3 +466,11 @@
 
 - [x] Improve background visuals on Contact page hero section
 - [x] Ensure text readability and visual consistency with other pages
+
+## Contact Page Background Replacement
+
+- [ ] Search for contact/communication/professional engagement imagery
+- [ ] Replace Contact page background with more relevant image
+
+- [x] Search for contact/communication/professional engagement imagery
+- [x] Replace Contact page background with professional handshake image
