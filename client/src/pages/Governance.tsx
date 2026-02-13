@@ -24,13 +24,14 @@ export default function Governance() {
         {/* Hero Section */}
         <section className="relative overflow-hidden py-24 md:py-32 border-b border-border">
           <div
-            className="absolute inset-0 opacity-15"
+            className="absolute inset-0"
             style={{
               backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/EofUAEvjbCURRFUp.png)",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           ></div>
+          <div className="absolute inset-0 bg-background/90"></div>
           <div className="container relative z-10">
             <div className="max-w-3xl">
               <h1 className="text-display mb-6 text-foreground">Governance & Responsibility</h1>

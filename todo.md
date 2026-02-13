@@ -500,3 +500,8 @@
 - [x] Add Twitter Card metadata
 - [x] Implement JSON-LD structured data
 - [x] Test meta tags with social media debuggers
+
+## Visual Improvements
+
+- [x] Remove transparency/opacity from Consultancy page backgrounds
+- [x] Remove transparency/opacity from Governance page backgrounds

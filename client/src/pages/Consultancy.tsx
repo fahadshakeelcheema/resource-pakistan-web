@@ -30,9 +30,9 @@ export default function Consultancy() {
               backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/PGIHvqECYjfwrhnF.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center",
-              opacity: 0.15,
             }}
           ></div>
+          <div className="absolute inset-0 bg-background/90"></div>
           <div className="container relative z-10">
             <div className="max-w-3xl">
               <h1 className="text-display mb-6 text-foreground">
