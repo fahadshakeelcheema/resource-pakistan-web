@@ -402,3 +402,7 @@
 
 - [x] Reorder header navigation: Consultancy before Mining
 - [x] Reorder footer navigation: Consultancy before Mining
+
+## About Page Background Enhancement
+
+- [x] Remove transparency layer from About Us page background for sharper scenery

@@ -20,7 +20,7 @@ export default function About() {
         {/* Hero Section */}
         <section className="relative overflow-hidden py-10 md:py-10 border-b border-border">
           <div
-            className="absolute inset-0 opacity-[0.15]"
+            className="absolute inset-0"
             style={{
               backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/HjuvozCNZQjtDKdL.jpg)",
               backgroundSize: "cover",
@@ -29,8 +29,8 @@ export default function About() {
           ></div>
           <div className="container relative z-10">
             <div className="max-w-3xl">
-              <h1 className="text-display mb-6">About Resource Pakistan</h1>
-              <p className="text-subheading">
+              <h1 className="text-display mb-6 text-white drop-shadow-lg">About Resource Pakistan</h1>
+              <p className="text-subheading text-white drop-shadow-lg">
                 A multidisciplinary company founded to support Pakistan's
                 resource and industrial development through rigorous planning,
                 institutional alignment, and responsible execution.
