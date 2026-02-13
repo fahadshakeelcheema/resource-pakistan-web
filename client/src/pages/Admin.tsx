@@ -1,0 +1,378 @@
+import { useState } from "react";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { trpc } from "@/lib/trpc";
+import { getLoginUrl } from "@/const";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Badge } from "@/components/ui/badge";
+import { Textarea } from "@/components/ui/textarea";
+import { Search, Loader2, Mail, Phone, Building2, Calendar, MessageSquare } from "lucide-react";
+
+type InquiryStatus = "new" | "in_progress" | "resolved";
+
+export default function Admin() {
+  const { user, loading: authLoading } = useAuth();
+  const [searchTerm, setSearchTerm] = useState("");
+  const [statusFilter, setStatusFilter] = useState<string>("all");
+  const [selectedInquiryId, setSelectedInquiryId] = useState<number | null>(null);
+  const [adminNotes, setAdminNotes] = useState("");
+
+  const { data: inquiries, isLoading, refetch } = trpc.inquiries.list.useQuery(
+    {
+      status: statusFilter,
+      search: searchTerm || undefined,
+    },
+    {
+      enabled: user?.role === "admin",
+    }
+  );
+
+  const { data: selectedInquiry } = trpc.inquiries.getById.useQuery(
+    { id: selectedInquiryId! },
+    { enabled: selectedInquiryId !== null }
+  );
+
+  const updateStatusMutation = trpc.inquiries.updateStatus.useMutation({
+    onSuccess: () => {
+      refetch();
+    },
+  });
+
+  const updateNotesMutation = trpc.inquiries.updateNotes.useMutation({
+    onSuccess: () => {
+      refetch();
+      setSelectedInquiryId(null);
+    },
+  });
+
+  const handleStatusChange = (id: number, status: InquiryStatus) => {
+    updateStatusMutation.mutate({ id, status });
+  };
+
+  const handleSaveNotes = () => {
+    if (selectedInquiryId) {
+      updateNotesMutation.mutate({
+        id: selectedInquiryId,
+        adminNotes,
+      });
+    }
+  };
+
+  const getStatusBadge = (status: string) => {
+    const variants: Record<string, { variant: "default" | "secondary" | "destructive" | "outline"; label: string }> = {
+      new: { variant: "destructive", label: "New" },
+      in_progress: { variant: "default", label: "In Progress" },
+      resolved: { variant: "secondary", label: "Resolved" },
+    };
+    const config = variants[status] || { variant: "outline", label: status };
+    return <Badge variant={config.variant}>{config.label}</Badge>;
+  };
+
+  // Authentication check
+  if (authLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div className="min-h-screen flex flex-col bg-background">
+        <Header />
+        <main className="flex-1 flex items-center justify-center">
+          <div className="text-center max-w-md mx-auto px-4">
+            <h1 className="text-3xl font-bold mb-4">Authentication Required</h1>
+            <p className="text-muted-foreground mb-6">
+              You need to be logged in to access the admin dashboard.
+            </p>
+            <Button asChild>
+              <a href={getLoginUrl()}>Login</a>
+            </Button>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (user.role !== "admin") {
+    return (
+      <div className="min-h-screen flex flex-col bg-background">
+        <Header />
+        <main className="flex-1 flex items-center justify-center">
+          <div className="text-center max-w-md mx-auto px-4">
+            <h1 className="text-3xl font-bold mb-4">Access Denied</h1>
+            <p className="text-muted-foreground mb-6">
+              You do not have permission to access the admin dashboard.
+            </p>
+            <Button asChild variant="outline">
+              <a href="/">Return to Home</a>
+            </Button>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen flex flex-col bg-background">
+      <Header />
+
+      <main className="flex-1 py-12">
+        <div className="container">
+          <div className="mb-8">
+            <h1 className="text-4xl font-bold mb-2">Admin Dashboard</h1>
+            <p className="text-muted-foreground">
+              Manage contact form submissions and inquiries
+            </p>
+          </div>
+
+          {/* Filters */}
+          <div className="mb-6 flex flex-col sm:flex-row gap-4">
+            <div className="relative flex-1">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                placeholder="Search by name, email, organization, or subject..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10"
+              />
+            </div>
+            <Select value={statusFilter} onValueChange={setStatusFilter}>
+              <SelectTrigger className="w-full sm:w-[200px]">
+                <SelectValue placeholder="Filter by status" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Status</SelectItem>
+                <SelectItem value="new">New</SelectItem>
+                <SelectItem value="in_progress">In Progress</SelectItem>
+                <SelectItem value="resolved">Resolved</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          {/* Inquiries List */}
+          {isLoading ? (
+            <div className="flex justify-center py-12">
+              <Loader2 className="h-8 w-8 animate-spin text-primary" />
+            </div>
+          ) : inquiries && inquiries.length > 0 ? (
+            <div className="bg-card rounded-lg border">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="border-b bg-muted/50">
+                    <tr>
+                      <th className="text-left p-4 font-semibold">Name</th>
+                      <th className="text-left p-4 font-semibold hidden md:table-cell">
+                        Organization
+                      </th>
+                      <th className="text-left p-4 font-semibold hidden lg:table-cell">
+                        Subject
+                      </th>
+                      <th className="text-left p-4 font-semibold">Status</th>
+                      <th className="text-left p-4 font-semibold hidden sm:table-cell">
+                        Date
+                      </th>
+                      <th className="text-left p-4 font-semibold">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {inquiries.map((inquiry) => (
+                      <tr key={inquiry.id} className="border-b last:border-0 hover:bg-muted/30">
+                        <td className="p-4">
+                          <div className="font-medium">{inquiry.fullName}</div>
+                          <div className="text-sm text-muted-foreground">{inquiry.email}</div>
+                        </td>
+                        <td className="p-4 hidden md:table-cell">
+                          {inquiry.organization || "—"}
+                        </td>
+                        <td className="p-4 hidden lg:table-cell">
+                          <div className="max-w-xs truncate">{inquiry.subject}</div>
+                        </td>
+                        <td className="p-4">{getStatusBadge(inquiry.status)}</td>
+                        <td className="p-4 text-sm text-muted-foreground hidden sm:table-cell">
+                          {new Date(inquiry.createdAt).toLocaleDateString()}
+                        </td>
+                        <td className="p-4">
+                          <div className="flex gap-2">
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              onClick={() => {
+                                setSelectedInquiryId(inquiry.id);
+                                setAdminNotes(inquiry.adminNotes || "");
+                              }}
+                            >
+                              View
+                            </Button>
+                            {inquiry.status === "new" && (
+                              <Button
+                                size="sm"
+                                onClick={() => handleStatusChange(inquiry.id, "in_progress")}
+                              >
+                                Start
+                              </Button>
+                            )}
+                            {inquiry.status === "in_progress" && (
+                              <Button
+                                size="sm"
+                                variant="secondary"
+                                onClick={() => handleStatusChange(inquiry.id, "resolved")}
+                              >
+                                Resolve
+                              </Button>
+                            )}
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ) : (
+            <div className="text-center py-12 bg-card rounded-lg border">
+              <p className="text-muted-foreground">No inquiries found</p>
+            </div>
+          )}
+        </div>
+      </main>
+
+      {/* Inquiry Detail Dialog */}
+      <Dialog open={selectedInquiryId !== null} onOpenChange={() => setSelectedInquiryId(null)}>
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Inquiry Details</DialogTitle>
+            <DialogDescription>
+              View and manage inquiry information
+            </DialogDescription>
+          </DialogHeader>
+
+          {selectedInquiry && (
+            <div className="space-y-6">
+              {/* Contact Information */}
+              <div className="space-y-4">
+                <h3 className="font-semibold text-lg">Contact Information</h3>
+                <div className="grid gap-3">
+                  <div className="flex items-start gap-3">
+                    <Mail className="h-5 w-5 text-muted-foreground mt-0.5" />
+                    <div>
+                      <div className="font-medium">{selectedInquiry.fullName}</div>
+                      <div className="text-sm text-muted-foreground">{selectedInquiry.email}</div>
+                    </div>
+                  </div>
+                  {selectedInquiry.organization && (
+                    <div className="flex items-start gap-3">
+                      <Building2 className="h-5 w-5 text-muted-foreground mt-0.5" />
+                      <div className="text-sm">{selectedInquiry.organization}</div>
+                    </div>
+                  )}
+                  {selectedInquiry.phone && (
+                    <div className="flex items-start gap-3">
+                      <Phone className="h-5 w-5 text-muted-foreground mt-0.5" />
+                      <div className="text-sm">{selectedInquiry.phone}</div>
+                    </div>
+                  )}
+                  <div className="flex items-start gap-3">
+                    <Calendar className="h-5 w-5 text-muted-foreground mt-0.5" />
+                    <div className="text-sm">
+                      {new Date(selectedInquiry.createdAt).toLocaleString()}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Subject and Message */}
+              <div className="space-y-4">
+                <h3 className="font-semibold text-lg">Inquiry</h3>
+                <div>
+                  <div className="text-sm font-medium text-muted-foreground mb-1">Subject</div>
+                  <div>{selectedInquiry.subject}</div>
+                </div>
+                <div>
+                  <div className="text-sm font-medium text-muted-foreground mb-1 flex items-center gap-2">
+                    <MessageSquare className="h-4 w-4" />
+                    Message
+                  </div>
+                  <div className="bg-muted p-4 rounded-md whitespace-pre-wrap">
+                    {selectedInquiry.message}
+                  </div>
+                </div>
+              </div>
+
+              {/* Status */}
+              <div className="space-y-2">
+                <h3 className="font-semibold text-lg">Status</h3>
+                <div className="flex items-center gap-2">
+                  {getStatusBadge(selectedInquiry.status)}
+                  <div className="flex gap-2 ml-auto">
+                    {selectedInquiry.status !== "in_progress" && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => handleStatusChange(selectedInquiry.id, "in_progress")}
+                      >
+                        Mark In Progress
+                      </Button>
+                    )}
+                    {selectedInquiry.status !== "resolved" && (
+                      <Button
+                        size="sm"
+                        variant="secondary"
+                        onClick={() => handleStatusChange(selectedInquiry.id, "resolved")}
+                      >
+                        Mark Resolved
+                      </Button>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Admin Notes */}
+              <div className="space-y-2">
+                <h3 className="font-semibold text-lg">Admin Notes</h3>
+                <Textarea
+                  placeholder="Add internal notes about this inquiry..."
+                  value={adminNotes}
+                  onChange={(e) => setAdminNotes(e.target.value)}
+                  rows={4}
+                />
+                <Button onClick={handleSaveNotes} disabled={updateNotesMutation.isPending}>
+                  {updateNotesMutation.isPending ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Saving...
+                    </>
+                  ) : (
+                    "Save Notes"
+                  )}
+                </Button>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+
+      <Footer />
+    </div>
+  );
+}

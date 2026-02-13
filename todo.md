@@ -315,3 +315,17 @@
 - [x] Run all vitest tests
 - [x] Check for console errors
 - [x] Verify environment variables are set
+
+## Admin Dashboard for Contact Form Management
+
+- [x] Create admin dashboard page at /admin route
+- [x] Implement admin authentication check (only admin role can access)
+- [x] Build inquiry list view with table layout
+- [x] Add search functionality (search by name, email, organization, subject)
+- [x] Add filter by status (new, in_progress, resolved, all)
+- [x] Implement inquiry detail modal/view
+- [x] Add status update functionality (new → in_progress → resolved)
+- [x] Add admin notes field for internal tracking
+- [x] Display inquiry metadata (submission date, contact info)
+- [x] Add responsive design for mobile access
+- [x] Write vitest tests for admin procedures
