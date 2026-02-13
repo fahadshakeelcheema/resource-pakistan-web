@@ -406,3 +406,7 @@
 ## About Page Background Enhancement
 
 - [x] Remove transparency layer from About Us page background for sharper scenery
+
+## About Page Shield Icon Color
+
+- [x] Change shield icon color to golden in Ethics, Compliance, and Confidentiality section

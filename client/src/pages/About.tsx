@@ -545,12 +545,12 @@ export default function About() {
                   <path
                     d="M 200 50 L 320 100 L 320 200 Q 320 300 200 350 Q 80 300 80 200 L 80 100 Z"
                     fill="none"
-                    stroke="#ffffff"
+                    stroke="#D4AF37"
                     strokeWidth="4"
                   />
                   <path
                     d="M 200 60 L 310 105 L 310 200 Q 310 290 200 335 Q 90 290 90 200 L 90 105 Z"
-                    fill="#095d29"
+                    fill="#B8860B"
                     opacity="0.9"
                   />
 
@@ -558,7 +558,7 @@ export default function About() {
                   <path
                     d="M 140 200 L 180 240 L 260 150"
                     fill="none"
-                    stroke="#ffffff"
+                    stroke="#FFD700"
                     strokeWidth="12"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -567,15 +567,15 @@ export default function About() {
                   {/* Inner Shield Details */}
                   <path
                     d="M 200 70 L 200 320"
-                    stroke="#ffffff"
+                    stroke="#D4AF37"
                     strokeWidth="1"
-                    opacity="0.2"
+                    opacity="0.3"
                   />
                   <path
                     d="M 100 110 L 300 110"
-                    stroke="#ffffff"
+                    stroke="#D4AF37"
                     strokeWidth="1"
-                    opacity="0.2"
+                    opacity="0.3"
                   />
                 </svg>
               </div>
