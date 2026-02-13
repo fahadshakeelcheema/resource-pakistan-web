@@ -28,7 +28,7 @@ export default function Technology() {
             style={{
               backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/EsqNxNgmHNMGLDNM.webp)",
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "center center",
             }}
           ></div>
           <div className="container relative z-10">
@@ -45,7 +45,7 @@ export default function Technology() {
         </section>
 
         {/* Section 1: Technology Strategy with Icon */}
-        <section className="py-8 md:py-10 section-cream border-t border-border">
+        <section className="py-12 md:py-16 section-cream border-t border-border">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading">
@@ -218,7 +218,7 @@ export default function Technology() {
         </section>
 
         {/* Section 2: Focus Areas */}
-        <section className="py-8 md:py-10 section-green border-t border-border">
+        <section className="py-12 md:py-16 section-green border-t border-border">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading" style={{ color: "#ffffff" }}>
@@ -341,7 +341,7 @@ export default function Technology() {
         </section>
 
         {/* Section 3: Long-Term Outlook */}
-        <section className="py-8 md:py-10 section-cream border-t border-border">
+        <section className="py-12 md:py-16 section-cream border-t border-border">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading">Long-Term Institutional Planning</h2>
@@ -599,7 +599,7 @@ export default function Technology() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-10 md:py-10 section-light border-t border-border">
+        <section className="py-16 md:py-20 section-light border-t border-border">
           <div className="container text-center">
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
               For technology assessment, research support, or strategic planning

@@ -22,13 +22,13 @@ export default function About() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-10 md:py-10 border-b border-border">
+        <section className="relative overflow-hidden py-24 md:py-32 border-b border-border">
           <div
             className="absolute inset-0"
             style={{
               backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/HjuvozCNZQjtDKdL.jpg)",
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "center center",
             }}
           ></div>
           <div className="container relative z-10">
@@ -44,13 +44,13 @@ export default function About() {
         </section>
 
         {/* Section 1: Mission and Scope - Alternating Layout */}
-        <section className="relative py-8 md:py-10 overflow-hidden border-b border-border">
+        <section className="relative py-12 md:py-16 overflow-hidden border-b border-border">
           <div
             className="absolute inset-0"
             style={{
               backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/HjuvozCNZQjtDKdL.jpg)",
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "center center",
               opacity: 0.25,
             }}
           ></div>
@@ -179,7 +179,7 @@ export default function About() {
         </section>
 
         {/* Section 2: Core Principles */}
-        <section className="py-8 md:py-10 section-green border-t border-border">
+        <section className="py-12 md:py-16 section-green border-t border-border">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading" style={{ color: "#ffffff" }}>
@@ -331,7 +331,7 @@ export default function About() {
         </section>
 
         {/* Section 3: Expertise and Experience */}
-        <section className="py-8 md:py-10 section-cream border-t border-border">
+        <section className="py-12 md:py-16 section-cream border-t border-border">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading">Expertise and Experience</h2>
@@ -511,7 +511,7 @@ export default function About() {
         </section>
 
         {/* Section 4: Ethics, Compliance, and Confidentiality */}
-        <section className="py-8 md:py-10 section-green border-t border-border">
+        <section className="py-12 md:py-16 section-green border-t border-border">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading" style={{ color: "#ffffff" }}>
@@ -597,7 +597,7 @@ export default function About() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-10 md:py-10 section-cream border-t border-border">
+        <section className="py-16 md:py-20 section-cream border-t border-border">
           <div className="container text-center">
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
               To learn more about our services or discuss a potential

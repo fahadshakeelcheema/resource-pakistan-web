@@ -28,7 +28,7 @@ export default function Governance() {
             style={{
               backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/EofUAEvjbCURRFUp.png)",
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "center center",
             }}
           ></div>
           <div className="absolute inset-0 bg-background/90"></div>
@@ -44,7 +44,7 @@ export default function Governance() {
         </section>
 
         {/* Section 1: Governance Framework with Icon */}
-        <section className="py-8 md:py-10 section-cream border-t border-border">
+        <section className="py-12 md:py-16 section-cream border-t border-border">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading">Governance Framework</h2>
@@ -213,7 +213,7 @@ export default function Governance() {
         </section>
 
         {/* Section 2: Ethical Principles */}
-        <section className="py-8 md:py-10 section-green border-t border-border">
+        <section className="py-12 md:py-16 section-green border-t border-border">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading" style={{ color: "#ffffff" }}>
@@ -338,7 +338,7 @@ export default function Governance() {
         </section>
 
         {/* Section 3: Compliance and Standards */}
-        <section className="py-8 md:py-10 section-cream border-t border-border">
+        <section className="py-12 md:py-16 section-cream border-t border-border">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading">Compliance and Standards</h2>
@@ -496,7 +496,7 @@ export default function Governance() {
         </section>
 
         {/* Section 4: Stakeholder Coordination */}
-        <section className="py-8 md:py-10 section-green border-t border-border">
+        <section className="py-12 md:py-16 section-green border-t border-border">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading" style={{ color: "#ffffff" }}>
@@ -733,7 +733,7 @@ export default function Governance() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-10 md:py-10 section-cream border-t border-border">
+        <section className="py-16 md:py-20 section-cream border-t border-border">
           <div className="container text-center">
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
               For questions regarding our governance framework, compliance

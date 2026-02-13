@@ -518,3 +518,11 @@
 
 - [x] Search for Pakistani business handshake imagery
 - [x] Replace contact page background with Pakistani men hands image
+
+## Visual Consistency & Symmetry Enhancement
+
+- [x] Analyze EVs & Technology page hero dimensions as reference
+- [x] Standardize hero section heights across all pages (py-24 md:py-32)
+- [x] Adjust background image positioning for fuller display
+- [x] Enhance section spacing for better visual rhythm (py-16 md:py-20)
+- [x] Ensure symmetry while scrolling down pages

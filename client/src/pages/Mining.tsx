@@ -22,13 +22,13 @@ export default function Mining() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-10 md:py-10 border-b border-border">
+        <section className="relative overflow-hidden py-24 md:py-32 border-b border-border">
           <div
             className="absolute inset-0"
             style={{
               backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/bSfMnSMVuLdvxHwI.jpg)",
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "center center",
             }}
           ></div>
           <div className="container relative z-10">
@@ -45,7 +45,7 @@ export default function Mining() {
         </section>
 
         {/* Section 1: Our Approach to Mining - Alternating Layout */}
-        <section className="py-8 md:py-10 section-cream border-t border-border">
+        <section className="py-12 md:py-16 section-cream border-t border-border">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center">
               {/* Text Left */}
@@ -253,7 +253,7 @@ export default function Mining() {
         </section>
 
         {/* Section 2: Core Services */}
-        <section className="py-8 md:py-10 section-green border-t border-border">
+        <section className="py-12 md:py-16 section-green border-t border-border">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading" style={{ color: "#ffffff" }}>
@@ -376,7 +376,7 @@ export default function Mining() {
         </section>
 
         {/* Section 3: Geological Context */}
-        <section className="py-8 md:py-10 section-cream border-t border-border">
+        <section className="py-12 md:py-16 section-cream border-t border-border">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading">Pakistan's Geological Context</h2>
@@ -410,7 +410,7 @@ export default function Mining() {
         </section>
 
         {/* Section 4: Technical Knowledge */}
-        <section className="py-8 md:py-10 section-cream border-t border-border">
+        <section className="py-12 md:py-16 section-cream border-t border-border">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading">
@@ -627,7 +627,7 @@ export default function Mining() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-10 md:py-10 section-light border-t border-border">
+        <section className="py-16 md:py-20 section-light border-t border-border">
           <div className="container text-center">
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
               For mining feasibility studies, compliance planning, or resource

@@ -92,7 +92,7 @@ export default function Contact() {
             style={{
               backgroundImage: "url(/images/pakistani-business-handshake.jpg)",
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "center center",
             }}
           ></div>
           <div className="container relative z-10">
@@ -112,7 +112,7 @@ export default function Contact() {
         </section>
 
         {/* Contact Information and Form */}
-        <section className="section-cream py-8 md:py-10 border-t border-border">
+        <section className="section-cream py-12 md:py-16 border-t border-border">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Company Information */}
@@ -314,7 +314,7 @@ export default function Contact() {
         </section>
 
         {/* Additional Information */}
-        <section className="section-green py-8 md:py-10 border-t border-border">
+        <section className="section-green py-12 md:py-16 border-t border-border">
           <div className="container">
             <div className="max-w-3xl">
               <h2

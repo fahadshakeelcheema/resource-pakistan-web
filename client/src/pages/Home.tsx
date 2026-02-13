@@ -71,7 +71,7 @@ export default function Home() {
         </section>
 
         {/* Section 1: Core Verticals - Circular Service Icons */}
-        <section className="py-8 md:py-10 section-cream">
+        <section className="py-12 md:py-16 section-cream">
           <div className="container">
             <div className="mb-6 text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -196,7 +196,7 @@ export default function Home() {
         </section>
 
         {/* Section 2: Our Approach */}
-        <section className="py-8 md:py-10 section-green border-t border-white/20">
+        <section className="py-12 md:py-16 section-green border-t border-white/20">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading" style={{ color: "#ffffff" }}>
@@ -319,7 +319,7 @@ export default function Home() {
         </section>
 
         {/* Section 3: Strategic Sectors */}
-        <section className="py-8 md:py-10 section-cream border-t border-border">
+        <section className="py-12 md:py-16 section-cream border-t border-border">
           <div className="container">
             <div className="mb-6">
               <h2 className="text-heading">Strategic Sectors</h2>
@@ -387,7 +387,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-10 md:py-10 section-green border-t border-white/20">
+        <section className="py-16 md:py-20 section-green border-t border-white/20">
           <div className="container text-center">
             <p
               className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto"
