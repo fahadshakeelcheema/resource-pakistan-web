@@ -563,3 +563,9 @@
 - [x] Update Core Services card backgrounds to darker blue (#1e3a5f)
 - [x] Update Technical Knowledge and Expertise SVG diagram colors to blue (#1e3a5f, #2d5a8c)
 - [x] Update Mining Development Process SVG diagram colors to blue
+
+## EVs & Technology Page Color Updates
+
+- [x] Update Focus Areas card backgrounds to darker blue (#1e3a5f)
+- [x] Update Technology Strategy SVG diagram colors to blue (#1e3a5f, #2d5a8c)
+- [x] Update Long-Term Institutional Planning SVG diagram colors to blue (#1e3a5f, #2d5a8c)

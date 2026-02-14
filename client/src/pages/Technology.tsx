@@ -88,13 +88,13 @@ export default function Technology() {
                       y="-30"
                       width="160"
                       height="50"
-                      fill="#2d5a3d"
+                      fill="#2d5a8c"
                       rx="8"
                     />
                     {/* Car Roof */}
                     <path
                       d="M -50 -30 L -30 -60 L 30 -60 L 50 -30 Z"
-                      fill="#2d5a3d"
+                      fill="#2d5a8c"
                     />
                     {/* Windows */}
                     <rect
@@ -118,22 +118,22 @@ export default function Technology() {
                       cx="-50"
                       cy="25"
                       r="15"
-                      fill="#095d29"
-                      stroke="#2d5a3d"
+                      fill="#1e3a5f"
+                      stroke="#2d5a8c"
                       strokeWidth="3"
                     />
                     <circle
                       cx="50"
                       cy="25"
                       r="15"
-                      fill="#095d29"
-                      stroke="#2d5a3d"
+                      fill="#1e3a5f"
+                      stroke="#2d5a8c"
                       strokeWidth="3"
                     />
                     {/* Lightning Bolt (Electric Symbol) */}
                     <polygon
                       points="0,-10 -8,5 0,5 -5,20 10,0 2,0 8,-15"
-                      fill="#095d29"
+                      fill="#1e3a5f"
                     />
                   </g>
 
@@ -144,16 +144,16 @@ export default function Technology() {
                     y1="80"
                     x2="150"
                     y2="80"
-                    stroke="#2d5a3d"
+                      stroke="#2d5a8c"
                     strokeWidth="2"
                   />
-                  <circle cx="150" cy="80" r="5" fill="#095d29" />
+                  <circle cx="150" cy="80" r="5" fill="#1e3a5f" />
                   <line
                     x1="150"
                     y1="80"
                     x2="150"
                     y2="120"
-                    stroke="#2d5a3d"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
 
@@ -163,16 +163,16 @@ export default function Technology() {
                     y1="160"
                     x2="320"
                     y2="200"
-                    stroke="#2d5a3d"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
-                  <circle cx="320" cy="200" r="5" fill="#095d29" />
+                  <circle cx="320" cy="200" r="5" fill="#1e3a5f" />
                   <line
                     x1="280"
                     y1="200"
                     x2="320"
                     y2="200"
-                    stroke="#2d5a3d"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
 
@@ -182,16 +182,16 @@ export default function Technology() {
                     y1="280"
                     x2="150"
                     y2="280"
-                    stroke="#2d5a3d"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
-                  <circle cx="100" cy="280" r="5" fill="#095d29" />
+                  <circle cx="100" cy="280" r="5" fill="#1e3a5f" />
                   <line
                     x1="100"
                     y1="240"
                     x2="100"
                     y2="280"
-                    stroke="#2d5a3d"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
 
@@ -202,10 +202,10 @@ export default function Technology() {
                       y="0"
                       width="30"
                       height="50"
-                      fill="#2d5a3d"
+                      fill="#2d5a8c"
                       rx="3"
                     />
-                    <rect x="-10" y="5" width="20" height="15" fill="#095d29" />
+                    <rect x="-10" y="5" width="20" height="15" fill="#1e3a5f" />
                     <polygon
                       points="0,25 -5,35 0,35 -3,45 7,30 2,30 5,20"
                       fill="#ffffff"
@@ -230,7 +230,7 @@ export default function Technology() {
               {/* Electric Mobility */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredArea("mobility")}
                 onMouseLeave={() => setHoveredArea(null)}
               >
@@ -258,7 +258,7 @@ export default function Technology() {
               {/* Technology Pilot Programs */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredArea("pilot")}
                 onMouseLeave={() => setHoveredArea(null)}
               >
@@ -286,7 +286,7 @@ export default function Technology() {
               {/* Industrial Technology Integration */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredArea("industrial")}
                 onMouseLeave={() => setHoveredArea(null)}
               >
@@ -313,7 +313,7 @@ export default function Technology() {
               {/* Research and Analysis */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredArea("research")}
                 onMouseLeave={() => setHoveredArea(null)}
               >
@@ -383,7 +383,7 @@ export default function Technology() {
                       refY="3"
                       orient="auto"
                     >
-                      <polygon points="0 0, 10 3, 0 6" fill="#095d29" />
+                      <polygon points="0 0, 10 3, 0 6" fill="#1e3a5f" />
                     </marker>
                   </defs>
                   <line
@@ -391,7 +391,7 @@ export default function Technology() {
                     y1="150"
                     x2="420"
                     y2="150"
-                    stroke="#2d5a3d"
+                    stroke="#2d5a8c"
                     strokeWidth="3"
                     markerEnd="url(#arrowhead)"
                   />
@@ -401,8 +401,8 @@ export default function Technology() {
                     cx="90"
                     cy="150"
                     r="25"
-                    fill="#095d29"
-                    stroke="#2d5a3d"
+                      fill="#1e3a5f"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
                   <text
@@ -419,7 +419,7 @@ export default function Technology() {
                     x="90"
                     y="195"
                     fontSize="13"
-                    fill="#2d5a3d"
+                      fill="#2d5a8c"
                     textAnchor="middle"
                     fontWeight="600"
                   >
@@ -431,8 +431,8 @@ export default function Technology() {
                     cx="180"
                     cy="150"
                     r="25"
-                    fill="#095d29"
-                    stroke="#2d5a3d"
+                    fill="#1e3a5f"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
                   <text
@@ -461,8 +461,8 @@ export default function Technology() {
                     cx="280"
                     cy="150"
                     r="25"
-                    fill="#095d29"
-                    stroke="#2d5a3d"
+                    fill="#1e3a5f"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
                   <text
@@ -491,8 +491,8 @@ export default function Technology() {
                     cx="390"
                     cy="150"
                     r="25"
-                    fill="#095d29"
-                    stroke="#2d5a3d"
+                    fill="#1e3a5f"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
                   <text
