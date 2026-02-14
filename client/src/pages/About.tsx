@@ -192,7 +192,7 @@ export default function About() {
               {/* Institutional Integrity */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredPrinciple("integrity")}
                 onMouseLeave={() => setHoveredPrinciple(null)}
               >
@@ -220,7 +220,7 @@ export default function About() {
               {/* Feasibility First */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredPrinciple("feasibility")}
                 onMouseLeave={() => setHoveredPrinciple(null)}
               >
@@ -248,7 +248,7 @@ export default function About() {
               {/* Responsible Development */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredPrinciple("responsible")}
                 onMouseLeave={() => setHoveredPrinciple(null)}
               >
@@ -276,7 +276,7 @@ export default function About() {
               {/* Multidisciplinary Approach */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredPrinciple("multidisciplinary")}
                 onMouseLeave={() => setHoveredPrinciple(null)}
               >
@@ -303,7 +303,7 @@ export default function About() {
               {/* Long-Term Perspective */}
               <div
                 className="card-institutional md:col-span-2 transition-all hover:shadow-lg md:mx-auto md:max-w-2xl"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredPrinciple("longterm")}
                 onMouseLeave={() => setHoveredPrinciple(null)}
               >
@@ -367,7 +367,7 @@ export default function About() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   {/* Central Hub */}
-                  <circle cx="200" cy="200" r="40" fill="#095d29" />
+                  <circle cx="200" cy="200" r="40" fill="#1e3a5f" />
                   <text
                     x="200"
                     y="210"
@@ -381,7 +381,7 @@ export default function About() {
 
                   {/* Outer Nodes - Expertise Areas */}
                   {/* Mining */}
-                  <circle cx="200" cy="80" r="35" fill="#2d5a3d" />
+                  <circle cx="200" cy="80" r="35" fill="#2d5a8c" />
                   <text
                     x="200"
                     y="88"
@@ -402,7 +402,7 @@ export default function About() {
                   />
 
                   {/* Consultancy */}
-                  <circle cx="320" cy="200" r="35" fill="#2d5a3d" />
+                  <circle cx="320" cy="200" r="35" fill="#2d5a8c" />
                   <text
                     x="320"
                     y="205"
@@ -423,7 +423,7 @@ export default function About() {
                   />
 
                   {/* Technology */}
-                  <circle cx="200" cy="320" r="35" fill="#2d5a3d" />
+                  <circle cx="200" cy="320" r="35" fill="#2d5a8c" />
                   <text
                     x="200"
                     y="325"
@@ -444,7 +444,7 @@ export default function About() {
                   />
 
                   {/* Industrial */}
-                  <circle cx="80" cy="200" r="35" fill="#2d5a3d" />
+                  <circle cx="80" cy="200" r="35" fill="#2d5a8c" />
                   <text
                     x="80"
                     y="205"

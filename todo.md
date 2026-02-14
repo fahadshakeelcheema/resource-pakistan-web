@@ -547,3 +547,8 @@
 
 - [x] Update Our Approach card backgrounds to darker blue shade (#1e3a5f)
 - [x] Ensure text readability on darker blue cards
+
+## About Us Page Color Updates
+
+- [x] Update Core Principles card backgrounds to darker blue (#1e3a5f)
+- [x] Update Expertise and Experience SVG diagram colors to blue (#1e3a5f, #2d5a8c)
