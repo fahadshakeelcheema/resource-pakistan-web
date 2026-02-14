@@ -542,3 +542,8 @@
 - [x] Update subsection hover states and backgrounds (via CSS variables)
 - [x] Update SVG diagram colors (via CSS variables)
 - [x] Ensure text readability with new blue color scheme
+
+## Homepage Our Approach Section
+
+- [x] Update Our Approach card backgrounds to darker blue shade (#1e3a5f)
+- [x] Ensure text readability on darker blue cards

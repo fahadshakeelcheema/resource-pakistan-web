@@ -210,7 +210,7 @@ export default function Home() {
                 className="p-6 rounded-lg border border-border hover:border-green-primary transition-all"
                 onMouseEnter={() => setHoveredApproach("feasibility")}
                 onMouseLeave={() => setHoveredApproach(null)}
-                style={{ backgroundColor: "#095d29", borderStyle: "none" }}
+                style={{ backgroundColor: "#1e3a5f", borderStyle: "none" }}
               >
                 <h3
                   className="text-xl font-bold text-foreground mb-2"
@@ -238,7 +238,7 @@ export default function Home() {
                 className="p-6 rounded-lg border border-border hover:border-green-primary transition-all"
                 onMouseEnter={() => setHoveredApproach("institutional")}
                 onMouseLeave={() => setHoveredApproach(null)}
-                style={{ backgroundColor: "#095d29", borderStyle: "none" }}
+                style={{ backgroundColor: "#1e3a5f", borderStyle: "none" }}
               >
                 <h3
                   className="text-xl font-bold text-foreground mb-2"
@@ -265,7 +265,7 @@ export default function Home() {
                 className="p-6 rounded-lg border border-border hover:border-green-primary transition-all"
                 onMouseEnter={() => setHoveredApproach("responsible")}
                 onMouseLeave={() => setHoveredApproach(null)}
-                style={{ backgroundColor: "#095d29", borderStyle: "none" }}
+                style={{ backgroundColor: "#1e3a5f", borderStyle: "none" }}
               >
                 <h3
                   className="text-xl font-bold text-foreground mb-2"
@@ -293,7 +293,7 @@ export default function Home() {
                 className="p-6 rounded-lg border border-border hover:border-green-primary transition-all"
                 onMouseEnter={() => setHoveredApproach("multidisciplinary")}
                 onMouseLeave={() => setHoveredApproach(null)}
-                style={{ backgroundColor: "#095d29", borderStyle: "none" }}
+                style={{ backgroundColor: "#1e3a5f", borderStyle: "none" }}
               >
                 <h3
                   className="text-xl font-bold text-foreground mb-2"
