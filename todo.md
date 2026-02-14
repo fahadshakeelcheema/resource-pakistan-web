@@ -576,3 +576,8 @@
 - [x] Update Governance Framework SVG diagram colors to blue (#1e3a5f, #2d5a8c)
 - [x] Update Compliance and Standards SVG diagram colors to blue (gradient: #1e3a5f → #6bb3ff)
 - [x] Fix Stakeholder Coordination section font and SVG colors (central circle #1e3a5f, text white)
+
+## Contact Page Background Update
+
+- [x] Search for Pakistani businessmen in suits shaking hands imagery
+- [x] Replace Contact Resource Pakistan section background image
