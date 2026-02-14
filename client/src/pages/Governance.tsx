@@ -85,14 +85,14 @@ export default function Governance() {
                     y="150"
                     width="20"
                     height="180"
-                    fill="#2d5a3d"
+                    fill="#2d5a8c"
                   />
                   <rect
                     x="170"
                     y="320"
                     width="60"
                     height="15"
-                    fill="#095d29"
+                    fill="#1e3a5f"
                     rx="2"
                   />
 
@@ -102,7 +102,7 @@ export default function Governance() {
                     y="145"
                     width="200"
                     height="10"
-                    fill="#2d5a3d"
+                    fill="#2d5a8c"
                     rx="2"
                   />
 
@@ -112,7 +112,7 @@ export default function Governance() {
                     y1="155"
                     x2="100"
                     y2="200"
-                    stroke="#2d5a3d"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
                   <line
@@ -120,19 +120,19 @@ export default function Governance() {
                     y1="155"
                     x2="140"
                     y2="200"
-                    stroke="#2d5a3d"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
                   <path
                     d="M 80 200 L 100 200 L 120 220 L 100 220 L 80 200 Z"
-                    fill="#095d29"
-                    stroke="#2d5a3d"
+                    fill="#1e3a5f"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
                   <path
                     d="M 100 200 L 120 200 L 140 220 L 120 220 L 100 200 Z"
-                    fill="#095d29"
-                    stroke="#2d5a3d"
+                    fill="#1e3a5f"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
 
@@ -142,7 +142,7 @@ export default function Governance() {
                     y1="155"
                     x2="260"
                     y2="200"
-                    stroke="#2d5a3d"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
                   <line
@@ -150,19 +150,19 @@ export default function Governance() {
                     y1="155"
                     x2="300"
                     y2="200"
-                    stroke="#2d5a3d"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
                   <path
                     d="M 240 200 L 260 200 L 280 220 L 260 220 L 240 200 Z"
-                    fill="#095d29"
-                    stroke="#2d5a3d"
+                    fill="#1e3a5f"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
                   <path
                     d="M 260 200 L 280 200 L 300 220 L 280 220 L 260 200 Z"
-                    fill="#095d29"
-                    stroke="#2d5a3d"
+                    fill="#1e3a5f"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
 
@@ -171,8 +171,8 @@ export default function Governance() {
                     cx="200"
                     cy="150"
                     r="8"
-                    fill="#095d29"
-                    stroke="#2d5a3d"
+                    fill="#1e3a5f"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                   />
 
@@ -195,8 +195,8 @@ export default function Governance() {
                   {/* Shield Symbol (Compliance) */}
                   <path
                     d="M 200 80 L 180 85 L 180 105 Q 180 120 200 130 Q 220 120 220 105 L 220 85 Z"
-                    fill="#2d5a3d"
-                    stroke="#095d29"
+                    fill="#2d5a8c"
+                    stroke="#1e3a5f"
                     strokeWidth="2"
                   />
                   <path
@@ -225,7 +225,7 @@ export default function Governance() {
               {/* Integrity and Transparency */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredPrinciple("integrity")}
                 onMouseLeave={() => setHoveredPrinciple(null)}
               >
@@ -253,7 +253,7 @@ export default function Governance() {
               {/* Confidentiality */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredPrinciple("confidentiality")}
                 onMouseLeave={() => setHoveredPrinciple(null)}
               >
@@ -281,7 +281,7 @@ export default function Governance() {
               {/* Responsible Development */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredPrinciple("responsible")}
                 onMouseLeave={() => setHoveredPrinciple(null)}
               >
@@ -309,7 +309,7 @@ export default function Governance() {
               {/* Institutional Alignment */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredPrinciple("alignment")}
                 onMouseLeave={() => setHoveredPrinciple(null)}
               >
@@ -378,8 +378,8 @@ export default function Governance() {
                     y="250"
                     width="300"
                     height="60"
-                    fill="#095d29"
-                    stroke="#2d5a3d"
+                    fill="#1e3a5f"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                     rx="4"
                   />
@@ -400,8 +400,8 @@ export default function Governance() {
                     y="180"
                     width="250"
                     height="60"
-                    fill="#2d5a3d"
-                    stroke="#095d29"
+                    fill="#2d5a8c"
+                    stroke="#1e3a5f"
                     strokeWidth="2"
                     rx="4"
                   />
@@ -422,8 +422,8 @@ export default function Governance() {
                     y="110"
                     width="200"
                     height="60"
-                    fill="#3d7a4f"
-                    stroke="#2d5a3d"
+                    fill="#4d9ae5"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                     rx="4"
                   />
@@ -444,8 +444,8 @@ export default function Governance() {
                     y="40"
                     width="150"
                     height="60"
-                    fill="#4d8a5f"
-                    stroke="#2d5a3d"
+                    fill="#6bb3ff"
+                    stroke="#2d5a8c"
                     strokeWidth="2"
                     rx="4"
                   />
@@ -536,7 +536,7 @@ export default function Governance() {
                     cx="200"
                     cy="200"
                     r="50"
-                    fill="#ede0d4"
+                    fill="#1e3a5f"
                     stroke="#ffffff"
                     strokeWidth="3"
                   />
@@ -544,7 +544,7 @@ export default function Governance() {
                     x="200"
                     y="200"
                     fontSize="13"
-                    fill="#095d29"
+                    fill="#1e3a5f"
                     textAnchor="middle"
                     fontWeight="bold"
                   >
@@ -554,7 +554,7 @@ export default function Governance() {
                     x="200"
                     y="215"
                     fontSize="13"
-                    fill="#095d29"
+                    fill="#1e3a5f"
                     textAnchor="middle"
                     fontWeight="bold"
                   >

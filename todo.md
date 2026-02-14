@@ -569,3 +569,10 @@
 - [x] Update Focus Areas card backgrounds to darker blue (#1e3a5f)
 - [x] Update Technology Strategy SVG diagram colors to blue (#1e3a5f, #2d5a8c)
 - [x] Update Long-Term Institutional Planning SVG diagram colors to blue (#1e3a5f, #2d5a8c)
+
+## Governance Page Color Updates
+
+- [x] Update Ethical Principles card backgrounds to darker blue (#1e3a5f)
+- [x] Update Governance Framework SVG diagram colors to blue (#1e3a5f, #2d5a8c)
+- [x] Update Compliance and Standards SVG diagram colors to blue (gradient: #1e3a5f → #6bb3ff)
+- [x] Fix Stakeholder Coordination section font and SVG colors (central circle #1e3a5f, text white)
