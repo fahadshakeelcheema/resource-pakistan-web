@@ -84,8 +84,8 @@ export default function Consultancy() {
                     cx="200"
                     cy="200"
                     r="60"
-                    fill="#095d29"
-                    stroke="#2d5a3d"
+                    fill="#1e3a5f"
+                    stroke="#2d5a8c"
                     strokeWidth="3"
                   />
                   <text
@@ -105,8 +105,8 @@ export default function Consultancy() {
                     cx="200"
                     cy="80"
                     r="40"
-                    fill="#2d5a3d"
-                    stroke="#095d29"
+                    fill="#2d5a8c"
+                    stroke="#1e3a5f"
                     strokeWidth="2"
                   />
                   <text
@@ -132,8 +132,8 @@ export default function Consultancy() {
                     cx="320"
                     cy="200"
                     r="40"
-                    fill="#2d5a3d"
-                    stroke="#095d29"
+                    fill="#2d5a8c"
+                    stroke="#1e3a5f"
                     strokeWidth="2"
                   />
                   <text
@@ -159,8 +159,8 @@ export default function Consultancy() {
                     cx="200"
                     cy="320"
                     r="40"
-                    fill="#2d5a3d"
-                    stroke="#095d29"
+                    fill="#2d5a8c"
+                    stroke="#1e3a5f"
                     strokeWidth="2"
                   />
                   <text
@@ -186,8 +186,8 @@ export default function Consultancy() {
                     cx="80"
                     cy="200"
                     r="40"
-                    fill="#2d5a3d"
-                    stroke="#095d29"
+                    fill="#2d5a8c"
+                    stroke="#1e3a5f"
                     strokeWidth="2"
                   />
                   <text
@@ -265,7 +265,7 @@ export default function Consultancy() {
               {/* Strategic Planning */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredService("strategic")}
                 onMouseLeave={() => setHoveredService(null)}
               >
@@ -293,7 +293,7 @@ export default function Consultancy() {
               {/* Policy Analysis */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredService("policy")}
                 onMouseLeave={() => setHoveredService(null)}
               >
@@ -320,7 +320,7 @@ export default function Consultancy() {
               {/* Feasibility Assessment */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredService("feasibility")}
                 onMouseLeave={() => setHoveredService(null)}
               >
@@ -348,7 +348,7 @@ export default function Consultancy() {
               {/* Stakeholder Engagement */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredService("stakeholder")}
                 onMouseLeave={() => setHoveredService(null)}
               >

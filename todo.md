@@ -552,3 +552,8 @@
 
 - [x] Update Core Principles card backgrounds to darker blue (#1e3a5f)
 - [x] Update Expertise and Experience SVG diagram colors to blue (#1e3a5f, #2d5a8c)
+
+## Consultancy Page Color Updates
+
+- [x] Update Core Consultancy Services card backgrounds to darker blue (#1e3a5f)
+- [x] Update Consultancy Approach SVG diagram colors to blue (#1e3a5f, #2d5a8c)
