@@ -80,7 +80,7 @@ export default function Mining() {
                     x="200"
                     y="30"
                     fontSize="18"
-                    fill="#095d29"
+                    fill="#1e3a5f"
                     textAnchor="middle"
                     fontWeight="bold"
                   >
@@ -93,7 +93,7 @@ export default function Mining() {
                     y="60"
                     width="200"
                     height="60"
-                    fill="#2d5a3d"
+                    fill="#2d5a8c"
                     rx="8"
                   />
                   <text
@@ -125,7 +125,7 @@ export default function Mining() {
                     stroke="#095d29"
                     strokeWidth="3"
                   />
-                  <polygon points="200,150 195,140 205,140" fill="#095d29" />
+                  <polygon points="200,150 195,140 205,140" fill="#1e3a5f" />
 
                   {/* Step 2: Economic Viability */}
                   <rect
@@ -133,7 +133,7 @@ export default function Mining() {
                     y="150"
                     width="200"
                     height="60"
-                    fill="#2d5a3d"
+                    fill="#2d5a8c"
                     rx="8"
                   />
                   <text
@@ -165,7 +165,7 @@ export default function Mining() {
                     stroke="#095d29"
                     strokeWidth="3"
                   />
-                  <polygon points="200,240 195,230 205,230" fill="#095d29" />
+                  <polygon points="200,240 195,230 205,230" fill="#1e3a5f" />
 
                   {/* Step 3: Regulatory Compliance */}
                   <rect
@@ -173,7 +173,7 @@ export default function Mining() {
                     y="240"
                     width="200"
                     height="60"
-                    fill="#2d5a3d"
+                    fill="#2d5a8c"
                     rx="8"
                   />
                   <text
@@ -205,7 +205,7 @@ export default function Mining() {
                     stroke="#095d29"
                     strokeWidth="3"
                   />
-                  <polygon points="200,330 195,320 205,320" fill="#095d29" />
+                  <polygon points="200,330 195,320 205,320" fill="#1e3a5f" />
 
                   {/* Step 4: Implementation Planning */}
                   <rect
@@ -213,7 +213,7 @@ export default function Mining() {
                     y="330"
                     width="200"
                     height="60"
-                    fill="#095d29"
+                    fill="#1e3a5f"
                     rx="8"
                   />
                   <text
@@ -237,7 +237,7 @@ export default function Mining() {
                   </text>
 
                   {/* Checkmark at bottom */}
-                  <circle cx="200" cy="420" r="20" fill="#095d29" />
+                  <circle cx="200" cy="420" r="20" fill="#1e3a5f" />
                   <path
                     d="M 190 420 L 197 427 L 210 410"
                     fill="none"
@@ -265,7 +265,7 @@ export default function Mining() {
               {/* Feasibility Studies */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredService("feasibility")}
                 onMouseLeave={() => setHoveredService(null)}
               >
@@ -293,7 +293,7 @@ export default function Mining() {
               {/* Compliance & Regulatory Planning */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredService("compliance")}
                 onMouseLeave={() => setHoveredService(null)}
               >
@@ -321,7 +321,7 @@ export default function Mining() {
               {/* Value-Chain Analysis */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredService("valuechain")}
                 onMouseLeave={() => setHoveredService(null)}
               >
@@ -348,7 +348,7 @@ export default function Mining() {
               {/* Stakeholder Coordination */}
               <div
                 className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#095d29" }}
+                style={{ backgroundColor: "#1e3a5f" }}
                 onMouseEnter={() => setHoveredService("stakeholder")}
                 onMouseLeave={() => setHoveredService(null)}
               >
@@ -444,7 +444,7 @@ export default function Mining() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   {/* Central Hub */}
-                  <circle cx="200" cy="200" r="50" fill="#095d29" />
+                  <circle cx="200" cy="200" r="50" fill="#1e3a5f" />
                   <text
                     x="200"
                     y="195"
@@ -467,7 +467,7 @@ export default function Mining() {
                   </text>
 
                   {/* Geological Assessment (Top) */}
-                  <circle cx="200" cy="80" r="45" fill="#2d5a3d" />
+                  <circle cx="200" cy="80" r="45" fill="#2d5a8c" />
                   <text
                     x="200"
                     y="78"
@@ -498,7 +498,7 @@ export default function Mining() {
                   />
 
                   {/* Mining Engineering (Right) */}
-                  <circle cx="320" cy="200" r="45" fill="#2d5a3d" />
+                  <circle cx="320" cy="200" r="45" fill="#2d5a8c" />
                   <text
                     x="320"
                     y="198"
@@ -529,7 +529,7 @@ export default function Mining() {
                   />
 
                   {/* Environmental Analysis (Bottom Right) */}
-                  <circle cx="280" cy="310" r="45" fill="#2d5a3d" />
+                  <circle cx="280" cy="310" r="45" fill="#2d5a8c" />
                   <text
                     x="280"
                     y="305"
@@ -560,7 +560,7 @@ export default function Mining() {
                   />
 
                   {/* Institutional Planning (Bottom Left) */}
-                  <circle cx="120" cy="310" r="45" fill="#2d5a3d" />
+                  <circle cx="120" cy="310" r="45" fill="#2d5a8c" />
                   <text
                     x="120"
                     y="305"
@@ -591,7 +591,7 @@ export default function Mining() {
                   />
 
                   {/* Regulatory Compliance (Left) */}
-                  <circle cx="80" cy="200" r="45" fill="#2d5a3d" />
+                  <circle cx="80" cy="200" r="45" fill="#2d5a8c" />
                   <text
                     x="80"
                     y="198"

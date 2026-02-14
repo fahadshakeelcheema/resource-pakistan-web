@@ -557,3 +557,9 @@
 
 - [x] Update Core Consultancy Services card backgrounds to darker blue (#1e3a5f)
 - [x] Update Consultancy Approach SVG diagram colors to blue (#1e3a5f, #2d5a8c)
+
+## Mining Page Color Updates
+
+- [x] Update Core Services card backgrounds to darker blue (#1e3a5f)
+- [x] Update Technical Knowledge and Expertise SVG diagram colors to blue (#1e3a5f, #2d5a8c)
+- [x] Update Mining Development Process SVG diagram colors to blue
