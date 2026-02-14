@@ -533,3 +533,12 @@
 - [x] Reduce dark overlays for better image visibility (from 90% to 40-50%)
 - [x] Adjust background-size for proper full-scale display
 - [x] Ensure images are properly visible while maintaining text readability
+
+## Color Scheme Update - Green to Blue
+
+- [x] Analyze current green color usage across all pages
+- [x] Update CSS theme colors from green to blue (matching header)
+- [x] Update section background colors (via CSS variables)
+- [x] Update subsection hover states and backgrounds (via CSS variables)
+- [x] Update SVG diagram colors (via CSS variables)
+- [x] Ensure text readability with new blue color scheme

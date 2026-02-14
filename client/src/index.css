@@ -77,14 +77,14 @@
   --accent: #1e3a5f;
   --accent-foreground: #f5f3f0;
   
-  /* Green accents from Resource Pakistan logo */
-  --green-primary: #2D7A3E;
-  --green-light: #3A9B4F;
-  --green-dark: #1F5A2C;
-  --green-muted: #5FAD6F;
-  --green-deep: #164A23;
+  /* Blue accents matching header institutional design */
+  --green-primary: #2d5a8c;
+  --green-light: #4d9ae5;
+  --green-dark: #1e3a5f;
+  --green-muted: #6bb6f5;
+  --green-deep: #0f2847;
   
-  /* Tailwind color mappings for green tones */
+  /* Tailwind color mappings for blue tones */
   --color-green-primary: var(--green-primary);
   --color-green-light: var(--green-light);
   --color-green-dark: var(--green-dark);
@@ -260,7 +260,7 @@
     @apply bg-secondary;
   }
   
-  /* Green section background with light text */
+  /* Blue section background with light text (institutional design) */
   .section-green {
     background-color: var(--green-primary);
     color: #ffffff;
