@@ -90,7 +90,7 @@ export default function Contact() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url(/images/pakistan-business-handshake-hq.jpg)",
+              backgroundImage: "url(/images/pakistan-business-handshake-two.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center center",
             }}
