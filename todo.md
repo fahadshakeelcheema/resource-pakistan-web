@@ -610,3 +610,7 @@
 
 - [x] Generate symbolic handshake image with regular business suit colors (navy & charcoal)
 - [x] Replace contact page background with new image (2752x1536px)
+
+## Contact Page - Reorder Focus Areas
+
+- [x] Reorder Focus Areas to: Consultancy & Advisory, Mining & Resources, EVs & Technology, Industrial Planning

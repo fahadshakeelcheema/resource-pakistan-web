@@ -149,8 +149,8 @@ export default function Contact() {
                       Focus Areas
                     </h3>
                     <ul className="text-sm text-foreground space-y-1">
-                      <li>Mining & Resources</li>
                       <li>Consultancy & Advisory</li>
+                      <li>Mining & Resources</li>
                       <li>Electric Vehicles & Technology</li>
                       <li>Industrial Planning</li>
                     </ul>
