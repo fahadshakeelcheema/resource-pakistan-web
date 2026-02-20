@@ -627,3 +627,7 @@
 - [x] Remove dividing line between Resource Pakistan logo and Partner Organizations
 - [x] Reduce spacing between logo section and partner logos
 - [x] Center-align copyright text
+
+## Footer Contact Information
+
+- [x] Add official email address to footer
