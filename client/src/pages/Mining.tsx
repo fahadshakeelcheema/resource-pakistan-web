@@ -111,7 +111,7 @@ export default function Mining() {
         {/* Section 2: Core Services */}
         <section className="py-6 md:py-8 section-light border-t border-border">
           <div className="container">
-            <h2 className="text-heading text-center mb-4" style={{ color: "#ffffff" }}>
+            <h2 className="text-heading text-center mb-4 text-foreground">
               Core Services
             </h2>
 

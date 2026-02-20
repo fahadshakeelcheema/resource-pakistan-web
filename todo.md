@@ -809,3 +809,7 @@
 ## Contact Page Confidentiality Section Alignment Fix
 
 - [x] Fix content alignment to match heading alignment in Confidentiality & Professional Standards section
+
+## Mining Page Text Color Adjustment
+
+- [x] Adjust text color on Mining page h2 heading (line ~114)
