@@ -744,3 +744,8 @@
 
 - [x] Fix hero logo display - ensure it's not stretched/cut off in desktop view
 - [x] Center-align Mission and Scope text content under heading
+
+## About Us Page Final Fixes
+
+- [x] Replace hero with industrial chimney background + transparent logo PNG overlay
+- [x] Fix Mission and Scope content alignment beneath heading
