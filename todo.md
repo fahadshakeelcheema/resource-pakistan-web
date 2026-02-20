@@ -739,3 +739,8 @@
 - [x] Generate custom hero image with industrial colors and Resource Pakistan logo at center
 - [x] Left-align hero heading and tagline
 - [x] Position content properly under Mission and Scope heading
+
+## About Us Page Fixes
+
+- [x] Fix hero logo display - ensure it's not stretched/cut off in desktop view
+- [x] Center-align Mission and Scope text content under heading

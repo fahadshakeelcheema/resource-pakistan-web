@@ -24,8 +24,9 @@ export default function About() {
             className="absolute inset-0"
             style={{
               backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/jMFMDhFAFMsMCSjQ.jpg)",
-              backgroundSize: "cover",
+              backgroundSize: "contain",
               backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
             }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/40"></div>
