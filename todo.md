@@ -691,3 +691,8 @@
 ## Homepage - Hero Section Text Update
 
 - [x] Reorder sectors in hero text to: consultancy, mining, electric vehicles, and industrial technology
+
+## Governance Page - Remove Watermark from Hero Image
+
+- [x] Search for justice-themed image without watermark
+- [x] Replace hero background image on Governance page

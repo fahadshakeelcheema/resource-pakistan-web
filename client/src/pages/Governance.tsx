@@ -23,7 +23,7 @@ export default function Governance() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url(/images/governance-justice-background.jpg)",
+              backgroundImage: "url(/images/governance-hero-bg.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center center",
             }}
