@@ -11,15 +11,15 @@ export default function Footer() {
     <footer className="bg-background border-t border-border mt-16">
       <div className="container py-6">
         {/* Company Info - Compact */}
-        <div className="flex flex-col items-center text-center mb-6">
+        <div className="flex flex-col items-center text-center mb-4">
           <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-16 w-auto mb-3" />
           <p className="text-sm text-muted-foreground max-w-md">
             Building Pakistan's resource and industrial future through strategic development.
           </p>
         </div>
 
-        {/* Partner Organizations */}
-        <div className="border-t border-border pt-6 mb-6">
+        {/* Partner Organizations - No dividing line */}
+        <div className="pt-4 mb-4">
           <h4 className="text-xs font-bold text-foreground mb-4 uppercase tracking-wider text-center">Partner Organizations</h4>
           <div className="flex flex-wrap items-center justify-center gap-6">
             <img src="/images/irada-logo.png" alt="Irada Pakistan" className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
@@ -31,11 +31,9 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright - Compact */}
-        <div className="border-t border-border pt-4">
-          <div className="text-center text-xs text-muted-foreground">
-            <p>© {currentYear} Resource Pakistan (Pvt) Ltd. All rights reserved.</p>
-          </div>
+        {/* Copyright - Centered */}
+        <div className="pt-4 text-center">
+          <p className="text-xs text-muted-foreground">© {currentYear} Resource Pakistan (Pvt) Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>

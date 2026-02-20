@@ -621,3 +621,9 @@
 - [x] Remove Company section from footer
 - [x] Remove Get in Touch section from footer
 - [x] Make remaining footer content more compact
+
+## Footer Spacing Refinement
+
+- [x] Remove dividing line between Resource Pakistan logo and Partner Organizations
+- [x] Reduce spacing between logo section and partner logos
+- [x] Center-align copyright text
