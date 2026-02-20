@@ -316,9 +316,9 @@ export default function Contact() {
         {/* Additional Information */}
         <section className="section-green py-12 md:py-16 border-t border-border">
           <div className="container">
-            <div className="max-w-2xl mx-auto text-center">
+            <div className="flex flex-col items-center w-full">
               <h2
-                className="text-2xl font-bold mb-6"
+                className="text-2xl font-bold mb-6 text-center"
                 style={{
                   fontFamily: "'Crimson Text', serif",
                   color: "#ffffff",
@@ -327,13 +327,13 @@ export default function Contact() {
                 Confidentiality & Professional Standards
               </h2>
               <p
-                className="text-base leading-relaxed"
+                className="text-base leading-relaxed text-center max-w-xl"
                 style={{ color: "#ffffff" }}
               >
                 All inquiries and communications with Resource Pakistan are handled with strict confidentiality and professional standards. We understand the sensitive nature of resource development and institutional planning work, and we maintain rigorous information security protocols.
               </p>
               <p
-                className="text-base leading-relaxed mt-6"
+                className="text-base leading-relaxed mt-6 text-center max-w-xl"
                 style={{ color: "#ede0d4" }}
               >
                 Our team will review your inquiry and respond within 2-3 business days. For time-sensitive matters, please indicate this in your message.

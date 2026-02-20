@@ -826,3 +826,8 @@
 
 - [x] Fix Confidentiality & Professional Standards heading and text alignment mismatch
 - [x] Fix footer copyright text alignment (© 2026 Resource Pakistan)
+
+## Alignment Fixes (Round 4)
+
+- [x] Properly center-align Confidentiality section heading and text
+- [x] Properly center-align footer copyright text
