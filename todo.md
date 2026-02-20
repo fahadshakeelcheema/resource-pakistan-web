@@ -805,3 +805,7 @@
 
 - [x] Fix Governance page hero image zoom/scale issue (adjust background-size or background-position)
 - [x] Center-align content in Confidentiality & Professional Standards section on Contact page
+
+## Contact Page Confidentiality Section Alignment Fix
+
+- [x] Fix content alignment to match heading alignment in Confidentiality & Professional Standards section

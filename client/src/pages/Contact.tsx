@@ -327,7 +327,7 @@ export default function Contact() {
                 Confidentiality & Professional Standards
               </h2>
               <p
-                className="text-base text-foreground leading-relaxed"
+                className="text-base text-foreground leading-relaxed text-justify"
                 style={{ color: "#ffffff" }}
               >
                 All inquiries and communications with Resource Pakistan are
@@ -337,7 +337,7 @@ export default function Contact() {
                 information security protocols.
               </p>
               <p
-                className="text-base text-foreground leading-relaxed mt-6"
+                className="text-base text-foreground leading-relaxed mt-6 text-justify"
                 style={{ color: "#ede0d4" }}
               >
                 Our team will review your inquiry and respond within 2-3
