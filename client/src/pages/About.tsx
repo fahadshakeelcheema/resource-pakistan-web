@@ -35,7 +35,7 @@ export default function About() {
           {/* Transparent logo centered */}
           <div className="absolute inset-0 flex items-center justify-center">
             <img
-              src="/images/resource-pakistan-logo.png"
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/oyBVIDWGQxCqRkYT.png"
               alt="Resource Pakistan"
               className="h-48 md:h-56 lg:h-64 w-auto opacity-50"
             />

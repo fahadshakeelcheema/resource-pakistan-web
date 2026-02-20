@@ -4,7 +4,7 @@ import { join } from "path";
 
 /**
  * Performance Optimization Tests
- * Validates lazy loading and preload implementation
+ * Validates lazy loading, preload implementation, and CDN usage
  */
 describe("Performance Optimization", () => {
   it("should have preload hints for critical assets in HTML", () => {
@@ -13,15 +13,12 @@ describe("Performance Optimization", () => {
     
     // Check for logo preload
     expect(htmlContent).toContain('rel="preload"');
-    expect(htmlContent).toContain('/images/resource-pakistan-logo-hq.png');
+    expect(htmlContent).toContain('files.manuscdn.com');
     
     // Check for font preconnect
     expect(htmlContent).toContain('rel="preconnect"');
     expect(htmlContent).toContain('fonts.googleapis.com');
     expect(htmlContent).toContain('fonts.gstatic.com');
-    
-    // Check for CDN preconnect
-    expect(htmlContent).toContain('files.manuscdn.com');
   });
 
   it("should have lazy loading on Home page service images", () => {
@@ -49,7 +46,8 @@ describe("Performance Optimization", () => {
     
     // Logo should have high priority, not lazy loading
     expect(headerContent).toContain('fetchPriority="high"');
-    expect(headerContent).toContain('resource-pakistan-logo-hq.png');
+    // Logo should use CDN URL
+    expect(headerContent).toContain('files.manuscdn.com');
   });
 
   it("should not have lazy loading on critical above-fold images", () => {
@@ -57,8 +55,26 @@ describe("Performance Optimization", () => {
     const headerContent = readFileSync(headerPath, "utf-8");
     
     // Header logo should NOT have lazy loading
-    const logoSection = headerContent.match(/<img[^>]*resource-pakistan-logo-hq\.png[^>]*>/);
+    const logoSection = headerContent.match(/<img[^>]*manuscdn\.com[^>]*>/);
     expect(logoSection).toBeTruthy();
     expect(logoSection![0]).not.toContain('loading="lazy"');
+  });
+
+  it("should use CDN URLs for all images (no local /images/ paths)", () => {
+    const files = [
+      "../client/src/components/Header.tsx",
+      "../client/src/components/Footer.tsx",
+      "../client/src/pages/Home.tsx",
+      "../client/src/pages/About.tsx",
+      "../client/src/pages/Contact.tsx",
+    ];
+
+    for (const file of files) {
+      const filePath = join(__dirname, file);
+      const content = readFileSync(filePath, "utf-8");
+      // No local /images/ paths should remain
+      expect(content).not.toMatch(/src="\/images\//);
+      expect(content).not.toContain("private-us-east-1.manuscdn.com");
+    }
   });
 });

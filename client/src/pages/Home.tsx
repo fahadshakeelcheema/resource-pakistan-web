@@ -76,7 +76,7 @@ export default function Home() {
                 <div className="relative w-40 h-40 mb-4 overflow-hidden rounded-full border-4 border-green-primary transition-all group-hover:border-green-light group-hover:shadow-2xl">
                   <img
                     loading="lazy"
-                    src="/images/service-consultancy.jpg"
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/fxSzXQIbDPNaMuZX.jpg"
                     alt="Consultancy & Advisory"
                     className="w-full h-full object-cover transition-transform group-hover:scale-110"
                   />
@@ -102,7 +102,7 @@ export default function Home() {
                 <div className="relative w-40 h-40 mb-4 overflow-hidden rounded-full border-4 border-green-primary transition-all group-hover:border-green-light group-hover:shadow-2xl">
                   <img
                     loading="lazy"
-                    src="/images/service-mining.jpg"
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/RticwPOOekFuUdyS.jpg"
                     alt="Mining & Resources"
                     className="w-full h-full object-cover transition-transform group-hover:scale-110"
                   />
@@ -128,7 +128,7 @@ export default function Home() {
                 <div className="relative w-40 h-40 mb-4 overflow-hidden rounded-full border-4 border-green-primary transition-all group-hover:border-green-light group-hover:shadow-2xl">
                   <img
                     loading="lazy"
-                    src="/images/service-ev-technology.jpg"
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/MnLyjyltGcLPrHJZ.jpg"
                     alt="Electric Vehicles & Technology"
                     className="w-full h-full object-cover transition-transform group-hover:scale-110"
                   />
@@ -154,7 +154,7 @@ export default function Home() {
                 <div className="relative w-40 h-40 mb-4 overflow-hidden rounded-full border-4 border-green-primary transition-all group-hover:border-green-light group-hover:shadow-2xl">
                   <img
                     loading="lazy"
-                    src="/images/service-industrial-planning.jpg"
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/rvocLuENTtmEfOfM.jpg"
                     alt="Industrial Planning"
                     className="w-full h-full object-cover transition-transform group-hover:scale-110"
                   />

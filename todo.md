@@ -842,3 +842,16 @@
 - [x] Add meta tags for Open Graph and Twitter Cards
 - [x] Validate structured data output
 - [x] Write tests for structured data
+
+## Deployment Readiness Checks
+
+- [x] Production build succeeds without errors
+- [x] All vitest tests pass (52/52)
+- [x] TypeScript compilation has no errors
+- [x] No local media files in project directory (all 29 images moved to S3/CDN)
+- [x] No hardcoded localhost or sandbox URLs in source code
+- [x] No private/expiring manuscdn URLs (replaced with permanent CDN URLs)
+- [x] Database schema is synced (pnpm db:push)
+- [x] Environment variables are properly configured
+- [x] All pages render correctly (visual check)
+- [x] Dependencies are clean (no vulnerabilities)

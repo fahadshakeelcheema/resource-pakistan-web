@@ -90,7 +90,7 @@ export default function Contact() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url(https://private-us-east-1.manuscdn.com/sessionFile/aGhAHI1AoYZ5p1nfcEzd8f/sandbox/bKd8v9XaDoYoaaFsdWSLO7-img-1_1771400417000_na1fn_cGFraXN0YW4taGFuZHNoYWtlLXByb2Zlc3Npb25hbA.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvYUdoQUhJMUFvWVo1cDFuZmNFemQ4Zi9zYW5kYm94L2JLZDh2OVhhRG9Zb2FhRnNkV1NMTzctaW1nLTFfMTc3MTQwMDQxNzAwMF9uYTFmbl9jR0ZyYVhOMFlXNHRhR0Z1WkhOb1lXdGxMWEJ5YjJabGMzTnBiMjVoYkEuanBnP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=fYgYUFBu2fiGd21PpZpmb1za3WEISZCBn88nLk882Q6QfKk2uLl~CsyyuHQY6usCXEp34Q6~HzqbmyepGxv6OrRuwtUuUITorn1MXglChCU4sKNlUrN~aEfSzH8z8fPoIO5H~AE6nly7bcdFlH1NtJ9s2Kd2Z5gzVbUOpugYPQz8SN8LKt0P4FgfNhXB3KTHxvavfb~XKSOgNqctqwYoLWjRbJsJExEVKv7owiEsqRYXPBkS3HBxGX6l6vApKnNcdsFB16GBr4Y~sl7JajxnhYmZX06o~wywD9jWPMqnW5oR2aRvDMC2SCeSILV7wWv711Z8bxM4XE3V1hwzi7bUrQ__)",
+              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/KMjxsphCydLypviA.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center center",
             }}
