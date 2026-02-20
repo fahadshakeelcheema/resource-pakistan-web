@@ -236,7 +236,7 @@ export default function Consultancy() {
         {/* CTA Section */}
         <section className="py-6 md:py-8 section-green border-t border-border">
           <div className="container text-center">
-            <p className="text-base mb-4 text-center max-w-2xl mx-auto text-muted-foreground">
+            <p className="text-base mb-4 text-center max-w-2xl mx-auto text-white">
               For consultancy services, strategic planning, or advisory support,
               please contact us.
             </p>

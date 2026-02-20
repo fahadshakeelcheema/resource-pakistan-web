@@ -795,3 +795,8 @@
 - [x] Reduce spacing on EVs & Technology page sections
 - [x] Ensure consistent compact layout across all three pages
 - [x] Test visual balance after compactness improvements
+
+## CTA Text Visibility Fix
+
+- [x] Fix text color in Consultancy page CTA section (Request Consultation)
+- [x] Fix text color in EVs & Technology page CTA section (Inquire Now)

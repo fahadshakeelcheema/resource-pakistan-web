@@ -202,7 +202,7 @@ export default function Technology() {
         {/* CTA Section */}
         <section className="py-6 md:py-8 section-green border-t border-border">
           <div className="container text-center">
-            <p className="text-lg text-muted-foreground mb-4 max-w-2xl mx-auto">
+            <p className="text-lg text-white mb-4 max-w-2xl mx-auto">
               For technology assessment, research support, or strategic planning
               in electric vehicles and emerging technologies, please contact us.
             </p>
