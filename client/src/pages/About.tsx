@@ -37,7 +37,7 @@ export default function About() {
             <img
               src="/images/resource-pakistan-logo.png"
               alt="Resource Pakistan"
-              className="h-48 md:h-56 lg:h-64 w-auto opacity-30"
+              className="h-48 md:h-56 lg:h-64 w-auto opacity-50"
             />
           </div>
           {/* Left-aligned text */}
