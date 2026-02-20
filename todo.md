@@ -766,3 +766,9 @@
 - [x] Remove image from Pakistan's Geological Context section
 - [x] Remove diagram from Technical Knowledge and Expertise section
 - [x] Apply compactness to entire page
+
+## EVs & Technology Page Overhaul
+
+- [x] Replace hero image with provided battery/tech image
+- [x] Compress Technology Strategy and Assessment section
+- [x] Apply compactness and remove extra spacing throughout page
