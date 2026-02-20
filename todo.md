@@ -721,3 +721,9 @@
 - [x] Compact Governance page sections
 - [x] Compact all sector pages (Mining, Technology, Consultancy)
 - [x] Ensure consistent compact spacing across entire website
+
+## About Us Page Updates
+
+- [x] Left-align hero section heading and tagline
+- [x] Left-align all section content
+- [x] Update hero background image to industrial landscape with logo
