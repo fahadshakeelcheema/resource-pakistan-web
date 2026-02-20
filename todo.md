@@ -676,3 +676,8 @@
 - [x] Remove entire Ethical Principles section
 - [x] Remove SVG diagram from Stakeholder Coordination section
 - [x] Make page layout more compact and tidy
+
+## About Us Page - Background and Section Updates
+
+- [x] Change Mission and Scope section background to white
+- [x] Remove Core Principles section

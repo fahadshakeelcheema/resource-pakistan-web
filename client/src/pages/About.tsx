@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { useState } from "react";
+
 import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
@@ -11,8 +11,6 @@ import { seoConfig } from "@/lib/seo-config";
  * Mission, principles, expertise, and ethics
  */
 export default function About() {
-  const [hoveredPrinciple, setHoveredPrinciple] = useState<string | null>(null);
-
   return (
     <>
       <SEO metadata={seoConfig.about} />
@@ -45,16 +43,7 @@ export default function About() {
         </section>
 
         {/* Section 1: Mission and Scope - Alternating Layout */}
-        <section className="relative py-12 md:py-16 overflow-hidden border-b border-border">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/HjuvozCNZQjtDKdL.jpg)",
-              backgroundSize: "cover",
-              backgroundPosition: "center center",
-              opacity: 0.25,
-            }}
-          ></div>
+        <section className="relative py-12 md:py-16 overflow-hidden border-b border-border bg-white">
           <div className="container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center">
               {/* Icon Left - Mission Compass */}
@@ -179,159 +168,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Section 2: Core Principles */}
-        <section className="py-12 md:py-16 section-green border-t border-border">
-          <div className="container">
-            <div className="mb-6">
-              <h2 className="text-heading" style={{ color: "#ffffff" }}>
-                Core Principles
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Institutional Integrity */}
-              <div
-                className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#1e3a5f" }}
-                onMouseEnter={() => setHoveredPrinciple("integrity")}
-                onMouseLeave={() => setHoveredPrinciple(null)}
-              >
-                <h3
-                  className="text-lg font-bold text-foreground mb-4"
-                  style={{ color: "#ffffff" }}
-                >
-                  Institutional Integrity
-                </h3>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${hoveredPrinciple === "integrity" ? "max-h-48 opacity-100 mt-2" : "max-h-0 opacity-0"}`}
-                >
-                  <p
-                    className="text-body text-muted-foreground"
-                    style={{ color: "#c8bfb6" }}
-                  >
-                    We operate with transparency and accountability,
-                    understanding that our work informs institutional
-                    decision-making. Every recommendation is grounded in
-                    rigorous analysis and documented evidence.
-                  </p>
-                </div>
-              </div>
-
-              {/* Feasibility First */}
-              <div
-                className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#1e3a5f" }}
-                onMouseEnter={() => setHoveredPrinciple("feasibility")}
-                onMouseLeave={() => setHoveredPrinciple(null)}
-              >
-                <h3
-                  className="text-lg font-bold text-foreground mb-4"
-                  style={{ color: "#ffffff" }}
-                >
-                  Feasibility First
-                </h3>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${hoveredPrinciple === "feasibility" ? "max-h-48 opacity-100 mt-2" : "max-h-0 opacity-0"}`}
-                >
-                  <p
-                    className="text-body text-muted-foreground"
-                    style={{ color: "#c8bfb6" }}
-                  >
-                    We prioritize realistic assessment over optimistic
-                    projections. Our role is to provide decision-makers with
-                    clear understanding of opportunities, constraints, and
-                    implementation requirements.
-                  </p>
-                </div>
-              </div>
-
-              {/* Responsible Development */}
-              <div
-                className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#1e3a5f" }}
-                onMouseEnter={() => setHoveredPrinciple("responsible")}
-                onMouseLeave={() => setHoveredPrinciple(null)}
-              >
-                <h3
-                  className="text-lg font-bold text-foreground mb-4"
-                  style={{ color: "#ffffff" }}
-                >
-                  Responsible Development
-                </h3>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${hoveredPrinciple === "responsible" ? "max-h-48 opacity-100 mt-2" : "max-h-0 opacity-0"}`}
-                >
-                  <p
-                    className="text-body text-muted-foreground"
-                    style={{ color: "#c8bfb6" }}
-                  >
-                    Resource and industrial development must integrate
-                    environmental stewardship, socio-economic considerations,
-                    and compliance. We embed these principles into every
-                    engagement.
-                  </p>
-                </div>
-              </div>
-
-              {/* Multidisciplinary Approach */}
-              <div
-                className="card-institutional transition-all hover:shadow-lg"
-                style={{ backgroundColor: "#1e3a5f" }}
-                onMouseEnter={() => setHoveredPrinciple("multidisciplinary")}
-                onMouseLeave={() => setHoveredPrinciple(null)}
-              >
-                <h3
-                  className="text-lg font-bold text-foreground mb-4"
-                  style={{ color: "#ffffff" }}
-                >
-                  Multidisciplinary Approach
-                </h3>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${hoveredPrinciple === "multidisciplinary" ? "max-h-48 opacity-100 mt-2" : "max-h-0 opacity-0"}`}
-                >
-                  <p
-                    className="text-body text-muted-foreground"
-                    style={{ color: "#c8bfb6" }}
-                  >
-                    Complex challenges require diverse expertise. We bring
-                    together specialists across mining, consultancy, technology,
-                    and industrial planning.
-                  </p>
-                </div>
-              </div>
-
-              {/* Long-Term Perspective */}
-              <div
-                className="card-institutional md:col-span-2 transition-all hover:shadow-lg md:mx-auto md:max-w-2xl"
-                style={{ backgroundColor: "#1e3a5f" }}
-                onMouseEnter={() => setHoveredPrinciple("longterm")}
-                onMouseLeave={() => setHoveredPrinciple(null)}
-              >
-                <h3
-                  className="text-lg font-bold text-foreground mb-4"
-                  style={{ color: "#ffffff" }}
-                >
-                  Long-Term Perspective
-                </h3>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${hoveredPrinciple === "longterm" ? "max-h-48 opacity-100 mt-2" : "max-h-0 opacity-0"}`}
-                >
-                  <p
-                    className="text-body text-muted-foreground"
-                    style={{ color: "#c8bfb6" }}
-                  >
-                    We view our engagements as contributions to Pakistan's
-                    long-term development trajectory, not short-term
-                    transactions. This perspective shapes our recommendations
-                    and approach.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 3: Expertise and Experience */}
+        {/* Section 2: Expertise and Experience */}
         <section className="py-12 md:py-16 section-cream border-t border-border">
           <div className="container">
             <div className="mb-6">
