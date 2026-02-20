@@ -655,3 +655,7 @@
 
 - [x] Search for justice-themed image (scales of justice or gavel)
 - [x] Update Governance page hero background image
+
+## Governance Page - Compliance Diagram Update
+
+- [x] Remove checkmarks from compliance and standards SVG diagram boxes

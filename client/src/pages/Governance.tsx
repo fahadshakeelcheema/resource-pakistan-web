@@ -460,35 +460,7 @@ export default function Governance() {
                     Advisory Excellence
                   </text>
 
-                  {/* Checkmarks for each layer - positioned on right side */}
-                  <path
-                    d="M 320 275 L 325 282 L 335 268"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M 295 205 L 300 212 L 310 198"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M 270 135 L 275 142 L 285 128"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M 250 65 L 255 72 L 265 58"
-                    fill="none"
-                    stroke="#ffffff"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
+
                 </svg>
               </div>
             </div>
