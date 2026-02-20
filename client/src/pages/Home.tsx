@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { seoConfig, organizationSchema } from "@/lib/seo-config";
+import { seoConfig, buildPageJsonLd } from "@/lib/seo-config";
 
 /**
  * Home Page - Compact Institutional Design
@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <>
-      <SEO metadata={seoConfig.home} jsonLd={organizationSchema} />
+      <SEO metadata={seoConfig.home} jsonLd={buildPageJsonLd('home')} />
       <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <Breadcrumb items={[]} />

@@ -831,3 +831,14 @@
 
 - [x] Properly center-align Confidentiality section heading and text
 - [x] Properly center-align footer copyright text
+
+## Structured Data (JSON-LD) for SEO
+
+- [x] Create Organization schema with company details
+- [x] Add WebSite schema with search action
+- [x] Add BreadcrumbList schema for navigation
+- [x] Add page-specific schemas (ContactPage, AboutPage, etc.)
+- [x] Implement JSON-LD injection via React Helmet or direct script tags
+- [x] Add meta tags for Open Graph and Twitter Cards
+- [x] Validate structured data output
+- [x] Write tests for structured data

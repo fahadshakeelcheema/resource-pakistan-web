@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { seoConfig } from "@/lib/seo-config";
+import { seoConfig, buildPageJsonLd } from "@/lib/seo-config";
 
 /**
  * Governance Page - Compact Center-Aligned Design
@@ -12,7 +12,7 @@ import { seoConfig } from "@/lib/seo-config";
 export default function Governance() {
   return (
     <>
-      <SEO metadata={seoConfig.governance} />
+      <SEO metadata={seoConfig.governance} jsonLd={buildPageJsonLd('governance')} />
       <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <Breadcrumb items={[{ label: "Governance" }]} />

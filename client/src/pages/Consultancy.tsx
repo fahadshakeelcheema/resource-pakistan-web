@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { seoConfig } from "@/lib/seo-config";
+import { seoConfig, buildPageJsonLd } from "@/lib/seo-config";
 
 /**
  * Consultancy Page - Compact Center-Aligned Design
@@ -16,7 +16,7 @@ export default function Consultancy() {
 
   return (
     <>
-      <SEO metadata={seoConfig.consultancy} />
+      <SEO metadata={seoConfig.consultancy} jsonLd={buildPageJsonLd('consultancy')} />
       <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <Breadcrumb items={[{ label: "Consultancy" }]} />

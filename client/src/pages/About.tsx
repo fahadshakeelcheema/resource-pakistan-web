@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { seoConfig } from "@/lib/seo-config";
+import { seoConfig, buildPageJsonLd } from "@/lib/seo-config";
 
 /**
  * About Us Page
@@ -13,7 +13,7 @@ import { seoConfig } from "@/lib/seo-config";
 export default function About() {
   return (
     <>
-      <SEO metadata={seoConfig.about} />
+      <SEO metadata={seoConfig.about} jsonLd={buildPageJsonLd('about')} />
       <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <Breadcrumb items={[{ label: "About Us" }]} />

@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { seoConfig } from "@/lib/seo-config";
+import { seoConfig, buildPageJsonLd } from "@/lib/seo-config";
 
 /**
  * Mining Page - Compact Institutional Design
@@ -15,7 +15,7 @@ export default function Mining() {
 
   return (
     <>
-      <SEO metadata={seoConfig.mining} />
+      <SEO metadata={seoConfig.mining} jsonLd={buildPageJsonLd('mining')} />
       <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <Breadcrumb items={[{ label: "Mining" }]} />

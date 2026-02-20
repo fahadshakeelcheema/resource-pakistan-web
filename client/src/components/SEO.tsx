@@ -3,12 +3,14 @@ import { SEOMetadata } from '@/lib/seo-config';
 
 interface SEOProps {
   metadata: SEOMetadata;
-  jsonLd?: object;
+  /** Single JSON-LD object or array of JSON-LD objects */
+  jsonLd?: object | object[];
 }
 
 /**
  * SEO Component
- * Dynamically updates meta tags for each page
+ * Dynamically updates meta tags and injects JSON-LD structured data for each page.
+ * Supports multiple JSON-LD blocks (Organization, WebSite, BreadcrumbList, page-specific).
  */
 export function SEO({ metadata, jsonLd }: SEOProps) {
   useEffect(() => {
@@ -20,8 +22,9 @@ export function SEO({ metadata, jsonLd }: SEOProps) {
       let element = document.querySelector(selector);
       if (!element) {
         element = document.createElement('meta');
-        const [attr, value] = selector.match(/\[(.+)="(.+)"\]/)?.slice(1, 3) || [];
-        if (attr && value) {
+        const match = selector.match(/\[(.+?)="(.+?)"\]/);
+        if (match) {
+          const [, attr, value] = match;
           element.setAttribute(attr, value);
           document.head.appendChild(element);
         }
@@ -41,6 +44,7 @@ export function SEO({ metadata, jsonLd }: SEOProps) {
     updateMetaTag('meta[property="og:title"]', metadata.title);
     updateMetaTag('meta[property="og:description"]', metadata.description);
     updateMetaTag('meta[property="og:type"]', metadata.ogType || 'website');
+    updateMetaTag('meta[property="og:site_name"]', 'Resource Pakistan');
     if (metadata.ogImage) {
       updateMetaTag('meta[property="og:image"]', metadata.ogImage);
     }
@@ -68,15 +72,27 @@ export function SEO({ metadata, jsonLd }: SEOProps) {
     }
 
     // Update JSON-LD structured data
+    // Remove all existing JSON-LD scripts first (clean slate per page)
+    const existingScripts = document.querySelectorAll('script[type="application/ld+json"][data-seo-managed]');
+    existingScripts.forEach(script => script.remove());
+
     if (jsonLd) {
-      let scriptElement = document.querySelector('script[type="application/ld+json"]');
-      if (!scriptElement) {
-        scriptElement = document.createElement('script');
+      const schemas = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
+      schemas.forEach((schema, index) => {
+        const scriptElement = document.createElement('script');
         scriptElement.setAttribute('type', 'application/ld+json');
+        scriptElement.setAttribute('data-seo-managed', 'true');
+        scriptElement.setAttribute('data-schema-index', String(index));
+        scriptElement.textContent = JSON.stringify(schema);
         document.head.appendChild(scriptElement);
-      }
-      scriptElement.textContent = JSON.stringify(jsonLd);
+      });
     }
+
+    // Cleanup on unmount: remove managed JSON-LD scripts
+    return () => {
+      const managedScripts = document.querySelectorAll('script[type="application/ld+json"][data-seo-managed]');
+      managedScripts.forEach(script => script.remove());
+    };
   }, [metadata, jsonLd]);
 
   return null; // This component doesn't render anything
