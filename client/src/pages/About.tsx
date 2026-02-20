@@ -56,10 +56,10 @@ export default function About() {
           <div className="container">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">Mission and Scope</h2>
             <p className="text-sm md:text-base leading-relaxed text-center max-w-3xl mx-auto mb-3">
-              Resource Pakistan (Pvt) Ltd is a strategic advisory and development firm focused on resource development, industrial planning, and institutional consultancy. We work with government bodies, policy institutions, and strategic partners to advance feasibility-driven projects across mining, consultancy, electric vehicles, and industrial technology sectors.
+              Our mission is to support Pakistan's long-term economic development through rigorous analysis, responsible resource planning, and institutional alignment.
             </p>
             <p className="text-sm md:text-base leading-relaxed text-center max-w-3xl mx-auto">
-              Our mission is to support Pakistan's long-term economic development through rigorous analysis, responsible resource planning, and institutional alignment.
+              Resource Pakistan (Pvt) Ltd is a strategic advisory and development firm focused on resource development, industrial planning, and institutional consultancy. We work with government bodies, policy institutions, and strategic partners to advance feasibility-driven projects across mining, consultancy, electric vehicles, and industrial technology sectors.
             </p>
           </div>
         </section>
