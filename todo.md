@@ -614,3 +614,10 @@
 ## Contact Page - Reorder Focus Areas
 
 - [x] Reorder Focus Areas to: Consultancy & Advisory, Mining & Resources, EVs & Technology, Industrial Planning
+
+## Footer Simplification
+
+- [x] Remove Core Services section from footer
+- [x] Remove Company section from footer
+- [x] Remove Get in Touch section from footer
+- [x] Make remaining footer content more compact
