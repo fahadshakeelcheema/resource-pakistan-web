@@ -631,3 +631,8 @@
 ## Footer Contact Information
 
 - [x] Add official email address to footer
+
+## Footer Logo and Text Size Increase
+
+- [x] Increase Resource Pakistan logo size in footer
+- [x] Increase tagline text size in footer
