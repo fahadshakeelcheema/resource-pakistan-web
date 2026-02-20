@@ -669,3 +669,10 @@
 ## About Us Page - SVG Color Update
 
 - [x] Change yellow-tinted colors in SVG diagrams to golden color
+
+## Governance Page - Simplification
+
+- [x] Remove SVG diagram from Governance Framework section
+- [x] Remove entire Ethical Principles section
+- [x] Remove SVG diagram from Stakeholder Coordination section
+- [x] Make page layout more compact and tidy
