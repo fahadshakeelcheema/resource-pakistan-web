@@ -42,128 +42,28 @@ export default function About() {
           </div>
         </section>
 
-        {/* Section 1: Mission and Scope - Alternating Layout */}
-        <section className="relative py-12 md:py-16 overflow-hidden border-b border-border bg-white">
-          <div className="container relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center">
-              {/* Icon Left - Mission Compass */}
-              <div className="order-2 lg:order-1 flex items-center justify-center">
-                <svg
-                  viewBox="0 0 400 400"
-                  className="w-full max-w-md h-auto"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Outer Circle */}
-                  <circle
-                    cx="200"
-                    cy="200"
-                    r="180"
-                    fill="none"
-                    stroke="#2d5a3d"
-                    strokeWidth="4"
-                  />
-                  <circle
-                    cx="200"
-                    cy="200"
-                    r="160"
-                    fill="none"
-                    stroke="#2d5a3d"
-                    strokeWidth="2"
-                    opacity="0.5"
-                  />
-
-                  {/* Cardinal Points */}
-                  <text
-                    x="200"
-                    y="50"
-                    textAnchor="middle"
-                    fontSize="24"
-                    fontWeight="bold"
-                    fill="#2d5a3d"
-                  >
-                    N
-                  </text>
-                  <text
-                    x="200"
-                    y="365"
-                    textAnchor="middle"
-                    fontSize="24"
-                    fontWeight="bold"
-                    fill="#2d5a3d"
-                  >
-                    S
-                  </text>
-                  <text
-                    x="50"
-                    y="210"
-                    textAnchor="middle"
-                    fontSize="24"
-                    fontWeight="bold"
-                    fill="#2d5a3d"
-                  >
-                    W
-                  </text>
-                  <text
-                    x="350"
-                    y="210"
-                    textAnchor="middle"
-                    fontSize="24"
-                    fontWeight="bold"
-                    fill="#2d5a3d"
-                  >
-                    E
-                  </text>
-
-                  {/* Compass Needle - pointing to strategic direction */}
-                  <g transform="rotate(-30 200 200)">
-                    <polygon
-                      points="200,80 210,200 200,210 190,200"
-                      fill="#095d29"
-                    />
-                    <polygon
-                      points="200,210 210,200 200,320 190,200"
-                      fill="#2d5a3d"
-                      opacity="0.6"
-                    />
-                  </g>
-
-                  {/* Center Circle */}
-                  <circle cx="200" cy="200" r="15" fill="#095d29" />
-                  <circle cx="200" cy="200" r="8" fill="#ffffff" />
-
-                  {/* Degree Marks */}
-                  <g stroke="#2d5a3d" strokeWidth="2" opacity="0.4">
-                    <line x1="200" y1="30" x2="200" y2="50" />
-                    <line x1="200" y1="350" x2="200" y2="370" />
-                    <line x1="30" y1="200" x2="50" y2="200" />
-                    <line x1="350" y1="200" x2="370" y2="200" />
-                  </g>
-                </svg>
-              </div>
-
-              {/* Text Right */}
-              <div className="order-1 lg:order-2">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#1a1a1a" }}>
-                  Mission and Scope
-                </h2>
-                <p className="text-lg mb-6 leading-relaxed" style={{ color: "#2d2d2d" }}>
-                  Resource Pakistan operates at the interface between resource
-                  development, policy frameworks, and industrial strategy. We
-                  provide advisory, analytical, and planning services to
-                  government bodies, institutional stakeholders, and strategic
-                  partners seeking to advance feasibility-driven projects across
-                  mining, consultancy, electric vehicles, and industrial
-                  technology sectors.
-                </p>
-                <p className="text-lg leading-relaxed" style={{ color: "#2d2d2d" }}>
-                  Our work is grounded in the principle that sustainable
-                  resource and industrial development requires rigorous
-                  feasibility assessment, institutional alignment, and long-term
-                  commitment. We reject transactional approaches in favor of
-                  structured, evidence-based planning that serves Pakistan's
-                  long-term economic interests.
-                </p>
-              </div>
+        {/* Section 1: Mission and Scope */}
+        <section className="py-10 md:py-12 bg-white border-b border-border">
+          <div className="container">
+            <div className="max-w-4xl">
+              <h2 className="text-heading mb-4">Mission and Scope</h2>
+              <p className="text-body mb-4">
+                Resource Pakistan operates at the interface between resource
+                development, policy frameworks, and industrial strategy. We
+                provide advisory, analytical, and planning services to
+                government bodies, institutional stakeholders, and strategic
+                partners seeking to advance feasibility-driven projects across
+                mining, consultancy, electric vehicles, and industrial
+                technology sectors.
+              </p>
+              <p className="text-body">
+                Our work is grounded in the principle that sustainable
+                resource and industrial development requires rigorous
+                feasibility assessment, institutional alignment, and long-term
+                commitment. We reject transactional approaches in favor of
+                structured, evidence-based planning that serves Pakistan's
+                long-term economic interests.
+              </p>
             </div>
           </div>
         </section>
@@ -312,88 +212,36 @@ export default function About() {
           </div>
         </section>
 
-        {/* Section 4: Ethics, Compliance, and Confidentiality */}
-        <section className="py-12 md:py-16 section-green border-t border-border">
+        {/* Section 3: Ethics, Compliance, and Confidentiality */}
+        <section className="py-10 md:py-12 section-green border-t border-border">
           <div className="container">
-            <div className="mb-6">
-              <h2 className="text-heading" style={{ color: "#ffffff" }}>
+            <div className="max-w-4xl">
+              <h2 className="text-heading mb-4" style={{ color: "#ffffff" }}>
                 Ethics, Compliance, and Confidentiality
               </h2>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center">
-              {/* Text Left */}
-              <div className="order-1 lg:order-1">
-                <p className="text-body mb-6">
-                  Resource Pakistan operates under strict ethical and compliance
-                  standards. We maintain confidentiality regarding all client
-                  information, project details, and strategic discussions. Our
-                  work is structured to support institutional decision-making
-                  processes while respecting the sensitive nature of resource
-                  development and policy planning.
-                </p>
-                <p className="text-body mb-6">
-                  We are committed to responsible resource development that
-                  integrates environmental protection, community considerations,
-                  and long-term sustainability. All our recommendations are
-                  subject to institutional review and are designed to withstand
-                  scrutiny from government bodies, policy analysts, and
-                  stakeholder groups.
-                </p>
-                <p className="text-body">
-                  Our engagement framework prioritizes transparency, documented
-                  analysis, and clear communication of assumptions, limitations,
-                  and recommendations. We understand that our work may inform
-                  public policy and institutional decisions, and we structure
-                  our deliverables accordingly.
-                </p>
-              </div>
-
-              {/* Icon Right - Shield of Integrity */}
-              <div className="order-2 lg:order-2 flex items-center justify-center">
-                <svg
-                  viewBox="0 0 400 400"
-                  className="w-full max-w-sm h-auto"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Shield Outline */}
-                  <path
-                    d="M 200 50 L 320 100 L 320 200 Q 320 300 200 350 Q 80 300 80 200 L 80 100 Z"
-                    fill="none"
-                    stroke="#D4AF37"
-                    strokeWidth="4"
-                  />
-                  <path
-                    d="M 200 60 L 310 105 L 310 200 Q 310 290 200 335 Q 90 290 90 200 L 90 105 Z"
-                    fill="#B8860B"
-                    opacity="0.9"
-                  />
-
-                  {/* Checkmark */}
-                  <path
-                    d="M 140 200 L 180 240 L 260 150"
-                    fill="none"
-                    stroke="#C9A961"
-                    strokeWidth="12"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-
-                  {/* Inner Shield Details */}
-                  <path
-                    d="M 200 70 L 200 320"
-                    stroke="#D4AF37"
-                    strokeWidth="1"
-                    opacity="0.3"
-                  />
-                  <path
-                    d="M 100 110 L 300 110"
-                    stroke="#D4AF37"
-                    strokeWidth="1"
-                    opacity="0.3"
-                  />
-                </svg>
-              </div>
+              <p className="text-body mb-4" style={{ color: "#ede0d4" }}>
+                Resource Pakistan operates under strict ethical and compliance
+                standards. We maintain confidentiality regarding all client
+                information, project details, and strategic discussions. Our
+                work is structured to support institutional decision-making
+                processes while respecting the sensitive nature of resource
+                development and policy planning.
+              </p>
+              <p className="text-body mb-4" style={{ color: "#ede0d4" }}>
+                We are committed to responsible resource development that
+                integrates environmental protection, community considerations,
+                and long-term sustainability. All our recommendations are
+                subject to institutional review and are designed to withstand
+                scrutiny from government bodies, policy analysts, and
+                stakeholder groups.
+              </p>
+              <p className="text-body" style={{ color: "#ede0d4" }}>
+                Our engagement framework prioritizes transparency, documented
+                analysis, and clear communication of assumptions, limitations,
+                and recommendations. We understand that our work may inform
+                public policy and institutional decisions, and we structure
+                our deliverables accordingly.
+              </p>
             </div>
           </div>
         </section>

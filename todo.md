@@ -681,3 +681,9 @@
 
 - [x] Change Mission and Scope section background to white
 - [x] Remove Core Principles section
+
+## About Us Page - Remove SVG Diagrams and Tidy
+
+- [x] Remove SVG diagram from Mission and Scope section
+- [x] Remove SVG diagram from Ethics, Compliance, and Confidentiality section
+- [x] Tidy up page layout for compact presentation
