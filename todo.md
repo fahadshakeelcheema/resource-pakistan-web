@@ -727,3 +727,9 @@
 - [x] Left-align hero section heading and tagline
 - [x] Left-align all section content
 - [x] Update hero background image to industrial landscape with logo
+
+## About Us Page Centered Alignment
+
+- [x] Center-align all section headings
+- [x] Align content below each heading (centered under heading)
+- [x] Display transparent Resource Pakistan logo as centerpiece of hero image
