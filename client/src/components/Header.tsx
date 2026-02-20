@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useAuth } from "@/_core/hooks/useAuth";
 
@@ -7,7 +7,11 @@ import { useAuth } from "@/_core/hooks/useAuth";
  * Header Component - Institutional Design with Smart Scroll Behavior
  * Blue background with white text for better readability
  * Hides on scroll down, shows on scroll up
- * Features Sectors dropdown menu
+ * Features Sectors dropdown menu with robust hover behavior
+ * 
+ * Dropdown uses a timeout-based approach combined with an invisible bridge
+ * element to prevent the menu from closing when the mouse moves from the
+ * button to the dropdown panel.
  */
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,6 +21,7 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const { user } = useAuth();
   const [location] = useLocation();
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -36,19 +41,51 @@ export default function Header() {
 
   const isSectorActive = sectorItems.some(item => location === item.href);
 
+  const handleMouseEnter = useCallback(() => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setSectorsDropdownOpen(true);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setSectorsDropdownOpen(false);
+    }, 200); // 200ms grace period
+  }, []);
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('[data-sectors-dropdown]')) {
+        setSectorsDropdownOpen(false);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY < 10) {
-        // Always show header at top of page
         setIsVisible(true);
       } else if (currentScrollY > lastScrollY) {
-        // Scrolling down - hide header
         setIsVisible(false);
-        setSectorsDropdownOpen(false); // Close dropdown when hiding
+        setSectorsDropdownOpen(false);
       } else {
-        // Scrolling up - show header
         setIsVisible(true);
       }
 
@@ -97,14 +134,19 @@ export default function Header() {
             );
           })}
 
-          {/* Sectors Dropdown */}
+          {/* Sectors Dropdown - uses timeout + invisible bridge for robust hover */}
           <div
             className="relative"
-            onMouseEnter={() => setSectorsDropdownOpen(true)}
-            onMouseLeave={() => setSectorsDropdownOpen(false)}
+            data-sectors-dropdown
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <button
-              className={`text-base font-medium transition-colors flex items-center gap-1 ${
+              onClick={(e) => {
+                e.stopPropagation();
+                setSectorsDropdownOpen(prev => !prev);
+              }}
+              className={`text-base font-medium transition-colors flex items-center gap-1 cursor-pointer ${
                 isSectorActive
                   ? "text-white border-b-2 border-white font-semibold"
                   : "text-white/90 hover:text-white"
@@ -114,17 +156,32 @@ export default function Header() {
               <ChevronDown size={16} className={`transition-transform ${sectorsDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
             
+            {/* Invisible bridge: fills the gap between button and dropdown panel */}
             {sectorsDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md overflow-hidden">
-                {sectorItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block px-4 py-3 text-sm text-foreground hover:bg-accent transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+              <div
+                className="absolute left-0 w-full z-50"
+                style={{ top: "100%", height: "12px" }}
+              />
+            )}
+
+            {/* Dropdown panel */}
+            {sectorsDropdownOpen && (
+              <div
+                className="absolute left-1/2 -translate-x-1/2 w-56 z-50"
+                style={{ top: "calc(100% + 8px)" }}
+              >
+                <div className="bg-white shadow-lg rounded-md overflow-hidden border border-gray-100">
+                  {sectorItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-4 py-3 text-sm text-foreground hover:bg-accent transition-colors"
+                      onClick={() => setSectorsDropdownOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
             )}
           </div>

@@ -772,3 +772,4 @@
 - [x] Replace hero image with provided battery/tech image
 - [x] Compress Technology Strategy and Assessment section
 - [x] Apply compactness and remove extra spacing throughout page
+- [x] Fix Sectors dropdown menu calibration/positioning in header

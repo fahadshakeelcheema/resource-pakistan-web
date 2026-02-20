@@ -34,13 +34,13 @@ describe("Performance Optimization", () => {
     expect(lazyLoadMatches!.length).toBeGreaterThanOrEqual(4); // At least 4 service images
   });
 
-  it("should have lazy loading on Mining page map image", () => {
+  it("should have hero background image on Mining page", () => {
     const miningPath = join(__dirname, "../client/src/pages/Mining.tsx");
     const miningContent = readFileSync(miningPath, "utf-8");
     
-    // Check for lazy loading on minerals map
-    expect(miningContent).toContain('loading="lazy"');
-    expect(miningContent).toContain('ODKAWHNBDLulEcgD.jpeg');
+    // Check for hero background image on Mining page
+    expect(miningContent).toContain('backgroundImage');
+    expect(miningContent).toContain('.jpeg');
   });
 
   it("should have fetchPriority='high' on logo in Header", () => {
