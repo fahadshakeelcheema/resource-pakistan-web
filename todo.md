@@ -750,3 +750,10 @@
 - [x] Replace hero with industrial chimney background + transparent logo PNG overlay
 - [x] Fix Mission and Scope content alignment beneath heading
 - [x] Apply text-center and max-w-3xl mx-auto to each paragraph on Governance page
+
+## Consultancy Page Overhaul
+
+- [x] Replace hero image with provided consultancy services image
+- [x] Remove SVG diagram from Consultancy Approach section
+- [x] Center-align headings and content with text-center max-w-3xl mx-auto
+- [x] Make entire page compact with reduced spacing
