@@ -687,3 +687,7 @@
 - [x] Remove SVG diagram from Mission and Scope section
 - [x] Remove SVG diagram from Ethics, Compliance, and Confidentiality section
 - [x] Tidy up page layout for compact presentation
+
+## Homepage - Hero Section Text Update
+
+- [x] Reorder sectors in hero text to: consultancy, mining, electric vehicles, and industrial technology

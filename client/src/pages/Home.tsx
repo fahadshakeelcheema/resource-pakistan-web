@@ -49,7 +49,7 @@ export default function Home() {
                 Building Pakistan's Resource and Industrial Future
               </h1>
               <p className="text-xl md:text-2xl text-gray-100 mb-6 font-light">
-                Strategic development across mining, consultancy, electric
+                Strategic development across consultancy, mining, electric
                 vehicles, and industrial technology.
               </p>
               <p className="text-lg text-gray-200 mb-6 max-w-2xl leading-relaxed">
