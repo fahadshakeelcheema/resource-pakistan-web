@@ -636,3 +636,7 @@
 
 - [x] Increase Resource Pakistan logo size in footer
 - [x] Increase tagline text size in footer
+
+## Footer Logo Size - Further Increase
+
+- [x] Increase Resource Pakistan logo size further in footer (h-20 to h-24)

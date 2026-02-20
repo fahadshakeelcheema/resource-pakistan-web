@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="container py-6">
         {/* Company Info - Compact */}
         <div className="flex flex-col items-center text-center mb-4">
-          <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-20 w-auto mb-4" />
+          <img src="/images/resource-pakistan-logo.png" alt="Resource Pakistan" className="h-24 w-auto mb-4" />
           <p className="text-base text-muted-foreground max-w-md mb-2">
             Building Pakistan's resource and industrial future through strategic development.
           </p>
