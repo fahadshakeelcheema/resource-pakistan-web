@@ -813,3 +813,7 @@
 ## Mining Page Text Color Adjustment
 
 - [x] Adjust text color on Mining page h2 heading (line ~114)
+
+## Governance Hero Image Adjustment
+
+- [x] Adjust Governance page hero section image display

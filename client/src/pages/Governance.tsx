@@ -23,10 +23,9 @@ export default function Governance() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url(/images/governance-hero-bg.jpg)",
-              backgroundSize: "contain",
+              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/xkgFeNPBaBemTEDt.jpg)",
+              backgroundSize: "cover",
               backgroundPosition: "center center",
-              backgroundRepeat: "no-repeat",
             }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60"></div>
