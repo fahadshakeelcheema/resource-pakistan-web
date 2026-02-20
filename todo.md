@@ -650,3 +650,8 @@
 - [x] Update navigation order: Home, About Us, Sectors, Governance, Contact, Admin
 - [x] Implement dropdown hover/click functionality
 - [x] Test dropdown on desktop and mobile
+
+## Governance Page Background Update
+
+- [x] Search for justice-themed image (scales of justice or gavel)
+- [x] Update Governance page hero background image
