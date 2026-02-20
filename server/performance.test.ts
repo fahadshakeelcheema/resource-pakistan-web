@@ -40,7 +40,7 @@ describe("Performance Optimization", () => {
     
     // Check for hero background image on Mining page
     expect(miningContent).toContain('backgroundImage');
-    expect(miningContent).toContain('.jpeg');
+    expect(miningContent.includes('.jpeg') || miningContent.includes('.jpg')).toBe(true);
   });
 
   it("should have fetchPriority='high' on logo in Header", () => {

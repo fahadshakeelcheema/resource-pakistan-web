@@ -773,3 +773,25 @@
 - [x] Compress Technology Strategy and Assessment section
 - [x] Apply compactness and remove extra spacing throughout page
 - [x] Fix Sectors dropdown menu calibration/positioning in header
+
+
+## Hero Image Quality Improvements
+
+- [x] Review current hero image quality and resolutions
+- [x] Search for higher quality hero images for all pages
+- [x] Replace Home page hero image with higher quality version
+- [ ] Replace About Us page hero image with higher quality version
+- [x] Replace Consultancy page hero image with higher quality version
+- [x] Replace Mining page hero image with higher quality version
+- [x] Replace EVs & Technology page hero image with higher quality version
+- [ ] Replace Governance page hero image with higher quality version
+- [ ] Replace Contact page hero image with higher quality version
+- [x] Test all hero images for clarity and sharpness
+
+## Further Compactness Improvements
+
+- [x] Reduce spacing on Consultancy page sections
+- [x] Reduce spacing on Mining page sections
+- [x] Reduce spacing on EVs & Technology page sections
+- [x] Ensure consistent compact layout across all three pages
+- [x] Test visual balance after compactness improvements

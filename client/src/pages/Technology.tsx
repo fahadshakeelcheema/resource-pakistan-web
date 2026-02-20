@@ -22,11 +22,11 @@ export default function Technology() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-16 md:py-24 border-b border-border">
+        <section className="relative overflow-hidden py-12 md:py-16 border-b border-border">
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/JgZqESGTXTmPxuwZ.jpeg)",
+              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/NjZVMBMINiJroMqG.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center center",
             }}
@@ -46,7 +46,7 @@ export default function Technology() {
         </section>
 
         {/* Section 1: Technology Strategy - Compressed */}
-        <section className="py-8 md:py-12 section-cream border-t border-border">
+        <section className="py-6 md:py-8 section-cream border-t border-border">
           <div className="container">
             <h2 className="text-heading text-center mb-4">
               Technology Strategy and Assessment
@@ -70,7 +70,7 @@ export default function Technology() {
         </section>
 
         {/* Section 2: Focus Areas */}
-        <section className="py-8 md:py-12 section-green border-t border-border">
+        <section className="py-6 md:py-8 section-green border-t border-border">
           <div className="container">
             <h2 className="text-heading text-center mb-4" style={{ color: "#ffffff" }}>
               Focus Areas
@@ -156,8 +156,8 @@ export default function Technology() {
           </div>
         </section>
 
-        {/* Section 3: Long-Term Outlook - Compact */}
-        <section className="py-8 md:py-12 section-cream border-t border-border">
+        {/* Section 3: Long-Term Institutional Planning - No SVG */}
+        <section className="py-6 md:py-8 section-cream border-t border-border">
           <div className="container">
             <h2 className="text-heading text-center mb-4">Long-Term Institutional Planning</h2>
             <p className="text-body text-center max-w-3xl mx-auto mb-3">
@@ -200,7 +200,7 @@ export default function Technology() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-8 md:py-12 section-light border-t border-border">
+        <section className="py-6 md:py-8 section-green border-t border-border">
           <div className="container text-center">
             <p className="text-lg text-muted-foreground mb-4 max-w-2xl mx-auto">
               For technology assessment, research support, or strategic planning

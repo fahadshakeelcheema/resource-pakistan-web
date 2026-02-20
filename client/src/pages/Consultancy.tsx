@@ -23,11 +23,11 @@ export default function Consultancy() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-16 md:py-20 border-b border-border">
+        <section className="relative overflow-hidden py-12 md:py-16 border-b border-border">
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/MPztWmWUIhRSBNqL.jpeg)",
+              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/GTavqUOcdyusrNEo.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center center",
             }}
@@ -47,7 +47,7 @@ export default function Consultancy() {
         </section>
 
         {/* Consultancy Approach - Center Aligned, No SVG */}
-        <section className="py-8 md:py-10 section-cream border-t border-border">
+        <section className="py-6 md:py-8 section-cream border-t border-border">
           <div className="container">
             <h2 className="text-2xl md:text-3xl font-bold mb-3 text-center">Consultancy Approach</h2>
             <p className="text-sm md:text-base mb-3 leading-relaxed text-center max-w-3xl mx-auto">
@@ -68,7 +68,7 @@ export default function Consultancy() {
         </section>
 
         {/* Core Consultancy Services */}
-        <section className="py-8 md:py-10 section-green border-t border-border">
+        <section className="py-6 md:py-8 section-green border-t border-border">
           <div className="container">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center" style={{ color: "#ffffff" }}>
               Core Consultancy Services
@@ -165,7 +165,7 @@ export default function Consultancy() {
         </section>
 
         {/* Client Sectors */}
-        <section className="py-8 md:py-10 section-cream border-t border-border">
+        <section className="py-6 md:py-8 section-cream border-t border-border">
           <div className="container">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">Client Sectors</h2>
 
@@ -234,7 +234,7 @@ export default function Consultancy() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-8 md:py-10 section-light border-t border-border">
+        <section className="py-6 md:py-8 section-green border-t border-border">
           <div className="container text-center">
             <p className="text-base mb-4 text-center max-w-2xl mx-auto text-muted-foreground">
               For consultancy services, strategic planning, or advisory support,
