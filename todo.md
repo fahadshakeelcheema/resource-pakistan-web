@@ -800,3 +800,8 @@
 
 - [x] Fix text color in Consultancy page CTA section (Request Consultation)
 - [x] Fix text color in EVs & Technology page CTA section (Inquire Now)
+
+## Governance & Contact Page Fixes
+
+- [x] Fix Governance page hero image zoom/scale issue (adjust background-size or background-position)
+- [x] Center-align content in Confidentiality & Professional Standards section on Contact page

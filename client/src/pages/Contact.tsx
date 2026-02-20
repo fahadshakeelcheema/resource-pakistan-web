@@ -316,7 +316,7 @@ export default function Contact() {
         {/* Additional Information */}
         <section className="section-green py-12 md:py-16 border-t border-border">
           <div className="container">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mx-auto text-center">
               <h2
                 className="text-2xl font-bold text-foreground mb-6"
                 style={{
