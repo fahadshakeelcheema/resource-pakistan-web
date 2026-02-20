@@ -757,3 +757,12 @@
 - [x] Remove SVG diagram from Consultancy Approach section
 - [x] Center-align headings and content with text-center max-w-3xl mx-auto
 - [x] Make entire page compact with reduced spacing
+
+## Mining Page Overhaul
+
+- [x] Replace hero image with provided mining trucks image
+- [x] Center-align Feasibility-Driven Resource Development heading and content
+- [x] Convert SVG diagram to linear format
+- [x] Remove image from Pakistan's Geological Context section
+- [x] Remove diagram from Technical Knowledge and Expertise section
+- [x] Apply compactness to entire page
