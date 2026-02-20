@@ -733,3 +733,9 @@
 - [x] Center-align all section headings
 - [x] Align content below each heading (centered under heading)
 - [x] Display transparent Resource Pakistan logo as centerpiece of hero image
+
+## About Us Hero Image and Layout Updates
+
+- [x] Generate custom hero image with industrial colors and Resource Pakistan logo at center
+- [x] Left-align hero heading and tagline
+- [x] Position content properly under Mission and Scope heading
