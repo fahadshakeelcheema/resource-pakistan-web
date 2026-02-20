@@ -709,3 +709,15 @@
 
 - [x] Search for better justice-themed background without watermark
 - [x] Replace Governance hero background image
+
+## Website Compacting and Spacing Optimization
+
+- [x] Remove email address from footer
+- [x] Compact homepage hero section to fit without scrolling
+- [x] Ensure homepage shows hero + core verticals + inquiry + footer with two sections per scroll
+- [x] Remove all extra padding and spacing across all pages
+- [x] Compact About Us page sections
+- [x] Update About Us hero with logo on industrial backdrop
+- [x] Compact Governance page sections
+- [x] Compact all sector pages (Mining, Technology, Consultancy)
+- [x] Ensure consistent compact spacing across entire website

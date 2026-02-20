@@ -6,7 +6,7 @@ import { SEO } from "@/components/SEO";
 import { seoConfig } from "@/lib/seo-config";
 
 /**
- * About Us Page - Simplified Center-Aligned Design
+ * About Us Page - Compact Center-Aligned Design
  * Company background, mission, expertise
  */
 export default function About() {
@@ -18,106 +18,84 @@ export default function About() {
       <Breadcrumb items={[{ label: "About Us" }]} />
 
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 md:py-28 border-b border-border bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8c]">
+        {/* Hero Section - Logo on Industrial Backdrop */}
+        <section className="relative overflow-hidden py-16 md:py-20 border-b border-border">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/HjuvozCNZQjtDKdL.jpg)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/70 to-slate-900/80"></div>
           <div className="container relative z-10 text-center">
             <div className="max-w-3xl mx-auto">
-              <h1 className="text-display mb-6 text-white drop-shadow-lg">About Resource Pakistan</h1>
-              <p className="text-subheading text-white drop-shadow-lg font-semibold">
+              <img 
+                src="/images/resource-pakistan-logo.png" 
+                alt="Resource Pakistan" 
+                className="h-32 w-auto mx-auto mb-4 drop-shadow-2xl" 
+              />
+              <h1 className="text-4xl md:text-5xl font-bold mb-3 text-white drop-shadow-lg">About Resource Pakistan</h1>
+              <p className="text-lg text-white drop-shadow-lg font-semibold">
                 Strategic advisory, resource development, and institutional planning.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Section 1: Mission and Scope */}
-        <section className="py-10 md:py-12 bg-white border-t border-border">
+        {/* Mission and Scope - Compact */}
+        <section className="py-8 md:py-10 bg-white border-t border-border">
           <div className="container">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-heading mb-4">Mission and Scope</h2>
-              <p className="text-body mb-4">
-                Resource Pakistan (Pvt) Ltd is a strategic advisory and development firm
-                focused on resource development, industrial planning, and institutional
-                consultancy. We work with government bodies, policy institutions, and
-                strategic partners to advance feasibility-driven projects across mining,
-                consultancy, electric vehicles, and industrial technology sectors.
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">Mission and Scope</h2>
+              <p className="text-sm md:text-base mb-3 leading-relaxed">
+                Resource Pakistan (Pvt) Ltd is a strategic advisory and development firm focused on resource development, industrial planning, and institutional consultancy. We work with government bodies, policy institutions, and strategic partners to advance feasibility-driven projects across mining, consultancy, electric vehicles, and industrial technology sectors.
               </p>
-              <p className="text-body">
-                Our mission is to support Pakistan's long-term economic development
-                through rigorous analysis, responsible resource planning, and
-                institutional alignment. We prioritize sustainable development,
-                compliance with regulatory frameworks, and stakeholder coordination in
-                all our engagements.
+              <p className="text-sm md:text-base leading-relaxed">
+                Our mission is to support Pakistan's long-term economic development through rigorous analysis, responsible resource planning, and institutional alignment.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Section 2: Expertise and Experience */}
-        <section className="py-10 md:py-12 section-cream border-t border-border">
+        {/* Expertise and Experience - Compact */}
+        <section className="py-8 md:py-10 section-cream border-t border-border">
           <div className="container">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-heading mb-4">Expertise and Experience</h2>
-              <p className="text-body mb-4">
-                Our team comprises professionals with extensive experience in
-                resource development, institutional planning, technology
-                assessment, and strategic advisory. We have worked across
-                government bodies, policy institutions, and private sector
-                organizations, developing deep understanding of Pakistan's
-                institutional landscape and sectoral dynamics.
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">Expertise and Experience</h2>
+              <p className="text-sm md:text-base mb-3 leading-relaxed">
+                Our team comprises professionals with extensive experience in resource development, institutional planning, technology assessment, and strategic advisory. We have worked across government bodies, policy institutions, and private sector organizations.
               </p>
-              <p className="text-body">
-                Our expertise spans feasibility study methodology,
-                environmental and social impact assessment, technology
-                evaluation, industrial policy analysis, and stakeholder
-                coordination. We combine technical rigor with institutional
-                awareness to deliver recommendations that are both
-                analytically sound and operationally feasible.
+              <p className="text-sm md:text-base leading-relaxed">
+                Our expertise spans feasibility study methodology, environmental and social impact assessment, technology evaluation, industrial policy analysis, and stakeholder coordination.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Section 3: Ethics, Compliance, and Confidentiality */}
-        <section className="py-10 md:py-12 section-green border-t border-border">
+        {/* Ethics, Compliance, and Confidentiality - Compact */}
+        <section className="py-8 md:py-10 section-green border-t border-border">
           <div className="container">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-heading mb-4" style={{ color: "#ffffff" }}>
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: "#ffffff" }}>
                 Ethics, Compliance, and Confidentiality
               </h2>
-              <p className="text-body mb-4" style={{ color: "#ede0d4" }}>
-                Resource Pakistan operates under strict ethical and compliance
-                standards. We maintain confidentiality regarding all client
-                information, project details, and strategic discussions. Our
-                work is structured to support institutional decision-making
-                processes while respecting the sensitive nature of resource
-                development and policy planning.
+              <p className="text-sm md:text-base mb-3 leading-relaxed" style={{ color: "#ede0d4" }}>
+                Resource Pakistan operates under strict ethical and compliance standards. We maintain confidentiality regarding all client information, project details, and strategic discussions.
               </p>
-              <p className="text-body mb-4" style={{ color: "#ede0d4" }}>
-                We are committed to responsible resource development that
-                integrates environmental protection, community considerations,
-                and long-term sustainability. All our recommendations are
-                subject to institutional review and are designed to withstand
-                scrutiny from government bodies, policy analysts, and
-                stakeholder groups.
-              </p>
-              <p className="text-body" style={{ color: "#ede0d4" }}>
-                Our engagement framework prioritizes transparency, documented
-                analysis, and clear communication of assumptions, limitations,
-                and recommendations. We understand that our work may inform
-                public policy and institutional decisions, and we structure
-                our deliverables accordingly.
+              <p className="text-sm md:text-base leading-relaxed" style={{ color: "#ede0d4" }}>
+                We are committed to responsible resource development that integrates environmental protection, community considerations, and long-term sustainability. All our recommendations are subject to institutional review and designed to withstand scrutiny from government bodies, policy analysts, and stakeholder groups.
               </p>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 md:py-20 section-cream border-t border-border">
+        {/* CTA Section - Compact */}
+        <section className="py-10 md:py-12 section-cream border-t border-border">
           <div className="container text-center">
-            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-              For inquiries regarding our services, strategic partnerships, or
-              institutional engagements, please contact us.
+            <p className="text-base mb-5 max-w-2xl mx-auto">
+              For inquiries regarding our services, strategic partnerships, or institutional engagements, please contact us.
             </p>
             <Link
               href="/contact"
