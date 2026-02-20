@@ -29,8 +29,8 @@ export default function Governance() {
             }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60"></div>
-          <div className="container relative z-10 text-center">
-            <div className="max-w-3xl mx-auto">
+          <div className="container relative z-10">
+            <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold mb-3 text-white drop-shadow-lg">Governance & Responsibility</h1>
               <p className="text-lg text-white drop-shadow-lg font-semibold">
                 Ethics, compliance, and responsible resource development aligned with institutional standards.
