@@ -6,7 +6,7 @@ import { SEO } from "@/components/SEO";
 import { seoConfig } from "@/lib/seo-config";
 
 /**
- * Governance Page - Simplified Compact Design
+ * Governance Page - Simplified Center-Aligned Design
  * Ethics, compliance, responsibility, stakeholder coordination
  */
 export default function Governance() {
@@ -28,9 +28,9 @@ export default function Governance() {
               backgroundPosition: "center center",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/50"></div>
-          <div className="container relative z-10">
-            <div className="max-w-3xl">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60"></div>
+          <div className="container relative z-10 text-center">
+            <div className="max-w-3xl mx-auto">
               <h1 className="text-display mb-6 text-white drop-shadow-lg">Governance & Responsibility</h1>
               <p className="text-subheading text-white drop-shadow-lg font-semibold">
                 Ethics, compliance, and responsible resource development aligned
@@ -43,11 +43,8 @@ export default function Governance() {
         {/* Section 1: Governance Framework */}
         <section className="py-10 md:py-12 section-cream border-t border-border">
           <div className="container">
-            <div className="mb-4">
-              <h2 className="text-heading">Governance Framework</h2>
-            </div>
-
-            <div className="max-w-4xl">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-heading mb-4">Governance Framework</h2>
               <p className="text-body mb-4">
                 Resource Pakistan operates under strict ethical, compliance,
                 and governance standards. Our work is structured to support
@@ -72,11 +69,8 @@ export default function Governance() {
         {/* Section 2: Compliance and Standards */}
         <section className="py-10 md:py-12 section-green border-t border-border">
           <div className="container">
-            <div className="mb-4">
-              <h2 className="text-heading" style={{ color: "#ffffff" }}>Compliance and Standards</h2>
-            </div>
-
-            <div className="max-w-4xl">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-heading mb-4" style={{ color: "#ffffff" }}>Compliance and Standards</h2>
               <p className="text-body mb-4" style={{ color: "#ede0d4" }}>
                 Resource Pakistan operates in compliance with Pakistan's
                 regulatory frameworks, environmental standards, and
@@ -100,11 +94,8 @@ export default function Governance() {
         {/* Section 3: Stakeholder Coordination */}
         <section className="py-10 md:py-12 section-cream border-t border-border">
           <div className="container">
-            <div className="mb-4">
-              <h2 className="text-heading">Stakeholder Coordination</h2>
-            </div>
-
-            <div className="max-w-4xl">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-heading mb-4">Stakeholder Coordination</h2>
               <p className="text-body mb-4">
                 Resource development and industrial planning require
                 coordination across multiple stakeholder groups including

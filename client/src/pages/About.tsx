@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-
 import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/Footer";
@@ -7,8 +6,8 @@ import { SEO } from "@/components/SEO";
 import { seoConfig } from "@/lib/seo-config";
 
 /**
- * About Page - Refined Institutional Design
- * Mission, principles, expertise, and ethics
+ * About Us Page - Simplified Center-Aligned Design
+ * Company background, mission, expertise
  */
 export default function About() {
   return (
@@ -20,194 +19,61 @@ export default function About() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-24 md:py-32 border-b border-border">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/HjuvozCNZQjtDKdL.jpg)",
-              backgroundSize: "cover",
-              backgroundPosition: "center center",
-            }}
-          ></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/50"></div>
-          <div className="container relative z-10">
-            <div className="max-w-3xl">
+        <section className="relative overflow-hidden py-20 md:py-28 border-b border-border bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8c]">
+          <div className="container relative z-10 text-center">
+            <div className="max-w-3xl mx-auto">
               <h1 className="text-display mb-6 text-white drop-shadow-lg">About Resource Pakistan</h1>
-              <p className="text-subheading text-white drop-shadow-lg">
-                A multidisciplinary company founded to support Pakistan's
-                resource and industrial development through rigorous planning,
-                institutional alignment, and responsible execution.
+              <p className="text-subheading text-white drop-shadow-lg font-semibold">
+                Strategic advisory, resource development, and institutional planning.
               </p>
             </div>
           </div>
         </section>
 
         {/* Section 1: Mission and Scope */}
-        <section className="py-10 md:py-12 bg-white border-b border-border">
+        <section className="py-10 md:py-12 bg-white border-t border-border">
           <div className="container">
-            <div className="max-w-4xl">
+            <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-heading mb-4">Mission and Scope</h2>
               <p className="text-body mb-4">
-                Resource Pakistan operates at the interface between resource
-                development, policy frameworks, and industrial strategy. We
-                provide advisory, analytical, and planning services to
-                government bodies, institutional stakeholders, and strategic
-                partners seeking to advance feasibility-driven projects across
-                mining, consultancy, electric vehicles, and industrial
-                technology sectors.
+                Resource Pakistan (Pvt) Ltd is a strategic advisory and development firm
+                focused on resource development, industrial planning, and institutional
+                consultancy. We work with government bodies, policy institutions, and
+                strategic partners to advance feasibility-driven projects across mining,
+                consultancy, electric vehicles, and industrial technology sectors.
               </p>
               <p className="text-body">
-                Our work is grounded in the principle that sustainable
-                resource and industrial development requires rigorous
-                feasibility assessment, institutional alignment, and long-term
-                commitment. We reject transactional approaches in favor of
-                structured, evidence-based planning that serves Pakistan's
-                long-term economic interests.
+                Our mission is to support Pakistan's long-term economic development
+                through rigorous analysis, responsible resource planning, and
+                institutional alignment. We prioritize sustainable development,
+                compliance with regulatory frameworks, and stakeholder coordination in
+                all our engagements.
               </p>
             </div>
           </div>
         </section>
 
         {/* Section 2: Expertise and Experience */}
-        <section className="py-12 md:py-16 section-cream border-t border-border">
+        <section className="py-10 md:py-12 section-cream border-t border-border">
           <div className="container">
-            <div className="mb-6">
-              <h2 className="text-heading">Expertise and Experience</h2>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center">
-              {/* Text Left */}
-              <div className="order-1">
-                <p className="text-body mb-6">
-                  Our team comprises professionals with extensive experience in
-                  resource development, institutional planning, technology
-                  assessment, and strategic advisory. We have worked across
-                  government bodies, policy institutions, and private sector
-                  organizations, developing deep understanding of Pakistan's
-                  institutional landscape and sectoral dynamics.
-                </p>
-                <p className="text-body">
-                  Our expertise spans feasibility study methodology,
-                  environmental and social impact assessment, technology
-                  evaluation, industrial policy analysis, and stakeholder
-                  coordination. We combine technical rigor with institutional
-                  awareness to deliver recommendations that are both
-                  analytically sound and operationally feasible.
-                </p>
-              </div>
-
-              {/* Icon Right - Circular Flow Diagram */}
-              <div className="order-2 flex items-center justify-center">
-                <svg
-                  viewBox="0 0 400 400"
-                  className="w-full max-w-sm h-auto"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Circular arrow path - anticlockwise flow */}
-                  {/* Advisory to Trainings (left to top) */}
-                  <path
-                    d="M 80 200 Q 80 80, 200 80"
-                    fill="none"
-                    stroke="#2d5a8c"
-                    strokeWidth="3"
-                    markerEnd="url(#arrowhead)"
-                  />
-                  
-                  {/* Trainings to Tech (top to right) */}
-                  <path
-                    d="M 200 80 Q 320 80, 320 200"
-                    fill="none"
-                    stroke="#2d5a8c"
-                    strokeWidth="3"
-                    markerEnd="url(#arrowhead)"
-                  />
-                  
-                  {/* Tech to Defence (right to bottom) */}
-                  <path
-                    d="M 320 200 Q 320 320, 200 320"
-                    fill="none"
-                    stroke="#2d5a8c"
-                    strokeWidth="3"
-                    markerEnd="url(#arrowhead)"
-                  />
-                  
-                  {/* Defence to Advisory (bottom to left) */}
-                  <path
-                    d="M 200 320 Q 80 320, 80 200"
-                    fill="none"
-                    stroke="#2d5a8c"
-                    strokeWidth="3"
-                    markerEnd="url(#arrowhead)"
-                  />
-
-                  {/* Arrow marker definition */}
-                  <defs>
-                    <marker
-                      id="arrowhead"
-                      markerWidth="10"
-                      markerHeight="10"
-                      refX="9"
-                      refY="3"
-                      orient="auto"
-                    >
-                      <polygon points="0 0, 10 3, 0 6" fill="#2d5a8c" />
-                    </marker>
-                  </defs>
-
-                  {/* Expertise Area Nodes */}
-                  {/* Advisory (Left) */}
-                  <circle cx="80" cy="200" r="40" fill="#1e3a5f" stroke="#2d5a8c" strokeWidth="2" />
-                  <text
-                    x="80"
-                    y="207"
-                    textAnchor="middle"
-                    fontSize="13"
-                    fontWeight="bold"
-                    fill="#ffffff"
-                  >
-                    Advisory
-                  </text>
-
-                  {/* Trainings (Top) */}
-                  <circle cx="200" cy="80" r="40" fill="#1e3a5f" stroke="#2d5a8c" strokeWidth="2" />
-                  <text
-                    x="200"
-                    y="87"
-                    textAnchor="middle"
-                    fontSize="13"
-                    fontWeight="bold"
-                    fill="#ffffff"
-                  >
-                    Trainings
-                  </text>
-
-                  {/* Tech (Right) */}
-                  <circle cx="320" cy="200" r="40" fill="#1e3a5f" stroke="#2d5a8c" strokeWidth="2" />
-                  <text
-                    x="320"
-                    y="207"
-                    textAnchor="middle"
-                    fontSize="13"
-                    fontWeight="bold"
-                    fill="#ffffff"
-                  >
-                    Tech
-                  </text>
-
-                  {/* Defence (Bottom) */}
-                  <circle cx="200" cy="320" r="40" fill="#1e3a5f" stroke="#2d5a8c" strokeWidth="2" />
-                  <text
-                    x="200"
-                    y="327"
-                    textAnchor="middle"
-                    fontSize="13"
-                    fontWeight="bold"
-                    fill="#ffffff"
-                  >
-                    Defence
-                  </text>
-                </svg>
-              </div>
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-heading mb-4">Expertise and Experience</h2>
+              <p className="text-body mb-4">
+                Our team comprises professionals with extensive experience in
+                resource development, institutional planning, technology
+                assessment, and strategic advisory. We have worked across
+                government bodies, policy institutions, and private sector
+                organizations, developing deep understanding of Pakistan's
+                institutional landscape and sectoral dynamics.
+              </p>
+              <p className="text-body">
+                Our expertise spans feasibility study methodology,
+                environmental and social impact assessment, technology
+                evaluation, industrial policy analysis, and stakeholder
+                coordination. We combine technical rigor with institutional
+                awareness to deliver recommendations that are both
+                analytically sound and operationally feasible.
+              </p>
             </div>
           </div>
         </section>
@@ -215,7 +81,7 @@ export default function About() {
         {/* Section 3: Ethics, Compliance, and Confidentiality */}
         <section className="py-10 md:py-12 section-green border-t border-border">
           <div className="container">
-            <div className="max-w-4xl">
+            <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-heading mb-4" style={{ color: "#ffffff" }}>
                 Ethics, Compliance, and Confidentiality
               </h2>
@@ -250,13 +116,14 @@ export default function About() {
         <section className="py-16 md:py-20 section-cream border-t border-border">
           <div className="container text-center">
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-              To learn more about our services or discuss a potential
-              engagement, please contact us.
+              For inquiries regarding our services, strategic partnerships, or
+              institutional engagements, please contact us.
             </p>
-            <Link href="/contact">
-              <a className="inline-block px-8 py-3 bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:-translate-y-0.5">
-                Get in Touch
-              </a>
+            <Link
+              href="/contact"
+              className="inline-block px-8 py-3 bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:-translate-y-0.5"
+            >
+              Get in Touch
             </Link>
           </div>
         </section>

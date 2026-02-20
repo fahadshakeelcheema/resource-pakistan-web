@@ -696,3 +696,16 @@
 
 - [x] Search for justice-themed image without watermark
 - [x] Replace hero background image on Governance page
+
+## Homepage, About Us, and Governance Pages - Content Updates
+
+- [x] Remove "Our Approach" section from Homepage
+- [x] Remove "Strategic Sectors" section from Homepage
+- [x] Remove SVG diagram from About Us page (Expertise section)
+- [x] Center-align all text content on About Us page
+- [x] Center-align all text content on Governance page
+
+## Governance Hero Background - Replace with Better Image
+
+- [x] Search for better justice-themed background without watermark
+- [x] Replace Governance hero background image
