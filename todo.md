@@ -665,3 +665,7 @@
 - [x] Redesign expertise diagram to circular arrow flow (anticlockwise)
 - [x] Position items: Advisory (left) → Trainings (top) → Tech (right) → Defence (bottom)
 - [x] Add curved arrows connecting each item in circular flow
+
+## About Us Page - SVG Color Update
+
+- [x] Change yellow-tinted colors in SVG diagrams to golden color

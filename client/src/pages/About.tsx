@@ -536,7 +536,7 @@ export default function About() {
                   <path
                     d="M 140 200 L 180 240 L 260 150"
                     fill="none"
-                    stroke="#FFD700"
+                    stroke="#C9A961"
                     strokeWidth="12"
                     strokeLinecap="round"
                     strokeLinejoin="round"
