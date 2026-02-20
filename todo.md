@@ -640,3 +640,13 @@
 ## Footer Logo Size - Further Increase
 
 - [x] Increase Resource Pakistan logo size further in footer (h-20 to h-24)
+
+## Header Navigation Restructure - Sectors Dropdown
+
+- [x] Add "Sectors" dropdown menu to header navigation
+- [x] Move Consultancy to Sectors dropdown
+- [x] Move Mining to Sectors dropdown
+- [x] Move EVs - [ ] Move EVs & Technology to Sectors dropdown Technology to Sectors dropdown
+- [x] Update navigation order: Home, About Us, Sectors, Governance, Contact, Admin
+- [x] Implement dropdown hover/click functionality
+- [x] Test dropdown on desktop and mobile
