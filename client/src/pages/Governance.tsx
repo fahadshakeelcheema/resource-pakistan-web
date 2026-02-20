@@ -7,7 +7,7 @@ import { seoConfig } from "@/lib/seo-config";
 
 /**
  * Governance Page - Compact Center-Aligned Design
- * Ethics, compliance, responsibility, stakeholder coordination
+ * Each paragraph individually uses text-center and max-w-3xl mx-auto
  */
 export default function Governance() {
   return (
@@ -18,7 +18,7 @@ export default function Governance() {
       <Breadcrumb items={[{ label: "Governance" }]} />
 
       <main className="flex-1">
-        {/* Hero Section - Compact */}
+        {/* Hero Section */}
         <section className="relative overflow-hidden py-16 md:py-20 border-b border-border">
           <div
             className="absolute inset-0"
@@ -39,61 +39,56 @@ export default function Governance() {
           </div>
         </section>
 
-        {/* Governance Framework - Compact */}
+        {/* Governance Framework */}
         <section className="py-8 md:py-10 section-cream border-t border-border">
           <div className="container">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">Governance Framework</h2>
-              <p className="text-sm md:text-base mb-3 leading-relaxed">
-                Resource Pakistan operates under strict ethical, compliance, and governance standards. Our work is structured to support institutional decision-making while maintaining confidentiality, transparency, and accountability.
-              </p>
-              <p className="text-sm md:text-base leading-relaxed">
-                We are committed to responsible resource and industrial development that integrates environmental protection, socio-economic considerations, and long-term sustainability.
-              </p>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-center">Governance Framework</h2>
+            <p className="text-sm md:text-base mb-3 leading-relaxed text-center max-w-3xl mx-auto">
+              Resource Pakistan operates under strict ethical, compliance, and governance standards. Our work is structured to support institutional decision-making while maintaining confidentiality, transparency, and accountability.
+            </p>
+            <p className="text-sm md:text-base leading-relaxed text-center max-w-3xl mx-auto">
+              We are committed to responsible resource and industrial development that integrates environmental protection, socio-economic considerations, and long-term sustainability.
+            </p>
           </div>
         </section>
 
-        {/* Compliance and Standards - Compact */}
+        {/* Compliance and Standards */}
         <section className="py-8 md:py-10 section-green border-t border-border">
           <div className="container">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: "#ffffff" }}>Compliance and Standards</h2>
-              <p className="text-sm md:text-base mb-3 leading-relaxed" style={{ color: "#ede0d4" }}>
-                Resource Pakistan operates in compliance with Pakistan's regulatory frameworks, environmental standards, and institutional requirements. All our recommendations are designed to support compliance and withstand institutional review.
-              </p>
-              <p className="text-sm md:text-base leading-relaxed" style={{ color: "#ede0d4" }}>
-                Our engagement methodology integrates compliance requirements from the outset, ensuring that all recommendations are feasible within Pakistan's institutional and regulatory context.
-              </p>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-center" style={{ color: "#ffffff" }}>Compliance and Standards</h2>
+            <p className="text-sm md:text-base mb-3 leading-relaxed text-center max-w-3xl mx-auto" style={{ color: "#ede0d4" }}>
+              Resource Pakistan operates in compliance with Pakistan's regulatory frameworks, environmental standards, and institutional requirements. All our recommendations are designed to support compliance and withstand institutional review.
+            </p>
+            <p className="text-sm md:text-base leading-relaxed text-center max-w-3xl mx-auto" style={{ color: "#ede0d4" }}>
+              Our engagement methodology integrates compliance requirements from the outset, ensuring that all recommendations are feasible within Pakistan's institutional and regulatory context.
+            </p>
           </div>
         </section>
 
-        {/* Stakeholder Coordination - Compact */}
+        {/* Stakeholder Coordination */}
         <section className="py-8 md:py-10 section-cream border-t border-border">
           <div className="container">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">Stakeholder Coordination</h2>
-              <p className="text-sm md:text-base mb-3 leading-relaxed">
-                Resource development and industrial planning require coordination across multiple stakeholder groups including government bodies, policy institutions, local communities, and strategic partners.
-              </p>
-              <p className="text-sm md:text-base leading-relaxed">
-                Our stakeholder coordination approach prioritizes transparency, documented communication, and institutional alignment.
-              </p>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-center">Stakeholder Coordination</h2>
+            <p className="text-sm md:text-base mb-3 leading-relaxed text-center max-w-3xl mx-auto">
+              Resource development and industrial planning require coordination across multiple stakeholder groups including government bodies, policy institutions, local communities, and strategic partners.
+            </p>
+            <p className="text-sm md:text-base leading-relaxed text-center max-w-3xl mx-auto">
+              Our stakeholder coordination approach prioritizes transparency, documented communication, and institutional alignment.
+            </p>
           </div>
         </section>
 
-        {/* CTA Section - Compact */}
+        {/* CTA Section */}
         <section className="py-10 md:py-12 section-green border-t border-border">
           <div className="container text-center">
-            <p className="text-base mb-5 max-w-2xl mx-auto" style={{ color: "#ede0d4" }}>
+            <p className="text-base mb-5 text-center max-w-2xl mx-auto" style={{ color: "#ede0d4" }}>
               For questions regarding our governance framework, compliance standards, or ethical principles, please contact us.
             </p>
-            <Link href="/contact">
-              <a className="inline-block px-8 py-3 bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:-translate-y-0.5">
-                Get in Touch
-              </a>
+            <Link
+              href="/contact"
+              className="inline-block px-8 py-3 bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg hover:-translate-y-0.5"
+            >
+              Get in Touch
             </Link>
           </div>
         </section>

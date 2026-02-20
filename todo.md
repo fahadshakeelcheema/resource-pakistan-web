@@ -749,3 +749,4 @@
 
 - [x] Replace hero with industrial chimney background + transparent logo PNG overlay
 - [x] Fix Mission and Scope content alignment beneath heading
+- [x] Apply text-center and max-w-3xl mx-auto to each paragraph on Governance page
