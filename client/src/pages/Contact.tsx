@@ -316,9 +316,9 @@ export default function Contact() {
         {/* Additional Information */}
         <section className="section-green py-12 md:py-16 border-t border-border">
           <div className="container">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-2xl mx-auto text-center">
               <h2
-                className="text-2xl font-bold text-foreground mb-6"
+                className="text-2xl font-bold mb-6"
                 style={{
                   fontFamily: "'Crimson Text', serif",
                   color: "#ffffff",
@@ -327,22 +327,16 @@ export default function Contact() {
                 Confidentiality & Professional Standards
               </h2>
               <p
-                className="text-base text-foreground leading-relaxed text-center"
+                className="text-base leading-relaxed"
                 style={{ color: "#ffffff" }}
               >
-                All inquiries and communications with Resource Pakistan are
-                handled with strict confidentiality and professional standards.
-                We understand the sensitive nature of resource development and
-                institutional planning work, and we maintain rigorous
-                information security protocols.
+                All inquiries and communications with Resource Pakistan are handled with strict confidentiality and professional standards. We understand the sensitive nature of resource development and institutional planning work, and we maintain rigorous information security protocols.
               </p>
               <p
-                className="text-base text-foreground leading-relaxed mt-6 text-center"
+                className="text-base leading-relaxed mt-6"
                 style={{ color: "#ede0d4" }}
               >
-                Our team will review your inquiry and respond within 2-3
-                business days. For time-sensitive matters, please indicate this
-                in your message.
+                Our team will review your inquiry and respond within 2-3 business days. For time-sensitive matters, please indicate this in your message.
               </p>
             </div>
           </div>

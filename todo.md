@@ -821,3 +821,8 @@
 ## Contact Page Confidentiality Section Alignment Fix (Round 2)
 
 - [x] Fix alignment issues in Confidentiality & Professional Standards section (div at line 319)
+
+## Alignment Fixes (Round 3)
+
+- [x] Fix Confidentiality & Professional Standards heading and text alignment mismatch
+- [x] Fix footer copyright text alignment (© 2026 Resource Pakistan)

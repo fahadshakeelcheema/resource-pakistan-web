@@ -32,8 +32,8 @@ export default function Footer() {
         </div>
 
         {/* Copyright - Centered */}
-        <div className="pt-2 text-center">
-          <p className="text-xs text-muted-foreground">© {currentYear} Resource Pakistan (Pvt) Ltd. All rights reserved.</p>
+        <div className="pt-3 mt-3 border-t border-border text-center">
+          <p className="text-xs text-muted-foreground text-center">© {currentYear} Resource Pakistan (Pvt) Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>
