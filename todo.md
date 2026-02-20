@@ -855,3 +855,8 @@
 - [x] Environment variables are properly configured
 - [x] All pages render correctly (visual check)
 - [x] Dependencies are clean (no vulnerabilities)
+
+## Contact Page Hero Image Improvement
+
+- [x] Search for a better, more professional Pakistan-themed hero image for Contact page
+- [x] Upload new image to S3 CDN and update Contact page
