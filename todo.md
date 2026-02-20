@@ -817,3 +817,7 @@
 ## Governance Hero Image Adjustment
 
 - [x] Adjust Governance page hero section image display
+
+## Contact Page Confidentiality Section Alignment Fix (Round 2)
+
+- [x] Fix alignment issues in Confidentiality & Professional Standards section (div at line 319)
