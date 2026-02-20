@@ -359,74 +359,96 @@ export default function About() {
                 </p>
               </div>
 
-              {/* Icon Right - Interconnected Expertise */}
+              {/* Icon Right - Circular Flow Diagram */}
               <div className="order-2 flex items-center justify-center">
                 <svg
                   viewBox="0 0 400 400"
                   className="w-full max-w-sm h-auto"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  {/* Central Hub */}
-                  <circle cx="200" cy="200" r="40" fill="#1e3a5f" />
-                  <text
-                    x="200"
-                    y="210"
-                    textAnchor="middle"
-                    fontSize="16"
-                    fontWeight="bold"
-                    fill="#ffffff"
-                  >
-                    Core
-                  </text>
-
-                  {/* Outer Nodes - Expertise Areas */}
-                  {/* Mining */}
-                  <circle cx="200" cy="80" r="35" fill="#2d5a8c" />
-                  <text
-                    x="200"
-                    y="88"
-                    textAnchor="middle"
-                    fontSize="14"
-                    fontWeight="bold"
-                    fill="#ffffff"
-                  >
-                    Mining
-                  </text>
-                  <line
-                    x1="200"
-                    y1="160"
-                    x2="200"
-                    y2="115"
-                    stroke="#2d5a3d"
+                  {/* Circular arrow path - anticlockwise flow */}
+                  {/* Advisory to Trainings (left to top) */}
+                  <path
+                    d="M 80 200 Q 80 80, 200 80"
+                    fill="none"
+                    stroke="#2d5a8c"
                     strokeWidth="3"
+                    markerEnd="url(#arrowhead)"
+                  />
+                  
+                  {/* Trainings to Tech (top to right) */}
+                  <path
+                    d="M 200 80 Q 320 80, 320 200"
+                    fill="none"
+                    stroke="#2d5a8c"
+                    strokeWidth="3"
+                    markerEnd="url(#arrowhead)"
+                  />
+                  
+                  {/* Tech to Defence (right to bottom) */}
+                  <path
+                    d="M 320 200 Q 320 320, 200 320"
+                    fill="none"
+                    stroke="#2d5a8c"
+                    strokeWidth="3"
+                    markerEnd="url(#arrowhead)"
+                  />
+                  
+                  {/* Defence to Advisory (bottom to left) */}
+                  <path
+                    d="M 200 320 Q 80 320, 80 200"
+                    fill="none"
+                    stroke="#2d5a8c"
+                    strokeWidth="3"
+                    markerEnd="url(#arrowhead)"
                   />
 
-                  {/* Consultancy */}
-                  <circle cx="320" cy="200" r="35" fill="#2d5a8c" />
+                  {/* Arrow marker definition */}
+                  <defs>
+                    <marker
+                      id="arrowhead"
+                      markerWidth="10"
+                      markerHeight="10"
+                      refX="9"
+                      refY="3"
+                      orient="auto"
+                    >
+                      <polygon points="0 0, 10 3, 0 6" fill="#2d5a8c" />
+                    </marker>
+                  </defs>
+
+                  {/* Expertise Area Nodes */}
+                  {/* Advisory (Left) */}
+                  <circle cx="80" cy="200" r="40" fill="#1e3a5f" stroke="#2d5a8c" strokeWidth="2" />
                   <text
-                    x="320"
-                    y="205"
+                    x="80"
+                    y="207"
                     textAnchor="middle"
-                    fontSize="12"
+                    fontSize="13"
                     fontWeight="bold"
                     fill="#ffffff"
                   >
                     Advisory
                   </text>
-                  <line
-                    x1="240"
-                    y1="200"
-                    x2="285"
-                    y2="200"
-                    stroke="#2d5a3d"
-                    strokeWidth="3"
-                  />
 
-                  {/* Technology */}
-                  <circle cx="200" cy="320" r="35" fill="#2d5a8c" />
+                  {/* Trainings (Top) */}
+                  <circle cx="200" cy="80" r="40" fill="#1e3a5f" stroke="#2d5a8c" strokeWidth="2" />
                   <text
                     x="200"
-                    y="325"
+                    y="87"
+                    textAnchor="middle"
+                    fontSize="13"
+                    fontWeight="bold"
+                    fill="#ffffff"
+                  >
+                    Trainings
+                  </text>
+
+                  {/* Tech (Right) */}
+                  <circle cx="320" cy="200" r="40" fill="#1e3a5f" stroke="#2d5a8c" strokeWidth="2" />
+                  <text
+                    x="320"
+                    y="207"
                     textAnchor="middle"
                     fontSize="13"
                     fontWeight="bold"
@@ -434,77 +456,19 @@ export default function About() {
                   >
                     Tech
                   </text>
-                  <line
-                    x1="200"
-                    y1="240"
-                    x2="200"
-                    y2="285"
-                    stroke="#2d5a3d"
-                    strokeWidth="3"
-                  />
 
-                  {/* Industrial */}
-                  <circle cx="80" cy="200" r="35" fill="#2d5a8c" />
+                  {/* Defence (Bottom) */}
+                  <circle cx="200" cy="320" r="40" fill="#1e3a5f" stroke="#2d5a8c" strokeWidth="2" />
                   <text
-                    x="80"
-                    y="205"
+                    x="200"
+                    y="327"
                     textAnchor="middle"
-                    fontSize="11"
+                    fontSize="13"
                     fontWeight="bold"
                     fill="#ffffff"
                   >
-                    Industrial
+                    Defence
                   </text>
-                  <line
-                    x1="160"
-                    y1="200"
-                    x2="115"
-                    y2="200"
-                    stroke="#2d5a3d"
-                    strokeWidth="3"
-                  />
-
-                  {/* Cross-connections showing integration */}
-                  <line
-                    x1="220"
-                    y1="180"
-                    x2="290"
-                    y2="220"
-                    stroke="#2d5a3d"
-                    strokeWidth="1.5"
-                    opacity="0.3"
-                    strokeDasharray="5,5"
-                  />
-                  <line
-                    x1="180"
-                    y1="180"
-                    x2="110"
-                    y2="220"
-                    stroke="#2d5a3d"
-                    strokeWidth="1.5"
-                    opacity="0.3"
-                    strokeDasharray="5,5"
-                  />
-                  <line
-                    x1="180"
-                    y1="220"
-                    x2="110"
-                    y2="180"
-                    stroke="#2d5a3d"
-                    strokeWidth="1.5"
-                    opacity="0.3"
-                    strokeDasharray="5,5"
-                  />
-                  <line
-                    x1="220"
-                    y1="220"
-                    x2="290"
-                    y2="180"
-                    stroke="#2d5a3d"
-                    strokeWidth="1.5"
-                    opacity="0.3"
-                    strokeDasharray="5,5"
-                  />
                 </svg>
               </div>
             </div>

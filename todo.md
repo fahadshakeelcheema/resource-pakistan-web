@@ -659,3 +659,9 @@
 ## Governance Page - Compliance Diagram Update
 
 - [x] Remove checkmarks from compliance and standards SVG diagram boxes
+
+## About Us Page - Expertise Diagram Redesign
+
+- [x] Redesign expertise diagram to circular arrow flow (anticlockwise)
+- [x] Position items: Advisory (left) → Trainings (top) → Tech (right) → Defence (bottom)
+- [x] Add curved arrows connecting each item in circular flow
