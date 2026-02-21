@@ -860,3 +860,9 @@
 
 - [x] Search for a better, more professional Pakistan-themed hero image for Contact page
 - [x] Upload new image to S3 CDN and update Contact page
+
+## Sitemap & Robots.txt
+
+- [x] Create sitemap.xml with all pages and proper priorities
+- [x] Create robots.txt with sitemap reference
+- [x] Verify sitemap is accessible at /sitemap.xml
