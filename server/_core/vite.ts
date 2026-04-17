@@ -3,22 +3,12 @@ import fs from "fs";
 import { type Server } from "http";
 import { nanoid } from "nanoid";
 import path from "path";
-import { fileURLToPath } from "url";
-import { createServer as createViteServer } from "vite";
-import viteConfig from "../../vite.config";
-
-// Safe __dirname for both ESM and bundled contexts
-function getSafeDirname(): string {
-  try {
-    if (import.meta.dirname) return import.meta.dirname;
-  } catch {}
-  try {
-    return path.dirname(fileURLToPath(import.meta.url));
-  } catch {}
-  return process.cwd();
-}
 
 export async function setupVite(app: Express, server: Server) {
+  // Dynamic imports to avoid bundling vite config into production build
+  const { createServer: createViteServer } = await import("vite");
+  const { default: viteConfig } = await import("../../vite.config");
+
   const serverOptions = {
     middlewareMode: true,
     hmr: { server },
@@ -37,12 +27,8 @@ export async function setupVite(app: Express, server: Server) {
     const url = req.originalUrl;
 
     try {
-      const clientTemplate = path.resolve(
-        getSafeDirname(),
-        "../..",
-        "client",
-        "index.html"
-      );
+      // In development, find client/index.html relative to cwd
+      const clientTemplate = path.resolve(process.cwd(), "client", "index.html");
 
       // always reload the index.html file from disk incase it changes
       let template = await fs.promises.readFile(clientTemplate, "utf-8");
