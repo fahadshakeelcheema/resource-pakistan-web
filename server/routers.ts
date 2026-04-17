@@ -6,7 +6,6 @@ import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { createInquiry, getInquiries, getInquiriesByStatus, searchInquiries, updateInquiryStatus, updateInquiryNotes, getInquiryById } from "./db";
 import { getInquiryAnalytics } from "./analytics";
-import { notifyOwner } from "./_core/notification";
 import { sendContactFormNotification, sendAutoResponse } from "./_core/email";
 
 export const appRouter = router({
@@ -45,12 +44,6 @@ export const appRouter = router({
             subject: input.subject,
             message: input.message,
             status: "new",
-          });
-
-          // Notify owner of new inquiry
-          await notifyOwner({
-            title: "New Inquiry from Resource Pakistan Website",
-            content: `New inquiry from ${input.fullName} (${input.email})\n\nSubject: ${input.subject}\n\nMessage: ${input.message}`,
           });
 
           // Send email notification to admin

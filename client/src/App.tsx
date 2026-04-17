@@ -13,6 +13,7 @@ import Technology from "./pages/Technology";
 import Governance from "./pages/Governance";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
+import Login from "./pages/Login";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -33,6 +34,7 @@ function Router() {
       <Route path={"/governance"} component={Governance} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/admin"} component={Admin} />
+      <Route path={"/login"} component={Login} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

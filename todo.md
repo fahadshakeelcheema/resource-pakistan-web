@@ -870,3 +870,44 @@
 ## Google Search Console Verification
 
 - [x] Add Google Search Console verification meta tag to index.html
+
+
+## Manus to Independent Stack Migration
+
+- [ ] Phase 1: Create migration plan and documentation (MIGRATION_PLAN.md)
+- [ ] Phase 2: Replace Manus OAuth with JWT-based authentication
+- [ ] Phase 2a: Add password field to users table schema
+- [ ] Phase 2b: Implement bcrypt password hashing
+- [ ] Phase 2c: Create login/register endpoints
+- [ ] Phase 2d: Update frontend auth hooks
+- [ ] Phase 3: Replace Manus S3 storage with MinIO
+- [ ] Phase 3a: Set up MinIO configuration
+- [ ] Phase 3b: Migrate existing CDN images to MinIO
+- [ ] Phase 3c: Update all image URLs in components
+- [ ] Phase 4: Replace SendGrid with free email service (Resend or Mailgun)
+- [ ] Phase 4a: Update email sending logic
+- [ ] Phase 4b: Test contact form email delivery
+- [ ] Phase 5: Remove Manus-specific integrations
+- [ ] Phase 5a: Remove LLM integration if unused
+- [ ] Phase 5b: Remove Maps integration if unused
+- [ ] Phase 5c: Remove Notifications integration if unused
+- [ ] Phase 5d: Remove Analytics integration if unused
+- [ ] Phase 6: Set up Neon PostgreSQL database
+- [ ] Phase 6a: Create Neon account and project
+- [ ] Phase 6b: Generate connection string
+- [ ] Phase 6c: Update DATABASE_URL
+- [ ] Phase 6d: Run migrations (pnpm db:push)
+- [ ] Phase 7: Deploy to Render.com
+- [ ] Phase 7a: Create Render account
+- [ ] Phase 7b: Connect GitHub repository
+- [ ] Phase 7c: Configure environment variables
+- [ ] Phase 7d: Set up automatic deployments
+- [ ] Phase 7e: Configure custom domain
+- [ ] Phase 8: Testing and verification
+- [ ] Phase 8a: Test all pages and functionality
+- [ ] Phase 8b: Verify authentication flow
+- [ ] Phase 8c: Test contact form and email
+- [ ] Phase 8d: Check image loading
+- [ ] Phase 8e: Validate SEO elements
+- [ ] Phase 8f: Performance testing
+- [ ] Phase 9: Create deployment and maintenance documentation
