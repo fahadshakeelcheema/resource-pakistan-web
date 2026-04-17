@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="container py-4">
         {/* Company Info - Compact */}
         <div className="flex flex-col items-center text-center mb-3">
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/oyBVIDWGQxCqRkYT.png" alt="Resource Pakistan" className="h-20 w-auto mb-2" />
+          <img src="/images/oyBVIDWGQxCqRkYT.png" alt="Resource Pakistan" className="h-20 w-auto mb-2" />
           <p className="text-sm text-muted-foreground max-w-md">
             Building Pakistan's resource and industrial future through strategic development.
           </p>
@@ -22,12 +22,12 @@ export default function Footer() {
         <div className="pt-2 mb-3">
           <h4 className="text-xs font-bold text-foreground mb-3 uppercase tracking-wider text-center">Partner Organizations</h4>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/fHGPeUgyMGZdAUlY.png" alt="Irada Pakistan" className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
-            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/DMKlOmKTmrEehoBO.png" alt="Ministry of Science and Technology" className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
-            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/JZrdBIZOjnRgDmYf.png" alt="CTTI" className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
-            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/QmFkPgNxuGsKVnyS.png" alt="NAvtech" className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
-            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/ucLBSuRWUsdLgZCy.png" alt="Huawei" className="h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
-            <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/SNOYCynrDHTPaHmd.png" alt="AIIB" className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            <img src="/images/fHGPeUgyMGZdAUlY.png" alt="Irada Pakistan" className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            <img src="/images/DMKlOmKTmrEehoBO.png" alt="Ministry of Science and Technology" className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            <img src="/images/JZrdBIZOjnRgDmYf.png" alt="CTTI" className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            <img src="/images/QmFkPgNxuGsKVnyS.png" alt="NAvtech" className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            <img src="/images/ucLBSuRWUsdLgZCy.png" alt="Huawei" className="h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            <img src="/images/SNOYCynrDHTPaHmd.png" alt="AIIB" className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
           </div>
         </div>
 

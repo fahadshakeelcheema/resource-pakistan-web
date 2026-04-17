@@ -26,7 +26,7 @@ export default function Technology() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/NjZVMBMINiJroMqG.jpg)",
+              backgroundImage: "url(/images/NjZVMBMINiJroMqG.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center center",
             }}

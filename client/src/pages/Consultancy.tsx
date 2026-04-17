@@ -27,7 +27,7 @@ export default function Consultancy() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/GTavqUOcdyusrNEo.jpg)",
+              backgroundImage: "url(/images/GTavqUOcdyusrNEo.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center center",
             }}

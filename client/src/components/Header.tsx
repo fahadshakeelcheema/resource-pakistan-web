@@ -107,7 +107,7 @@ export default function Header() {
         {/* Logo / Company Name */}
         <Link href="/" className="flex items-center gap-3 no-underline hover:no-underline">
           <img
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663029222690/NwHKdWUDVEbPtaGq.png"
+            src="/images/NwHKdWUDVEbPtaGq.png"
             alt="Resource Pakistan"
             className="h-auto"
             style={{ width: "140px", height: "auto", imageRendering: "crisp-edges" }}
